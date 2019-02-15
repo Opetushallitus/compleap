@@ -14,6 +14,11 @@ CompLeap Proof-of-Concept (POC).
 npm i
 ```
 
+Luo `.env`-tiedosto ympäristömuuttujille kopioimalla esimerkistä:
+```shell
+cp .env.example .env
+```
+
 ## Sovelluksen ajaminen paikallisesti
 
 ```shell
