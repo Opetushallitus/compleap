@@ -1,9 +1,15 @@
+const path = require('path')
+
 const CleanWebpackPlugin = require('clean-webpack-plugin')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 
 module.exports = {
   resolve: {
-    extensions: ['.js', '.jsx', '.json']
+    extensions: ['.js', '.jsx', '.json'],
+    modules: [
+      'node_modules',
+      path.resolve(__dirname, 'src')
+    ]
   },
   module: {
     rules: [
