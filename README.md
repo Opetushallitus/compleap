@@ -1,2 +1,25 @@
-# compleap
-CompLeap
+# CompLeap Proof-of-Concept
+
+CompLeap Proof-of-Concept (POC).
+
+## Käytetyt teknologiat ja kehitystyökalut
+
+- React (https://reactjs.org/) (näkymäkirjasto)
+- webpack (https://webpack.js.org/) ja Babel (https://babeljs.io/) (build)
+- JavaScript Standard Style (https://standardjs.com/) ja ESLint (https://eslint.org/) (koodityyli ja sen tarkistus)
+
+## Riippuvuuksien asentaminen
+
+```shell
+npm i
+```
+
+## Sovelluksen ajaminen paikallisesti
+
+```shell
+npm run start:dev
+```
+
+Tämä käynnistää kehitysserverin (webpack-dev-server) ja tarjoaa sovelluksen osoitteessa http://localhost:8080/.
+
+Vaihtoehtoisesti voit tehdä sovelluksesta kehitys-buildin (`npm run build:dev`) ja tarjoilla `dist`-hakemistossa olevat tiedostot jollakin toisella HTTP-palvelinsovelluksella.
