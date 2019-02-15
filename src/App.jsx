@@ -1,6 +1,6 @@
 import React from 'react'
-import t from 'util/translate'
+import Profile from 'component/Profile'
 
-const App = () => <div>{t`CompLeap POC`}</div>
+const App = () => <Profile/>
 
 export default App

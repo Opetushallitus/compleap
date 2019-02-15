@@ -11,7 +11,9 @@
     "build:dev": "./node_modules/.bin/webpack --config webpack.dev.js",
     "build:prod": "./node_modules/.bin/webpack --config webpack.prod.js",
     "start:dev": "./node_modules/.bin/webpack-dev-server --config webpack.dev.js",
-    "test:ui": "npm run build:prod && JEST_ENV=jest-environment-puppeteer ./node_modules/.bin/jest --testPathPattern=page.spec.js"
+    "test": "./node_modules/.bin/concurrently \"npm run test:ui\" \"npm run test:snapshot\"",
+    "test:ui": "npm run build:prod && JEST_ENV=jest-environment-puppeteer ./node_modules/.bin/jest --testPathPattern=page.spec.js",
+    "test:snapshot": "JEST_ENV=jsdom ./node_modules/.bin/jest --testPathPattern=test.js"
   },
   "dependencies": {
     "@babel/runtime": "^7.3.1",
@@ -30,6 +32,7 @@
     "@babel/preset-react": "^7.0.0",
     "babel-loader": "^8.0.5",
     "clean-webpack-plugin": "^1.0.1",
+    "concurrently": "^4.1.0",
     "eslint": "^5.13.0",
     "eslint-config-standard": "^12.0.0",
     "eslint-loader": "^2.1.2",
@@ -44,6 +47,7 @@
     "jest": "^24.1.0",
     "jest-puppeteer": "^4.0.0",
     "puppeteer": "^1.12.2",
+    "react-test-renderer": "^16.8.2",
     "uglifyjs-webpack-plugin": "^2.1.1",
     "webpack-merge": "^4.2.1"
   }

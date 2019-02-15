@@ -1,5 +1,10 @@
 require('dotenv').config()
 
 module.exports = {
-  preset: 'jest-puppeteer'
+  preset: 'jest-puppeteer',
+  moduleDirectories: [
+    'node_modules',
+    'src',
+    'resources'
+  ]
 }
