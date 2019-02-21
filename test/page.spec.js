@@ -7,10 +7,10 @@ describe('Lander', () => {
 
   it('should display correct title', async () => {
     const pageTitle = await page.title()
-    expect(pageTitle).toMatch('CompLeap POC')
+    expect(pageTitle).toMatch('CompLeap')
   })
 
-  it('should display correct text', async () => {
-    await expect(page).toMatch('CompLeap POC')
+  it('should display correct heading', async () => {
+    await expect(page).toMatchElement('h1', { text: 'CompLeap' })
   })
 })

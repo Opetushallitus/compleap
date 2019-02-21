@@ -33,7 +33,7 @@ module.exports = {
     new HtmlWebpackPlugin({
       filename: 'index.html',
       template: './src/index.html',
-      title: 'CompLeap POC'
+      title: 'CompLeap'
     })
   ]
 }

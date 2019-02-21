@@ -1,5 +1,20 @@
 {
-  "CompLeap POC": {
-    "fi": "CompLeap POC"
+  "CompLeap": {
+    "fi": "CompLeap"
+  },
+  "Autamme sinua löytämään itsellesi sopivimman opiskelupaikan.": {
+    "fi": "Autamme sinua löytämään itsellesi sopivimman opiskelupaikan."
+  },
+  "Käytämme tässä apuna kiinnostuksiasi ja jo tehtyjä opintojasi.": {
+    "fi": "Käytämme tässä apuna kiinnostuksiasi ja jo tehtyjä opintojasi."
+  },
+  "Aloita kirjautumalla sisään:": {
+    "fi": "Aloita kirjautumalla sisään:"
+  },
+  "Kirjaudu sisään": {
+    "fi": "Kirjaudu sisään"
+  },
+  "Saamme tällä tavoin tiedot Suomessa suorittamistasi opinnoista.": {
+    "fi": "Saamme tällä tavoin tiedot Suomessa suorittamistasi opinnoista."
   }
 }

@@ -1,6 +1,6 @@
 import React from 'react'
-import Profile from 'component/Profile'
+import Lander from 'component/Lander'
 
-const App = () => <Profile/>
+const App = () => <Lander/>
 
 export default App

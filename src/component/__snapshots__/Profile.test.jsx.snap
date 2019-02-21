@@ -2,6 +2,6 @@
 
 exports[`Profile should render correctly 1`] = `
 <div>
-  CompLeap POC
+  CompLeap
 </div>
 `;
