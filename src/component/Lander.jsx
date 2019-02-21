@@ -2,7 +2,7 @@ import React from 'react'
 import styled from 'styled-components'
 import t from 'util/translate'
 import { H1 } from 'ui/typography'
-import Button from 'component/generic/widget/Button'
+import LinkButton from 'component/generic/widget/LinkButton'
 
 const Container = styled.main`
   max-width: ${props => props.theme.layout.maxContentWidth};
@@ -21,7 +21,7 @@ const Brief = () => (
 const LoginPrompt = () => (
   <section>
     <p>{t`Aloita kirjautumalla sisään:`}</p>
-    <Button onClick={() => console.warn('Not implemented')}>{t`Kirjaudu sisään`}</Button>
+    <LinkButton href='#profile'>{t`Kirjaudu sisään`}</LinkButton>
     <p>{t`Saamme tällä tavoin tiedot Suomessa suorittamistasi opinnoista.`}</p>
   </section>
 )

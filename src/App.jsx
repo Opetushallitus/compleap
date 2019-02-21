@@ -2,15 +2,18 @@ import React from 'react'
 import { ThemeProvider } from 'styled-components'
 import GlobalStyle from 'ui/GlobalStyle'
 import theme from 'ui/theme'
-import Lander from 'component/Lander'
+import { Context, state } from 'state/state'
+import Router from 'component/Router'
 
 const App = () => (
-  <ThemeProvider theme={theme}>
-    <React.Fragment>
-      <GlobalStyle/>
-      <Lander/>
-    </React.Fragment>
-  </ThemeProvider>
+  <Context.Provider value={state}>
+    <ThemeProvider theme={theme}>
+      <React.Fragment>
+        <GlobalStyle/>
+        <Router/>
+      </React.Fragment>
+    </ThemeProvider>
+  </Context.Provider>
 )
 
 export default App

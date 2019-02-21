@@ -2,9 +2,10 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import styled from 'styled-components'
 
-const SolidButton = styled.button`
+export const SolidButtonStyle = styled.button`
   display: inline-block;
   border: none;
+  color: ${props => props.theme.color.black};
   background-color: ${props => props.theme.color.background.accent};
   padding: 0.5rem 2rem;
   font-size: ${props => props.theme.font.size.base};
@@ -13,8 +14,11 @@ const SolidButton = styled.button`
   font-weight: 400;
 `
 
-const Button = ({ onClick, attributes = {}, children }) =>
-  <SolidButton onClick={onClick} {...attributes}>{children}</SolidButton>
+const Button = ({ onClick, attributes = {}, children }) => (
+  <SolidButtonStyle onClick={onClick} {...attributes}>
+    {children}
+  </SolidButtonStyle>
+)
 
 Button.propTypes = {
   onClick: PropTypes.func.isRequired,
