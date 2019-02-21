@@ -1,9 +1,18 @@
 import React from 'react'
+import styled from 'styled-components'
 import t from 'util/translate'
+import { H1 } from 'ui/typography'
+import Button from 'component/generic/widget/Button'
+
+const Container = styled.main`
+  max-width: ${props => props.theme.layout.maxContentWidth};
+  margin: auto;
+  text-align: center;
+`
 
 const Brief = () => (
   <section>
-    <h1>{t`CompLeap`}</h1>
+    <H1>{t`CompLeap`}</H1>
     <p>{t`Autamme sinua löytämään itsellesi sopivimman opiskelupaikan.`}</p>
     <p>{t`Käytämme tässä apuna kiinnostuksiasi ja jo tehtyjä opintojasi.`}</p>
   </section>
@@ -12,16 +21,16 @@ const Brief = () => (
 const LoginPrompt = () => (
   <section>
     <p>{t`Aloita kirjautumalla sisään:`}</p>
-    <button>{t`Kirjaudu sisään`}</button>
+    <Button onClick={() => console.warn('Not implemented')}>{t`Kirjaudu sisään`}</Button>
     <p>{t`Saamme tällä tavoin tiedot Suomessa suorittamistasi opinnoista.`}</p>
   </section>
 )
 
 const Lander = () => (
-  <main>
+  <Container>
     <Brief/>
     <LoginPrompt/>
-  </main>
+  </Container>
 )
 
 export default Lander

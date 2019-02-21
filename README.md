@@ -6,6 +6,7 @@ CompLeap Proof-of-Concept (POC).
 
 - React (https://reactjs.org/) (näkymäkirjasto)
 - webpack (https://webpack.js.org/) ja Babel (https://babeljs.io/) (build)
+- styled-components (https://www.styled-components.com/) (tyylit)
 - JavaScript Standard Style (https://standardjs.com/) ja ESLint (https://eslint.org/) (koodityyli ja sen tarkistus)
 
 ## Riippuvuuksien asentaminen
