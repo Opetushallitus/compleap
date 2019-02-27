@@ -45,8 +45,8 @@ Puppeteer-based browser tests:
 npm run test:ui
 ```
 
-Component tests (Jest snapshots):
+Component tests:
 ```shell
-npm run test:snapshot
+npm run test:component
 ```
 
