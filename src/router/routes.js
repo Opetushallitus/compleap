@@ -1,4 +1,6 @@
+import { NavigationEvent } from 'state/machine'
+
 export default {
-  '/': 'HOME',
-  '/#profile': 'PROFILE'
+  '/': NavigationEvent.HOME,
+  '/#profile': NavigationEvent.PROFILE
 }

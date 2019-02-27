@@ -1,18 +1,45 @@
 import { Machine } from 'xstate'
 
-export default Machine({
-  initial: 'lander',
+/**
+ * Enum for states.
+ * @readonly
+ * @enum {string}
+ */
+const State = Object.freeze({
+  lander: 'lander',
+  profile: 'profile'
+})
+
+/**
+ * Enum for navigation events.
+ * @readonly
+ * @enum {string}
+ */
+const NavigationEvent = Object.freeze({
+  LOGIN: 'LOGIN',
+  HOME: 'HOME',
+  PROFILE: 'PROFILE'
+})
+
+const machine = Machine({
+  initial: State.lander,
   states: {
-    lander: {
+    [State.lander]: {
       on: {
-        LOGIN: 'profile',
-        PROFILE: 'profile'
+        [NavigationEvent.LOGIN]: State.profile,
+        [NavigationEvent.PROFILE]: State.profile
       }
     },
-    profile: {
+    [State.profile]: {
       on: {
-        HOME: 'lander'
+        [NavigationEvent.HOME]: State.lander
       }
     }
   }
 })
+
+export {
+  machine,
+  State,
+  NavigationEvent
+}

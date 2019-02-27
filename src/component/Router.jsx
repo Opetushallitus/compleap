@@ -3,10 +3,11 @@ import { Context } from 'state/state'
 import Lander from 'component/Lander'
 import Profile from 'component/Profile'
 import useObservable from './generic/hook/useObservable'
+import { State } from 'state/machine'
 
 const pages = [
-  { state: 'lander', view: Lander },
-  { state: 'profile', view: Profile }
+  { state: State.lander, view: Lander },
+  { state: State.profile, view: Profile }
 ]
 
 const resolve = state => {
