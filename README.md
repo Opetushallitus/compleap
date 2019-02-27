@@ -2,47 +2,51 @@
 
 CompLeap Proof-of-Concept (POC).
 
-## Käytetyt teknologiat ja kehitystyökalut
+## Technologies and development tools
 
-- React (https://reactjs.org/) (näkymäkirjasto)
-- webpack (https://webpack.js.org/) ja Babel (https://babeljs.io/) (build)
-- styled-components (https://www.styled-components.com/) (tyylit)
-- JavaScript Standard Style (https://standardjs.com/) ja ESLint (https://eslint.org/) (koodityyli ja sen tarkistus)
+- React (https://reactjs.org/) (views)
+- webpack (https://webpack.js.org/) and Babel (https://babeljs.io/) (build)
+- styled-components (https://www.styled-components.com/) (styles)
+- JavaScript Standard Style (https://standardjs.com/) and ESLint (https://eslint.org/) (code style)
 
-## Riippuvuuksien asentaminen
+## Installing dependencies
 
 ```shell
 npm i
 ```
 
-Luo `.env`-tiedosto ympäristömuuttujille kopioimalla esimerkistä:
+Create `.env` file for environment variables by copying it from the example file:
 ```shell
 cp .env.example .env
 ```
 
-## Sovelluksen ajaminen paikallisesti
+## Running locally
 
 ```shell
 npm run start:dev
 ```
 
-Tämä käynnistää kehitysserverin (webpack-dev-server) ja tarjoaa sovelluksen osoitteessa http://localhost:8080/.
+This starts up the development server (webpack-dev-server) and serves the app at http://localhost:8080/.
 
-Vaihtoehtoisesti voit tehdä sovelluksesta kehitys-buildin (`npm run build:dev`) ja tarjoilla `dist`-hakemistossa olevat tiedostot jollakin toisella HTTP-palvelinsovelluksella.
+Alternatively, you can create a development build (`npm run build:dev`) and serve the files from the `dist` directory with some other HTTP server application. The production build can be created similarly by running `npm run build:prod`.
 
-## Testien ajaminen
+## Running tests
 
-Puppeteer-selaintestit:
+**All tests:**
+
+```shell
+npm run test
+```
+
+**Or by type:**
+
+Puppeteer-based browser tests:
 ```shell
 npm run test:ui
 ```
 
-Jest-komponenttitestit (snapshotit):
+Component tests (Jest snapshots):
 ```shell
 npm run test:snapshot
 ```
 
-Kaikki testit kerralla:
-```shell
-npm run test
-```
