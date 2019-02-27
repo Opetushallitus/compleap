@@ -2,7 +2,7 @@ import React, { useContext } from 'react'
 import { Context } from 'state/state'
 import Lander from 'component/Lander'
 import Profile from 'component/Profile'
-import useObservable from './generic/hook/useObservable'
+import useObservable from 'component/generic/hook/useObservable'
 import { State } from 'state/machine'
 
 const pages = [
