@@ -18,8 +18,10 @@ const resolve = state => {
 
 const Router = () => {
   const context = useContext(Context)
-  const state = useObservable(context)
+  const state = useObservable(context, { skipDuplicates: (prev, next) => next.matches(prev.toStrings()[0]) })
   const View = resolve(state)
+
+  console.debug(`Rendering view ${View.displayName}`)
 
   return <View/>
 }

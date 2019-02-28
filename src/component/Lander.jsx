@@ -33,4 +33,6 @@ const Lander = () => (
   </Container>
 )
 
+Lander.displayName = 'Lander'
+
 export default Lander
