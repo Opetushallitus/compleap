@@ -1,7 +1,42 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Profile should render correctly 1`] = `
+exports[`Profile should show error when fetching interest suggestions failed 1`] = `
 <div>
-  CompLeap
+  <h1
+    className="sc-htpNat eLLhOJ"
+  >
+    CompLeap
+  </h1>
+  <div>
+    error
+  </div>
+</div>
+`;
+
+exports[`Profile should show interest suggestions when fetched successfully 1`] = `
+<div>
+  <h1
+    className="sc-bwzfXH clirBR"
+  >
+    CompLeap
+  </h1>
+  <ul>
+    <li>
+      test
+    </li>
+  </ul>
+</div>
+`;
+
+exports[`Profile should show loading indicator when fetching interest suggestions 1`] = `
+<div>
+  <h1
+    className="sc-bdVaJa gqrJlT"
+  >
+    CompLeap
+  </h1>
+  <div>
+    loading
+  </div>
 </div>
 `;

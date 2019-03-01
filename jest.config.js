@@ -6,5 +6,8 @@ module.exports = {
     'node_modules',
     'src',
     'resources'
-  ]
+  ],
+  'moduleNameMapper': {
+    'test/(.*)$': '<rootDir>/test/$1'
+  }
 }
