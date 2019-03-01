@@ -1,45 +1,82 @@
 import { Machine } from 'xstate'
+import services from 'state/services'
+import { actions, context } from 'state/context'
 
-/**
- * Enum for states.
- * @readonly
- * @enum {string}
- */
-const State = Object.freeze({
+const PageState = Object.freeze({
   lander: 'lander',
-  profile: 'profile'
+  profile: 'profile',
+  interests: 'interests'
 })
 
-/**
- * Enum for navigation events.
- * @readonly
- * @enum {string}
- */
+const DataState = Object.freeze({
+  idle: 'idle',
+  pending: 'pending',
+  success: 'success',
+  failure: 'failure'
+})
+
 const NavigationEvent = Object.freeze({
   LOGIN: 'LOGIN',
   HOME: 'HOME',
   PROFILE: 'PROFILE'
 })
 
+const Service = Object.freeze({
+  getInterestSuggestions: 'getInterestSuggestions'
+})
+
+const Action = Object.freeze({
+  setInterestSuggestionsData: 'setInterestSuggestionsData',
+  setInterestSuggestionsError: 'setInterestSuggestionsError'
+})
+
 const machine = Machine({
-  initial: State.lander,
+  initial: PageState.lander,
+  context,
   states: {
-    [State.lander]: {
+    [PageState.lander]: {
       on: {
-        [NavigationEvent.LOGIN]: State.profile,
-        [NavigationEvent.PROFILE]: State.profile
+        [NavigationEvent.LOGIN]: PageState.profile,
+        [NavigationEvent.PROFILE]: PageState.profile
       }
     },
-    [State.profile]: {
+    [PageState.profile]: {
+      type: 'parallel',
+      states: {
+        [PageState.interests]: {
+          initial: DataState.idle,
+          states: {
+            [DataState.idle]: { on: { '': DataState.pending } },
+            [DataState.pending]: {
+              invoke: {
+                src: Service.getInterestSuggestions,
+                onDone: {
+                  target: DataState.success,
+                  actions: Action.setInterestSuggestionsData
+                },
+                onError: {
+                  target: DataState.failure,
+                  actions: Action.setInterestSuggestionsError
+                }
+              }
+            },
+            [DataState.success]: { },
+            [DataState.failure]: { }
+          }
+        }
+      },
       on: {
-        [NavigationEvent.HOME]: State.lander
+        [NavigationEvent.HOME]: PageState.lander
       }
     }
   }
+}, {
+  services,
+  actions
 })
 
 export {
   machine,
-  State,
+  PageState,
   NavigationEvent
 }

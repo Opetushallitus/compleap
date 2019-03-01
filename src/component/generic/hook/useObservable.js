@@ -15,7 +15,6 @@ export default (observable, { path = undefined, skipDuplicates = false }) => {
 
   useEffect(
     () => lensed
-      .changes()
       .skipDuplicates(eqCheck)
       .onValue(setV),
     []
