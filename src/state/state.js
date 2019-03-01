@@ -3,11 +3,11 @@ import { interpret } from 'xstate'
 import Atom from 'bacon.atom'
 
 import { machine } from 'state/machine'
+import { context } from 'state/context'
 import { logEvent, logState } from 'util/log'
 
+export const state = Atom(context)
 export const Context = React.createContext()
-
-export const state = Atom()
 
 const service = interpret(machine)
   .onTransition(s => state.set(s))
