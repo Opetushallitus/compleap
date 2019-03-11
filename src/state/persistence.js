@@ -1,4 +1,6 @@
 import { State } from 'xstate'
+import * as R from 'ramda'
+import { machine } from 'state/machine'
 
 export const persist = state => {
   const jsonState = JSON.stringify(state)
@@ -12,5 +14,18 @@ export const persist = state => {
 
 export const restore = () => {
   const restoredStateDef = JSON.parse(window.localStorage.getItem('app-state'))
-  return restoredStateDef ? State.create(restoredStateDef) : undefined
+  if (!restoredStateDef) return undefined
+
+  const restoredState = State.create(restoredStateDef)
+  const containsFailedState = restoredState.toStrings()
+    .map(R.split('.'))
+    .map(R.last)
+    .includes('failure')
+
+  if (containsFailedState) {
+    console.warn('Restored state contained a failure. Resetting to initial state.')
+    return State.from(machine.initialState, restoredState.context)
+  }
+
+  return restoredState
 }
