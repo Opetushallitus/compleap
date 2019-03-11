@@ -38,7 +38,7 @@ export const actions = {
         return isSelected
           ? R.over(
             R.compose(topicLens(index), subtopicsLens()),
-            subtopics => subtopics.map(st => R.set(isSelectedLens(), false, st)),
+            subtopics => subtopics.map(R.set(isSelectedLens(), false)),
             withToggledSelf
           )
           : withToggledSelf
