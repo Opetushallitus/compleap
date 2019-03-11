@@ -1,4 +1,5 @@
 import { Action } from 'state/context'
+import { InteractionEvent } from 'state/events'
 
 const State = Object.freeze({
   idle: 'idle',
@@ -37,7 +38,7 @@ const interestsStates = {
     },
     [State.success]: {
       on: {
-        TOGGLE: {
+        [InteractionEvent.TOGGLE_INTEREST]: {
           actions: Action.toggleInterestSelection
         }
       }

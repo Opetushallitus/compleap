@@ -1,4 +1,4 @@
-import { NavigationEvent } from 'state/machine'
+import { NavigationEvent } from 'state/events'
 
 export default {
   '/': NavigationEvent.HOME,
