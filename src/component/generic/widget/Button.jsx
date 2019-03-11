@@ -14,7 +14,7 @@ export const SolidButtonStyle = styled.button`
   font-weight: 400;
 `
 
-const Button = ({ onClick, attributes = {}, children }) => (
+const Button = ({ onClick, children, ...attributes }) => (
   <SolidButtonStyle onClick={onClick} {...attributes}>
     {children}
   </SolidButtonStyle>

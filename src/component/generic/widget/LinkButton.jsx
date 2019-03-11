@@ -8,7 +8,7 @@ const LinkButtonStyle = styled(SolidButtonStyle)`
   text-decoration: none;
 `
 
-const LinkButton = ({ href, attributes = {}, children }) => (
+const LinkButton = ({ href, children, ...attributes }) => (
   <LinkButtonStyle as='a' href={href} onClick={transition} {...attributes}>
     {children}
   </LinkButtonStyle>
