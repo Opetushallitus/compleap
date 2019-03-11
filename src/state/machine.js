@@ -1,36 +1,23 @@
 import { Machine } from 'xstate'
-import services from 'state/services'
 import { actions, context } from 'state/context'
+import services from 'state/services'
+import interestsStates from 'state/interestsStates'
 
-const PageState = Object.freeze({
+export const PageState = Object.freeze({
   lander: 'lander',
   profile: 'profile',
   interests: 'interests'
 })
 
-const DataState = Object.freeze({
-  idle: 'idle',
-  pending: 'pending',
-  success: 'success',
-  failure: 'failure'
-})
-
-const NavigationEvent = Object.freeze({
+export const NavigationEvent = Object.freeze({
   LOGIN: 'LOGIN',
   HOME: 'HOME',
   PROFILE: 'PROFILE'
 })
 
-const Service = Object.freeze({
-  getInterestSuggestions: 'getInterestSuggestions'
-})
-
-const Action = Object.freeze({
-  setInterestSuggestionsData: 'setInterestSuggestionsData',
-  setInterestSuggestionsError: 'setInterestSuggestionsError'
-})
-
-const machine = Machine({
+export const machine = Machine({
+  id: 'main',
+  strict: true,
   initial: PageState.lander,
   context,
   states: {
@@ -44,25 +31,7 @@ const machine = Machine({
       type: 'parallel',
       states: {
         [PageState.interests]: {
-          initial: DataState.idle,
-          states: {
-            [DataState.idle]: { on: { '': DataState.pending } },
-            [DataState.pending]: {
-              invoke: {
-                src: Service.getInterestSuggestions,
-                onDone: {
-                  target: DataState.success,
-                  actions: Action.setInterestSuggestionsData
-                },
-                onError: {
-                  target: DataState.failure,
-                  actions: Action.setInterestSuggestionsError
-                }
-              }
-            },
-            [DataState.success]: { },
-            [DataState.failure]: { }
-          }
+          ...interestsStates
         }
       },
       on: {
@@ -74,9 +43,3 @@ const machine = Machine({
   services,
   actions
 })
-
-export {
-  machine,
-  PageState,
-  NavigationEvent
-}
