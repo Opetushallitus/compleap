@@ -6,6 +6,7 @@ export default {
   color: {
     white: '#ffffff',
     black: '#000000',
+    gray: '#dedede',
     background: {
       accent: '#fff636'
     }
@@ -17,13 +18,13 @@ export default {
       s: '0.857rem',
       baseCompact: '0.875em',
       base: '1em',
-      m: '1.25rem',
-      l: '1.429rem',
+      m: '1.1rem',
+      l: '1.5rem',
       xl: '2.667rem'
     }
   },
   layout: {
-    maxContentWidth: '1160px',
-    breakpointFull: '900px'
+    maxContentWidth: '800px',
+    breakpointFull: '600px'
   }
 }

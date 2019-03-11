@@ -8,10 +8,17 @@ const mockState = queryStatus => jest.doMock('state/state', () => {
   const state = Atom({
     context: {
       interests: {
-        suggestions: {
-          data: ['test'],
-          error: undefined
-        }
+        data: [{
+          topic: 'Autot',
+          id: '1',
+          selected: true,
+          subtopics: [{
+            topic: 'Virittely ja korjaaminen',
+            id: '2',
+            selected: false
+          }]
+        }],
+        error: undefined
       }
     },
     value: {
