@@ -12,6 +12,10 @@ export const SolidButtonStyle = styled.button`
   cursor: pointer;
   text-align: center;
   font-weight: 400;
+
+  &:disabled {
+    background-color: ${props => props.theme.color.gray};
+  }
 `
 
 const Button = ({ onClick, children, ...attributes }) => (

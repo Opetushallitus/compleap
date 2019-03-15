@@ -8,6 +8,8 @@ const targetById = id => `#${id}`
 const State = Object.freeze({
   idle: 'idle',
   empty: 'empty',
+  collapsed: 'collapsed',
+  open: 'open',
   selected: 'selected',
   specifierRequired: 'specifierRequired',
   ready: 'ready',
@@ -15,55 +17,73 @@ const State = Object.freeze({
 })
 
 const educationStates = {
-  initial: State.idle,
+  initial: State.open,
   states: {
-    [State.idle]: {
+    [State.collapsed]: {
       on: {
-        '': [
-          { target: State.empty, cond: (ctx, _) => R.isEmpty(ctx.education.data) },
-          { target: State.selected }
-        ]
+        [InteractionEvent.ENTER_EDUCATION]: State.open
       }
     },
-    [State.empty]: {
-      on: {
-        [InteractionEvent.SELECT_EDUCATION]: {
-          target: State.selected,
-          actions: Action.selectEducation
-        }
-      }
-    },
-    [State.selected]: {
-      id: State.selected,
+    [State.open]: {
       initial: State.idle,
       states: {
         [State.idle]: {
           on: {
             '': [
-              { target: State.specifierRequired, cond: (ctx, _) => isVocational(ctx.education.data.id) },
-              { target: State.ready }
+              { target: State.empty, cond: (ctx, _) => R.isEmpty(ctx.education.data) },
+              { target: State.selected }
             ]
           }
         },
-        [State.specifierRequired]: {
+        [State.empty]: {
           on: {
             [InteractionEvent.SELECT_EDUCATION]: {
-              target: targetById(State.selected),
+              target: State.selected,
               actions: Action.selectEducation
             }
           }
         },
-        [State.ready]: {
-          on: {
-            [InteractionEvent.SELECT_EDUCATION]: {
-              target: targetById(State.selected),
-              actions: Action.selectEducation
+        [State.selected]: {
+          id: State.selected,
+          initial: State.idle,
+          states: {
+            [State.idle]: {
+              on: {
+                '': [
+                  { target: State.specifierRequired, cond: (ctx, _) => isVocational(ctx.education.data.id) },
+                  { target: State.ready }
+                ]
+              }
+            },
+            [State.specifierRequired]: {
+              on: {
+                [InteractionEvent.SELECT_EDUCATION]: {
+                  target: targetById(State.selected),
+                  actions: Action.selectEducation
+                }
+              }
+            },
+            [State.ready]: {
+              on: {
+                [InteractionEvent.SELECT_EDUCATION]: {
+                  target: targetById(State.selected),
+                  actions: Action.selectEducation
+                },
+                [InteractionEvent.CONFIRM_EDUCATION]: {
+                  target: targetById(State.done)
+                }
+              }
             }
           }
         }
+      },
+      on: {
+        [InteractionEvent.CANCEL_EDUCATION]: State.collapsed
       }
     },
-    [State.done]: {}
+    [State.done]: {
+      id: State.done
+    }
   }
 }
 

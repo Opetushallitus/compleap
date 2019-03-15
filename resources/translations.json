@@ -50,6 +50,9 @@
   "Hae alaa": {
     "fi": "Hae alaa"
   },
+  "Lisää muualla kuin Suomessa suoritettu tutkinto": {
+    "fi": "Lisää muualla kuin Suomessa suoritettu tutkinto"
+  },
   "Valitse mahdollisimman tarkasti mitkä allaolevista asioista sinua kiinnostavat. Mitä tarkemmin valitset, sitä tarkemmin pystymme etsimään sinulle sopivia koulutuksia.": {
     "fi": "Valitse mahdollisimman tarkasti mitkä allaolevista asioista sinua kiinnostavat. Mitä tarkemmin valitset, sitä tarkemmin pystymme etsimään sinulle sopivia koulutuksia."
   },
@@ -58,5 +61,11 @@
   },
   "Valitse seuraavista ainakin 5 sinua kiinnostavaa asiaa": {
     "fi": "Valitse seuraavista ainakin 5 sinua kiinnostavaa asiaa"
+  },
+  "Peruuta": {
+    "fi": "Peruuta"
+  },
+  "Valmis": {
+    "fi": "Valmis"
   }
 }

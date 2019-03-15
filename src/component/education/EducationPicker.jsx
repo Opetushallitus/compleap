@@ -1,15 +1,26 @@
 import React, { useContext } from 'react'
 import educations from 'educations'
-import { Context } from 'state/state'
+import { Context, dispatch } from 'state/state'
 import t from 'util/translate'
 import { H2, H3 } from 'ui/typography'
 import useObservable from 'component/generic/hook/useObservable'
 import EducationLevelPicker from 'component/education/EducationLevelPicker'
+import Button from 'component/generic/widget/Button'
+import { InteractionEvent } from 'state/events'
 
 const EducationPicker = () => {
   const context$ = useContext(Context)
-  const selectionState = useObservable(context$, { path: ['value', 'profile', 'education', 'selected'] })
+  const selectionState = useObservable(context$, { path: ['value', 'profile', 'education', 'open', 'selected'] })
   const selectedId = useObservable(context$, { path: ['context', 'education', 'data', 'id'] })
+  const isCollapsed = useObservable(context$, { path: ['value', 'profile', 'education'] }) === 'collapsed'
+
+  if (isCollapsed) {
+    return (
+      <Button onClick={() => dispatch(InteractionEvent.ENTER_EDUCATION)}>
+        {t`Lisää muualla kuin Suomessa suoritettu tutkinto`}
+      </Button>
+    )
+  }
 
   return (
     <React.Fragment>
@@ -21,6 +32,12 @@ const EducationPicker = () => {
         selectedId={selectedId}
         requireSpecifier={selectionState === 'specifierRequired'}
       />
+      <Button onClick={() => dispatch(InteractionEvent.CANCEL_EDUCATION)}>
+        {t`Peruuta`}
+      </Button>
+      <Button onClick={() => dispatch(InteractionEvent.CONFIRM_EDUCATION)} disabled={selectionState !== 'ready'}>
+        {t`Valmis`}
+      </Button>
     </React.Fragment>
   )
 }
