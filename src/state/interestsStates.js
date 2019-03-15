@@ -15,7 +15,7 @@ const Service = Object.freeze({
 const interestsStates = {
   initial: State.idle,
   states: {
-    idle: {
+    [State.idle]: {
       on: {
         '': [
           { target: State.pending, cond: (ctx, _) => ctx.interests.data.length === 0 },
