@@ -6,13 +6,17 @@ export const context = {
   interests: {
     data: [],
     error: undefined
+  },
+  education: {
+    data: {}
   }
 }
 
 export const Action = Object.freeze({
   setInterestsData: 'setInterestsData',
   setInterestsError: 'setInterestsError',
-  toggleInterestSelection: 'toggleInterestSelection'
+  toggleInterestSelection: 'toggleInterestSelection',
+  selectEducation: 'selectEducation'
 })
 
 export const actions = {
@@ -44,5 +48,8 @@ export const actions = {
           : withToggledSelf
       }
     }
+  }),
+  [Action.selectEducation]: assign({
+    education: (ctx, event) => R.assoc('data', event.data, ctx.education)
   })
 }

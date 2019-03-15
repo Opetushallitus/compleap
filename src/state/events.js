@@ -5,5 +5,6 @@ export const NavigationEvent = Object.freeze({
 })
 
 export const InteractionEvent = Object.freeze({
-  TOGGLE_INTEREST: 'TOGGLE_INTEREST'
+  TOGGLE_INTEREST: 'TOGGLE_INTEREST',
+  SELECT_EDUCATION: 'SELECT_EDUCATION'
 })

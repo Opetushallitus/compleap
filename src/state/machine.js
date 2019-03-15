@@ -3,10 +3,15 @@ import { actions, context } from 'state/context'
 import services from 'state/services'
 import interestsStates from 'state/interestsStates'
 import { NavigationEvent } from 'state/events'
+import educationStates from 'state/educationStates'
 
 export const PageState = Object.freeze({
   lander: 'lander',
-  profile: 'profile',
+  profile: 'profile'
+})
+
+const SectionState = Object.freeze({
+  education: 'education',
   interests: 'interests'
 })
 
@@ -25,9 +30,8 @@ export const machine = Machine({
     [PageState.profile]: {
       type: 'parallel',
       states: {
-        [PageState.interests]: {
-          ...interestsStates
-        }
+        [SectionState.education]: { ...educationStates },
+        [SectionState.interests]: { ...interestsStates }
       },
       on: {
         [NavigationEvent.HOME]: PageState.lander
