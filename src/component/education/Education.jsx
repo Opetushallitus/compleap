@@ -9,7 +9,7 @@ const Education = () => {
   const status = useObservable(context$, { path: ['value', 'profile', 'education'] })
   const selectedEducation = useObservable(context$, { path: ['context', 'education', 'data'] })
 
-  if (status === 'empty') return <EducationPicker/>
+  if (status !== 'done') return <EducationPicker/>
 
   return (
     <div>{educations[selectedEducation.id]}</div>

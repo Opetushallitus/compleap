@@ -2,10 +2,16 @@ import * as R from 'ramda'
 import { InteractionEvent } from 'state/events'
 import { Action } from 'state/context'
 
+const isVocational = id => id === '2'
+const targetById = id => `#${id}`
+
 const State = Object.freeze({
   idle: 'idle',
   empty: 'empty',
-  selected: 'selected'
+  selected: 'selected',
+  specifierRequired: 'specifierRequired',
+  ready: 'ready',
+  done: 'done'
 })
 
 const educationStates = {
@@ -27,7 +33,37 @@ const educationStates = {
         }
       }
     },
-    [State.selected]: { }
+    [State.selected]: {
+      id: State.selected,
+      initial: State.idle,
+      states: {
+        [State.idle]: {
+          on: {
+            '': [
+              { target: State.specifierRequired, cond: (ctx, _) => isVocational(ctx.education.data.id) },
+              { target: State.ready }
+            ]
+          }
+        },
+        [State.specifierRequired]: {
+          on: {
+            [InteractionEvent.SELECT_EDUCATION]: {
+              target: targetById(State.selected),
+              actions: Action.selectEducation
+            }
+          }
+        },
+        [State.ready]: {
+          on: {
+            [InteractionEvent.SELECT_EDUCATION]: {
+              target: targetById(State.selected),
+              actions: Action.selectEducation
+            }
+          }
+        }
+      }
+    },
+    [State.done]: {}
   }
 }
 
