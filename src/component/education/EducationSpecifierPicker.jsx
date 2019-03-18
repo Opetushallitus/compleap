@@ -8,6 +8,7 @@ import { InteractionEvent } from 'state/events'
 
 const isMostSpecific = (v, k) => k.length === 4
 const specifiers = R.pickBy(isMostSpecific, educationClassification)
+const keysById = R.sort(R.comparator(R.lt), Object.keys(specifiers))
 
 const EducationSpecifierPicker = ({ selectedId = '' }) => (
   <div>
@@ -17,7 +18,7 @@ const EducationSpecifierPicker = ({ selectedId = '' }) => (
       onChange={({ target }) => dispatch({ type: InteractionEvent.SELECT_EDUCATION_SPECIFIER, data: { id: target.value } })}
     >
       <option value='' disabled>{t`Hae alaa`}</option>
-      {Object.keys(specifiers).map(k => (
+      {keysById.map(k => (
         <option key={k} value={k}>
           {t(specifiers[k])}
         </option>)
