@@ -79,7 +79,7 @@ export const actions = {
     education: (ctx, _) => R.assocPath(['data', 'selection'], undefined, ctx.education)
   }),
   [Action.clearEducationSpecifier]: assign({
-    education: (ctx, _) => R.assocPath(['data', 'selection', 'specifier'], undefined, ctx.education)
+    education: (ctx, _) => R.dissocPath(['data', 'selection', 'specifier'], ctx.education)
   }),
   [Action.addEducation]: assign({
     education: (ctx, _) => R.over(educationsLens(), R.append(ctx.education.data.selection), ctx.education)
