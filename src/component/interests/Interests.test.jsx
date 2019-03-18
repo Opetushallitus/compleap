@@ -11,14 +11,20 @@ const mockState = queryStatus => jest.doMock('state/state', () => {
         data: [{
           topic: 'Autot',
           id: '1',
-          selected: true,
+          selectionSet: true,
           subtopics: [{
             topic: 'Virittely ja korjaaminen',
             id: '2',
-            selected: false
+            selectionSet: false
           }]
         }],
         error: undefined
+      },
+      education: {
+        data: {
+          educations: [],
+          selection: undefined
+        }
       }
     },
     value: {
@@ -33,35 +39,35 @@ const mockState = queryStatus => jest.doMock('state/state', () => {
   }
 })
 
-describe('Profile', () => {
+describe('Interests', () => {
   beforeEach(() => {
     jest.clearAllMocks()
   })
 
-  it('should show loading indicator when fetching interest suggestions', () => {
-    let Profile
+  it('should show loading indicator when fetching suggestions', () => {
+    let Interests
     mockState('pending')
-    jest.isolateModules(() => { Profile = require('./Profile').default })
+    jest.isolateModules(() => { Interests = require('./Interests').default })
 
-    const renderedJSON = createRendererWithTheme(<Profile/>).toJSON()
+    const renderedJSON = createRendererWithTheme(<Interests/>).toJSON()
     expect(renderedJSON).toMatchSnapshot()
   })
 
   it('should show interest suggestions when fetched successfully', () => {
-    let Profile
+    let Interests
     mockState('success')
-    jest.isolateModules(() => { Profile = require('./Profile').default })
+    jest.isolateModules(() => { Interests = require('./Interests').default })
 
-    const renderedJSON = createRendererWithTheme(<Profile/>).toJSON()
+    const renderedJSON = createRendererWithTheme(<Interests/>).toJSON()
     expect(renderedJSON).toMatchSnapshot()
   })
 
   it('should show error when fetching interest suggestions failed', () => {
-    let Profile
+    let Interests
     mockState('failure')
-    jest.isolateModules(() => { Profile = require('./Profile').default })
+    jest.isolateModules(() => { Interests = require('./Interests').default })
 
-    const renderedJSON = createRendererWithTheme(<Profile/>).toJSON()
+    const renderedJSON = createRendererWithTheme(<Interests/>).toJSON()
     expect(renderedJSON).toMatchSnapshot()
   })
 })

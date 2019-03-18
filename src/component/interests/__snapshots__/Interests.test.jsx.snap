@@ -1,0 +1,44 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Interests should show error when fetching interest suggestions failed 1`] = `
+<div>
+  error
+</div>
+`;
+
+exports[`Interests should show interest suggestions when fetched successfully 1`] = `
+<section>
+  <h2
+    className="sc-gZMcBi kUGyUY"
+  >
+    Kiinnostukset
+  </h2>
+  <p>
+    Valitse mahdollisimman tarkasti mitkä allaolevista asioista sinua kiinnostavat. Mitä tarkemmin valitset, sitä tarkemmin pystymme etsimään sinulle sopivia koulutuksia.
+  </p>
+  <h3
+    className="sc-gqjmRU bJVuQj"
+  >
+    Valitse seuraavista ainakin 5 sinua kiinnostavaa asiaa
+  </h3>
+  <ul
+    className="sc-VigVT buKjMU"
+  >
+    <li>
+      <button
+        className="sc-gzVnrw cJyJMM"
+        onClick={[Function]}
+        value="Autot"
+      >
+        Autot
+      </button>
+    </li>
+  </ul>
+</section>
+`;
+
+exports[`Interests should show loading indicator when fetching suggestions 1`] = `
+<div>
+  loading
+</div>
+`;
