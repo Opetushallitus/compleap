@@ -1,6 +1,13 @@
 import * as R from 'ramda'
 import { assign } from 'xstate'
-import { findSubtopicIndex, findTopicIndex, isSelectedLens, subtopicsLens, topicLens } from 'state/helper'
+import {
+  educationsLens,
+  findSubtopicIndex,
+  findTopicIndex,
+  isSelectedLens,
+  subtopicsLens,
+  topicLens
+} from 'state/helper'
 
 export const context = {
   interests: {
@@ -8,7 +15,16 @@ export const context = {
     error: undefined
   },
   education: {
-    data: {}
+    data: {
+      /**
+       * [{ level: { id }, specifier?: { id } }]
+       */
+      educations: [],
+      /**
+       * { level: { id }, specifier?: { id } }
+       */
+      selection: undefined
+    }
   }
 }
 
@@ -16,7 +32,11 @@ export const Action = Object.freeze({
   setInterestsData: 'setInterestsData',
   setInterestsError: 'setInterestsError',
   toggleInterestSelection: 'toggleInterestSelection',
-  selectEducation: 'selectEducation'
+  selectEducation: 'selectEducation',
+  selectEducationSpecifier: 'selectEducationSpecifier',
+  clearEducationSelection: 'clearEducationSelection',
+  clearEducationSpecifier: 'clearEducationSpecifier',
+  addEducation: 'addEducation'
 })
 
 export const actions = {
@@ -50,6 +70,18 @@ export const actions = {
     }
   }),
   [Action.selectEducation]: assign({
-    education: (ctx, event) => R.assoc('data', event.data, ctx.education)
+    education: (ctx, event) => R.assocPath(['data', 'selection', 'level'], event.data, ctx.education)
+  }),
+  [Action.selectEducationSpecifier]: assign({
+    education: (ctx, event) => R.assocPath(['data', 'selection', 'specifier'], event.data, ctx.education)
+  }),
+  [Action.clearEducationSelection]: assign({
+    education: (ctx, _) => R.assocPath(['data', 'selection'], undefined, ctx.education)
+  }),
+  [Action.clearEducationSpecifier]: assign({
+    education: (ctx, _) => R.assocPath(['data', 'selection', 'specifier'], undefined, ctx.education)
+  }),
+  [Action.addEducation]: assign({
+    education: (ctx, _) => R.over(educationsLens(), R.append(ctx.education.data.selection), ctx.education)
   })
 }

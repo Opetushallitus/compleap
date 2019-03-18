@@ -6,3 +6,5 @@ export const findSubtopicIndex = (id, parentIndex, ctx) => R.findIndex(R.propEq(
 export const topicLens = index => R.lensPath(['data', index])
 export const subtopicsLens = () => R.lensProp('subtopics')
 export const isSelectedLens = () => R.lensProp('selected')
+
+export const educationsLens = () => R.lensPath(['data', 'educations'])

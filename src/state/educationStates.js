@@ -1,76 +1,78 @@
-import * as R from 'ramda'
 import { InteractionEvent } from 'state/events'
 import { Action } from 'state/context'
 
 const isVocational = id => id === '2'
 const targetById = id => `#${id}`
 
-const State = Object.freeze({
-  idle: 'idle',
-  empty: 'empty',
-  collapsed: 'collapsed',
-  open: 'open',
-  selected: 'selected',
+export const EducationPickerState = Object.freeze({
+  formCollapsed: 'formCollapsed',
+  formOpen: 'formOpen',
+  selectionEmpty: 'selectionEmpty',
+  selectionSet: 'selectionSet',
+  checkIfSelectionReady: 'checkIfSelectionReady',
   specifierRequired: 'specifierRequired',
-  ready: 'ready',
+  selectionReady: 'selectionReady',
   done: 'done'
 })
 
 const educationStates = {
-  initial: State.open,
+  initial: EducationPickerState.formOpen,
   states: {
-    [State.collapsed]: {
+    [EducationPickerState.formCollapsed]: {
+      onEntry: Action.clearEducationSelection,
       on: {
-        [InteractionEvent.ENTER_EDUCATION]: State.open
+        [InteractionEvent.BEGIN_EDUCATION_INPUT]: EducationPickerState.formOpen
       }
     },
-    [State.open]: {
-      initial: State.idle,
+    [EducationPickerState.formOpen]: {
+      initial: EducationPickerState.selectionEmpty,
       states: {
-        [State.idle]: {
-          on: {
-            '': [
-              { target: State.empty, cond: (ctx, _) => R.isEmpty(ctx.education.data) },
-              { target: State.selected }
-            ]
-          }
-        },
-        [State.empty]: {
+        [EducationPickerState.selectionEmpty]: {
           on: {
             [InteractionEvent.SELECT_EDUCATION]: {
-              target: State.selected,
+              target: EducationPickerState.selectionSet,
               actions: Action.selectEducation
             }
           }
         },
-        [State.selected]: {
-          id: State.selected,
-          initial: State.idle,
+        [EducationPickerState.selectionSet]: {
+          id: EducationPickerState.selectionSet,
+          initial: EducationPickerState.checkIfSelectionReady,
           states: {
-            [State.idle]: {
+            [EducationPickerState.checkIfSelectionReady]: {
               on: {
                 '': [
-                  { target: State.specifierRequired, cond: (ctx, _) => isVocational(ctx.education.data.id) },
-                  { target: State.ready }
+                  {
+                    target: EducationPickerState.specifierRequired,
+                    cond: (ctx, _) => {
+                      const { selection } = ctx.education.data
+                      return isVocational(selection.level.id) && !selection.specifier
+                    }
+                  },
+                  { target: EducationPickerState.selectionReady }
                 ]
               }
             },
-            [State.specifierRequired]: {
+            [EducationPickerState.specifierRequired]: {
               on: {
+                [InteractionEvent.SELECT_EDUCATION_SPECIFIER]: {
+                  target: targetById(EducationPickerState.selectionSet),
+                  actions: Action.selectEducationSpecifier
+                },
                 [InteractionEvent.SELECT_EDUCATION]: {
-                  target: targetById(State.selected),
+                  target: targetById(EducationPickerState.selectionSet),
                   actions: Action.selectEducation
                 }
               }
             },
-            [State.ready]: {
+            [EducationPickerState.selectionReady]: {
               on: {
                 [InteractionEvent.SELECT_EDUCATION]: {
-                  target: targetById(State.selected),
-                  actions: Action.selectEducation
+                  target: targetById(EducationPickerState.selectionSet),
+                  actions: [Action.selectEducation, Action.clearEducationSpecifier]
                 },
                 [InteractionEvent.CONFIRM_EDUCATION]: {
-                  target: targetById(State.done)
+                  target: targetById(EducationPickerState.done)
                 }
               }
             }
@@ -78,11 +80,16 @@ const educationStates = {
         }
       },
       on: {
-        [InteractionEvent.CANCEL_EDUCATION]: State.collapsed
+        [InteractionEvent.CANCEL_EDUCATION]: EducationPickerState.formCollapsed
       }
     },
-    [State.done]: {
-      id: State.done
+    [EducationPickerState.done]: {
+      id: EducationPickerState.done,
+      on: {
+        '': [
+          { target: EducationPickerState.formCollapsed, actions: Action.addEducation }
+        ]
+      }
     }
   }
 }

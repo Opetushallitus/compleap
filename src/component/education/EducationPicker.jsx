@@ -7,16 +7,27 @@ import useObservable from 'component/generic/hook/useObservable'
 import EducationLevelPicker from 'component/education/EducationLevelPicker'
 import Button from 'component/generic/widget/Button'
 import { InteractionEvent } from 'state/events'
+import { EducationPickerState } from 'state/educationStates'
+
+const {
+  formCollapsed,
+  formOpen,
+  selectionSet,
+  specifierRequired,
+  selectionReady
+} = EducationPickerState
 
 const EducationPicker = () => {
   const context$ = useContext(Context)
-  const selectionState = useObservable(context$, { path: ['value', 'profile', 'education', 'open', 'selected'] })
-  const selectedId = useObservable(context$, { path: ['context', 'education', 'data', 'id'] })
-  const isCollapsed = useObservable(context$, { path: ['value', 'profile', 'education'] }) === 'collapsed'
+  const isCollapsed = useObservable(context$, { path: ['value', 'profile', 'education'] }) === formCollapsed
+  const selectionState = useObservable(context$, { path: ['value', 'profile', 'education', formOpen, selectionSet] })
+  const selectedId = useObservable(context$, { path: ['context', 'education', 'data', 'selection', 'level', 'id'] })
+  const selectedSpecifierId = useObservable(context$, { path: ['context', 'education', 'data', 'selection', 'specifier', 'id'] })
+  const hasSpecifier = !!selectedSpecifierId
 
   if (isCollapsed) {
     return (
-      <Button onClick={() => dispatch(InteractionEvent.ENTER_EDUCATION)}>
+      <Button onClick={() => dispatch(InteractionEvent.BEGIN_EDUCATION_INPUT)}>
         {t`Lisää muualla kuin Suomessa suoritettu tutkinto`}
       </Button>
     )
@@ -30,12 +41,13 @@ const EducationPicker = () => {
       <EducationLevelPicker
         options={Object.entries(educations)}
         selectedId={selectedId}
-        requireSpecifier={selectionState === 'specifierRequired'}
+        selectedSpecifierId={selectedSpecifierId}
+        showSpecifierPicker={selectionState === specifierRequired || hasSpecifier}
       />
       <Button onClick={() => dispatch(InteractionEvent.CANCEL_EDUCATION)}>
         {t`Peruuta`}
       </Button>
-      <Button onClick={() => dispatch(InteractionEvent.CONFIRM_EDUCATION)} disabled={selectionState !== 'ready'}>
+      <Button onClick={() => dispatch(InteractionEvent.CONFIRM_EDUCATION)} disabled={selectionState !== selectionReady}>
         {t`Valmis`}
       </Button>
     </React.Fragment>

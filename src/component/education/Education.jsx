@@ -7,12 +7,19 @@ import EducationPicker from 'component/education/EducationPicker'
 const Education = () => {
   const context$ = useContext(Context)
   const status = useObservable(context$, { path: ['value', 'profile', 'education'] })
-  const selectedEducation = useObservable(context$, { path: ['context', 'education', 'data'] })
+  const educationsList = useObservable(context$, { path: ['context', 'education', 'data', 'educations'] })
 
   if (status !== 'done') return <EducationPicker/>
 
   return (
-    <div>{educations[selectedEducation.id]}</div>
+    <React.Fragment>
+      {
+        educationsList.map(education => (
+          <div key={education.id}>{educations[education.id]}</div>
+        ))
+      }
+      <EducationPicker/>
+    </React.Fragment>
   )
 }
 
