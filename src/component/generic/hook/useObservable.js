@@ -20,5 +20,8 @@ export default (observable, { path = undefined, skipDuplicates = false }) => {
     []
   )
 
+  if (v === undefined) console.warn('Observable has value undefined')
+  else if (v === null) console.warn('Observable has value null')
+
   return v
 }
