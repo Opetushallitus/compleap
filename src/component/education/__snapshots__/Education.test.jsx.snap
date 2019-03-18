@@ -1,0 +1,31 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Education should show added educations 1`] = `
+<section>
+  <div>
+    Perusopetus
+    <button
+      className="sc-bdVaJa gDfxFS"
+      onClick={[Function]}
+    >
+      Poista tutkinto
+    </button>
+  </div>
+  <div>
+    Ammatillinen tutkinto
+     (Käsityöalat)
+    <button
+      className="sc-bdVaJa gDfxFS"
+      onClick={[Function]}
+    >
+      Poista tutkinto
+    </button>
+  </div>
+  <button
+    className="sc-bdVaJa gDfxFS"
+    onClick={[Function]}
+  >
+    Lisää muualla kuin Suomessa suoritettu tutkinto
+  </button>
+</section>
+`;
