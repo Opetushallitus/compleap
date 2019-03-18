@@ -19,6 +19,7 @@ const EducationLevelPicker = ({ options, selectedId, selectedSpecifierId, addedS
             id={id}
             type='radio'
             name='level'
+            checked={selectedId === id}
             onChange={({ target }) => dispatch({ type: InteractionEvent.SELECT_EDUCATION, data: { id: target.id } })}
           />
           <label htmlFor={id}>

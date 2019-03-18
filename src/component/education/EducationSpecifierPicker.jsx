@@ -17,7 +17,7 @@ const EducationSpecifierPicker = ({ selectedId = '', addedIds }) => {
     <div>
       <p>{t`Miltä alalta tutkinto on?`}</p>
       <select
-        defaultValue={selectedId}
+        value={selectedId}
         onChange={({ target }) => dispatch({ type: InteractionEvent.SELECT_EDUCATION_SPECIFIER, data: { id: target.value } })}
       >
         <option value='' disabled>{t`Hae alaa`}</option>
