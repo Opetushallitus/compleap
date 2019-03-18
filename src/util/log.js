@@ -1,7 +1,7 @@
-const MaxTitleLength = 60
+const MaxTitleLength = 100
 
 const logGroupDetailFormat = 'color: #777777; font-weight: 400;'
-const logGroupHighlightFormat = 'color: #444444; font-weight: 600;'
+const logGroupHighlightFormat = 'color: #999999; font-weight: 600;'
 
 const createStamp = () => {
   const date = new Date()
@@ -32,5 +32,5 @@ export const logEvent = event => {
 
 export const logState = state => {
   const states = state.toStrings()
-  logUpdate('state', states[states.length - 1], state)
+  logUpdate('state', states.reverse().join(', '), state)
 }
