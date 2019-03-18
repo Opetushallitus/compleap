@@ -91,6 +91,11 @@ const educationStates = {
         ]
       }
     }
+  },
+  on: {
+    [InteractionEvent.REMOVE_EDUCATION]: {
+      actions: Action.removeEducation
+    }
   }
 }
 

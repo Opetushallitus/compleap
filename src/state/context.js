@@ -1,5 +1,6 @@
 import * as R from 'ramda'
 import { assign } from 'xstate'
+import uuid from 'uuid/v4'
 import {
   educationsLens,
   findSubtopicIndex,
@@ -17,7 +18,7 @@ export const context = {
   education: {
     data: {
       /**
-       * [{ level: { id }, specifier?: { id } }]
+       * [{ id, level: { id }, specifier?: { id } }]
        */
       educations: [],
       /**
@@ -36,7 +37,8 @@ export const Action = Object.freeze({
   selectEducationSpecifier: 'selectEducationSpecifier',
   clearEducationSelection: 'clearEducationSelection',
   clearEducationSpecifier: 'clearEducationSpecifier',
-  addEducation: 'addEducation'
+  addEducation: 'addEducation',
+  removeEducation: 'removeEducation'
 })
 
 export const actions = {
@@ -82,6 +84,12 @@ export const actions = {
     education: (ctx, _) => R.dissocPath(['data', 'selection', 'specifier'], ctx.education)
   }),
   [Action.addEducation]: assign({
-    education: (ctx, _) => R.over(educationsLens(), R.append(ctx.education.data.selection), ctx.education)
+    education: (ctx, _) => R.over(educationsLens(), R.append(R.assoc('id', uuid(), ctx.education.data.selection)), ctx.education)
+  }),
+  [Action.removeEducation]: assign({
+    education: (ctx, event) => {
+      const i = R.findIndex(({ id }) => id === event.data.id, ctx.education.data.educations)
+      return R.dissocPath(['data', 'educations', i], ctx.education)
+    }
   })
 }
