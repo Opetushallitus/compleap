@@ -10,25 +10,30 @@ const isMostSpecific = (v, k) => k.length === 4
 const specifiers = R.pickBy(isMostSpecific, educationClassification)
 const keysById = R.sort(R.comparator(R.lt), Object.keys(specifiers))
 
-const EducationSpecifierPicker = ({ selectedId = '' }) => (
-  <div>
-    <p>{t`Miltä alalta tutkinto on?`}</p>
-    <select
-      defaultValue={selectedId}
-      onChange={({ target }) => dispatch({ type: InteractionEvent.SELECT_EDUCATION_SPECIFIER, data: { id: target.value } })}
-    >
-      <option value='' disabled>{t`Hae alaa`}</option>
-      {keysById.map(k => (
-        <option key={k} value={k}>
-          {t(specifiers[k])}
-        </option>)
-      )}
-    </select>
-  </div>
-)
+const EducationSpecifierPicker = ({ selectedId = '', addedIds }) => {
+  const availableOptions = keysById.filter(k => !addedIds.includes(k))
+
+  return (
+    <div>
+      <p>{t`Miltä alalta tutkinto on?`}</p>
+      <select
+        defaultValue={selectedId}
+        onChange={({ target }) => dispatch({ type: InteractionEvent.SELECT_EDUCATION_SPECIFIER, data: { id: target.value } })}
+      >
+        <option value='' disabled>{t`Hae alaa`}</option>
+        {availableOptions.map(k => (
+          <option key={k} value={k}>
+            {t(specifiers[k])}
+          </option>)
+        )}
+      </select>
+    </div>
+  )
+}
 
 EducationSpecifierPicker.propTypes = {
-  selectedId: PropTypes.string
+  selectedId: PropTypes.string,
+  addedIds: PropTypes.array
 }
 
 export default EducationSpecifierPicker

@@ -1,4 +1,5 @@
 import React, { useContext } from 'react'
+import * as R from 'ramda'
 import educations from 'educations'
 import { Context, dispatch } from 'state/state'
 import t from 'util/translate'
@@ -21,9 +22,13 @@ const EducationPicker = () => {
   const context$ = useContext(Context)
   const isCollapsed = useObservable(context$, { path: ['value', 'profile', 'education'] }) === formCollapsed
   const selectionState = useObservable(context$, { path: ['value', 'profile', 'education', formOpen, selectionSet] })
+
   const selectedId = useObservable(context$, { path: ['context', 'education', 'data', 'selection', 'level', 'id'] })
   const selectedSpecifierId = useObservable(context$, { path: ['context', 'education', 'data', 'selection', 'specifier', 'id'] })
+  const addedEducations = useObservable(context$, { path: ['context', 'education', 'data', 'educations'] })
+
   const hasSpecifier = !!selectedSpecifierId
+  const addedEducationSpecifierIds = addedEducations.map(R.view(R.lensPath(['specifier', 'id']))).filter(v => !!v)
 
   if (isCollapsed) {
     return (
@@ -42,6 +47,7 @@ const EducationPicker = () => {
         options={Object.entries(educations)}
         selectedId={selectedId}
         selectedSpecifierId={selectedSpecifierId}
+        addedSpecifierIds={addedEducationSpecifierIds}
         showSpecifierPicker={selectionState === specifierRequired || hasSpecifier}
       />
       <Button onClick={() => dispatch(InteractionEvent.CANCEL_EDUCATION)}>

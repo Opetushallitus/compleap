@@ -10,7 +10,7 @@ const EducationOptionsList = styled.ul`
   list-style: none;
 `
 
-const EducationLevelPicker = ({ options, selectedId, selectedSpecifierId, showSpecifierPicker = false }) => (
+const EducationLevelPicker = ({ options, selectedId, selectedSpecifierId, addedSpecifierIds, showSpecifierPicker = false }) => (
   <EducationOptionsList>
     {
       options.map(([id, education]) => (
@@ -25,7 +25,12 @@ const EducationLevelPicker = ({ options, selectedId, selectedSpecifierId, showSp
             {t(education)}
           </label>
           {
-            selectedId === id && showSpecifierPicker && <EducationSpecifierPicker selectedId={selectedSpecifierId}/>
+            selectedId === id && showSpecifierPicker && (
+              <EducationSpecifierPicker
+                selectedId={selectedSpecifierId}
+                addedIds={addedSpecifierIds}
+              />
+            )
           }
         </li>
       ))
@@ -37,6 +42,7 @@ EducationLevelPicker.propTypes = {
   options: PropTypes.array.isRequired,
   selectedId: PropTypes.string,
   selectedSpecifierId: PropTypes.string,
+  addedSpecifierIds: PropTypes.array,
   showSpecifierPicker: PropTypes.bool
 }
 
