@@ -7,11 +7,13 @@ import { dispatch } from 'state/state'
 import { InteractionEvent } from 'state/events'
 
 const isMostSpecific = (v, k) => k.length === 4
-const specifiers = R.pickBy(isMostSpecific, educationClassification)
-const keysById = R.sort(R.comparator(R.lt), Object.keys(specifiers))
+const pickMostSpecifics = R.pickBy(isMostSpecific)
+const toSelectOptions = R.compose(R.map(([id, label]) => ({ id, label })), R.toPairs)
+const sortById = R.sortBy(R.prop('id'))
+const specifiers = R.compose(sortById, toSelectOptions, pickMostSpecifics)(educationClassification)
 
 const EducationSpecifierPicker = ({ selectedId = '', addedIds }) => {
-  const availableOptions = keysById.filter(k => !addedIds.includes(k))
+  const availableOptions = specifiers.filter(({ id }) => !addedIds.includes(id))
 
   return (
     <div>
@@ -21,9 +23,9 @@ const EducationSpecifierPicker = ({ selectedId = '', addedIds }) => {
         onChange={({ target }) => dispatch({ type: InteractionEvent.SELECT_EDUCATION_SPECIFIER, data: { id: target.value } })}
       >
         <option value='' disabled>{t`Hae alaa`}</option>
-        {availableOptions.map(k => (
-          <option key={k} value={k}>
-            {t(specifiers[k])}
+        {availableOptions.map(({ id, label }) => (
+          <option key={id} value={id}>
+            {t(label)}
           </option>)
         )}
       </select>
