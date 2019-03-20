@@ -71,6 +71,10 @@ const educationStates = {
                   target: targetById(EducationPickerState.selectionSet),
                   actions: [Action.selectEducation, Action.clearEducationSpecifier]
                 },
+                [InteractionEvent.SELECT_EDUCATION_SPECIFIER]: {
+                  target: targetById(EducationPickerState.selectionSet),
+                  actions: Action.selectEducationSpecifier
+                },
                 [InteractionEvent.CONFIRM_EDUCATION]: {
                   target: targetById(EducationPickerState.done)
                 }
