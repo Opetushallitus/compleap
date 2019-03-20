@@ -3,7 +3,7 @@ import * as R from 'ramda'
 import educations from 'educations'
 import { Context, dispatch } from 'state/state'
 import t from 'util/translate'
-import { H2, H3 } from 'ui/typography'
+import { H3 } from 'ui/typography'
 import useObservable from 'component/generic/hook/useObservable'
 import EducationLevelPicker from 'component/education/EducationLevelPicker'
 import Button from 'component/generic/widget/Button'
@@ -40,7 +40,6 @@ const EducationPicker = () => {
 
   return (
     <React.Fragment>
-      <H2>{t`Koulutukset`}</H2>
       <H3>{t`Olen suorittanut tutkinnon ulkomailla`}</H3>
       <p>{t`Minkä tasoisesta tutkinnosta on kyse?`}</p>
       <EducationLevelPicker
