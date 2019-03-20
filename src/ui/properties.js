@@ -2,10 +2,12 @@ import { css } from 'styled-components'
 
 export const roundedRectangle = css`
   border-radius: 3px;
+  padding: 0.6rem 2rem;
 `
 
 export const rounded = css`
   border-radius: 25px;
+  padding: 0.6rem 2rem;
 `
 
 export const primary = css`

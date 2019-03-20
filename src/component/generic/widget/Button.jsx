@@ -25,7 +25,6 @@ const resolveButtonStyle = type => {
 const BaseButtonStyle = styled.button`
   display: inline-block;
   border: none;
-  padding: 0.6rem 2rem;
   font-size: ${props => props.theme.font.size.base};
   cursor: pointer;
   text-align: center;

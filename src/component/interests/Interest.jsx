@@ -3,18 +3,18 @@ import PropTypes from 'prop-types'
 import styled from 'styled-components'
 import { dispatch } from 'state/state'
 import { InteractionEvent } from 'state/events'
+import { rounded } from 'ui/properties'
 
 const TopicBubble = styled.button`
   display: inline-block;
-  width: 5rem;
-  height: 5rem;
   padding: 0;
   margin: 0.5rem;
   background: ${({ theme, selected, hasParent }) =>
     selected ? theme.color.primary : hasParent ? theme.color.gray : theme.color.white};
   border: solid 1px ${({ theme, hasParent }) => hasParent ? 'transparent' : theme.color.black};
-  border-radius: 50%;
   cursor: pointer;
+
+  ${rounded}
 `
 
 const SubtopicList = styled.ul`
