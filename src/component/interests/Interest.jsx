@@ -11,7 +11,7 @@ const TopicBubble = styled.button`
   padding: 0;
   margin: 0.5rem;
   background: ${({ theme, selected, hasParent }) =>
-    selected ? theme.color.background.accent : hasParent ? theme.color.gray : theme.color.white};
+    selected ? theme.color.primary : hasParent ? theme.color.gray : theme.color.white};
   border: solid 1px ${({ theme, hasParent }) => hasParent ? 'transparent' : theme.color.black};
   border-radius: 50%;
   cursor: pointer;

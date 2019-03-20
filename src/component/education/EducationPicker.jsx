@@ -32,7 +32,7 @@ const EducationPicker = () => {
 
   if (isCollapsed) {
     return (
-      <Button onClick={() => dispatch(InteractionEvent.BEGIN_EDUCATION_INPUT)}>
+      <Button type='secondary' onClick={() => dispatch(InteractionEvent.BEGIN_EDUCATION_INPUT)}>
         {t`Lisää muualla kuin Suomessa suoritettu tutkinto`}
       </Button>
     )
@@ -50,7 +50,7 @@ const EducationPicker = () => {
         addedSpecifierIds={addedEducationSpecifierIds}
         showSpecifierPicker={selectionState === specifierRequired || hasSpecifier}
       />
-      <Button onClick={() => dispatch(InteractionEvent.CANCEL_EDUCATION)}>
+      <Button type='text' onClick={() => dispatch(InteractionEvent.CANCEL_EDUCATION)}>
         {t`Peruuta`}
       </Button>
       <Button onClick={() => dispatch(InteractionEvent.CONFIRM_EDUCATION)} disabled={selectionState !== selectionReady}>

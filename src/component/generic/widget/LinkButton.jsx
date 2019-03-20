@@ -1,10 +1,10 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import styled from 'styled-components'
-import { SolidButtonStyle } from 'component/generic/widget/Button'
+import { PrimaryButtonStyle } from 'component/generic/widget/Button'
 import { transition } from 'router/router'
 
-const LinkButtonStyle = styled(SolidButtonStyle)`
+const LinkButtonStyle = styled(PrimaryButtonStyle)`
   text-decoration: none;
 `
 
