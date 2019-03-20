@@ -8,32 +8,53 @@ import EducationSpecifierPicker from 'component/education/EducationSpecifierPick
 
 const EducationOptionsList = styled.ul`
   list-style: none;
+  padding-left: 1rem;
+`
+
+const EducationOption = styled.li`
+  margin: 0.5rem 0;
+`
+
+const EducationOptionInput = styled.input`
+  width: 1rem;
+  height: 1rem;
+  margin: 0;
+`
+
+const EducationOptionLabel = styled.label`
+  margin-left: 0.75rem;
+`
+
+const EducationSpecifierContainer = styled.div`
+  margin-left: 1.75rem;
 `
 
 const EducationLevelPicker = ({ options, selectedId, selectedSpecifierId, addedSpecifierIds, showSpecifierPicker = false }) => (
   <EducationOptionsList>
     {
       options.map(([id, education]) => (
-        <li key={id}>
-          <input
+        <EducationOption key={id}>
+          <EducationOptionInput
             id={id}
             type='radio'
             name='level'
             checked={selectedId === id}
             onChange={({ target }) => dispatch({ type: InteractionEvent.SELECT_EDUCATION, data: { id: target.id } })}
           />
-          <label htmlFor={id}>
+          <EducationOptionLabel htmlFor={id}>
             {t(education)}
-          </label>
+          </EducationOptionLabel>
           {
             selectedId === id && showSpecifierPicker && (
-              <EducationSpecifierPicker
-                selectedId={selectedSpecifierId}
-                addedIds={addedSpecifierIds}
-              />
+              <EducationSpecifierContainer>
+                <EducationSpecifierPicker
+                  selectedId={selectedSpecifierId}
+                  addedIds={addedSpecifierIds}
+                />
+              </EducationSpecifierContainer>
             )
           }
-        </li>
+        </EducationOption>
       ))
     }
   </EducationOptionsList>
