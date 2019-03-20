@@ -36,6 +36,7 @@ const BaseButtonStyle = styled.button`
 
   &:disabled {
     ${disabled}
+    cursor: default;
   }
 
   &:focus {
