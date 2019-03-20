@@ -89,6 +89,10 @@ export const actions = {
   [Action.removeEducation]: assign({
     education: (ctx, event) => {
       const i = R.findIndex(({ id }) => id === event.data.id, ctx.education.data.educations)
+      if (i === -1) {
+        console.error(`Tried to remove education, but could not find one with id ${event.data.id}`)
+        return
+      }
       return R.dissocPath(['data', 'educations', i], ctx.education)
     }
   })

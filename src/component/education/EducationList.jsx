@@ -35,7 +35,7 @@ const EducationList = () => {
           {specifier && <DetailsText>{educationClassification[specifier.id]}</DetailsText>}
         </div>
         <div>
-          <Button type='text' onClick={() => dispatch({ type: InteractionEvent.REMOVE_EDUCATION, data: { level, specifier } })}>
+          <Button type='text' onClick={() => dispatch({ type: InteractionEvent.REMOVE_EDUCATION, data: { id } })}>
             {t`Poista tutkinto`}
           </Button>
         </div>
