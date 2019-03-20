@@ -1,5 +1,6 @@
 import React, { useContext } from 'react'
 import * as R from 'ramda'
+import styled from 'styled-components'
 import educations from 'educations'
 import { Context, dispatch } from 'state/state'
 import t from 'util/translate'
@@ -17,6 +18,10 @@ const {
   specifierRequired,
   selectionReady
 } = EducationPickerState
+
+const EducationPickerStyle = styled.div`
+  padding: 0.5rem 1rem;
+`
 
 const EducationPicker = () => {
   const context$ = useContext(Context)
@@ -39,7 +44,7 @@ const EducationPicker = () => {
   }
 
   return (
-    <React.Fragment>
+    <EducationPickerStyle>
       <H3>{t`Olen suorittanut tutkinnon ulkomailla`}</H3>
       <p>{t`Minkä tasoisesta tutkinnosta on kyse?`}</p>
       <EducationLevelPicker
@@ -55,7 +60,7 @@ const EducationPicker = () => {
       <Button onClick={() => dispatch(InteractionEvent.CONFIRM_EDUCATION)} disabled={selectionState !== selectionReady}>
         {t`Valmis`}
       </Button>
-    </React.Fragment>
+    </EducationPickerStyle>
   )
 }
 
