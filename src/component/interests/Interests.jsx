@@ -23,7 +23,7 @@ const Interests = () => {
   if (status === 'failure') return <div>{'error'}</div>
 
   return (
-    <section>
+    <React.Fragment>
       <H2>{t`Kiinnostukset`}</H2>
       <p>
         {t(
@@ -39,7 +39,7 @@ const Interests = () => {
           </li>
         ))}
       </TopicList>
-    </section>
+    </React.Fragment>
   )
 }
 

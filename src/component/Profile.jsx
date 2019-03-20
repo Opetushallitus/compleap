@@ -10,13 +10,21 @@ const ProfileContainer = styled.main`
   margin: auto;
 `
 
+const SectionContainer = styled.section`
+  margin-bottom: 2rem;
+`
+
 const Profile = () => (
   <ProfileContainer>
     <H1>
       {t`CompLeap`}
     </H1>
-    <Education/>
-    <Interests/>
+    <SectionContainer>
+      <Education/>
+    </SectionContainer>
+    <SectionContainer>
+      <Interests/>
+    </SectionContainer>
   </ProfileContainer>
 )
 

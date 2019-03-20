@@ -5,11 +5,11 @@ import t from 'util/translate'
 import { H2 } from 'ui/typography'
 
 const Education = () => (
-  <section>
+  <React.Fragment>
     <H2>{t`Koulutukset`}</H2>
     <EducationList/>
     <EducationPicker/>
-  </section>
+  </React.Fragment>
 )
 
 export default Education
