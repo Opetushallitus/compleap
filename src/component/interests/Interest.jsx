@@ -6,15 +6,20 @@ import { InteractionEvent } from 'state/events'
 import { rounded } from 'ui/properties'
 
 const TopicBubble = styled.button`
-  display: inline-block;
-  padding: 0;
-  margin: 0.5rem;
-  background: ${({ theme, selected, hasParent }) =>
-    selected ? theme.color.primary : hasParent ? theme.color.gray : theme.color.white};
-  border: solid 1px ${({ theme, hasParent }) => hasParent ? 'transparent' : theme.color.black};
-  cursor: pointer;
+  ${rounded};
 
-  ${rounded}
+  display: inline-block;
+  background: ${({ theme, hasParent }) => hasParent ? theme.color.accentLightest : theme.color.white};
+  border-style: solid;
+  border-width: ${({ theme, hasParent }) => hasParent ? '2px' : '3px'};
+  border-color: ${({ theme, hasParent, selected }) =>
+    selected
+      ? hasParent ? theme.color.accentDarker : theme.color.accent
+      : hasParent ? 'transparent' : theme.color.grayLighter};
+  cursor: pointer;
+  font-size: ${({ theme }) => theme.font.size.base};
+  padding: 0.5rem 1rem;
+  margin: 0.5rem 0.25rem;
 `
 
 const SubtopicList = styled.ul`

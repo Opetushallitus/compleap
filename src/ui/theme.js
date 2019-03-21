@@ -2,6 +2,7 @@ import { darken, lighten } from 'polished'
 
 const PrimaryColor = '#fff636'
 const SecondaryColor = '#282828'
+const AccentColor = '#23F0C7'
 const GrayColor = '#bcbcbc'
 
 /**
@@ -27,6 +28,11 @@ export default {
     secondaryLightest: lighten(0.225, SecondaryColor),
     secondaryDarker: darken(0.15, SecondaryColor),
     secondaryDarkest: darken(0.225, SecondaryColor),
+    accent: AccentColor,
+    accentLighter: lighten(0.15, AccentColor),
+    accentLightest: lighten(0.225, AccentColor),
+    accentDarker: darken(0.15, AccentColor),
+    accentDarkest: darken(0.225, AccentColor),
     background: lighten(0.2, GrayColor)
   },
   font: {
