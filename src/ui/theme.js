@@ -41,7 +41,8 @@ export default {
     }
   },
   layout: {
-    maxContentWidth: '800px',
-    breakpointFull: '600px'
+    maxContentWidth: '1000px',
+    breakpointFull: '600px',
+    footerHeight: '5rem'
   }
 }

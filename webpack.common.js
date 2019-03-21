@@ -21,6 +21,12 @@ module.exports = {
           'babel-loader',
           'eslint-loader'
         ]
+      },
+      {
+        test: /\.png$/,
+        use: [
+          'file-loader'
+        ]
       }
     ]
   },

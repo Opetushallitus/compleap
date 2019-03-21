@@ -1,11 +1,9 @@
 import React from 'react'
 import styled from 'styled-components'
-import t from 'util/translate'
-import { H1 } from 'ui/typography'
 import Education from 'component/education/Education'
 import Interests from 'component/interests/Interests'
 
-const ProfileContainer = styled.main`
+const ProfileContainer = styled.div`
   max-width: ${props => props.theme.layout.maxContentWidth};
   margin: auto;
 `
@@ -16,9 +14,6 @@ const SectionContainer = styled.section`
 
 const Profile = () => (
   <ProfileContainer>
-    <H1>
-      {t`CompLeap`}
-    </H1>
     <SectionContainer>
       <Education/>
     </SectionContainer>

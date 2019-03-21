@@ -5,10 +5,14 @@ const GlobalStyle = createGlobalStyle`
   body, button, input, optgroup, select, textarea {
     font-family: ${props => props.theme.font.family};
   }
+
+  body {
+    margin: 0;
+  }
   
   html {
     font-size: ${props => props.theme.font.size.baseCompact};
-    
+
     ${media.full`
       font-size: ${props => props.theme.font.size.base};
     `}
