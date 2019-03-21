@@ -30,7 +30,7 @@ export default {
     background: lighten(0.2, GrayColor)
   },
   font: {
-    family: `'Source Sans Pro', sans-serif`,
+    family: `'Roboto', sans-serif`,
     size: {
       xs: '0.75em',
       s: '0.857rem',

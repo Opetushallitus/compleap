@@ -7,7 +7,7 @@ import useObservable from 'component/generic/hook/useObservable'
 import t from 'util/translate'
 import Button from 'component/generic/widget/Button'
 import { InteractionEvent } from 'state/events'
-import { H4 } from 'ui/typography'
+import { H3 } from 'ui/typography'
 
 const EducationCard = styled.div`
   display: flex;
@@ -31,7 +31,7 @@ const EducationList = () => {
     educationsList && educationsList.map(({ id, level, specifier }) => (
       <EducationCard key={id}>
         <div>
-          <H4>{educations[level.id]}</H4>
+          <H3>{educations[level.id]}</H3>
           {specifier && <DetailsText>{educationClassification[specifier.id]}</DetailsText>}
         </div>
         <div>

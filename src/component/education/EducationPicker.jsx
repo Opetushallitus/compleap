@@ -4,12 +4,13 @@ import styled from 'styled-components'
 import educations from 'educations'
 import { Context, dispatch } from 'state/state'
 import t from 'util/translate'
-import { H3 } from 'ui/typography'
+import { H2 } from 'ui/typography'
 import useObservable from 'component/generic/hook/useObservable'
 import EducationLevelPicker from 'component/education/EducationLevelPicker'
 import Button from 'component/generic/widget/Button'
 import { InteractionEvent } from 'state/events'
 import { EducationPickerState } from 'state/educationStates'
+import { roundedRectangle } from 'ui/properties'
 
 const {
   formCollapsed,
@@ -20,7 +21,11 @@ const {
 } = EducationPickerState
 
 const EducationPickerStyle = styled.div`
-  padding: 0.5rem 1rem;
+  ${roundedRectangle};
+
+  max-width: 600px;
+  padding: 1.5rem 1rem;
+  box-shadow: 1px 1px 10px 1px ${({ theme }) => theme.color.grayLighter};
 `
 
 const EducationPicker = () => {
@@ -45,7 +50,7 @@ const EducationPicker = () => {
 
   return (
     <EducationPickerStyle>
-      <H3>{t`Olen suorittanut tutkinnon ulkomailla`}</H3>
+      <H2>{t`Olen suorittanut tutkinnon ulkomailla`}</H2>
       <p>{t`Minkä tasoisesta tutkinnosta on kyse?`}</p>
       <EducationLevelPicker
         options={Object.entries(educations)}

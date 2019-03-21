@@ -1,7 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 import t from 'util/translate'
-import { H2 } from 'ui/typography'
+import { H1 } from 'ui/typography'
 import { roundedRectangle } from 'ui/properties'
 
 const Placeholder = () => {
@@ -55,7 +55,7 @@ const Placeholder = () => {
 
 const Recommendations = () => (
   <React.Fragment>
-    <H2>{t`Suositellut opiskelupaikat`}</H2>
+    <H1>{t`Suositellut opiskelupaikat`}</H1>
     <Placeholder/>
   </React.Fragment>
 )

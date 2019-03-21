@@ -5,7 +5,7 @@ import Interest from 'component/interests/Interest'
 import { Context } from 'state/state'
 import useObservable from 'component/generic/hook/useObservable'
 import t from 'util/translate'
-import { H2, H3 } from 'ui/typography'
+import { H1, H2 } from 'ui/typography'
 
 const TopicList = styled.ul`
   list-style: none;
@@ -24,14 +24,14 @@ const Interests = () => {
 
   return (
     <React.Fragment>
-      <H2>{t`Kiinnostukset`}</H2>
+      <H1>{t`Kiinnostukset`}</H1>
       <p>
         {t(
           'Valitse mahdollisimman tarkasti mitkä allaolevista asioista sinua kiinnostavat. ' +
           'Mitä tarkemmin valitset, sitä tarkemmin pystymme etsimään sinulle sopivia koulutuksia.'
         )}
       </p>
-      <H3>{t`Valitse seuraavista ainakin 5 sinua kiinnostavaa asiaa`}</H3>
+      <H2>{t`Valitse seuraavista ainakin 5 sinua kiinnostavaa asiaa`}</H2>
       <TopicList>
         {interests.map(v => (
           <li key={v.topic}>
