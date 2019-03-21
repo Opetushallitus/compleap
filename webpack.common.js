@@ -1,3 +1,4 @@
+const webpack = require('webpack')
 const path = require('path')
 
 const CleanWebpackPlugin = require('clean-webpack-plugin')
@@ -40,6 +41,9 @@ module.exports = {
       filename: 'index.html',
       template: './src/index.html',
       title: 'CompLeap'
+    }),
+    new webpack.DefinePlugin({
+      'process.env.CONTEXT_VERSION': JSON.stringify('1')
     })
   ]
 }

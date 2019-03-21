@@ -11,6 +11,7 @@ import {
 } from 'state/helper'
 
 export const context = {
+  version: process.env.CONTEXT_VERSION,
   interests: {
     data: [],
     error: undefined
