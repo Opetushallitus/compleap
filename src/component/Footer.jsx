@@ -2,7 +2,7 @@ import React from 'react'
 import styled from 'styled-components'
 
 const FooterContainer = styled.footer`
-  background-color: ${({ theme }) => theme.color.grayLightest};
+  background-color: ${({ theme }) => theme.color.black};
   width: 100%;
   height: ${({ theme }) => theme.layout.footerHeight};
   position: absolute;

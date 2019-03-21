@@ -26,7 +26,8 @@ export default {
     secondaryLighter: lighten(0.15, SecondaryColor),
     secondaryLightest: lighten(0.225, SecondaryColor),
     secondaryDarker: darken(0.15, SecondaryColor),
-    secondaryDarkest: darken(0.225, SecondaryColor)
+    secondaryDarkest: darken(0.225, SecondaryColor),
+    background: lighten(0.2, GrayColor)
   },
   font: {
     family: `'Source Sans Pro', sans-serif`,
@@ -43,6 +44,6 @@ export default {
   layout: {
     maxContentWidth: '1000px',
     breakpointFull: '600px',
-    footerHeight: '5rem'
+    footerHeight: '3rem'
   }
 }

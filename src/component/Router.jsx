@@ -23,6 +23,7 @@ const Router = () => {
 
   console.debug(`Rendering view ${View.displayName}`)
 
+  document.body.id = View.displayName
   return <View/>
 }
 

@@ -14,10 +14,7 @@ const Container = styled.div`
 const Box = ({ children, align = 'left' }) => <Container textAlign={align}>{children}</Container>
 
 Box.propTypes = {
-  children: PropTypes.oneOfType([
-    PropTypes.arrayOf(PropTypes.node),
-    PropTypes.node
-  ]).isRequired,
+  children: PropTypes.oneOfType([PropTypes.arrayOf(PropTypes.node), PropTypes.node]).isRequired,
   align: PropTypes.oneOf(AlignType)
 }
 
