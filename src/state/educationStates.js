@@ -2,6 +2,8 @@ import { InteractionEvent } from 'state/events'
 import { Action } from 'state/context'
 
 const isVocational = id => id === '2'
+const isHigherEducation = id => ['4', '5', '6'].includes(id)
+const canHaveSpecifier = id => isVocational(id) || isHigherEducation(id)
 const targetById = id => `#${id}`
 
 export const EducationPickerState = Object.freeze({
@@ -46,7 +48,7 @@ const educationStates = {
                     target: EducationPickerState.specifierRequired,
                     cond: (ctx, _) => {
                       const { selection } = ctx.education.data
-                      return isVocational(selection.level.id) && !selection.specifier
+                      return canHaveSpecifier(selection.level.id) && !selection.specifier
                     }
                   },
                   { target: EducationPickerState.selectionReady }
