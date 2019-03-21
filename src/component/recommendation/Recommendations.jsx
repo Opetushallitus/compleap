@@ -8,6 +8,7 @@ const Placeholder = () => {
   const Container = styled.div`
     ${roundedRectangle};
     
+    align-self: stretch;
     min-height: 5rem;
     border: dashed 3px ${({ theme }) => theme.color.grayLightest}
     padding: 1rem;

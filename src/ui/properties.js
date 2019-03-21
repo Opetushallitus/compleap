@@ -10,6 +10,11 @@ export const rounded = css`
   padding: 0.6rem 2rem;
 `
 
+export const bordered = css`
+  border: solid 3px ${({ theme }) => theme.color.grayLightest}
+  margin: -1.5px;
+`
+
 export const primary = css`
   color: ${({ theme }) => theme.color.black};
   background-color: ${({ theme }) => theme.color.primary};

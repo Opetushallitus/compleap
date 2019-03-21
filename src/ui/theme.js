@@ -42,7 +42,7 @@ export default {
     }
   },
   layout: {
-    maxContentWidth: '1000px',
+    maxContentWidth: '920px',
     breakpointFull: '600px',
     footerHeight: '3rem'
   }

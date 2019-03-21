@@ -31,10 +31,10 @@ const BaseButtonStyle = styled.button`
   font-weight: 400;
   margin: ${ButtonFocusBorderWidth};
 
-  ${fadeColor}
+  ${fadeColor};
 
   &:disabled {
-    ${disabled}
+    ${disabled};
     cursor: default;
   }
 
@@ -46,11 +46,11 @@ const BaseButtonStyle = styled.button`
 `
 
 export const PrimaryButtonStyle = styled(BaseButtonStyle)`
-  ${primary}
-  ${roundedRectangle}
+  ${primary};
+  ${roundedRectangle};
 
   &:hover:enabled {
-    ${primaryDarker}
+    ${primaryDarker};
   }
 
   &:focus {
@@ -59,11 +59,11 @@ export const PrimaryButtonStyle = styled(BaseButtonStyle)`
 `
 
 export const SecondaryButtonStyle = styled(BaseButtonStyle)`
-  ${secondary}
-  ${rounded}
+  ${secondary};
+  ${rounded};
 
   &:hover:enabled {
-    ${secondaryDarker}
+    ${secondaryDarker};
   }
 
   &:focus {
@@ -74,7 +74,7 @@ export const SecondaryButtonStyle = styled(BaseButtonStyle)`
 export const TextButtonStyle = styled(BaseButtonStyle)`
   text-decoration: underline;
 
-  ${roundedRectangle}
+  ${roundedRectangle};
 
   &:hover:enabled {
     background-color: ${({ theme }) => theme.color.grayLightest};

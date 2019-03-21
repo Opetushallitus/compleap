@@ -8,15 +8,18 @@ import t from 'util/translate'
 import Button from 'component/generic/widget/Button'
 import { InteractionEvent } from 'state/events'
 import { H3 } from 'ui/typography'
+import { bordered, roundedRectangle } from 'ui/properties'
 
 const EducationCard = styled.div`
+  ${roundedRectangle}
+  ${bordered}
+
   display: flex;
   justify-content: space-between;
   align-items: center;
-  border: solid 1px ${({ theme }) => theme.color.gray};
-  max-width: 600px;
   padding: 1rem;
   margin-bottom: 1.5rem;
+  align-self: stretch;
 `
 
 const DetailsText = styled.p`

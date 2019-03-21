@@ -23,7 +23,7 @@ const {
 const EducationPickerStyle = styled.div`
   ${roundedRectangle};
 
-  max-width: 600px;
+  align-self: stretch;
   padding: 1.5rem 1rem;
   box-shadow: 1px 1px 10px 1px ${({ theme }) => theme.color.grayLighter};
 `

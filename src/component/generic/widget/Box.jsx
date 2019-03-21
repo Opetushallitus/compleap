@@ -4,17 +4,39 @@ import styled from 'styled-components'
 
 const AlignType = ['left', 'right', 'center']
 
+const alignToFlex = align => {
+  switch (align) {
+    case 'right': return 'flex-end'
+    case 'center': return 'center'
+    case 'left':
+    default:
+      return 'flex-start'
+  }
+}
+
 const Container = styled.div`
   max-width: ${({ theme }) => theme.layout.maxContentWidth}
   margin: auto;
   padding: 2rem 1rem;
-  text-align: ${({ textAlign }) => textAlign};
+  display: flex;
+  flex-wrap: nowrap;
+  flex-direction: column;
+  text-align: ${({ align }) => align};
+  align-items: ${({ align }) => alignToFlex(align)};
 `
 
-const Box = ({ children, align = 'left' }) => <Container textAlign={align}>{children}</Container>
+const Box = ({ children, className, align = 'left' }) => (
+  <Container
+    className={className}
+    align={align}
+  >
+    {children}
+  </Container>
+)
 
 Box.propTypes = {
   children: PropTypes.oneOfType([PropTypes.arrayOf(PropTypes.node), PropTypes.node]).isRequired,
+  className: PropTypes.string,
   align: PropTypes.oneOf(AlignType)
 }
 
