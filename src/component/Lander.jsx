@@ -1,13 +1,7 @@
 import React from 'react'
-import styled from 'styled-components'
 import t from 'util/translate'
+import Box from 'component/generic/widget/Box'
 import LinkButton from 'component/generic/widget/LinkButton'
-
-const Container = styled.div`
-  max-width: ${props => props.theme.layout.maxContentWidth};
-  margin: auto;
-  text-align: center;
-`
 
 const Brief = () => (
   <section>
@@ -25,10 +19,10 @@ const LoginPrompt = () => (
 )
 
 const Lander = () => (
-  <Container>
+  <Box align='center'>
     <Brief/>
     <LoginPrompt/>
-  </Container>
+  </Box>
 )
 
 Lander.displayName = 'Lander'

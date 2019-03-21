@@ -15,12 +15,8 @@ const PageContainer = styled.div`
 /**
  * For footer fixed to the bottom
  */
-const ContentWrapper = styled.div`
+const ContentContainer = styled.div`
   padding-bottom: ${({ theme }) => theme.layout.footerHeight}
-`
-
-const ContentContainer = styled.main`
-  padding: 2rem 1rem;
 `
 
 const App = () => (
@@ -29,11 +25,9 @@ const App = () => (
       <PageContainer>
         <GlobalStyle/>
         <TopBar/>
-        <ContentWrapper>
-          <ContentContainer>
-            <Router/>
-          </ContentContainer>
-        </ContentWrapper>
+        <ContentContainer>
+          <Router/>
+        </ContentContainer>
         <Footer/>
       </PageContainer>
     </ThemeProvider>
