@@ -30,7 +30,7 @@ export default {
     secondaryDarkest: darken(0.225, SecondaryColor),
     accent: AccentColor,
     accentLighter: lighten(0.15, AccentColor),
-    accentLightest: lighten(0.225, AccentColor),
+    accentLightest: lighten(0.4, AccentColor),
     accentDarker: darken(0.15, AccentColor),
     accentDarkest: darken(0.225, AccentColor),
     background: lighten(0.2, GrayColor)

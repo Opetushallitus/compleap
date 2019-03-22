@@ -14,6 +14,10 @@ const TopicList = styled.ul`
   padding: 0;
 `
 
+const TopicListItem = styled.li`
+  display: contents;
+`
+
 const Interests = () => {
   const context$ = useContext(Context)
   const status = useObservable(context$, { path: ['value', 'profile', 'interests'] })
@@ -34,9 +38,9 @@ const Interests = () => {
       <H2>{t`Valitse seuraavista ainakin 5 sinua kiinnostavaa asiaa`}</H2>
       <TopicList>
         {interests.map(v => (
-          <li key={v.topic}>
+          <TopicListItem key={v.topic}>
             <Interest interest={v}/>
-          </li>
+          </TopicListItem>
         ))}
       </TopicList>
     </React.Fragment>

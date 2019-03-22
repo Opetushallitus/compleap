@@ -28,6 +28,17 @@ module.exports = {
         use: [
           'file-loader'
         ]
+      },
+      {
+        test: /\.svg$/,
+        use: [
+          {
+            loader: '@svgr/webpack',
+            options: {
+              icon: true
+            }
+          }
+        ]
       }
     ]
   },
