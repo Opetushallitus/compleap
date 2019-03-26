@@ -18,6 +18,7 @@ const service = interpret(machine)
 
 export const dispatch = event => {
   logEvent(event)
+  validateEvent(event)
   service.send(event)
 }
 

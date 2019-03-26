@@ -1,0 +1,23 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "SelectEducationEvent",
+  "description": "Event REMOVE_EDUCATION",
+  "type": "object",
+  "properties": {
+    "type": {
+      "const": "REMOVE_EDUCATION"
+    },
+    "data": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type":  "string"
+        }
+      },
+      "required": [ "id" ],
+      "additionalProperties": false
+    }
+  },
+  "required": [ "type", "data" ],
+  "additionalProperties": false
+}
