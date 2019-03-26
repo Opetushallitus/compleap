@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 import styled from 'styled-components'
 import {
   disabled,
-  fadeColor,
+  fadeColor, padded,
   primary,
   primaryDarker, rounded,
   roundedRectangle,
@@ -48,6 +48,7 @@ const BaseButtonStyle = styled.button`
 export const PrimaryButtonStyle = styled(BaseButtonStyle)`
   ${primary};
   ${roundedRectangle};
+  ${padded};
 
   &:hover:enabled {
     ${primaryDarker};
@@ -75,6 +76,7 @@ export const TextButtonStyle = styled(BaseButtonStyle)`
   text-decoration: underline;
 
   ${roundedRectangle};
+  ${padded};
 
   &:hover:enabled {
     background-color: ${({ theme }) => theme.color.grayLightest};

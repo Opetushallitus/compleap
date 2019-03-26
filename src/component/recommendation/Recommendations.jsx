@@ -2,11 +2,12 @@ import React from 'react'
 import styled from 'styled-components'
 import t from 'util/translate'
 import { H1 } from 'ui/typography'
-import { roundedRectangle } from 'ui/properties'
+import { padded, roundedRectangle } from 'ui/properties'
 
 const Placeholder = () => {
   const Container = styled.div`
     ${roundedRectangle};
+    ${padded};
     
     align-self: stretch;
     min-height: 5rem;
@@ -21,6 +22,7 @@ const Placeholder = () => {
 
   const Expander = styled.div`
     ${roundedRectangle};
+    ${padded};
     
     height: 3rem;
     background-color: ${({ theme }) => theme.color.grayLightest};

@@ -2,6 +2,9 @@ import { css } from 'styled-components'
 
 export const roundedRectangle = css`
   border-radius: 3px;
+`
+
+export const padded = css`
   padding: 0.6rem 2rem;
 `
 

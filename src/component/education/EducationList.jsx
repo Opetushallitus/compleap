@@ -8,11 +8,12 @@ import t from 'util/translate'
 import Button from 'component/generic/widget/Button'
 import { InteractionEvent } from 'state/events'
 import { H3 } from 'ui/typography'
-import { bordered, roundedRectangle } from 'ui/properties'
+import { bordered, padded, roundedRectangle } from 'ui/properties'
 
 const EducationCard = styled.div`
-  ${roundedRectangle}
-  ${bordered}
+  ${roundedRectangle};
+  ${padded};
+  ${bordered};
 
   display: flex;
   justify-content: space-between;

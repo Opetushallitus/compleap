@@ -14,7 +14,7 @@ const StyledSection = styled.section`
   margin-top: ${({ even, first }) => even && !first && '-5vw'};
 }
 
-  & svg {
+  & > svg {
     display: block;
     width: 100%;
     height: 6vw;

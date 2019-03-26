@@ -53,7 +53,6 @@ const Chip = ({ type = 'primary', selected = false, value, onClick, children }) 
             width: '1rem',
             height: '1rem',
             marginTop: '0.7rem',
-            marginLeft: '0.6rem',
             stroke: selected ? theme.color.white : isPrimary ? theme.color.grayLighter : theme.color.grayLighter,
             strokeWidth: 2
           }}/>
