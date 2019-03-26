@@ -6,6 +6,7 @@ import { machine } from 'state/machine'
 import { context } from 'state/context'
 import { logEvent, logState } from 'util/log'
 import { persist, restore } from 'state/persistence'
+import { validateEvent } from 'state/validate/validate'
 
 export const state = Atom(context)
 export const Context = React.createContext()
