@@ -13,7 +13,20 @@ const Container = styled.div`
   max-width: 500px;
 `
 
-const SearchableDropdown = ({ placeholder, options, selectedId, locale = 'fi-FI' }) => {
+const useInputFilter = (inputBusRef, filterFn, onInputChange, onResultChange) => useEffect(() => {
+  const inputBus = new B.Bus()
+  inputBusRef.current = inputBus
+  const resultStream = inputBus.map(filterFn)
+
+  const subscriptions = [
+    inputBus.onValue(onInputChange),
+    resultStream.onValue(onResultChange)
+  ]
+
+  return () => subscriptions.forEach(unsubscribe => unsubscribe())
+})
+
+const Select = ({ placeholder, options, selectedId, locale = 'fi-FI' }) => {
   const [rawInput, setRawInput] = useState('')
   const [isFocused, setIsFocused] = useState(false)
   const [filteredOptions, setFilteredOptions] = useState(options)
@@ -21,38 +34,30 @@ const SearchableDropdown = ({ placeholder, options, selectedId, locale = 'fi-FI'
   const inputFieldRef = useRef()
   const inputBusRef = useRef()
 
-  useEffect(() => {
-    const inputBus = new B.Bus()
-    inputBusRef.current = inputBus
-    const resultStream = inputBus.map(doFilter)
+  const resetInput = () => inputBusRef.current && inputBusRef.current.push('')
+  const closeOptions = () => inputFieldRef.current && inputFieldRef.current.blur()
 
-    const subscriptions = [
-      inputBus.onValue(setRawInput),
-      resultStream.onValue(setFilteredOptions)
-    ]
+  const onInputFocus = () => {
+    resetInput()
+    setIsFocused(true)
+  }
 
-    return () => subscriptions.forEach(unsubscribe => unsubscribe())
-  })
+  const onInputBlur = () => {
+    resetInput()
+    setIsFocused(false)
+  }
+
+  const selectOption = id => {
+    dispatch({ type: InteractionEvent.SELECT_EDUCATION_SPECIFIER, data: { id } })
+    resetInput()
+    closeOptions()
+  }
 
   const doFilter = input =>
     options.filter(({ label }) =>
       label.toLocaleLowerCase(locale).includes(input.toLocaleLowerCase(locale)))
 
-  const onInputFocus = () => {
-    inputBusRef.current.push('')
-    setIsFocused(true)
-  }
-
-  const onInputBlur = () => {
-    inputBusRef.current.push('')
-    setIsFocused(false)
-  }
-
-  const onSelectOption = id => {
-    dispatch({ type: InteractionEvent.SELECT_EDUCATION_SPECIFIER, data: { id } })
-    inputBusRef.current.push('')
-    inputFieldRef.current.blur()
-  }
+  useInputFilter(inputBusRef, doFilter, setRawInput, setFilteredOptions)
 
   const selectedOption = options.find(({ id }) => id === selectedId)
   const selectedLabel = selectedOption ? selectedOption.label : ''
@@ -67,16 +72,22 @@ const SearchableDropdown = ({ placeholder, options, selectedId, locale = 'fi-FI'
         onFocus={onInputFocus}
         onBlur={onInputBlur}
       />
-      {isFocused && <Options options={filteredOptions} onSelect={onSelectOption}/>}
+      {isFocused && (
+        <Options
+          options={filteredOptions}
+          onSelect={selectOption}
+          onEscape={() => inputFieldRef.current.blur()}
+        />
+      )}
     </Container>
   )
 }
 
-SearchableDropdown.propTypes = {
+Select.propTypes = {
   placeholder: PropTypes.string,
   options: PropTypes.array,
   selectedId: PropTypes.string.isRequired,
   locale: PropTypes.string
 }
 
-export default SearchableDropdown
+export default Select
