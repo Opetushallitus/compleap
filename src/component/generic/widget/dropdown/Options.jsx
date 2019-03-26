@@ -53,6 +53,8 @@ const Options = ({ options, onSelect, onEscape }) => {
     }
   })
 
+  if (options.length === 0) return null
+
   return (
     <Container>
       <ResultsPane>
