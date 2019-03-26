@@ -1,10 +1,15 @@
-import React from 'react'
+import React, { useContext } from 'react'
+import PropTypes from 'prop-types'
 import styled from 'styled-components'
 import t from 'util/translate'
 import { H1 } from 'ui/typography'
-import { padded, roundedRectangle } from 'ui/properties'
+import { padded, roundedRectangle, shadowed } from 'ui/properties'
+import { Context } from 'state/state'
+import useObservable from 'component/generic/hook/useObservable'
+import { RecommendationsState } from 'state/recommendationStates'
+import useRecommendationsQuery from 'component/recommendation/useRecommendationsQuery'
 
-const Placeholder = () => {
+const Placeholder = ({ loading }) => {
   const Container = styled.div`
     ${roundedRectangle};
     ${padded};
@@ -13,6 +18,7 @@ const Placeholder = () => {
     min-height: 5rem;
     border: dashed 3px ${({ theme }) => theme.color.grayLightest}
     padding: 1rem;
+    opacity: ${loading ? 0.4 : 1.0};
   `
   const Text = styled.div`
     border-top: solid 4px ${({ theme, darker }) => darker ? theme.color.grayLighter : theme.color.grayLightest};
@@ -56,11 +62,63 @@ const Placeholder = () => {
   )
 }
 
-const Recommendations = () => (
-  <React.Fragment>
-    <H1>{t`Suositellut opiskelupaikat`}</H1>
-    <Placeholder/>
-  </React.Fragment>
+Placeholder.propTypes = {
+  loading: PropTypes.bool
+}
+
+const Message = styled.div`
+  ${roundedRectangle};
+  ${shadowed};
+
+  align-self: stretch;
+  padding: 1.5rem 1rem;
+  margin: 2rem 0 4rem 0;
+`
+
+const RequireInterests = () => (
+  <Message>
+    <b>
+      {t`Valitse ensin vähintään 5 kiinnostuksen kohdetta.`}
+    </b>
+  </Message>
 )
+
+const Content = ({ recommendations, show, isPending }) => {
+  if (!show) return <RequireInterests/>
+  if (isPending) return <Placeholder loading={true}/> // TODO replace with actual loading indicator
+
+  return <Placeholder/>
+}
+
+Content.propTypes = {
+  status: PropTypes.oneOf(Object.values(RecommendationsState)),
+  recommendations: PropTypes.any,
+  show: PropTypes.bool,
+  isPending: PropTypes.bool
+}
+
+const Recommendations = () => {
+  const context$ = useContext(Context)
+  const status = useObservable(context$, { path: ['value', 'profile', 'recommendations'] })
+
+  const educations$ = context$.map(({ context }) => context.education.data.educations)
+  const interests$ = context$.map(({ context }) => context.interests.data)
+
+  const [recommendations, shouldShowRecommendations] = useRecommendationsQuery(educations$, interests$)
+
+  return (
+    <React.Fragment>
+      <H1>{t`Suositellut opiskelupaikat`}</H1>
+      <p>
+        {t`Näytetään opintojesi ja valitsemiesi kiinnostusten perusteella sinulle sopivimpia opiskelupaikkoja hakualueeltasi. Voit halutessasi rajata aluetta tarkemmin.`}
+      </p>
+      <Content
+        recommendations={recommendations}
+        show={shouldShowRecommendations}
+        isPending={status === RecommendationsState.pending}
+      />
+    </React.Fragment>
+  )
+}
 
 export default Recommendations

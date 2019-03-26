@@ -376,5 +376,11 @@
   },
   "Suositellut opiskelupaikat": {
     "fi": "Suositellut opiskelupaikat"
+  },
+  "Näytetään opintojesi ja valitsemiesi kiinnostusten perusteella sinulle sopivimpia opiskelupaikkoja hakualueeltasi. Voit halutessasi rajata aluetta tarkemmin.": {
+    "fi": "Näytetään opintojesi ja valitsemiesi kiinnostusten perusteella sinulle sopivimpia opiskelupaikkoja hakualueeltasi. Voit halutessasi rajata aluetta tarkemmin."
+  },
+  "Valitse ensin vähintään 5 kiinnostuksen kohdetta.": {
+    "fi": "Valitse ensin vähintään 5 kiinnostuksen kohdetta."
   }
 }

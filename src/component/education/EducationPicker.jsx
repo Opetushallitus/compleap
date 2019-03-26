@@ -10,7 +10,7 @@ import EducationLevelPicker from 'component/education/EducationLevelPicker'
 import Button from 'component/generic/widget/Button'
 import { InteractionEvent } from 'state/events'
 import { EducationPickerState } from 'state/educationStates'
-import { padded, roundedRectangle } from 'ui/properties'
+import { padded, roundedRectangle, shadowed } from 'ui/properties'
 
 const {
   formCollapsed,
@@ -23,10 +23,10 @@ const {
 const EducationPickerStyle = styled.div`
   ${roundedRectangle};
   ${padded};
+  ${shadowed};
 
   align-self: stretch;
   padding: 1.5rem 1rem;
-  box-shadow: 1px 1px 10px 1px ${({ theme }) => theme.color.grayLighter};
 `
 
 const EducationPicker = () => {

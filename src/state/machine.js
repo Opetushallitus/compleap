@@ -1,9 +1,10 @@
 import { Machine } from 'xstate'
 import { actions, context } from 'state/context'
 import services from 'state/services'
-import interestsStates from 'state/interestsStates'
 import { NavigationEvent } from 'state/events'
+import interestsStates from 'state/interestsStates'
 import educationStates from 'state/educationStates'
+import recommendationStates from 'state/recommendationStates'
 
 export const PageState = Object.freeze({
   lander: 'lander',
@@ -12,7 +13,8 @@ export const PageState = Object.freeze({
 
 const SectionState = Object.freeze({
   education: 'education',
-  interests: 'interests'
+  interests: 'interests',
+  recommendations: 'recommendations'
 })
 
 export const machine = Machine({
@@ -31,7 +33,8 @@ export const machine = Machine({
       type: 'parallel',
       states: {
         [SectionState.education]: { ...educationStates },
-        [SectionState.interests]: { ...interestsStates }
+        [SectionState.interests]: { ...interestsStates },
+        [SectionState.recommendations]: { ...recommendationStates }
       },
       on: {
         [NavigationEvent.HOME]: PageState.lander

@@ -18,6 +18,10 @@ export const bordered = css`
   margin: -1.5px;
 `
 
+export const shadowed = css`
+  box-shadow: 1px 1px 10px 1px ${({ theme }) => theme.color.grayLighter};
+`
+
 export const primary = css`
   color: ${({ theme }) => theme.color.black};
   background-color: ${({ theme }) => theme.color.primary};

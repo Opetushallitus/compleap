@@ -13,3 +13,9 @@ export const InteractionEvent = Object.freeze({
   CANCEL_EDUCATION: 'CANCEL_EDUCATION',
   REMOVE_EDUCATION: 'REMOVE_EDUCATION'
 })
+
+export const RecommendationsStatusEvent = Object.freeze({
+  QUERY_PENDING: 'QUERY_PENDING',
+  QUERY_SUCCESS: 'QUERY_SUCCESS',
+  QUERY_FAILURE: 'QUERY_FAILURE'
+})

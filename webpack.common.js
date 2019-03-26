@@ -54,7 +54,7 @@ module.exports = {
       title: 'CompLeap'
     }),
     new webpack.DefinePlugin({
-      'process.env.CONTEXT_VERSION': JSON.stringify('1')
+      'process.env.CONTEXT_VERSION': JSON.stringify('2')
     })
   ]
 }
