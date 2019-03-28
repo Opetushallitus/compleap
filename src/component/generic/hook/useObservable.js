@@ -1,8 +1,12 @@
 import { useEffect, useState } from 'react'
 
-export default (observable, { path = undefined, skipDuplicates = false }) => {
+export default (observable, options) => {
+  const defaultOptions = { path: undefined, skipDuplicates: false }
+  const mergedOptions = Object.assign({}, defaultOptions, options)
+  const { path, skipDuplicates } = mergedOptions
+
   const lensed = path ? observable.view(path) : observable
-  const [v, setV] = useState(lensed.get())
+  const [v, setV] = useState(lensed.get ? lensed.get() : undefined)
 
   const eqCheck = (() => {
     switch (typeof skipDuplicates) {

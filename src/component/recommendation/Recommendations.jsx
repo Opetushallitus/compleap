@@ -1,6 +1,8 @@
 import React, { useContext } from 'react'
 import PropTypes from 'prop-types'
 import styled from 'styled-components'
+import B from 'baconjs'
+import * as R from 'ramda'
 import t from 'util/translate'
 import { H1 } from 'ui/typography'
 import { padded, roundedRectangle, shadowed } from 'ui/properties'
@@ -8,6 +10,7 @@ import { Context } from 'state/state'
 import useObservable from 'component/generic/hook/useObservable'
 import { RecommendationsState } from 'state/recommendationStates'
 import useRecommendationsQuery from 'component/recommendation/useRecommendationsQuery'
+import { subtopicsLens } from 'state/helper'
 
 const Placeholder = ({ loading }) => {
   const Container = styled.div`
@@ -97,6 +100,12 @@ Content.propTypes = {
   isPending: PropTypes.bool
 }
 
+const MinInterestsRequired = 5
+
+const extractSubtopics = R.compose(R.flatten, R.map(R.view(subtopicsLens())))
+const withoutSubtopics = R.map(R.omit('subtopics'))
+const countSelectedTopics = R.compose(R.length, R.filter(R.propEq('selected', true)))
+
 const Recommendations = () => {
   const context$ = useContext(Context)
   const status = useObservable(context$, { path: ['value', 'profile', 'recommendations'] })
@@ -104,7 +113,14 @@ const Recommendations = () => {
   const educations$ = context$.map(({ context }) => context.education.data.educations)
   const interests$ = context$.map(({ context }) => context.interests.data)
 
-  const [recommendations, shouldShowRecommendations] = useRecommendationsQuery(educations$, interests$)
+  const flattenedTopics$ = interests$.map(interests => R.concat(withoutSubtopics(interests), extractSubtopics(interests)))
+  const numSelectedInterests$ = flattenedTopics$.map(countSelectedTopics)
+  const hasRequiredInterests$ = numSelectedInterests$.map(v => v >= MinInterestsRequired).toProperty()
+
+  const queryParams$ = B.combineTemplate({ educations: educations$, interests: interests$ })
+
+  const recommendations = useRecommendationsQuery(queryParams$, hasRequiredInterests$)
+  const hasRequiredInterests = useObservable(hasRequiredInterests$, { skipDuplicates: true })
 
   return (
     <React.Fragment>
@@ -114,7 +130,7 @@ const Recommendations = () => {
       </p>
       <Content
         recommendations={recommendations}
-        show={shouldShowRecommendations}
+        show={hasRequiredInterests}
         isPending={status === RecommendationsState.pending}
       />
     </React.Fragment>
