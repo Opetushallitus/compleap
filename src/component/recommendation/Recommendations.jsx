@@ -86,18 +86,15 @@ const RequireInterests = () => (
   </Message>
 )
 
-const Content = ({ recommendations, show, isPending }) => {
-  if (!show) return <RequireInterests/>
-  if (isPending) return <Placeholder loading={true}/> // TODO replace with actual loading indicator
+const RecommendationResults = ({ recommendations, status }) => {
+  if (status === RecommendationsState.pending) return <Placeholder loading={true}/> // TODO replace with actual loading indicator
 
   return <Placeholder/>
 }
 
-Content.propTypes = {
-  status: PropTypes.oneOf(Object.values(RecommendationsState)),
+RecommendationResults.propTypes = {
   recommendations: PropTypes.any,
-  show: PropTypes.bool,
-  isPending: PropTypes.bool
+  status: PropTypes.oneOf(Object.values(RecommendationsState))
 }
 
 const MinInterestsRequired = 5
@@ -128,11 +125,11 @@ const Recommendations = () => {
       <p>
         {t`Näytetään opintojesi ja valitsemiesi kiinnostusten perusteella sinulle sopivimpia opiskelupaikkoja hakualueeltasi. Voit halutessasi rajata aluetta tarkemmin.`}
       </p>
-      <Content
-        recommendations={recommendations}
-        show={hasRequiredInterests}
-        isPending={status === RecommendationsState.pending}
-      />
+      {
+        hasRequiredInterests
+          ? <RecommendationResults recommendations={recommendations} status={status}/>
+          : <RequireInterests/>
+      }
     </React.Fragment>
   )
 }
