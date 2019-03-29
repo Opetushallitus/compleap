@@ -7,8 +7,8 @@ import { Context } from 'state/state'
 import { subtopicsLens } from 'state/helper'
 import useObservable from 'component/generic/hook/useObservable'
 import useRecommendationsQuery from 'component/recommendations/useRecommendationsQuery'
-import Recommendation from 'component/recommendations/recommendation/Recommendation'
 import RequireInterestsMessage from 'component/recommendations/require-interests/RequireInterestsMessage'
+import RecommendationList from 'component/recommendations/recommendation-list/RecommendationList'
 
 const MIN_INTERESTS_REQUIRED = 5
 
@@ -28,8 +28,9 @@ const Recommendations = () => {
   const hasRequiredInterests$ = numSelectedInterests$.map(v => v >= MIN_INTERESTS_REQUIRED).toProperty()
 
   const queryParams$ = B.combineTemplate({ educations: educations$, interests: interests$ })
+  const recommendationsResponse = useRecommendationsQuery(queryParams$, hasRequiredInterests$)
 
-  const recommendations = useRecommendationsQuery(queryParams$, hasRequiredInterests$)
+  const recommendations = recommendationsResponse && recommendationsResponse.data
   const hasRequiredInterests = useObservable(hasRequiredInterests$, { skipDuplicates: true })
 
   return (
@@ -40,7 +41,7 @@ const Recommendations = () => {
       </p>
       {
         hasRequiredInterests
-          ? <Recommendation recommendations={recommendations} status={status}/>
+          ? <RecommendationList recommendations={recommendations} status={status}/>
           : <RequireInterestsMessage/>
       }
     </React.Fragment>

@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 import styled from 'styled-components'
 import { padded, roundedRectangle } from 'ui/properties'
 
-const RecommendationsPlaceholder = ({ loading }) => {
+const Placeholder = ({ loading }) => {
   const Container = styled.div`
     ${roundedRectangle};
     ${padded};
@@ -56,8 +56,8 @@ const RecommendationsPlaceholder = ({ loading }) => {
   )
 }
 
-RecommendationsPlaceholder.propTypes = {
+Placeholder.propTypes = {
   loading: PropTypes.bool
 }
 
-export default RecommendationsPlaceholder
+export default Placeholder

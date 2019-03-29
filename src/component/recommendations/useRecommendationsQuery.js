@@ -5,13 +5,15 @@ import { dispatch } from 'state/state'
 import { RecommendationsStatusEvent } from 'state/events'
 import mockRequest from 'util/mockRequest'
 
+const RandomTempData = () => Math.floor(Math.random() * Math.floor(100))
+
 // TODO Implement API
 const doQueryRecommendations = ({ educations, interests }) => {
   dispatch(RecommendationsStatusEvent.QUERY_PENDING)
 
   return mockRequest(
     { educations, interests },
-    { status: 'ok', data: Math.floor(Math.random() * Math.floor(100)) }, // random placeholder data
+    { status: 'ok', data: [RandomTempData(), RandomTempData(), RandomTempData()] }, // random placeholder data
     true
   )
 }
