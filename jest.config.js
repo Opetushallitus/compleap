@@ -9,5 +9,9 @@ module.exports = {
   ],
   'moduleNameMapper': {
     'test/(.*)$': '<rootDir>/test/$1'
+  },
+  transform: {
+    '^.+\\.jsx?$': 'babel-jest',
+    '^.+\\.svg$': 'jest-svg-transformer'
   }
 }
