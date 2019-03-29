@@ -2,6 +2,7 @@ import React, { useContext } from 'react'
 import { Context } from 'state/state'
 import Lander from 'component/Lander'
 import Profile from 'component/Profile'
+import NotFound from 'component/NotFound'
 import useObservable from 'component/generic/hook/useObservable'
 import { PageState } from 'state/machine'
 
@@ -12,7 +13,12 @@ const pages = [
 
 const resolve = state => {
   const page = pages.find(page => state.matches(page.state))
-  if (!page) throw new Error(`Could not resolve view for state ${state.value}`)
+
+  if (!page) {
+    console.error(`Could not resolve view for state ${state.value}`)
+    return NotFound
+  }
+
   return page.view
 }
 
