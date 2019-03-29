@@ -2,7 +2,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import t from 'util/translate'
 import { RecommendationsState } from 'state/recommendationStates'
-import RecommendationsPlaceholder from 'component/recommendations/RecommendationsPlaceholder'
+import RecommendationsPlaceholder from 'component/recommendations/recommendation/fragment/RecommendationsPlaceholder'
 import Expander from 'component/generic/widget/Expander'
 import Disclaimer from 'component/generic/widget/Disclaimer'
 

@@ -8,7 +8,7 @@ import { subtopicsLens } from 'state/helper'
 import useObservable from 'component/generic/hook/useObservable'
 import useRecommendationsQuery from 'component/recommendations/useRecommendationsQuery'
 import Recommendation from 'component/recommendations/recommendation/Recommendation'
-import RequireInterestsMessage from 'component/recommendations/RequireInterestsMessage'
+import RequireInterestsMessage from 'component/recommendations/require-interests/RequireInterestsMessage'
 
 const MIN_INTERESTS_REQUIRED = 5
 

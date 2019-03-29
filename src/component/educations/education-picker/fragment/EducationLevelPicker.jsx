@@ -4,7 +4,7 @@ import styled from 'styled-components'
 import { dispatch } from 'state/state'
 import { InteractionEvent } from 'state/events'
 import t from 'util/translate'
-import EducationSpecifierPicker from 'component/education/EducationSpecifierPicker'
+import EducationSpecifierPicker from 'component/educations/education-picker/fragment/EducationSpecifierPicker'
 
 const EducationOptionsList = styled.ul`
   list-style: none;

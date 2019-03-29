@@ -1,7 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import styled from 'styled-components'
-import Education from 'component/education/Education'
+import Educations from 'component/educations/Educations'
 import Interests from 'component/interests/Interests'
 import Box from 'component/generic/widget/Box'
 import theme from 'ui/theme'
@@ -55,7 +55,7 @@ const Profile = () => (
   <React.Fragment>
     <SectionContainer even={true} first={true}>
       <Box>
-        <Education/>
+        <Educations/>
       </Box>
     </SectionContainer>
     <SectionContainer even={false}>

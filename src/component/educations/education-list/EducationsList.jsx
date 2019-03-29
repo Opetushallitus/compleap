@@ -27,7 +27,7 @@ const DetailsText = styled.p`
   margin-bottom: 0;
 `
 
-const EducationList = () => {
+const EducationsList = () => {
   const context$ = useContext(Context)
   const educationsList = useObservable(context$, { path: ['context', 'education', 'data', 'educations'] })
 
@@ -48,4 +48,4 @@ const EducationList = () => {
   )
 }
 
-export default EducationList
+export default EducationsList

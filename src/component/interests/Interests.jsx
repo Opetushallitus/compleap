@@ -1,7 +1,7 @@
 import React, { useContext } from 'react'
 import PropTypes from 'prop-types'
 import styled from 'styled-components'
-import Interest from 'component/interests/Interest'
+import Interest from 'component/interests/interest/Interest'
 import { Context } from 'state/state'
 import useObservable from 'component/generic/hook/useObservable'
 import t from 'util/translate'

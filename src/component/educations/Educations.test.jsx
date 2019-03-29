@@ -45,7 +45,7 @@ describe('Education', () => {
   it('should show added educations', () => {
     let Education
     mockState('formCollapsed')
-    jest.isolateModules(() => { Education = require('./Education').default })
+    jest.isolateModules(() => { Education = require('./Educations').default })
 
     const renderedJSON = createRendererWithTheme(<Education/>).toJSON()
     expect(renderedJSON).toMatchSnapshot()
