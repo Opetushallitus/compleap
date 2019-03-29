@@ -10,7 +10,7 @@ describe('Lander', () => {
     expect(pageTitle).toMatch('CompLeap')
   })
 
-  it('should display correct heading', async () => {
-    await expect(page).toMatchElement('h1', { text: 'CompLeap' })
+  it('should show login button', async () => {
+    await expect(page).toMatchElement('a', { text: 'Kirjaudu sisään' })
   })
 })
