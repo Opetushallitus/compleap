@@ -4,6 +4,7 @@ import styled from 'styled-components'
 import theme from 'ui/theme'
 import { rounded } from 'ui/properties'
 import Checkmark from 'asset/checkmark.svg'
+import { children } from 'util/proptype'
 
 const ChipType = ['primary', 'secondary']
 
@@ -68,7 +69,7 @@ Chip.propTypes = {
   value: PropTypes.string.isRequired,
   hasParent: PropTypes.bool,
   onClick: PropTypes.func.isRequired,
-  children: PropTypes.oneOfType([PropTypes.arrayOf(PropTypes.node), PropTypes.node]).isRequired
+  children
 }
 
 export default Chip

@@ -4,6 +4,7 @@ import t from 'util/translate'
 import { RecommendationsState } from 'state/recommendationStates'
 import RecommendationsPlaceholder from 'component/recommendation/RecommendationsPlaceholder'
 import Expander from 'component/generic/widget/Expander'
+import Disclaimer from 'component/generic/widget/Disclaimer'
 
 // TODO Handle translations for recommendations
 
@@ -60,7 +61,9 @@ const RecommendationResults = ({ recommendations, status }) => {
   }
 
   const CertificateDisclaimer = () =>
-    <p>{t`Huomaa, että sinun on pyydettäessä pystyttävä näyttämään todistukset aikaisemmista opinnoistasi. Tällä tavoin varmistetaan, että pystyt oikeasti hakemaan haluamaasi koulutukseen.`}</p>
+    <Disclaimer>
+      <p>{t`Huomaa, että sinun on pyydettäessä pystyttävä näyttämään todistukset aikaisemmista opinnoistasi. Tällä tavoin varmistetaan, että pystyt oikeasti hakemaan haluamaasi koulutukseen.`}</p>
+    </Disclaimer>
 
   return (
     <Expander header={Header}>

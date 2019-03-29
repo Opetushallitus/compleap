@@ -6,6 +6,7 @@ import Interests from 'component/interests/Interests'
 import Box from 'component/generic/widget/Box'
 import theme from 'ui/theme'
 import Recommendations from 'component/recommendation/Recommendations'
+import { children } from 'util/proptype'
 
 const StyledSection = styled.section`
   position: relative;
@@ -28,7 +29,7 @@ const Svg = ({ children }) => (
 )
 
 Svg.propTypes = {
-  children: PropTypes.oneOfType([PropTypes.arrayOf(PropTypes.node), PropTypes.node]).isRequired
+  children
 }
 
 const SectionContainer = ({ even, first = false, last = false, children }) => {
@@ -47,7 +48,7 @@ SectionContainer.propTypes = {
   even: PropTypes.bool.isRequired,
   first: PropTypes.bool,
   last: PropTypes.bool,
-  children: PropTypes.oneOfType([PropTypes.arrayOf(PropTypes.node), PropTypes.node]).isRequired
+  children
 }
 
 const Profile = () => (

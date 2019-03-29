@@ -1,6 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import styled from 'styled-components'
+import { children } from 'util/proptype'
 
 const AlignType = ['left', 'right', 'center']
 
@@ -35,7 +36,7 @@ const Box = ({ children, className, align = 'left' }) => (
 )
 
 Box.propTypes = {
-  children: PropTypes.oneOfType([PropTypes.arrayOf(PropTypes.node), PropTypes.node]).isRequired,
+  children,
   className: PropTypes.string,
   align: PropTypes.oneOf(AlignType)
 }

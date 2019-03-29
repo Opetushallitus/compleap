@@ -20,7 +20,7 @@ export default {
     grayDarkest: darken(0.3, GrayColor),
     primary: PrimaryColor,
     primaryLighter: lighten(0.15, PrimaryColor),
-    primaryLightest: lighten(0.225, PrimaryColor),
+    primaryLightest: lighten(0.3, PrimaryColor),
     primaryDarker: darken(0.15, PrimaryColor),
     primaryDarkest: darken(0.225, PrimaryColor),
     secondary: SecondaryColor,

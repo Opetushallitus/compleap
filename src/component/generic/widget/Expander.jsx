@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
-import PropTypes from 'prop-types'
 import styled from 'styled-components'
 import { bordered } from 'ui/properties'
+import { children } from 'util/proptype'
 
 const HORIZONTAL_WHITESPACE = 1
 
@@ -45,10 +45,9 @@ const Expander = ({ header, children }) => {
   )
 }
 
-const nodesType = PropTypes.oneOfType([PropTypes.arrayOf(PropTypes.node), PropTypes.node]).isRequired
 Expander.propTypes = {
-  header: nodesType,
-  children: nodesType
+  header: children,
+  children
 }
 
 export default Expander
