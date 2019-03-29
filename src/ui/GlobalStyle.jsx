@@ -14,6 +14,10 @@ const GlobalStyle = createGlobalStyle`
     }
   }
   
+  p {
+    line-height: 1.6em;
+  }
+
   html {
     font-size: ${props => props.theme.font.size.baseCompact};
 
