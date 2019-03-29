@@ -5,7 +5,7 @@ import Education from 'component/education/Education'
 import Interests from 'component/interests/Interests'
 import Box from 'component/generic/widget/Box'
 import theme from 'ui/theme'
-import Recommendations from 'component/recommendation/Recommendations'
+import Recommendations from 'component/recommendations/Recommendations'
 import { children } from 'util/proptype'
 
 const StyledSection = styled.section`

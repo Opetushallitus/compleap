@@ -6,9 +6,9 @@ import { H1 } from 'ui/typography'
 import { Context } from 'state/state'
 import { subtopicsLens } from 'state/helper'
 import useObservable from 'component/generic/hook/useObservable'
-import useRecommendationsQuery from 'component/recommendation/useRecommendationsQuery'
-import RecommendationResults from 'component/recommendation/RecommendationResults'
-import RequireInterestsMessage from 'component/recommendation/RequireInterestsMessage'
+import useRecommendationsQuery from 'component/recommendations/useRecommendationsQuery'
+import Recommendation from 'component/recommendations/recommendation/Recommendation'
+import RequireInterestsMessage from 'component/recommendations/RequireInterestsMessage'
 
 const MIN_INTERESTS_REQUIRED = 5
 
@@ -40,7 +40,7 @@ const Recommendations = () => {
       </p>
       {
         hasRequiredInterests
-          ? <RecommendationResults recommendations={recommendations} status={status}/>
+          ? <Recommendation recommendations={recommendations} status={status}/>
           : <RequireInterestsMessage/>
       }
     </React.Fragment>

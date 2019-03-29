@@ -2,7 +2,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import t from 'util/translate'
 import { RecommendationsState } from 'state/recommendationStates'
-import RecommendationsPlaceholder from 'component/recommendation/RecommendationsPlaceholder'
+import RecommendationsPlaceholder from 'component/recommendations/RecommendationsPlaceholder'
 import Expander from 'component/generic/widget/Expander'
 import Disclaimer from 'component/generic/widget/Disclaimer'
 
@@ -21,7 +21,7 @@ SummaryHeader.propTypes = {
   numApplicationOptions: PropTypes.number.isRequired
 }
 
-const RecommendationResults = ({ recommendations, status }) => {
+const Recommendation = ({ recommendations, status }) => {
   if (status === RecommendationsState.pending) return <RecommendationsPlaceholder loading={true}/> // TODO replace with actual loading indicator
 
   const Header = (
@@ -76,9 +76,9 @@ const RecommendationResults = ({ recommendations, status }) => {
   )
 }
 
-RecommendationResults.propTypes = {
+Recommendation.propTypes = {
   recommendations: PropTypes.any,
   status: PropTypes.oneOf(Object.values(RecommendationsState))
 }
 
-export default RecommendationResults
+export default Recommendation
