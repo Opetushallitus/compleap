@@ -28,6 +28,10 @@ const ChipButton = styled.button`
   height: 2.45rem;
   box-shadow: ${({ theme, selected }) => selected ? `0 5px 10px 2px ${theme.color.gray}` : 'unset'};
   
+  &:active {
+    color: ${({ theme }) => theme.color.black};
+  }
+
   &:focus {
     outline: 0;
   }

@@ -14,6 +14,7 @@ const ExpanderContainer = styled.div`
 
 const Header = styled.button`
   border: none;
+  margin: 0;
   padding: 1rem ${0.5 * HORIZONTAL_WHITESPACE}rem;
   text-align: left;
   cursor: pointer;

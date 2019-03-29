@@ -76,6 +76,7 @@ export const SecondaryButtonStyle = styled(BaseButtonStyle)`
 export const TextButtonStyle = styled(BaseButtonStyle)`
   text-decoration: underline;
   color: ${({ theme }) => theme.color.black};
+  background: none;
 
   ${roundedRectangle};
   ${padded};
