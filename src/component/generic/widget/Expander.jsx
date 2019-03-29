@@ -1,6 +1,5 @@
 import React, { useState } from 'react'
 import styled from 'styled-components'
-import { bordered } from 'ui/properties'
 import { children } from 'util/proptype'
 
 const HORIZONTAL_WHITESPACE = 1
@@ -10,17 +9,16 @@ const ExpanderContainer = styled.div`
   flex-direction: column;
   align-items: stretch;
   width: 100%;
+  box-shadow: 0 2px 5px 1px ${({ theme }) => theme.color.grayLighter};
 `
 
 const Header = styled.button`
-  ${bordered};
-  
-  padding: ${0.5 * HORIZONTAL_WHITESPACE}rem;
+  border: none;
+  padding: 1rem ${0.5 * HORIZONTAL_WHITESPACE}rem;
   text-align: left;
   cursor: pointer;
   font-size: ${({ theme }) => theme.font.size.base};
   background-color: ${({ theme }) => theme.color.primary};
-  border-color: ${({ theme }) => theme.color.primary};
   
   &:focus {
     outline: none;
@@ -28,8 +26,8 @@ const Header = styled.button`
 `
 
 const Content = styled.div`
-  ${bordered};
   padding: ${HORIZONTAL_WHITESPACE}rem 1rem;
+  background-color: ${({ theme }) => theme.color.white};
 `
 
 const Expander = ({ header, children }) => {
