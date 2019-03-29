@@ -1,59 +1,576 @@
-[{
-  "topic": "Autot",
-  "subtopics": [{
-    "topic": "Virittely ja korjaaminen"
-  }, {
-    "topic": "Autolla ajaminen"
-  }, {
-    "topic": "Urheiluautot"
-  }, {
-    "topic": "Raskaat ajoneuvot"
-  }, {
-    "topic": "Henkilöautot"
-  }]
-}, {
-  "topic": "Musiikki",
-  "subtopics": []
-}, {
-  "topic": "Luonto ja ympäristö",
-  "subtopics": []
-}, {
-  "topic": "Käsin tekeminen",
-  "subtopics": []
-}, {
-  "topic": "Taide",
-  "subtopics": []
-}, {
-  "topic": "Terveys",
-  "subtopics": []
-}, {
-  "topic": "Ruoka",
-  "subtopics": []
-}, {
-  "topic": "Matkailu",
-  "subtopics": []
-}, {
-  "topic": "Lapset ja nuoret",
-  "subtopics": []
-}, {
-  "topic": "Rakentaminen",
-  "subtopics": []
-}, {
-  "topic": "Talous- ja raha-asiat",
-  "subtopics": []
-}, {
-  "topic": "Koneet",
-  "subtopics": []
-}, {
-  "topic": "Lukeminen",
-  "subtopics": []
-}, {
-  "topic": "Kielet",
-  "subtopics": []
-}, {
-  "topic": "Tietokoneet",
-  "subtopics": []
-}, {
-  "topic": "Ihmisten auttaminen",
-  "subtopics": []
-}]
+[
+  {
+    "topic": "Transversal skills/competences",
+    "subtopics": [
+      {
+        "topic": "place drywall"
+      },
+      {
+        "topic": "teach air cabin crew procedures"
+      },
+      {
+        "topic": "leather products maintenance"
+      },
+      {
+        "topic": "risk assessment for window cleaning"
+      },
+      {
+        "topic": "supervise court hearings"
+      },
+      {
+        "topic": "dive with scuba equipment"
+      },
+      {
+        "topic": "first aid"
+      },
+      {
+        "topic": "electrical testing methods"
+      },
+      {
+        "topic": "analyse curriculum"
+      },
+      {
+        "topic": "social mediation"
+      },
+      {
+        "topic": "understand the emotional dimension of a performance"
+      },
+      {
+        "topic": "questioned document examination"
+      },
+      {
+        "topic": "system backup best practice"
+      },
+      {
+        "topic": "solid-state chemistry"
+      },
+      {
+        "topic": "upgrade firmware"
+      },
+      {
+        "topic": "dyeing technology"
+      },
+      {
+        "topic": "implement ICT risk management"
+      },
+      {
+        "topic": "manufacture texturised filament yarns"
+      }
+    ]
+  },
+  {
+    "topic": "dig wells",
+    "subtopics": [
+      {
+        "topic": "develop architectural plans"
+      },
+      {
+        "topic": "dispatch order processing"
+      },
+      {
+        "topic": "monitor gauge"
+      },
+      {
+        "topic": "types of concrete pumps"
+      },
+      {
+        "topic": "determine image composition"
+      },
+      {
+        "topic": "trading law"
+      },
+      {
+        "topic": "types of barley"
+      },
+      {
+        "topic": "maintain service record book"
+      },
+      {
+        "topic": "components of air conditioning systems"
+      },
+      {
+        "topic": "document seismic research"
+      },
+      {
+        "topic": "use painting equipment"
+      },
+      {
+        "topic": "primary care"
+      }
+    ]
+  },
+  {
+    "topic": "cut photographic film",
+    "subtopics": [
+      {
+        "topic": "develop food production processes"
+      },
+      {
+        "topic": "collect domestic waste"
+      },
+      {
+        "topic": "assemble truss constructions"
+      },
+      {
+        "topic": "create underwriting guidelines"
+      },
+      {
+        "topic": "operate in a specific field of nursing care"
+      },
+      {
+        "topic": "operate metal sheet shaker"
+      },
+      {
+        "topic": "wide web flexographic printing press"
+      },
+      {
+        "topic": "locomotive brake applications"
+      },
+      {
+        "topic": "apply desktop publishing techniques"
+      },
+      {
+        "topic": "apply footwear finishing techniques"
+      },
+      {
+        "topic": "match vessels to shipping routes"
+      },
+      {
+        "topic": "obtain permits for use of public spaces"
+      },
+      {
+        "topic": "place gypsum blocks"
+      }
+    ]
+  },
+  {
+    "topic": "types of packaging materials",
+    "subtopics": [
+      {
+        "topic": "finish concrete sections"
+      },
+      {
+        "topic": "in-circuit test"
+      },
+      {
+        "topic": "public housing legislation"
+      },
+      {
+        "topic": "apply foreign languages in social services"
+      },
+      {
+        "topic": "metallurgy"
+      },
+      {
+        "topic": "asphalt mixes"
+      },
+      {
+        "topic": "advise on healthy lifestyles"
+      },
+      {
+        "topic": "make logistical arrangements"
+      },
+      {
+        "topic": "apply for work permits"
+      },
+      {
+        "topic": "arrange equipment repairs"
+      },
+      {
+        "topic": "drive mobile heavy construction equipment"
+      },
+      {
+        "topic": "execute after sales activities"
+      },
+      {
+        "topic": "perform scientific research"
+      },
+      {
+        "topic": "operate motorised street sweeping machine"
+      },
+      {
+        "topic": "load film reels"
+      },
+      {
+        "topic": "adjust clay burning level"
+      },
+      {
+        "topic": "assemble visitor supplies"
+      },
+      {
+        "topic": "operate tractor"
+      }
+    ]
+  },
+  {
+    "topic": "assess the life cycle of resources",
+    "subtopics": [
+      {
+        "topic": "prepare for diagnostic imaging procedures"
+      },
+      {
+        "topic": "test lift operation"
+      },
+      {
+        "topic": "turf management"
+      },
+      {
+        "topic": "railway law"
+      },
+      {
+        "topic": "edit greeting card sentiments"
+      },
+      {
+        "topic": "operate metal polishing equipment"
+      },
+      {
+        "topic": "read scripts"
+      },
+      {
+        "topic": "maintain inventory of office supplies"
+      },
+      {
+        "topic": "plan learning curriculum"
+      },
+      {
+        "topic": "cultivate plankton production"
+      },
+      {
+        "topic": "manufacturing of sports equipment"
+      },
+      {
+        "topic": "keep records of bid history"
+      },
+      {
+        "topic": "manage construction archive"
+      },
+      {
+        "topic": "explain accounting records"
+      },
+      {
+        "topic": "install heating boiler"
+      },
+      {
+        "topic": "pharmaceutical processes"
+      }
+    ]
+  },
+  {
+    "topic": "assist in library facility planning",
+    "subtopics": [
+      {
+        "topic": "inspect industrial equipment"
+      },
+      {
+        "topic": "inspect for unauthorised connections"
+      },
+      {
+        "topic": "supervise waste water treatments"
+      },
+      {
+        "topic": "methods of drying timber"
+      },
+      {
+        "topic": "allocate paychecks"
+      },
+      {
+        "topic": "handle cash flow"
+      },
+      {
+        "topic": "create original drawings"
+      },
+      {
+        "topic": "advise on soil and water protection"
+      },
+      {
+        "topic": "produce guitar components"
+      },
+      {
+        "topic": "follow written instructions"
+      },
+      {
+        "topic": "design piers"
+      },
+      {
+        "topic": "evidence-based approach in general practice"
+      },
+      {
+        "topic": "investigation research methods"
+      },
+      {
+        "topic": "implement instructions"
+      }
+    ]
+  },
+  {
+    "topic": "install software",
+    "subtopics": [
+      {
+        "topic": "install recycling containers"
+      },
+      {
+        "topic": "transmission towers"
+      },
+      {
+        "topic": "assess cereal quality for brewing"
+      },
+      {
+        "topic": "read books"
+      },
+      {
+        "topic": "use automatic programming"
+      },
+      {
+        "topic": "oversee delivery of fuel"
+      },
+      {
+        "topic": "teach marketing principles"
+      },
+      {
+        "topic": "hardware components"
+      },
+      {
+        "topic": "set up drilling rigs"
+      },
+      {
+        "topic": "unbind books"
+      },
+      {
+        "topic": "learn the choreographic material"
+      },
+      {
+        "topic": "zoo regulations"
+      },
+      {
+        "topic": "sell tickets"
+      },
+      {
+        "topic": "manage overdue library materials"
+      },
+      {
+        "topic": "ensure vehicle operability"
+      }
+    ]
+  },
+  {
+    "topic": "manage test drives",
+    "subtopics": [
+      {
+        "topic": "develop economic policies"
+      },
+      {
+        "topic": "anchors used in maritime water transport"
+      },
+      {
+        "topic": "participant observation"
+      },
+      {
+        "topic": "wood preservation"
+      },
+      {
+        "topic": "teach design and applied arts principles"
+      },
+      {
+        "topic": "plan the dispatching of products"
+      },
+      {
+        "topic": "produce copies of valuable objects"
+      },
+      {
+        "topic": "communicate analytical insights"
+      },
+      {
+        "topic": "operate barriers at level crossings"
+      },
+      {
+        "topic": "install lighting"
+      },
+      {
+        "topic": "quality criteria for storage facilities"
+      },
+      {
+        "topic": "take over pedal control"
+      },
+      {
+        "topic": "monitor live fish collection"
+      },
+      {
+        "topic": "craftsmanship"
+      },
+      {
+        "topic": "prepare balls of clay"
+      },
+      {
+        "topic": "conduct environmental surveys"
+      },
+      {
+        "topic": "operate shuttle car"
+      },
+      {
+        "topic": "types of paint"
+      },
+      {
+        "topic": "teach astronomy"
+      },
+      {
+        "topic": "apply scientific methods"
+      },
+      {
+        "topic": "history of dance style"
+      }
+    ]
+  },
+  {
+    "topic": "supervise accounting operations",
+    "subtopics": [
+      {
+        "topic": "teach principles of social work"
+      },
+      {
+        "topic": "perform maintenance on fire alarm systems"
+      },
+      {
+        "topic": "multimedia systems"
+      },
+      {
+        "topic": "check in luggage"
+      },
+      {
+        "topic": "assess performance in sport events"
+      },
+      {
+        "topic": "follow research on special needs education"
+      },
+      {
+        "topic": "banking activities"
+      },
+      {
+        "topic": "define geographic sales areas"
+      },
+      {
+        "topic": "develop food safety programmes"
+      },
+      {
+        "topic": "analyse economic trends"
+      },
+      {
+        "topic": "handle personal identifiable information"
+      },
+      {
+        "topic": "supervise pool activities"
+      },
+      {
+        "topic": "mathematics"
+      },
+      {
+        "topic": "teach ergonomics in work place"
+      }
+    ]
+  },
+  {
+    "topic": "innovation processes",
+    "subtopics": [
+      {
+        "topic": "pollution prevention"
+      },
+      {
+        "topic": "assistive instruments"
+      },
+      {
+        "topic": "attend rehearsals"
+      },
+      {
+        "topic": "markets for modes of transport"
+      },
+      {
+        "topic": "compare survey computations"
+      },
+      {
+        "topic": "develop tourism products"
+      },
+      {
+        "topic": "allocate keys"
+      },
+      {
+        "topic": "prepare planting area for planting"
+      },
+      {
+        "topic": "pour concrete"
+      },
+      {
+        "topic": "imaging techniques"
+      },
+      {
+        "topic": "manufacturing of metal assembly products"
+      },
+      {
+        "topic": "test wireless devices"
+      },
+      {
+        "topic": "obtain sponsorship"
+      },
+      {
+        "topic": "supply chain principles"
+      },
+      {
+        "topic": "lay base courses"
+      },
+      {
+        "topic": "machinery load capacity"
+      },
+      {
+        "topic": "research locations for wind farms"
+      },
+      {
+        "topic": "develop social security programmes"
+      },
+      {
+        "topic": "advise on curriculum development"
+      }
+    ]
+  },
+  {
+    "topic": "file documents",
+    "subtopics": [
+      {
+        "topic": "describe artistic experience"
+      },
+      {
+        "topic": "marketing department processes"
+      },
+      {
+        "topic": "polish clay products"
+      },
+      {
+        "topic": "arrange interlibrary loans"
+      },
+      {
+        "topic": "surveying methods"
+      },
+      {
+        "topic": "manufacturing of mattresses"
+      },
+      {
+        "topic": "assist hydrographic surveys"
+      },
+      {
+        "topic": "mount optical components on frames"
+      },
+      {
+        "topic": "monitor security measures"
+      },
+      {
+        "topic": "metal forming technologies"
+      },
+      {
+        "topic": "trace financial transactions"
+      },
+      {
+        "topic": "hardware testing methods"
+      },
+      {
+        "topic": "plan marketing strategy"
+      }
+    ]
+  }
+]

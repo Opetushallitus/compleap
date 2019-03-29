@@ -6,6 +6,7 @@ import { subtopicsLens } from 'state/helper'
 // TODO: implement APIs
 const getInterestSuggestions = () => Promise.resolve(
   interests
+    .slice(0, 25)
     .map(interest => R.assoc('id', uuid(), interest))
     .map(interest => R.assoc('selected', false, interest))
     .map(interest => R.over(subtopicsLens(),
