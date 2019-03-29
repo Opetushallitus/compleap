@@ -1,23 +1,19 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import styled from 'styled-components'
-import { PrimaryButtonStyle } from 'component/generic/widget/Button'
+import Button, { ButtonTypes } from 'component/generic/widget/Button'
 import { transition } from 'router/router'
 
-const LinkButtonStyle = styled(PrimaryButtonStyle)`
-  text-decoration: none;
-`
-
-const LinkButton = ({ href, children, ...attributes }) => (
-  <LinkButtonStyle as='a' href={href} onClick={transition} {...attributes}>
+const LinkButton = ({ href, children, type, ...attributes }) => (
+  <Button as='a' type={type} href={href} onClick={transition} {...attributes}>
     {children}
-  </LinkButtonStyle>
+  </Button>
 )
 
 LinkButton.propTypes = {
   href: PropTypes.string.isRequired,
   attributes: PropTypes.object,
-  children: PropTypes.string
+  children: PropTypes.string,
+  type: PropTypes.oneOf(ButtonTypes)
 }
 
 export default LinkButton

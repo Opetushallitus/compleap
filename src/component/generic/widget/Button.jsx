@@ -13,7 +13,7 @@ import {
 
 const ButtonFocusBorderWidth = '3px'
 
-const ButtonTypes = ['primary', 'secondary', 'text']
+export const ButtonTypes = ['primary', 'secondary', 'text']
 const resolveButtonStyle = type => {
   switch (type) {
     case 'primary': return PrimaryButtonStyle
@@ -29,6 +29,7 @@ const BaseButtonStyle = styled.button`
   cursor: pointer;
   text-align: center;
   font-weight: 400;
+  text-decoration: none;
   margin: ${ButtonFocusBorderWidth};
 
   ${fadeColor};
@@ -74,6 +75,7 @@ export const SecondaryButtonStyle = styled(BaseButtonStyle)`
 
 export const TextButtonStyle = styled(BaseButtonStyle)`
   text-decoration: underline;
+  color: ${({ theme }) => theme.color.black};
 
   ${roundedRectangle};
   ${padded};
