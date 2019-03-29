@@ -1,31 +1,60 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Education should show added educations 1`] = `
-<section>
-  <div>
-    Perusopetus
-    <button
-      className="sc-bdVaJa gDfxFS"
-      onClick={[Function]}
-    >
-      Poista tutkinto
-    </button>
-  </div>
-  <div>
-    Ammatillinen tutkinto
-     (Käsityöalat)
-    <button
-      className="sc-bdVaJa gDfxFS"
-      onClick={[Function]}
-    >
-      Poista tutkinto
-    </button>
-  </div>
+Array [
+  <h1
+    className="sc-ifAKCX bztiCN"
+  >
+    Koulutukset
+  </h1>,
+  <div
+    className="sc-htoDjs eewNkD"
+  >
+    <div>
+      <h3
+        className="sc-bZQynM kbVxzK"
+      >
+        Perusopetus
+      </h3>
+    </div>
+    <div>
+      <button
+        className="sc-bdVaJa sc-bxivhb emGjDO"
+        onClick={[Function]}
+      >
+        Poista tutkinto
+      </button>
+    </div>
+  </div>,
+  <div
+    className="sc-htoDjs eewNkD"
+  >
+    <div>
+      <h3
+        className="sc-bZQynM kbVxzK"
+      >
+        Ammatillinen tutkinto
+      </h3>
+      <p
+        className="sc-dnqmqq feeNAA"
+      >
+        Käsityöalat
+      </p>
+    </div>
+    <div>
+      <button
+        className="sc-bdVaJa sc-bxivhb emGjDO"
+        onClick={[Function]}
+      >
+        Poista tutkinto
+      </button>
+    </div>
+  </div>,
   <button
-    className="sc-bdVaJa gDfxFS"
+    className="sc-bdVaJa sc-htpNat fPDwvT"
     onClick={[Function]}
   >
     Lisää muualla kuin Suomessa suoritettu tutkinto
-  </button>
-</section>
+  </button>,
+]
 `;

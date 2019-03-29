@@ -7,34 +7,103 @@ exports[`Interests should show error when fetching interest suggestions failed 1
 `;
 
 exports[`Interests should show interest suggestions when fetched successfully 1`] = `
-<section>
-  <h2
-    className="sc-gZMcBi kUGyUY"
+Array [
+  <h1
+    className="sc-jTzLTM gbZaCQ"
   >
     Kiinnostukset
-  </h2>
+  </h1>,
   <p>
     Valitse mahdollisimman tarkasti mitkä allaolevista asioista sinua kiinnostavat. Mitä tarkemmin valitset, sitä tarkemmin pystymme etsimään sinulle sopivia koulutuksia.
-  </p>
-  <h3
-    className="sc-gqjmRU bJVuQj"
+  </p>,
+  <h2
+    className="sc-fjdhpX dnlSsS"
   >
     Valitse seuraavista ainakin 5 sinua kiinnostavaa asiaa
-  </h3>
+  </h2>,
   <ul
-    className="sc-VigVT buKjMU"
+    className="sc-kAzzGY jpPCrv"
   >
-    <li>
-      <button
-        className="sc-gzVnrw cJyJMM"
-        onClick={[Function]}
-        value="Autot"
+    <li
+      className="sc-chPdSV DotLc"
+    >
+      <div
+        style={
+          Object {
+            "display": "contents",
+          }
+        }
       >
-        Autot
-      </button>
+        <button
+          className="sc-iwsKbI bYifuX"
+          onClick={[Function]}
+          selected={true}
+          value="Autot"
+        >
+          Autot
+          <div
+            className="sc-gZMcBi cdXOPR"
+            selected={true}
+          >
+            <svg
+              data-file-name="SvgCheckmark"
+              style={
+                Object {
+                  "height": "1rem",
+                  "marginTop": "0.7rem",
+                  "stroke": "#ffffff",
+                  "strokeWidth": 2,
+                  "width": "1rem",
+                }
+              }
+            />
+          </div>
+        </button>
+      </div>
+      <ul
+        className="sc-gqjmRU kOdtII"
+      >
+        <li
+          className="sc-VigVT fehrhF"
+        >
+          <div
+            style={
+              Object {
+                "display": "contents",
+              }
+            }
+          >
+            <button
+              className="sc-iwsKbI gihDDC"
+              onClick={[Function]}
+              selected={false}
+              value="Virittely ja korjaaminen"
+            >
+              Virittely ja korjaaminen
+              <div
+                className="sc-gZMcBi gzOsZU"
+                selected={false}
+              >
+                <svg
+                  data-file-name="SvgCheckmark"
+                  style={
+                    Object {
+                      "height": "1rem",
+                      "marginTop": "0.7rem",
+                      "stroke": "#e2e2e2",
+                      "strokeWidth": 2,
+                      "width": "1rem",
+                    }
+                  }
+                />
+              </div>
+            </button>
+          </div>
+        </li>
+      </ul>
     </li>
-  </ul>
-</section>
+  </ul>,
+]
 `;
 
 exports[`Interests should show loading indicator when fetching suggestions 1`] = `

@@ -11,11 +11,11 @@ const mockState = queryStatus => jest.doMock('state/state', () => {
         data: [{
           topic: 'Autot',
           id: '1',
-          selectionSet: true,
+          selected: true,
           subtopics: [{
             topic: 'Virittely ja korjaaminen',
             id: '2',
-            selectionSet: false
+            selected: false
           }]
         }],
         error: undefined
