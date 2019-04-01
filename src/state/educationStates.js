@@ -1,10 +1,12 @@
 import { InteractionEvent } from 'state/events'
 import { Action } from 'state/context'
+import { namespaceSubstate } from 'util/machineStateHelper'
 
 const isVocational = id => id === '2'
 const isHigherEducation = id => ['4', '5', '6'].includes(id)
 const canHaveSpecifier = id => isVocational(id) || isHigherEducation(id)
-const targetById = id => `#${id}`
+const namespaced = namespaceSubstate('EducationPickerState')
+const targetById = id => `#${namespaced(id)}`
 
 export const EducationPickerState = Object.freeze({
   formCollapsed: 'formCollapsed',
@@ -38,7 +40,7 @@ const educationStates = {
           }
         },
         [EducationPickerState.selectionSet]: {
-          id: EducationPickerState.selectionSet,
+          id: namespaced(EducationPickerState.selectionSet),
           initial: EducationPickerState.checkIfSelectionReady,
           states: {
             [EducationPickerState.checkIfSelectionReady]: {
@@ -90,7 +92,7 @@ const educationStates = {
       }
     },
     [EducationPickerState.done]: {
-      id: EducationPickerState.done,
+      id: namespaced(EducationPickerState.done),
       on: { '': { target: EducationPickerState.formCollapsed, actions: Action.addEducation } }
     }
   },
