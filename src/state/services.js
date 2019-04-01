@@ -4,7 +4,8 @@ import uuid from 'uuid/v4'
 import { subtopicsLens } from 'state/helper'
 
 export const Service = Object.freeze({
-  getInterestSuggestions: 'getInterestSuggestions'
+  getInterestSuggestions: 'getInterestSuggestions',
+  mapEducationClassToLearningOpportunityCode: 'mapEducationClassToLearningOpportunityCode'
 })
 
 const services = {
@@ -20,6 +21,9 @@ const services = {
           .map(R.assoc('selected', false)),
         interest
       ))
+  ),
+  [Service.mapEducationClassToLearningOpportunityCode]: () => Promise.resolve(
+    { code: 1 }
   )
 }
 

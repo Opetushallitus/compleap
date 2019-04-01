@@ -19,13 +19,14 @@ export const context = {
   education: {
     data: {
       /**
-       * [{ id, level: { id }, specifier?: { id } }]
+       * [{ id, level: { id }, specifier?: { id }, code }]
        */
       educations: [],
       /**
        * { level: { id }, specifier?: { id } }
        */
-      selection: undefined
+      selection: undefined,
+      error: undefined
     }
   }
 }
@@ -39,7 +40,8 @@ export const Action = Object.freeze({
   clearEducationSelection: 'clearEducationSelection',
   clearEducationSpecifier: 'clearEducationSpecifier',
   addEducation: 'addEducation',
-  removeEducation: 'removeEducation'
+  removeEducation: 'removeEducation',
+  setEducationError: 'setEducationError'
 })
 
 export const actions = {
@@ -85,7 +87,10 @@ export const actions = {
     education: (ctx, _) => R.dissocPath(['data', 'selection', 'specifier'], ctx.education)
   }),
   [Action.addEducation]: assign({
-    education: (ctx, _) => R.over(educationsLens(), R.append(R.assoc('id', uuid(), ctx.education.data.selection)), ctx.education)
+    education: (ctx, event) => {
+      const educationData = R.merge(ctx.education.data.selection, { id: uuid(), code: event.data.code })
+      return R.over(educationsLens(), R.append(educationData), ctx.education)
+    }
   }),
   [Action.removeEducation]: assign({
     education: (ctx, event) => {
@@ -96,5 +101,8 @@ export const actions = {
       }
       return R.dissocPath(['data', 'educations', i], ctx.education)
     }
+  }),
+  [Action.setEducationError]: assign({
+    education: (ctx, event) => R.assoc('error', event.data, ctx.education)
   })
 }

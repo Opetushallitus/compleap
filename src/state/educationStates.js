@@ -1,5 +1,6 @@
 import { InteractionEvent } from 'state/events'
 import { Action } from 'state/context'
+import { Service } from 'state/services'
 import { namespaceSubstate } from 'util/machineStateHelper'
 
 const isVocational = id => id === '2'
@@ -16,7 +17,9 @@ export const EducationPickerState = Object.freeze({
   checkIfSelectionReady: 'checkIfSelectionReady',
   specifierRequired: 'specifierRequired',
   selectionReady: 'selectionReady',
-  done: 'done'
+  done: 'done',
+  mapToEducationCode: 'mapToEducationCode',
+  failure: 'failure'
 })
 
 const educationStates = {
@@ -93,7 +96,20 @@ const educationStates = {
     },
     [EducationPickerState.done]: {
       id: namespaced(EducationPickerState.done),
-      on: { '': { target: EducationPickerState.formCollapsed, actions: Action.addEducation } }
+      invoke: {
+        src: Service.mapEducationClassToLearningOpportunityCode,
+        onDone: {
+          target: EducationPickerState.formCollapsed,
+          actions: Action.addEducation
+        },
+        onError: {
+          target: EducationPickerState.failure,
+          actions: Action.setEducationError
+        }
+      }
+    },
+    [EducationPickerState.failure]: {
+      id: namespaced(EducationPickerState.failure)
     }
   },
   on: {
