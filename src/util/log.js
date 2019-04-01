@@ -10,6 +10,8 @@ const createStamp = () => {
 
 const truncateString = str => str.length > MaxTitleLength ? `${str.substring(0, MaxTitleLength)}...` : str
 
+const stateHasError = state => state.event.type === 'error.execution'
+
 const logUpdate = (category, title, data) => {
   const stamp = createStamp()
 
@@ -31,6 +33,8 @@ export const logEvent = event => {
 }
 
 export const logState = state => {
+  if (stateHasError(state)) console.error('A service has failed. Resulting state may contain an error. Check state for details.')
+
   const states = state.toStrings()
   logUpdate('state', states.reverse().join(', '), state)
 }
