@@ -1,15 +1,12 @@
 import { Action } from 'state/context'
 import { InteractionEvent } from 'state/events'
+import { Service } from 'state/services'
 
 const State = Object.freeze({
   idle: 'idle',
   pending: 'pending',
   success: 'success',
   failure: 'failure'
-})
-
-const Service = Object.freeze({
-  getInterestSuggestions: 'getInterestSuggestions'
 })
 
 const interestsStates = {
