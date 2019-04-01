@@ -91,11 +91,7 @@ const educationStates = {
     },
     [EducationPickerState.done]: {
       id: EducationPickerState.done,
-      on: {
-        '': [
-          { target: EducationPickerState.formCollapsed, actions: Action.addEducation }
-        ]
-      }
+      on: { '': { target: EducationPickerState.formCollapsed, actions: Action.addEducation } }
     }
   },
   on: {
