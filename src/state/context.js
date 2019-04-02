@@ -88,7 +88,7 @@ export const actions = {
   }),
   [Action.addEducation]: assign({
     education: (ctx, event) => {
-      const educationData = R.merge(ctx.education.data.selection, { id: uuid(), code: event.data.code })
+      const educationData = R.merge(ctx.education.data.selection, { id: uuid(), code: event.data })
       return R.over(educationsLens(), R.append(educationData), ctx.education)
     }
   }),

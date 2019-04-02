@@ -1,4 +1,5 @@
 import interests from 'resources/mock/interests'
+import educationToLearningOpportunity from 'resources/mock/educationClassificationToLearningOpportunityCode'
 import * as R from 'ramda'
 import uuid from 'uuid/v4'
 import { subtopicsLens } from 'state/helper'
@@ -22,9 +23,23 @@ const services = {
         interest
       ))
   ),
-  [Service.mapEducationClassToLearningOpportunityCode]: () => Promise.resolve(
-    { code: 1 }
-  )
+  [Service.mapEducationClassToLearningOpportunityCode]: (ctx, _) => new Promise((resolve, reject) => {
+    const educationClassificationCode = ctx.education.data.selection.specifier.id
+
+    if (!educationClassificationCode || typeof educationClassificationCode !== 'string') {
+      return reject(new Error('No education classification code provided: cannot map to learning opportunity'))
+    }
+
+    const learningOpportunityCode = educationToLearningOpportunity[educationClassificationCode]
+    if (!learningOpportunityCode) {
+      return reject(new Error(
+        `Could not map education classification ${educationClassificationCode} to learning opportunity: ` +
+        'No matching code was found'
+      ))
+    }
+
+    return resolve(learningOpportunityCode)
+  })
 }
 
 export default {

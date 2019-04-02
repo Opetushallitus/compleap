@@ -109,7 +109,8 @@ const educationStates = {
       }
     },
     [EducationPickerState.failure]: {
-      id: namespaced(EducationPickerState.failure)
+      id: namespaced(EducationPickerState.failure),
+      on: { '': EducationPickerState.formCollapsed }
     }
   },
   on: {
