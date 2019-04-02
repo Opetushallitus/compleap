@@ -23,6 +23,16 @@ const services = {
         interest
       ))
   ),
+  /*
+  We are using national education classification 2016 (based on ISCED) for education options.
+  Here we map this user-selected option to a matching learning opportunity.
+  By doing this we can associate the option with descriptive learning opportunity information from the eRequirements service.
+  This will be used as a substitute for actual, personal education records (such as Koski data) for users that don't have such records.
+
+  TODO: replace mock with actual service
+  Here we mock the mapping calls, but the actual relevant Koodisto Service API is /json/relaatio/sisaltyy-ylakoodit/{koodiUri}.
+  E.g. https://virkailija.opintopolku.fi/koodisto-service/rest/json/relaatio/sisaltyy-ylakoodit/kansallinenkoulutusluokitus2016koulutusalataso3_1013
+   */
   [Service.mapEducationClassToLearningOpportunityCode]: (ctx, _) => new Promise((resolve, reject) => {
     const educationClassificationCode = ctx.education.data.selection.specifier.id
 
