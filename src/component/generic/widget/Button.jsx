@@ -13,11 +13,12 @@ import {
 
 const ButtonFocusBorderWidth = '3px'
 
-export const ButtonTypes = ['primary', 'secondary', 'text']
+export const ButtonTypes = ['primary', 'secondary', 'text', 'empty']
 const resolveButtonStyle = type => {
   switch (type) {
     case 'primary': return PrimaryButtonStyle
     case 'text': return TextButtonStyle
+    case 'empty': return EmptyButtonStyle
     default: return SecondaryButtonStyle
   }
 }
@@ -46,7 +47,7 @@ const BaseButtonStyle = styled.button`
 
 `
 
-export const PrimaryButtonStyle = styled(BaseButtonStyle)`
+const PrimaryButtonStyle = styled(BaseButtonStyle)`
   ${primary};
   ${roundedRectangle};
   ${padded};
@@ -60,7 +61,7 @@ export const PrimaryButtonStyle = styled(BaseButtonStyle)`
   }
 `
 
-export const SecondaryButtonStyle = styled(BaseButtonStyle)`
+const SecondaryButtonStyle = styled(BaseButtonStyle)`
   ${secondary};
   ${rounded};
 
@@ -73,7 +74,7 @@ export const SecondaryButtonStyle = styled(BaseButtonStyle)`
   }
 `
 
-export const TextButtonStyle = styled(BaseButtonStyle)`
+const TextButtonStyle = styled(BaseButtonStyle)`
   text-decoration: underline;
   color: ${({ theme }) => theme.color.black};
   background: none;
@@ -88,6 +89,13 @@ export const TextButtonStyle = styled(BaseButtonStyle)`
   &:focus {
     border: solid ${ButtonFocusBorderWidth} ${({ theme }) => theme.color.grayLighter};
   }
+`
+
+const EmptyButtonStyle = styled.button`
+  background: none;
+  border: none;
+  margin: 0;
+  padding: 0;
 `
 
 const Button = ({ onClick, type = 'primary', children, ...attributes }) => {

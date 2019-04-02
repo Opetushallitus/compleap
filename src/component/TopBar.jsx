@@ -1,6 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 import logo from 'resources/asset/compleap-logo.png'
+import LinkButton from 'component/generic/widget/LinkButton'
 
 const TopBarContainer = styled.div`
   background-color: ${({ theme }) => theme.color.black};
@@ -24,7 +25,9 @@ const Image = styled.img`
 const TopBar = () => (
   <TopBarContainer>
     <TopBarContent>
-      <Image src={logo}/>
+      <LinkButton href='/' type='empty'>
+        <Image src={logo}/>
+      </LinkButton>
     </TopBarContent>
   </TopBarContainer>
 )
