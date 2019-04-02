@@ -6,11 +6,19 @@ import educationClassification from 'resources/finnishEducationClassification201
 import t from 'util/translate'
 import Select from 'component/generic/widget/dropdown/Select'
 
+// TODO This only serves here as a filter for available education options
+import educationToLearningOpportunity from 'resources/mock/educationClassificationToLearningOpportunityCode'
+
+// TODO Replace with more complete set of available education classes
+// Here we only use a subset of education classification codes;
+// we only use the ones that have matching vocational eRequirements
+const educationClassificationVocational = R.pick(Object.keys(educationToLearningOpportunity), educationClassification)
+
 const isMostSpecific = (v, k) => k.length === 4
 const pickMostSpecifics = R.pickBy(isMostSpecific)
 const toSelectOptions = R.compose(R.map(([id, label]) => ({ id, label })), R.toPairs)
 const sortById = R.sortBy(R.prop('id'))
-const specifiers = R.compose(sortById, toSelectOptions, pickMostSpecifics)(educationClassification)
+const specifiers = R.compose(sortById, toSelectOptions, pickMostSpecifics)(educationClassificationVocational)
 
 const SelectContainer = styled.div`
   margin: 1rem 0;
