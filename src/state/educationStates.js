@@ -2,10 +2,8 @@ import { InteractionEvent } from 'state/events'
 import { Action } from 'state/context'
 import { Service } from 'state/services'
 import { namespaceSubstate } from 'util/machineStateHelper'
+import { canHaveSpecifier } from 'util/educationHelper'
 
-const isVocational = id => id === '2'
-const isHigherEducation = id => ['4', '5', '6'].includes(id)
-const canHaveSpecifier = id => isVocational(id) || isHigherEducation(id)
 const namespaced = namespaceSubstate('EducationPickerState')
 const targetById = id => `#${namespaced(id)}`
 

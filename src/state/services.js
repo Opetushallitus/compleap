@@ -3,6 +3,7 @@ import educationToLearningOpportunity from 'resources/mock/educationClassificati
 import * as R from 'ramda'
 import uuid from 'uuid/v4'
 import { subtopicsLens } from 'state/helper'
+import { isVocational } from 'util/educationHelper'
 
 export const Service = Object.freeze({
   getInterestSuggestions: 'getInterestSuggestions',
@@ -34,8 +35,13 @@ const services = {
   E.g. https://virkailija.opintopolku.fi/koodisto-service/rest/json/relaatio/sisaltyy-ylakoodit/kansallinenkoulutusluokitus2016koulutusalataso3_1013
    */
   [Service.mapEducationClassToLearningOpportunityCode]: (ctx, _) => new Promise((resolve, reject) => {
-    const educationClassificationCode = ctx.education.data.selection.specifier.id
+    const { level, specifier } = ctx.education.data.selection
+    if (!isVocational(level.id)) {
+      console.debug(`Skipping learning opportunity mapping: unsupported type id ${level.id}`)
+      return resolve(undefined)
+    }
 
+    const educationClassificationCode = specifier && specifier.id
     if (!educationClassificationCode || typeof educationClassificationCode !== 'string') {
       return reject(new Error('No education classification code provided: cannot map to learning opportunity'))
     }
