@@ -35,7 +35,7 @@ Array [
         }
       >
         <button
-          className="sc-iwsKbI bYifuX"
+          className="sc-iwsKbI gSRIic"
           onClick={[Function]}
           selected={true}
           value="Autot"
@@ -74,7 +74,7 @@ Array [
             }
           >
             <button
-              className="sc-iwsKbI gihDDC"
+              className="sc-iwsKbI dHsgxa"
               onClick={[Function]}
               selected={false}
               value="Virittely ja korjaaminen"

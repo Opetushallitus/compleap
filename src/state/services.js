@@ -1,4 +1,4 @@
-import interests from 'mock/interests'
+import interests from 'resources/mock/interests'
 import * as R from 'ramda'
 import uuid from 'uuid/v4'
 import { subtopicsLens } from 'state/helper'

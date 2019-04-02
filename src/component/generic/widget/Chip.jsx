@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 import styled from 'styled-components'
 import theme from 'ui/theme'
 import { rounded } from 'ui/properties'
-import Checkmark from 'asset/checkmark.svg'
+import Checkmark from 'resources/asset/checkmark.svg'
 import { children } from 'util/proptype'
 
 const ChipType = ['primary', 'secondary']

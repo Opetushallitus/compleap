@@ -8,7 +8,8 @@ module.exports = {
     'resources'
   ],
   'moduleNameMapper': {
-    'test/(.*)$': '<rootDir>/test/$1'
+    'test/(.*)$': '<rootDir>/test/$1',
+    'resources/(.*)$': '<rootDir>/resources/$1'
   },
   transform: {
     '^.+\\.jsx?$': 'babel-jest',

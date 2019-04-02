@@ -2,7 +2,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import styled from 'styled-components'
 import * as R from 'ramda'
-import educationClassification from 'finnishEducationClassification2016'
+import educationClassification from 'resources/finnishEducationClassification2016'
 import t from 'util/translate'
 import Select from 'component/generic/widget/dropdown/Select'
 

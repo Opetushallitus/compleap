@@ -1,7 +1,7 @@
 import React, { useContext } from 'react'
 import * as R from 'ramda'
 import styled from 'styled-components'
-import educations from 'educations'
+import educations from 'resources/educations'
 import { Context, dispatch } from 'state/state'
 import t from 'util/translate'
 import { H2 } from 'ui/typography'

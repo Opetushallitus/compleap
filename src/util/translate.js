@@ -1,4 +1,4 @@
-import translations from 'translations'
+import translations from 'resources/translations'
 import { lang } from 'util/preferences'
 
 /**

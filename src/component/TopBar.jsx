@@ -1,6 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
-import logo from 'asset/compleap-logo.png'
+import logo from 'resources/asset/compleap-logo.png'
 
 const TopBarContainer = styled.div`
   background-color: ${({ theme }) => theme.color.black};

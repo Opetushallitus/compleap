@@ -19,7 +19,7 @@ Array [
     </div>
     <div>
       <button
-        className="sc-bdVaJa sc-bxivhb emGjDO"
+        className="sc-bdVaJa sc-bxivhb lhKMRF"
         onClick={[Function]}
       >
         Poista tutkinto
@@ -43,7 +43,7 @@ Array [
     </div>
     <div>
       <button
-        className="sc-bdVaJa sc-bxivhb emGjDO"
+        className="sc-bdVaJa sc-bxivhb lhKMRF"
         onClick={[Function]}
       >
         Poista tutkinto

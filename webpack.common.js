@@ -9,9 +9,11 @@ module.exports = {
     extensions: ['.js', '.jsx', '.json'],
     modules: [
       'node_modules',
-      path.resolve(__dirname, 'src'),
-      path.resolve(__dirname, 'resources')
-    ]
+      path.resolve(__dirname, 'src')
+    ],
+    alias: {
+      resources: path.resolve(__dirname, 'resources')
+    }
   },
   module: {
     rules: [
