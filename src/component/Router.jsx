@@ -2,10 +2,10 @@ import React, { useContext } from 'react'
 import { Context } from 'state/state'
 import Lander from 'component/Lander'
 import Profile from 'component/Profile'
+import Login from 'component/Login'
 import NotFound from 'component/NotFound'
 import useObservable from 'component/generic/hook/useObservable'
 import { PageState } from 'state/machine'
-import Login from 'Login'
 
 const pages = [
   { state: PageState.lander, view: Lander },
