@@ -3,6 +3,7 @@ import { Context } from 'state/state'
 import Lander from 'component/Lander'
 import Profile from 'component/Profile'
 import Login from 'component/Login'
+import Pending from 'component/Pending'
 import NotFound from 'component/NotFound'
 import useObservable from 'component/generic/hook/useObservable'
 import { PageState } from 'state/machine'
@@ -10,6 +11,7 @@ import { PageState } from 'state/machine'
 const pages = [
   { state: PageState.lander, view: Lander },
   { state: PageState.login, view: Login },
+  { state: PageState.logout, view: Pending },
   { state: PageState.profile, view: Profile }
 ]
 

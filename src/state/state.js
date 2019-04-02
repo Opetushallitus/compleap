@@ -24,4 +24,5 @@ export const dispatch = event => {
 }
 
 state.onValue(logState)
-state.onValue(persist)
+const disposePersister = state.onValue(persist)
+export const stopPersisting = () => disposePersister()

@@ -3,11 +3,14 @@ import educationToLearningOpportunity from 'resources/mock/educationClassificati
 import * as R from 'ramda'
 import uuid from 'uuid/v4'
 import { subtopicsLens } from 'state/helper'
+import { clear } from 'state/persistence'
 import { isVocational } from 'util/educationHelper'
+import { stopPersisting } from 'state/state'
 
 export const Service = Object.freeze({
   getInterestSuggestions: 'getInterestSuggestions',
-  mapEducationClassToLearningOpportunityCode: 'mapEducationClassToLearningOpportunityCode'
+  mapEducationClassToLearningOpportunityCode: 'mapEducationClassToLearningOpportunityCode',
+  clearSession: 'clearSession'
 })
 
 const services = {
@@ -37,7 +40,7 @@ const services = {
   [Service.mapEducationClassToLearningOpportunityCode]: (ctx, _) => new Promise((resolve, reject) => {
     const { level, specifier } = ctx.education.data.selection
     if (!isVocational(level.id)) {
-      console.debug(`Skipping learning opportunity mapping: unsupported type id ${level.id}`)
+      console.debug(`Skipping learning opportunity mapping: unsupported type ${level.id}`)
       return resolve(undefined)
     }
 
@@ -55,7 +58,12 @@ const services = {
     }
 
     return resolve(learningOpportunityCode)
-  })
+  }),
+
+  [Service.clearSession]: () => {
+    stopPersisting()
+    return clear()
+  }
 }
 
 export default {

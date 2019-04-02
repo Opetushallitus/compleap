@@ -4,7 +4,8 @@ export const NavigationEvent = Object.freeze({
 })
 
 export const UserEvent = Object.freeze({
-  LOGIN: 'LOGIN'
+  LOGIN: 'LOGIN',
+  LOGOUT: 'LOGOUT'
 })
 
 export const InteractionEvent = Object.freeze({

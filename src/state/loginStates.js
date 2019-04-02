@@ -25,8 +25,7 @@ const loginStates = {
         }
       }
     },
-    [State.loggedIn]: {
-    }
+    [State.loggedIn]: { }
   }
 }
 

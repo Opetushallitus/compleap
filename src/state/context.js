@@ -36,6 +36,7 @@ export const context = {
 
 export const Action = Object.freeze({
   logIn: 'logIn',
+  reload: 'reload',
   setInterestsData: 'setInterestsData',
   setInterestsError: 'setInterestsError',
   toggleInterestSelection: 'toggleInterestSelection',
@@ -52,6 +53,7 @@ export const actions = {
   [Action.logIn]: assign({
     user: (ctx, _) => R.assoc('isLoggedIn', true, ctx.user)
   }),
+  [Action.reload]: () => window.location.reload(),
   [Action.setInterestsData]: assign({
     interests: (ctx, event) => R.assoc('data', event.data, ctx.interests)
   }),

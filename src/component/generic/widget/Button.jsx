@@ -91,7 +91,7 @@ const TextButtonStyle = styled(BaseButtonStyle)`
   }
 `
 
-const EmptyButtonStyle = styled.button`
+const EmptyButtonStyle = styled(BaseButtonStyle)`
   background: none;
   border: none;
   margin: 0;
