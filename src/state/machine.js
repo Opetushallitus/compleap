@@ -25,11 +25,7 @@ export const machine = Machine({
   initial: PageState.lander,
   context,
   states: {
-    [PageState.lander]: {
-      on: {
-        [NavigationEvent.LOGIN]: PageState.profile
-      }
-    },
+    [PageState.lander]: { },
     [PageState.login]: { ...loginStates },
     [PageState.profile]: {
       type: 'parallel',
