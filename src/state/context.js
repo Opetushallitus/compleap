@@ -12,6 +12,9 @@ import {
 
 export const context = {
   version: process.env.CONTEXT_VERSION,
+  user: {
+    isLoggedIn: false
+  },
   interests: {
     data: [],
     error: undefined
@@ -32,6 +35,7 @@ export const context = {
 }
 
 export const Action = Object.freeze({
+  logIn: 'logIn',
   setInterestsData: 'setInterestsData',
   setInterestsError: 'setInterestsError',
   toggleInterestSelection: 'toggleInterestSelection',
@@ -45,6 +49,9 @@ export const Action = Object.freeze({
 })
 
 export const actions = {
+  [Action.logIn]: assign({
+    user: (ctx, _) => R.assoc('isLoggedIn', true, ctx.user)
+  }),
   [Action.setInterestsData]: assign({
     interests: (ctx, event) => R.assoc('data', event.data, ctx.interests)
   }),

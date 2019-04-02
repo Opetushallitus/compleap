@@ -112,7 +112,7 @@ Button.propTypes = {
   onClick: PropTypes.func.isRequired,
   type: PropTypes.oneOf(ButtonTypes),
   attributes: PropTypes.object,
-  children: PropTypes.string
+  children: PropTypes.node
 }
 
 export default Button

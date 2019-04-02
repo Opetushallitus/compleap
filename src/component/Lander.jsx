@@ -1,8 +1,10 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import styled from 'styled-components'
 import t from 'util/translate'
 import Box from 'component/generic/widget/Box'
 import LinkButton from 'component/generic/widget/LinkButton'
+import { Context } from 'state/state'
+import useObservable from 'component/generic/hook/useObservable'
 
 const TextContainer = styled.section`
   max-width: 600px;
@@ -28,11 +30,17 @@ const Brief = () => (
   </TextContainer>
 )
 
-const LoginPrompt = () => (
-  <section>
-    <LanderButton href='#profile'>{t`Kirjaudu sisään`}</LanderButton>
-  </section>
-)
+const LoginPrompt = () => {
+  const context$ = useContext(Context)
+  const isLoggedIn = useObservable(context$, { path: ['context', 'user', 'isLoggedIn'] })
+  const buttonText = isLoggedIn ? t`Jatka profiiliisi` : t`Kirjaudu sisään`
+
+  return (
+    <section>
+      <LanderButton href='#profile'>{buttonText}</LanderButton>
+    </section>
+  )
+}
 
 const Lander = () => (
   <Box align='center'>

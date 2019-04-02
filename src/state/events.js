@@ -4,6 +4,10 @@ export const NavigationEvent = Object.freeze({
   PROFILE: 'PROFILE'
 })
 
+export const UserEvent = Object.freeze({
+  LOGIN: 'LOGIN'
+})
+
 export const InteractionEvent = Object.freeze({
   TOGGLE_INTEREST: 'TOGGLE_INTEREST',
   BEGIN_EDUCATION_INPUT: 'BEGIN_EDUCATION_INPUT',

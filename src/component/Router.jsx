@@ -5,9 +5,11 @@ import Profile from 'component/Profile'
 import NotFound from 'component/NotFound'
 import useObservable from 'component/generic/hook/useObservable'
 import { PageState } from 'state/machine'
+import Login from 'Login'
 
 const pages = [
   { state: PageState.lander, view: Lander },
+  { state: PageState.login, view: Login },
   { state: PageState.profile, view: Profile }
 ]
 
