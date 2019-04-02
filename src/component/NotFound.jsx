@@ -31,6 +31,4 @@ const NotFound = () => (
   </Container>
 )
 
-NotFound.propTypes = {}
-
 export default NotFound
