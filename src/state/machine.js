@@ -4,6 +4,7 @@ import services, { Service } from 'state/services'
 import { NavigationEvent, UserEvent } from 'state/events'
 import loginStates from 'state/loginStates'
 import interestsStates from 'state/interestsStates'
+import verifiedEducationStates from 'state/verifiedEducationStates'
 import unverifiedEducationStates from 'state/unverifiedEducationStates'
 import recommendationStates from 'state/recommendationStates'
 
@@ -21,6 +22,7 @@ const SectionState = Object.freeze({
 })
 
 const EducationSubsectionState = Object.freeze({
+  verifiedEducation: 'verifiedEducation',
   unverifiedEducation: 'unverifiedEducation'
 })
 
@@ -38,6 +40,7 @@ export const machine = Machine({
         [SectionState.education]: {
           type: 'parallel',
           states: {
+            [EducationSubsectionState.verifiedEducation]: { ...verifiedEducationStates },
             [EducationSubsectionState.unverifiedEducation]: { ...unverifiedEducationStates }
           }
         },

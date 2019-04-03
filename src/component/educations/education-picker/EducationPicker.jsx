@@ -4,7 +4,7 @@ import styled from 'styled-components'
 import educations from 'resources/educations'
 import { Context, dispatch } from 'state/state'
 import t from 'util/translate'
-import { H2 } from 'ui/typography'
+import { H3 } from 'ui/typography'
 import useObservable from 'component/generic/hook/useObservable'
 import EducationLevelPicker from 'component/educations/education-picker/fragment/EducationLevelPicker'
 import Button from 'component/generic/widget/Button'
@@ -51,7 +51,7 @@ const EducationPicker = () => {
 
   return (
     <EducationPickerStyle>
-      <H2>{t`Olen suorittanut tutkinnon ulkomailla`}</H2>
+      <H3>{t`Olen suorittanut tutkinnon ulkomailla`}</H3>
       <p>{t`Minkä tasoisesta tutkinnosta on kyse?`}</p>
       <EducationLevelPicker
         options={Object.entries(educations)}

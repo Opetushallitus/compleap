@@ -21,8 +21,14 @@ export const context = {
   },
   education: {
     data: {
+      verifiedEducations: [],
       /**
-       * [{ id, level: { id }, specifier?: { id }, code }]
+       * [{
+       *   id: UUID,
+       *   level: { id: EducationLevelId },
+       *   specifier?: { id: FinnishEducationClassification2016id },
+       *   code?: LearningOpportunityCodeUri (koulutuskoodiUri)
+       * }]
        */
       unverifiedEducations: [],
       /**
