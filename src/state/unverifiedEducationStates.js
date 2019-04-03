@@ -8,6 +8,7 @@ const namespaced = namespaceSubstate('EducationPickerState')
 const targetById = id => `#${namespaced(id)}`
 
 export const EducationPickerState = Object.freeze({
+  init: 'init',
   formCollapsed: 'formCollapsed',
   formOpen: 'formOpen',
   selectionEmpty: 'selectionEmpty',
@@ -21,8 +22,16 @@ export const EducationPickerState = Object.freeze({
 })
 
 const unverifiedEducationStates = {
-  initial: EducationPickerState.formOpen,
+  initial: EducationPickerState.init,
   states: {
+    [EducationPickerState.init]: {
+      on: {
+        '': [
+          { target: EducationPickerState.formCollapsed, cond: (ctx, _) => ctx.user.isLoggedIn },
+          { target: EducationPickerState.formOpen }
+        ]
+      }
+    },
     [EducationPickerState.formCollapsed]: {
       onEntry: Action.clearEducationSelection,
       on: {

@@ -8,7 +8,7 @@ import t from 'util/translate'
 import Card from 'component/generic/widget/Card'
 import Button from 'component/generic/widget/Button'
 import { InteractionEvent } from 'state/events'
-import { H3 } from 'ui/typography'
+import { H2, H3 } from 'ui/typography'
 
 const DetailsText = styled.p`
   margin-bottom: 0;
@@ -20,19 +20,24 @@ const UnverifiedEducationsList = () => {
 
   if (!unverifiedEducationsList) return null
 
-  return unverifiedEducationsList.map(({ id, level, specifier }) => (
-    <Card key={id}>
-      <div>
-        <H3>{educations[level.id]}</H3>
-        {specifier && <DetailsText>{educationClassification[specifier.id]}</DetailsText>}
-      </div>
-      <div>
-        <Button type='text' onClick={() => dispatch({ type: InteractionEvent.REMOVE_EDUCATION, data: { id } })}>
-          {t`Poista tutkinto`}
-        </Button>
-      </div>
-    </Card>
-  ))
+  return (
+    <React.Fragment>
+      {unverifiedEducationsList.length > 0 && <H2>{t`Ulkomailla suoritetut tutkinnot`}</H2>}
+      {unverifiedEducationsList.map(({ id, level, specifier }) => (
+        <Card key={id}>
+          <div>
+            <H3>{educations[level.id]}</H3>
+            {specifier && <DetailsText>{educationClassification[specifier.id]}</DetailsText>}
+          </div>
+          <div>
+            <Button type='text' onClick={() => dispatch({ type: InteractionEvent.REMOVE_EDUCATION, data: { id } })}>
+              {t`Poista tutkinto`}
+            </Button>
+          </div>
+        </Card>
+      ))}
+    </React.Fragment>
+  )
 }
 
 export default UnverifiedEducationsList
