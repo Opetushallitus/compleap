@@ -1,6 +1,6 @@
 /**
  * This is a mock implementation for persisting client state.
- * Here we persist state in local storage only and additionally allow clearing it.
+ * Here we persist state in local storage only.
  */
 
 import { State } from 'xstate'
@@ -49,17 +49,3 @@ export const restore = () => {
 
   return restoredState
 }
-
-export const clear = () => new Promise((resolve, reject) => {
-  const delay = process.env.MOCK_API_LATENCY_MS || 0
-
-  setTimeout(() => {
-    try {
-      window.localStorage.clear()
-      return resolve()
-    } catch (e) {
-      console.error(e)
-      return reject(e)
-    }
-  }, delay)
-})

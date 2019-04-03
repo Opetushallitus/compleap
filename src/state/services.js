@@ -3,7 +3,6 @@ import educationToLearningOpportunity from 'resources/mock/educationClassificati
 import * as R from 'ramda'
 import uuid from 'uuid/v4'
 import { subtopicsLens } from 'state/helper'
-import { clear } from 'state/persistence'
 import { isVocational } from 'util/educationHelper'
 import { stopPersisting } from 'state/state'
 
@@ -62,7 +61,20 @@ const services = {
 
   [Service.clearSession]: () => {
     stopPersisting()
-    return clear()
+
+    return new Promise((resolve, reject) => {
+      const delay = process.env.MOCK_API_LATENCY_MS || 0
+
+      setTimeout(() => {
+        try {
+          window.localStorage.clear()
+          return resolve()
+        } catch (e) {
+          console.error(e)
+          return reject(e)
+        }
+      }, delay)
+    })
   }
 }
 
