@@ -4,7 +4,7 @@ import services, { Service } from 'state/services'
 import { NavigationEvent, UserEvent } from 'state/events'
 import loginStates from 'state/loginStates'
 import interestsStates from 'state/interestsStates'
-import educationStates from 'state/educationStates'
+import unverifiedEducationStates from 'state/unverifiedEducationStates'
 import recommendationStates from 'state/recommendationStates'
 
 export const PageState = Object.freeze({
@@ -20,6 +20,10 @@ const SectionState = Object.freeze({
   recommendations: 'recommendations'
 })
 
+const EducationSubsectionState = Object.freeze({
+  unverifiedEducation: 'unverifiedEducation'
+})
+
 export const machine = Machine({
   id: 'main',
   strict: true,
@@ -31,7 +35,12 @@ export const machine = Machine({
     [PageState.profile]: {
       type: 'parallel',
       states: {
-        [SectionState.education]: { ...educationStates },
+        [SectionState.education]: {
+          type: 'parallel',
+          states: {
+            [EducationSubsectionState.unverifiedEducation]: { ...unverifiedEducationStates }
+          }
+        },
         [SectionState.interests]: { ...interestsStates },
         [SectionState.recommendations]: { ...recommendationStates }
       }

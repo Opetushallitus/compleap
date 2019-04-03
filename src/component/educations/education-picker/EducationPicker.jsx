@@ -9,7 +9,7 @@ import useObservable from 'component/generic/hook/useObservable'
 import EducationLevelPicker from 'component/educations/education-picker/fragment/EducationLevelPicker'
 import Button from 'component/generic/widget/Button'
 import { InteractionEvent } from 'state/events'
-import { EducationPickerState } from 'state/educationStates'
+import { EducationPickerState } from 'state/unverifiedEducationStates'
 import { padded, roundedRectangle, shadowed } from 'ui/properties'
 
 const {
@@ -31,8 +31,8 @@ const EducationPickerStyle = styled.div`
 
 const EducationPicker = () => {
   const context$ = useContext(Context)
-  const isCollapsed = useObservable(context$, { path: ['value', 'profile', 'education'] }) === formCollapsed
-  const selectionState = useObservable(context$, { path: ['value', 'profile', 'education', formOpen, selectionSet] })
+  const isCollapsed = useObservable(context$, { path: ['value', 'profile', 'education', 'unverifiedEducation'] }) === formCollapsed
+  const selectionState = useObservable(context$, { path: ['value', 'profile', 'education', 'unverifiedEducation', formOpen, selectionSet] })
 
   const selectedId = useObservable(context$, { path: ['context', 'education', 'data', 'selection', 'level', 'id'] })
   const selectedSpecifierId = useObservable(context$, { path: ['context', 'education', 'data', 'selection', 'specifier', 'id'] })

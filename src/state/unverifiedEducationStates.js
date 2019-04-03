@@ -20,7 +20,7 @@ export const EducationPickerState = Object.freeze({
   failure: 'failure'
 })
 
-const educationStates = {
+const unverifiedEducationStates = {
   initial: EducationPickerState.formOpen,
   states: {
     [EducationPickerState.formCollapsed]: {
@@ -118,4 +118,4 @@ const educationStates = {
   }
 }
 
-export default educationStates
+export default unverifiedEducationStates
