@@ -1,5 +1,6 @@
 export const NavigationEvent = Object.freeze({
   HOME: 'HOME',
+  LOGIN: 'LOGIN',
   PROFILE: 'PROFILE'
 })
 

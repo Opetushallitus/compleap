@@ -13,7 +13,8 @@ import {
 export const context = {
   version: process.env.CONTEXT_VERSION,
   user: {
-    isLoggedIn: false
+    isLoggedIn: false,
+    id: null
   },
   interests: {
     data: [],
@@ -57,7 +58,7 @@ export const Action = Object.freeze({
 
 export const actions = {
   [Action.logIn]: assign({
-    user: (ctx, _) => R.assoc('isLoggedIn', true, ctx.user)
+    user: (ctx, event) => R.merge(ctx.user, { isLoggedIn: true, id: event.data.id })
   }),
   [Action.reload]: () => window.location.reload(),
   [Action.setInterestsData]: assign({

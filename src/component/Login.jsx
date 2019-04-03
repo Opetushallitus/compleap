@@ -1,4 +1,5 @@
 import React from 'react'
+import uuid from 'uuid/v4'
 import { dispatch } from 'state/state'
 import { UserEvent } from 'state/events'
 import { transition } from 'router/router'
@@ -11,7 +12,7 @@ const Login = () => (
     <LinkButton
       href='#profile'
       onClick={event => {
-        dispatch(UserEvent.LOGIN)
+        dispatch({ type: UserEvent.LOGIN, data: { id: uuid() } })
         transition(event)
       }}
     >

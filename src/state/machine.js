@@ -32,7 +32,11 @@ export const machine = Machine({
   initial: PageState.lander,
   context,
   states: {
-    [PageState.lander]: { },
+    [PageState.lander]: {
+      on: {
+        [UserEvent.LOGIN]: { actions: Action.logIn }
+      }
+    },
     [PageState.login]: { ...loginStates },
     [PageState.profile]: {
       type: 'parallel',

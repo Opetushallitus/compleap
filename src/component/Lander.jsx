@@ -3,12 +3,44 @@ import styled from 'styled-components'
 import t from 'util/translate'
 import Box from 'component/generic/widget/Box'
 import LinkButton from 'component/generic/widget/LinkButton'
-import { Context } from 'state/state'
+import { Context, dispatch } from 'state/state'
 import useObservable from 'component/generic/hook/useObservable'
+import { UserEvent } from 'state/events'
+import { transition } from 'router/router'
 
-const TextContainer = styled.section`
+const BriefContainer = styled.section`
   max-width: 600px;
-  text-align: justify;
+  text-align: left;
+
+  & h1 {
+    font-size: 1.5rem;
+  }
+
+  & p {
+    font-size: 1.1rem;
+    line-height: 1.8em;
+    font-weight: 300;
+  }
+`
+
+const LoginContainer = styled.section`
+  max-width: 600px;
+
+  & h2 {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+  }
+
+  & p {
+    font-size: 0.9rem;
+    line-height: 1.6em;
+    font-weight: 300;
+    text-align: left;
+  }
+
+  & > div {
+    margin: 1rem 0;
+  }
 `
 
 const LanderButton = styled(LinkButton)`
@@ -17,28 +49,42 @@ const LanderButton = styled(LinkButton)`
   font-weight: 500;
 `
 
-const LanderTextStyle = styled.p`
-  font-size: 1.1rem;
-  line-height: 1.8em;
-  font-weight: 300;
-`
-
 const Brief = () => (
-  <TextContainer>
-    <LanderTextStyle>{t`Etsitkö sopivaa opiskelupaikkaa? CompLeap käyttää apuna kiinnostuksiasi ja jo tehtyjä opintojasi, suositellakseen juuri sinulle sopivimpia opiskelupaikkoja.`}</LanderTextStyle>
-    <LanderTextStyle>{t`Kirjautumalla sisään CompLeap pystyy käyttämään Suomessa tehtyjä opintojasi apuna sopivan opiskelupaikan arvioimisessa.`}</LanderTextStyle>
-  </TextContainer>
+  <BriefContainer>
+    <h1>{t`Onko kiinnostavan opiskelupaikan etsiminen hankalaa?`}</h1>
+    <p>{t`CompLeap auttaa sinua sopivan opiskelupaikan etsimisessä, sinun tarvitsee vain kertoa millaiset asiat sinua kiinnostavat ja mitä olet opiskellut tähän mennessä.`}</p>
+  </BriefContainer>
 )
 
 const LoginPrompt = () => {
   const context$ = useContext(Context)
   const isLoggedIn = useObservable(context$, { path: ['context', 'user', 'isLoggedIn'] })
-  const buttonText = isLoggedIn ? t`Jatka profiiliisi` : t`Kirjaudu sisään`
+  const loginButtonText = isLoggedIn ? t`Jatka profiiliisi` : t`Kirjaudu sisään`
 
   return (
-    <section>
-      <LanderButton href='#profile'>{buttonText}</LanderButton>
-    </section>
+    <LoginContainer>
+      {!isLoggedIn && <h2>{t`Oletko valmis? Aloita kirjautumalla sisään!`}</h2>}
+      <div>
+        <LanderButton href='#profile'>{loginButtonText}</LanderButton>
+      </div>
+      {!isLoggedIn && (
+        <React.Fragment>
+          <div>
+            <LinkButton
+              type='text'
+              href='#profile'
+              onClick={event => {
+                dispatch({ type: UserEvent.LOGIN, data: { id: null } })
+                transition(event)
+              }}
+            >
+              {t`Jatka kirjautumatta`}
+            </LinkButton>
+          </div>
+          <p>{t`Kirjautumalla sisään CompLeap pystyy käyttämään Suomessa tehtyjä opintojasi apuna sopivan opiskelupaikan etsimisessä.`}</p>
+        </React.Fragment>
+      )}
+    </LoginContainer>
   )
 }
 

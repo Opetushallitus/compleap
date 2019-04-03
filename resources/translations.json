@@ -2,14 +2,17 @@
   "CompLeap": {
     "fi": "CompLeap"
   },
-  "Etsitkö sopivaa opiskelupaikkaa? CompLeap käyttää apuna kiinnostuksiasi ja jo tehtyjä opintojasi, suositellakseen juuri sinulle sopivimpia opiskelupaikkoja.": {
-    "fi": "Etsitkö sopivaa opiskelupaikkaa? CompLeap käyttää apuna kiinnostuksiasi ja jo tehtyjä opintojasi, suositellakseen juuri sinulle sopivimpia opiskelupaikkoja."
+  "Onko kiinnostavan opiskelupaikan etsiminen hankalaa?": {
+    "fi": "Onko kiinnostavan opiskelupaikan etsiminen hankalaa?"
   },
-  "Kirjautumalla sisään CompLeap pystyy käyttämään Suomessa tehtyjä opintojasi apuna sopivan opiskelupaikan arvioimisessa.": {
-    "fi": "Kirjautumalla sisään CompLeap pystyy käyttämään Suomessa tehtyjä opintojasi apuna sopivan opiskelupaikan arvioimisessa."
+  "CompLeap auttaa sinua sopivan opiskelupaikan etsimisessä, sinun tarvitsee vain kertoa millaiset asiat sinua kiinnostavat ja mitä olet opiskellut tähän mennessä.": {
+    "fi": "CompLeap auttaa sinua sopivan opiskelupaikan etsimisessä, sinun tarvitsee vain kertoa millaiset asiat sinua kiinnostavat ja mitä olet opiskellut tähän mennessä."
   },
-  "Aloita kirjautumalla sisään:": {
-    "fi": "Aloita kirjautumalla sisään:"
+  "Kirjautumalla sisään CompLeap pystyy käyttämään Suomessa tehtyjä opintojasi apuna sopivan opiskelupaikan etsimisessä.": {
+    "fi": "Kirjautumalla sisään CompLeap pystyy käyttämään Suomessa tehtyjä opintojasi apuna sopivan opiskelupaikan etsimisessä."
+  },
+  "Oletko valmis? Aloita kirjautumalla sisään!": {
+    "fi": "Oletko valmis? Aloita kirjautumalla sisään!"
   },
   "Kirjaudu sisään": {
     "fi": "Kirjaudu sisään"

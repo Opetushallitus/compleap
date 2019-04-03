@@ -27,7 +27,10 @@ const unverifiedEducationStates = {
     [EducationPickerState.init]: {
       on: {
         '': [
-          { target: EducationPickerState.formCollapsed, cond: (ctx, _) => ctx.user.isLoggedIn },
+          {
+            target: EducationPickerState.formCollapsed,
+            cond: (ctx, _) => ctx.user.isLoggedIn && ctx.user.id
+          },
           { target: EducationPickerState.formOpen }
         ]
       }
