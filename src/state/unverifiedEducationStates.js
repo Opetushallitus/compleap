@@ -36,7 +36,7 @@ const unverifiedEducationStates = {
       }
     },
     [EducationPickerState.formCollapsed]: {
-      onEntry: Action.clearEducationSelection,
+      onEntry: Action.clearUnverifiedEducationSelection,
       on: {
         [InteractionEvent.BEGIN_EDUCATION_INPUT]: EducationPickerState.formOpen
       }
@@ -48,7 +48,7 @@ const unverifiedEducationStates = {
           on: {
             [InteractionEvent.SELECT_EDUCATION]: {
               target: EducationPickerState.selectionSet,
-              actions: Action.selectEducation
+              actions: Action.selectUnverifiedEducationLevel
             }
           }
         },
@@ -74,11 +74,11 @@ const unverifiedEducationStates = {
               on: {
                 [InteractionEvent.SELECT_EDUCATION_SPECIFIER]: {
                   target: targetById(EducationPickerState.selectionSet),
-                  actions: Action.selectEducationSpecifier
+                  actions: Action.selectUnverifiedEducationSpecifier
                 },
                 [InteractionEvent.SELECT_EDUCATION]: {
                   target: targetById(EducationPickerState.selectionSet),
-                  actions: Action.selectEducation
+                  actions: Action.selectUnverifiedEducationLevel
                 }
               }
             },
@@ -86,11 +86,11 @@ const unverifiedEducationStates = {
               on: {
                 [InteractionEvent.SELECT_EDUCATION]: {
                   target: targetById(EducationPickerState.selectionSet),
-                  actions: [Action.selectEducation, Action.clearEducationSpecifier]
+                  actions: [Action.selectUnverifiedEducationLevel, Action.clearUnverifiedEducationSpecifier]
                 },
                 [InteractionEvent.SELECT_EDUCATION_SPECIFIER]: {
                   target: targetById(EducationPickerState.selectionSet),
-                  actions: Action.selectEducationSpecifier
+                  actions: Action.selectUnverifiedEducationSpecifier
                 },
                 [InteractionEvent.CONFIRM_EDUCATION]: {
                   target: targetById(EducationPickerState.done)
@@ -110,11 +110,11 @@ const unverifiedEducationStates = {
         src: Service.mapEducationClassToLearningOpportunityCode,
         onDone: {
           target: EducationPickerState.formCollapsed,
-          actions: Action.addEducation
+          actions: Action.addUnverifiedEducation
         },
         onError: {
           target: EducationPickerState.failure,
-          actions: Action.setEducationError
+          actions: Action.setUnverifiedEducationError
         }
       }
     },
@@ -125,7 +125,7 @@ const unverifiedEducationStates = {
   },
   on: {
     [InteractionEvent.REMOVE_EDUCATION]: {
-      actions: Action.removeEducation
+      actions: Action.removeUnverifiedEducation
     }
   }
 }

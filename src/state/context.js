@@ -47,12 +47,12 @@ export const Action = Object.freeze({
   setInterestsData: 'setInterestsData',
   setInterestsError: 'setInterestsError',
   toggleInterestSelection: 'toggleInterestSelection',
-  selectEducation: 'selectEducation',
-  selectEducationSpecifier: 'selectEducationSpecifier',
-  clearEducationSelection: 'clearEducationSelection',
-  clearEducationSpecifier: 'clearEducationSpecifier',
-  addEducation: 'addEducation',
-  removeEducation: 'removeEducation',
+  selectUnverifiedEducationLevel: 'selectUnverifiedEducationLevel',
+  selectUnverifiedEducationSpecifier: 'selectUnverifiedEducationSpecifier',
+  clearUnverifiedEducationSelection: 'clearUnverifiedEducationSelection',
+  clearUnverifiedEducationSpecifier: 'clearUnverifiedEducationSpecifier',
+  addUnverifiedEducation: 'addUnverifiedEducation',
+  removeUnverifiedEducation: 'removeUnverifiedEducation',
   setEducationError: 'setEducationError'
 })
 
@@ -90,25 +90,25 @@ export const actions = {
       }
     }
   }),
-  [Action.selectEducation]: assign({
+  [Action.selectUnverifiedEducationLevel]: assign({
     education: (ctx, event) => R.assocPath(['data', 'selection', 'level'], event.data, ctx.education)
   }),
-  [Action.selectEducationSpecifier]: assign({
+  [Action.selectUnverifiedEducationSpecifier]: assign({
     education: (ctx, event) => R.assocPath(['data', 'selection', 'specifier'], event.data, ctx.education)
   }),
-  [Action.clearEducationSelection]: assign({
+  [Action.clearUnverifiedEducationSelection]: assign({
     education: (ctx, _) => R.assocPath(['data', 'selection'], undefined, ctx.education)
   }),
-  [Action.clearEducationSpecifier]: assign({
+  [Action.clearUnverifiedEducationSpecifier]: assign({
     education: (ctx, _) => R.dissocPath(['data', 'selection', 'specifier'], ctx.education)
   }),
-  [Action.addEducation]: assign({
+  [Action.addUnverifiedEducation]: assign({
     education: (ctx, event) => {
       const educationData = R.merge(ctx.education.data.selection, { id: uuid(), code: event.data })
       return R.over(unverifiedEducationsLens(), R.append(educationData), ctx.education)
     }
   }),
-  [Action.removeEducation]: assign({
+  [Action.removeUnverifiedEducation]: assign({
     education: (ctx, event) => {
       const i = R.findIndex(({ id }) => id === event.data.id, ctx.education.data.unverifiedEducations)
       if (i === -1) {
