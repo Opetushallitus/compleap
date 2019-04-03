@@ -7,4 +7,4 @@ export const topicLens = index => R.lensPath(['data', index])
 export const subtopicsLens = () => R.lensProp('subtopics')
 export const isSelectedLens = () => R.lensProp('selected')
 
-export const educationsLens = () => R.lensPath(['data', 'educations'])
+export const unverifiedEducationsLens = () => R.lensPath(['data', 'unverifiedEducations'])

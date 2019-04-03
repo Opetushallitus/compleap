@@ -36,10 +36,10 @@ const EducationPicker = () => {
 
   const selectedId = useObservable(context$, { path: ['context', 'education', 'data', 'selection', 'level', 'id'] })
   const selectedSpecifierId = useObservable(context$, { path: ['context', 'education', 'data', 'selection', 'specifier', 'id'] })
-  const addedEducations = useObservable(context$, { path: ['context', 'education', 'data', 'educations'] })
+  const addedUnverifiedEducations = useObservable(context$, { path: ['context', 'education', 'data', 'unverifiedEducations'] })
 
   const hasSpecifier = !!selectedSpecifierId
-  const addedEducationSpecifierIds = addedEducations.map(R.view(R.lensPath(['specifier', 'id']))).filter(v => !!v)
+  const addedEducationSpecifierIds = addedUnverifiedEducations.map(R.view(R.lensPath(['specifier', 'id']))).filter(v => !!v)
 
   if (isCollapsed) {
     return (

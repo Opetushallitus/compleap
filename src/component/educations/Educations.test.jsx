@@ -13,7 +13,7 @@ const mockState = formState => jest.doMock('state/state', () => {
       },
       education: {
         data: {
-          educations: [{
+          unverifiedEducations: [{
             id: 'd17ebd27-c42c-416a-954c-2eb42f9436ed',
             level: { id: '1' }
           }, {

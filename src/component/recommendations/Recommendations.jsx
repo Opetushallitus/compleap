@@ -20,14 +20,14 @@ const Recommendations = () => {
   const context$ = useContext(Context)
   const status = useObservable(context$, { path: ['value', 'profile', 'recommendations'] })
 
-  const educations$ = context$.map(({ context }) => context.education.data.educations)
+  const unverifiedEducations$ = context$.map(({ context }) => context.education.data.unverifiedEducations)
   const interests$ = context$.map(({ context }) => context.interests.data)
 
   const flattenedTopics$ = interests$.map(interests => R.concat(withoutSubtopics(interests), extractSubtopics(interests)))
   const numSelectedInterests$ = flattenedTopics$.map(countSelectedTopics)
   const hasRequiredInterests$ = numSelectedInterests$.map(v => v >= MIN_INTERESTS_REQUIRED).toProperty()
 
-  const queryParams$ = B.combineTemplate({ educations: educations$, interests: interests$ })
+  const queryParams$ = B.combineTemplate({ educations: unverifiedEducations$, interests: interests$ })
   const recommendationsResponse = useRecommendationsQuery(queryParams$, hasRequiredInterests$)
 
   const recommendations = recommendationsResponse && recommendationsResponse.data

@@ -22,7 +22,7 @@ const mockState = queryStatus => jest.doMock('state/state', () => {
       },
       education: {
         data: {
-          educations: [],
+          unverifiedEducations: [],
           selection: undefined
         }
       }

@@ -29,10 +29,10 @@ const DetailsText = styled.p`
 
 const EducationsList = () => {
   const context$ = useContext(Context)
-  const educationsList = useObservable(context$, { path: ['context', 'education', 'data', 'educations'] })
+  const unverifiedEducationsList = useObservable(context$, { path: ['context', 'education', 'data', 'unverifiedEducations'] })
 
   return (
-    educationsList && educationsList.map(({ id, level, specifier }) => (
+    unverifiedEducationsList && unverifiedEducationsList.map(({ id, level, specifier }) => (
       <EducationCard key={id}>
         <div>
           <H3>{educations[level.id]}</H3>

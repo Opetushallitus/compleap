@@ -2,7 +2,7 @@ import * as R from 'ramda'
 import { assign } from 'xstate'
 import uuid from 'uuid/v4'
 import {
-  educationsLens,
+  unverifiedEducationsLens,
   findSubtopicIndex,
   findTopicIndex,
   isSelectedLens,
@@ -24,7 +24,7 @@ export const context = {
       /**
        * [{ id, level: { id }, specifier?: { id }, code }]
        */
-      educations: [],
+      unverifiedEducations: [],
       /**
        * { level: { id }, specifier?: { id } }
        */
@@ -98,17 +98,17 @@ export const actions = {
   [Action.addEducation]: assign({
     education: (ctx, event) => {
       const educationData = R.merge(ctx.education.data.selection, { id: uuid(), code: event.data })
-      return R.over(educationsLens(), R.append(educationData), ctx.education)
+      return R.over(unverifiedEducationsLens(), R.append(educationData), ctx.education)
     }
   }),
   [Action.removeEducation]: assign({
     education: (ctx, event) => {
-      const i = R.findIndex(({ id }) => id === event.data.id, ctx.education.data.educations)
+      const i = R.findIndex(({ id }) => id === event.data.id, ctx.education.data.unverifiedEducations)
       if (i === -1) {
         console.error(`Tried to remove education, but could not find one with id ${event.data.id}`)
         return
       }
-      return R.dissocPath(['data', 'educations', i], ctx.education)
+      return R.dissocPath(['data', 'unverifiedEducations', i], ctx.education)
     }
   }),
   [Action.setEducationError]: assign({
