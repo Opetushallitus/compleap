@@ -22,7 +22,7 @@ export default keyOrLocalizedString => {
     const translated = keyOrLocalizedString[lang]
 
     if (!translated) {
-      console.error(`LocalizedString missing translation for language ${lang}: ${JSON.stringify(keyOrLocalizedString)}`)
+      console.warn(`LocalizedString missing translation for language ${lang}: ${JSON.stringify(keyOrLocalizedString)}`)
       return ''
     }
 
