@@ -26,8 +26,8 @@ const UnverifiedEducationsList = () => {
       {unverifiedEducationsList.map(({ id, level, specifier }) => (
         <Card key={id}>
           <div>
-            <H3>{educations[level.id]}</H3>
-            {specifier && <DetailsText>{educationClassification[specifier.id]}</DetailsText>}
+            <H3>{t(educations[level.id])}</H3>
+            {specifier && <DetailsText>{t(educationClassification[specifier.id])}</DetailsText>}
           </div>
           <div>
             <Button type='text' onClick={() => dispatch({ type: InteractionEvent.REMOVE_EDUCATION, data: { id } })}>

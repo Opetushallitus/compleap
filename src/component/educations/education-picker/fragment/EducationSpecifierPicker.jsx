@@ -26,6 +26,7 @@ const SelectContainer = styled.div`
 
 const EducationSpecifierPicker = ({ selectedId = '', addedIds }) => {
   const availableOptions = specifiers.filter(({ id }) => !addedIds.includes(id))
+  const translatedOptions = availableOptions.map(option => R.over(R.lensProp('label'), t, option))
 
   return (
     <div>
@@ -33,7 +34,7 @@ const EducationSpecifierPicker = ({ selectedId = '', addedIds }) => {
       <SelectContainer>
         <Select
           placeholder={t`Hae alaa`}
-          options={availableOptions}
+          options={translatedOptions}
           selectedId={selectedId}
         />
       </SelectContainer>
