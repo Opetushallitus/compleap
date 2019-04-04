@@ -31,6 +31,10 @@
     "placeOfStudy": { "#ref": "#/definitions/LocalizedString" },
     "uri": { "type": "string" },
     "name": { "$ref": "#/definitions/LocalizedString" },
+    "qualificationTitles": {
+      "type": "array",
+      "items": { "$ref": "#/definitions/LocalizedString" }
+    },
     "children": {
       "type": "array",
       "items": { "$ref": "#/definitions/Unit" }
@@ -40,6 +44,7 @@
     "placeOfStudy",
     "uri",
     "name",
+    "qualificationTitles",
     "children"
   ],
   "additionalProperties": false

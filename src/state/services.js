@@ -67,7 +67,9 @@ const services = {
     const parseKoskiData = koskiData => {
       const placeOfStudyLens = R.lensPath(['toimipiste', 'nimi'])
       const identifierLens = R.lensPath(['koulutusmoduuli', 'tunniste'])
-      const nameLens = R.compose(identifierLens, R.lensProp('nimi'))
+      const nameLens = R.lensProp('nimi')
+      const moduleNameLens = R.compose(identifierLens, nameLens)
+      const qualificationTitlesLens = R.lensProp('tutkintonimike')
       const childrenLens = R.lensProp('osasuoritukset')
 
       const topLevelRecords = R.compose(R.flatten, R.map(R.prop('suoritukset')))(koskiData.opiskeluoikeudet)
@@ -75,14 +77,17 @@ const services = {
       const parseRecord = parseChildren => record => VerifiedEducation({
         placeOfStudy: R.view(placeOfStudyLens, record),
         uri: koulutusmoduuliTunnisteToCodeUri(R.view(identifierLens, record)),
-        name: R.view(nameLens, record),
+        name: R.view(moduleNameLens, record),
+        qualificationTitles: parseQualificationTitles(record),
         children: parseChildren(record)
       })
+
+      const parseQualificationTitles = record => R.map(R.view(nameLens), R.view(qualificationTitlesLens, record))
 
       const parseChildren = record => R.view(childrenLens, record)
         .map(unit => ({
           uri: tutkinnonosaTunnisteToCodeUri(R.view(identifierLens, unit)),
-          name: R.view(nameLens, unit)
+          name: R.view(moduleNameLens, unit)
         }))
         .filter(unit => !!unit.uri)
 
