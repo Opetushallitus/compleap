@@ -31,3 +31,5 @@ export const validateEvent = event => {
       return check(removeEducationEventSchema, event)
   }
 }
+
+export const validateModel = (model, schema) => check(schema, model)

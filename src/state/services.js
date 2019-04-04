@@ -1,14 +1,18 @@
 import interests from 'resources/mock/interests'
 import educationToLearningOpportunity from 'resources/mock/educationClassificationToLearningOpportunityCode'
+import koskiData from 'resources/mock/koski/luontoJaYmparistoalanPerustutkinto'
 import * as R from 'ramda'
 import uuid from 'uuid/v4'
 import { subtopicsLens } from 'state/helper'
 import { isVocational } from 'util/educationHelper'
 import { stopPersisting } from 'state/state'
+import VerifiedEducation from 'model/VerifiedEducation'
+import { koulutusmoduuliTunnisteToCodeUri, tutkinnonosaTunnisteToCodeUri } from 'util/koski'
 
 export const Service = Object.freeze({
   getInterestSuggestions: 'getInterestSuggestions',
   mapEducationClassToLearningOpportunityCode: 'mapEducationClassToLearningOpportunityCode',
+  getVerifiedEducations: 'getVerifiedEducations',
   clearSession: 'clearSession'
 })
 
@@ -58,6 +62,35 @@ const services = {
 
     return resolve(learningOpportunityCode)
   }),
+
+  [Service.getVerifiedEducations]: () => {
+    const parseKoskiData = koskiData => {
+      const placeOfStudyLens = R.lensPath(['toimipiste', 'nimi'])
+      const identifierLens = R.lensPath(['koulutusmoduuli', 'tunniste'])
+      const nameLens = R.compose(identifierLens, R.lensProp('nimi'))
+      const childrenLens = R.lensProp('osasuoritukset')
+
+      const topLevelRecords = R.compose(R.flatten, R.map(R.prop('suoritukset')))(koskiData.opiskeluoikeudet)
+
+      const parseRecord = parseChildren => record => VerifiedEducation({
+        placeOfStudy: R.view(placeOfStudyLens, record),
+        uri: koulutusmoduuliTunnisteToCodeUri(R.view(identifierLens, record)),
+        name: R.view(nameLens, record),
+        children: parseChildren(record)
+      })
+
+      const parseChildren = record => R.view(childrenLens, record)
+        .map(unit => ({
+          uri: tutkinnonosaTunnisteToCodeUri(R.view(identifierLens, unit)),
+          name: R.view(nameLens, unit)
+        }))
+        .filter(unit => !!unit.uri)
+
+      return topLevelRecords.map(parseRecord(parseChildren))
+    }
+
+    return Promise.resolve(parseKoskiData(koskiData))
+  },
 
   [Service.clearSession]: () => {
     stopPersisting()

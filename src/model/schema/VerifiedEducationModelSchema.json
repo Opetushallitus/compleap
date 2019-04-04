@@ -1,0 +1,43 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+
+  "definitions": {
+    "LocalizedString": {
+      "type": "object",
+      "properties": {
+        "fi": { "type" : "string" },
+        "sv": { "type" : "string" },
+        "en": { "type" : "string" }
+      }
+    },
+    "Unit": {
+      "type": "object",
+      "properties": {
+        "uri": { "type": "string" },
+        "name": { "$ref": "#/definitions/LocalizedString" }
+      },
+      "required": [
+        "uri",
+        "name"
+      ]
+    }
+  },
+
+  "title": "VerifiedEducationModel",
+  "type": "object",
+  "properties": {
+    "placeOfStudy": { "#ref": "#/definitions/LocalizedString" },
+    "uri": { "type": "string" },
+    "name": { "$ref": "#/definitions/LocalizedString" },
+    "children": {
+      "type": "array",
+      "items": { "$ref": "#/definitions/Unit" }
+    }
+  },
+  "required": [
+    "placeOfStudy",
+    "uri",
+    "name",
+    "children"
+  ]
+}

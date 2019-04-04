@@ -22,6 +22,9 @@ export const context = {
   },
   education: {
     data: {
+      /**
+       * @see {@link VerifiedEducationModelSchema.json }
+       */
       verifiedEducations: [],
       /**
        * [{
@@ -30,12 +33,14 @@ export const context = {
        *   specifier?: { id: FinnishEducationClassification2016id },
        *   code?: LearningOpportunityCodeUri (koulutuskoodiUri)
        * }]
+       * TODO Add validation
        */
       unverifiedEducations: [],
       /**
        * { level: { id }, specifier?: { id } }
        */
       selection: undefined,
+      // TODO Use separate errors for verified and unverified education
       error: undefined
     }
   }
@@ -53,7 +58,8 @@ export const Action = Object.freeze({
   clearUnverifiedEducationSpecifier: 'clearUnverifiedEducationSpecifier',
   addUnverifiedEducation: 'addUnverifiedEducation',
   removeUnverifiedEducation: 'removeUnverifiedEducation',
-  setEducationError: 'setEducationError'
+  setEducationError: 'setEducationError',
+  setVerifiedEducationData: 'setVerifiedEducationData'
 })
 
 export const actions = {
@@ -120,5 +126,8 @@ export const actions = {
   }),
   [Action.setEducationError]: assign({
     education: (ctx, event) => R.assoc('error', event.data, ctx.education)
+  }),
+  [Action.setVerifiedEducationData]: assign({
+    education: (ctx, event) => R.assocPath(['data', 'verifiedEducations'], event.data, ctx.education)
   })
 }

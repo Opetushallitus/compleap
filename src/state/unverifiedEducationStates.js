@@ -114,7 +114,7 @@ const unverifiedEducationStates = {
         },
         onError: {
           target: EducationPickerState.failure,
-          actions: Action.setUnverifiedEducationError
+          actions: Action.setEducationError
         }
       }
     },
