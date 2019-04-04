@@ -3,97 +3,124 @@
     "fi": "CompLeap"
   },
   "Onko kiinnostavan opiskelupaikan etsiminen hankalaa?": {
-    "fi": "Onko kiinnostavan opiskelupaikan etsiminen hankalaa?"
+    "fi": "Onko kiinnostavan opiskelupaikan etsiminen hankalaa?",
+    "en": "Do you find it hard to find an interesting study place?"
   },
   "CompLeap auttaa sinua sopivan opiskelupaikan etsimisessä, sinun tarvitsee vain kertoa millaiset asiat sinua kiinnostavat ja mitä olet opiskellut tähän mennessä.": {
-    "fi": "CompLeap auttaa sinua sopivan opiskelupaikan etsimisessä, sinun tarvitsee vain kertoa millaiset asiat sinua kiinnostavat ja mitä olet opiskellut tähän mennessä."
-  },
-  "Kirjautumalla sisään CompLeap pystyy käyttämään Suomessa tehtyjä opintojasi apuna sopivan opiskelupaikan etsimisessä.": {
-    "fi": "Kirjautumalla sisään CompLeap pystyy käyttämään Suomessa tehtyjä opintojasi apuna sopivan opiskelupaikan etsimisessä."
+    "fi": "CompLeap auttaa sinua sopivan opiskelupaikan etsimisessä, sinun tarvitsee vain kertoa millaiset asiat sinua kiinnostavat ja mitä olet opiskellut tähän mennessä.",
+    "en": "Compleap heps you in finding a suitable study place, you only have to tell what interests you and what you have studied so far."
   },
   "Oletko valmis? Aloita kirjautumalla sisään!": {
-    "fi": "Oletko valmis? Aloita kirjautumalla sisään!"
+    "fi": "Oletko valmis? Aloita kirjautumalla sisään!",
+    "en": "Are you ready? Start by logging in."
+  },
+  "Kirjautumalla sisään CompLeap pystyy käyttämään Suomessa tehtyjä opintojasi apuna sopivan opiskelupaikan etsimisessä.": {
+    "fi": "Kirjautumalla sisään CompLeap pystyy käyttämään Suomessa tehtyjä opintojasi apuna sopivan opiskelupaikan etsimisessä.",
+    "en": "By logging in, CompLeap can use the studies you have done in Finland to help find a suitable study place for you."
   },
   "Kirjaudu sisään": {
-    "fi": "Kirjaudu sisään"
+    "fi": "Kirjaudu sisään",
+    "en": "Log in"
   },
   "Jatka kirjautumatta": {
-    "fi": "Jatka kirjautumatta"
-  },
-  "Saamme tällä tavoin tiedot Suomessa suorittamistasi opinnoista.": {
-    "fi": "Saamme tällä tavoin tiedot Suomessa suorittamistasi opinnoista."
+    "fi": "Jatka kirjautumatta",
+    "en": "Continue without logging in"
   },
   "Koulutukset": {
-    "fi": "Koulutukset"
+    "fi": "Koulutukset",
+    "en": "Education"
   },
   "Suomalaiset tutkinnot": {
-    "fi": "Suomalaiset tutkinnot"
+    "fi": "Suomalaiset tutkinnot",
+    "en": "Finnish degrees"
   },
   "Olemme tunnistaneet sinulta seuraavat koulutukset:": {
-    "fi": "Olemme tunnistaneet sinulta seuraavat koulutukset:"
+    "fi": "Olemme tunnistaneet sinulta seuraavat koulutukset:",
+    "en": "We have identified your following education:"
   },
   "Kerro mitä pidit opinnoistasi, niin voimme antaa parempia suosituksia. Voit myös jättää valinnan tyhjäksi.": {
-    "fi": "Kerro mitä pidit opinnoistasi, niin voimme antaa parempia suosituksia. Voit myös jättää valinnan tyhjäksi."
+    "fi": "Kerro mitä pidit opinnoistasi, niin voimme antaa parempia suosituksia. Voit myös jättää valinnan tyhjäksi.",
+    "en": "Tell us how you liked your education, and we can give you better recommendations. You can also leave the selection empty."
   },
   "Valmistunut": {
-    "fi": "Valmistunut"
+    "fi": "Valmistunut",
+    "en": "Graduated"
   },
   "Kesken": {
-    "fi": "Kesken"
+    "fi": "Kesken",
+    "en": "In progress"
   },
   "Ulkomailla suoritetut tutkinnot": {
-    "fi": "Ulkomailla suoritetut tutkinnot"
+    "fi": "Ulkomailla suoritetut tutkinnot",
+    "en": "Studies done outside of Finland"
   },
   "Olen suorittanut tutkinnon ulkomailla": {
-    "fi": "Olen suorittanut tutkinnon ulkomailla"
+    "fi": "Olen suorittanut tutkinnon ulkomailla",
+    "en": "I have done studies outside of Finland"
   },
   "Minkä tasoisesta tutkinnosta on kyse?": {
-    "fi": "Minkä tasoisesta tutkinnosta on kyse?"
+    "fi": "Minkä tasoisesta tutkinnosta on kyse?",
+    "en": "What level of education is it?"
   },
   "Perusopetus": {
-    "fi": "Perusopetus"
+    "fi": "Perusopetus",
+    "en": "Elementary education"
   },
   "Ammatillinen tutkinto": {
-    "fi": "Ammatillinen tutkinto"
+    "fi": "Ammatillinen tutkinto",
+    "en": "Vocational degree"
   },
   "Lukio tai vastaava": {
-    "fi": "Lukio tai vastaava"
+    "fi": "Lukio tai vastaava",
+    "en": "High school or similar"
   },
   "Kandidaatti – korkeakoulu / yliopisto": {
-    "fi": "Kandidaatti – korkeakoulu / yliopisto"
+    "fi": "Kandidaatti – korkeakoulu / yliopisto",
+    "en": "Bachelor – polytechnic / university"
   },
   "Maisteri – korkeakoulu / yliopisto": {
-    "fi": "Maisteri – korkeakoulu / yliopisto"
+    "fi": "Maisteri – korkeakoulu / yliopisto",
+    "en": "Masters – polytechnic / university"
   },
   "Jatkotutkinto – korkeakoulu / yliopisto": {
-    "fi": "Jatkotutkinto – korkeakoulu / yliopisto"
+    "fi": "Jatkotutkinto – korkeakoulu / yliopisto",
+    "en": "Licentiate or doctorate – polytechnic / university"
   },
   "Miltä alalta tutkinto on?": {
-    "fi": "Miltä alalta tutkinto on?"
+    "fi": "Miltä alalta tutkinto on?",
+    "en": "What field is it?"
   },
   "Hae alaa": {
-    "fi": "Hae alaa"
+    "fi": "Hae alaa",
+    "en": "Search for a field"
   },
   "Lisää muualla kuin Suomessa suoritettu tutkinto": {
-    "fi": "Lisää muualla kuin Suomessa suoritettu tutkinto"
+    "fi": "Lisää muualla kuin Suomessa suoritettu tutkinto",
+    "en": "Add a degree done outside of Finland"
   },
   "Poista tutkinto": {
-    "fi": "Poista tutkinto"
-  },
-  "Valitse mahdollisimman tarkasti mitkä allaolevista asioista sinua kiinnostavat. Mitä tarkemmin valitset, sitä tarkemmin pystymme etsimään sinulle sopivia koulutuksia.": {
-    "fi": "Valitse mahdollisimman tarkasti mitkä allaolevista asioista sinua kiinnostavat. Mitä tarkemmin valitset, sitä tarkemmin pystymme etsimään sinulle sopivia koulutuksia."
-  },
-  "Kiinnostukset": {
-    "fi": "Kiinnostukset"
-  },
-  "Valitse seuraavista ainakin 5 sinua kiinnostavaa asiaa": {
-    "fi": "Valitse seuraavista ainakin 5 sinua kiinnostavaa asiaa"
+    "fi": "Poista tutkinto",
+    "en": "Remove the degree"
   },
   "Peruuta": {
-    "fi": "Peruuta"
+    "fi": "Peruuta",
+    "en": "Cancel"
   },
   "Valmis": {
-    "fi": "Valmis"
+    "fi": "Valmis",
+    "en": "Ready"
+  },
+  "Kiinnostukset": {
+    "fi": "Kiinnostukset",
+    "en": "Fields of interest"
+  },
+  "Valitse mahdollisimman tarkasti mitkä allaolevista asioista sinua kiinnostavat. Mitä tarkemmin valitset, sitä tarkemmin pystymme etsimään sinulle sopivia koulutuksia.": {
+    "fi": "Valitse mahdollisimman tarkasti mitkä allaolevista asioista sinua kiinnostavat. Mitä tarkemmin valitset, sitä tarkemmin pystymme etsimään sinulle sopivia koulutuksia.",
+    "en": "Select as accurately as possible what interests you from the options below. The more accurately you select, the more accurately we can find education that is suitable for you."
+  },
+  "Valitse seuraavista ainakin 5 sinua kiinnostavaa asiaa": {
+    "fi": "Valitse seuraavista ainakin 5 sinua kiinnostavaa asiaa",
+    "en": "Select at least 5 topics from the following"
   },
   "Yleissivistävä koulutus": {
     "fi": "Yleissivistävä koulutus"
@@ -399,42 +426,55 @@
     "fi": "Muut tai tuntemattomat koulutusalat"
   },
   "Suositellut opiskelupaikat": {
-    "fi": "Suositellut opiskelupaikat"
+    "fi": "Suositellut opiskelupaikat",
+    "en": "Recommended study places"
   },
   "Näytetään opintojesi ja valitsemiesi kiinnostusten perusteella sinulle sopivimpia opiskelupaikkoja hakualueeltasi. Voit halutessasi rajata aluetta tarkemmin.": {
-    "fi": "Näytetään opintojesi ja valitsemiesi kiinnostusten perusteella sinulle sopivimpia opiskelupaikkoja hakualueeltasi. Voit halutessasi rajata aluetta tarkemmin."
+    "fi": "Näytetään opintojesi ja valitsemiesi kiinnostusten perusteella sinulle sopivimpia opiskelupaikkoja hakualueeltasi. Voit halutessasi rajata aluetta tarkemmin.",
+    "en": "Showing the most suitable study places from your selected area based on your studies and selected fields of interests. You can restrict the area further, if you want."
   },
   "Valitse ensin vähintään 5 kiinnostuksen kohdetta.": {
-    "fi": "Valitse ensin vähintään 5 kiinnostuksen kohdetta."
+    "fi": "Valitse ensin vähintään 5 kiinnostuksen kohdetta.",
+    "en": "Select first at least 5 fields of interest."
   },
   "hakukohdetta": {
-    "fi": "hakukohdetta"
+    "fi": "hakukohdetta",
+    "en": "learning opportunities"
   },
   "Työpaikat": {
-    "fi": "Työpaikat"
+    "fi": "Työpaikat",
+    "en": "Jobs"
   },
   "Huomaa, että sinun on pyydettäessä pystyttävä näyttämään todistukset aikaisemmista opinnoistasi. Tällä tavoin varmistetaan, että pystyt oikeasti hakemaan haluamaasi koulutukseen.": {
-    "fi": "Huomaa, että sinun on pyydettäessä pystyttävä näyttämään todistukset aikaisemmista opinnoistasi. Tällä tavoin varmistetaan, että pystyt oikeasti hakemaan haluamaasi koulutukseen."
+    "fi": "Huomaa, että sinun on pyydettäessä pystyttävä näyttämään todistukset aikaisemmista opinnoistasi. Tällä tavoin varmistetaan, että pystyt oikeasti hakemaan haluamaasi koulutukseen.",
+    "en": "Not that you will have to be able to show certificates from your previous studies if asked. This ensures that you can actually apply for the education you wish to apply for."
   },
   "Näytä loput": {
-    "fi": "Näytä loput"
+    "fi": "Näytä loput",
+    "en": "Show the rest"
   },
   "Näytä vähemmän": {
-    "fi": "Näytä vähemmän"
+    "fi": "Näytä vähemmän",
+    "en": "Show less"
   },
   "Lue lisää": {
-    "fi": "Lue lisää"
+    "fi": "Lue lisää",
+    "en": "Read more"
   },
   "Sivua ei löytynyt": {
-    "fi": "Sivua ei löytynyt"
+    "fi": "Sivua ei löytynyt",
+    "en": "Page couldn't be found"
   },
   "Palaa takaisin aloitussivulle": {
-    "fi": "Palaa takaisin aloitussivulle"
+    "fi": "Palaa takaisin aloitussivulle",
+    "en": "Return to the front page"
   },
   "Jatka profiiliisi": {
-    "fi": "Jatka profiiliisi"
+    "fi": "Jatka profiiliisi",
+    "en": "Continue to you profile"
   },
   "Kirjaudu ulos": {
-    "fi": "Kirjaudu ulos"
+    "fi": "Kirjaudu ulos",
+    "en": "Log out"
   }
 }

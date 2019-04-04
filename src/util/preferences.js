@@ -1,1 +1,1 @@
-export const lang = 'fi'
+export const lang = process.env.LANGUAGE || 'fi'
