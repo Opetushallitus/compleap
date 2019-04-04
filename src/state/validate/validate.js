@@ -1,4 +1,5 @@
 import Ajv from 'ajv'
+import * as R from 'ramda'
 import selectEducationEventSchema from 'state/validate/schema/selectEducationEventSchema'
 import selectEducationSpecifierEventSchema from 'state/validate/schema/selectEducationSpecifierEventSchema'
 import removeEducationEventSchema from 'state/validate/schema/removeEducationEventSchema'
@@ -32,4 +33,4 @@ export const validateEvent = event => {
   }
 }
 
-export const validateModel = (model, schema) => check(schema, model)
+export const validateModel = (model, schema) => check(schema, R.pick(Object.getOwnPropertyNames(model), model))
