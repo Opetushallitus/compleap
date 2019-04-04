@@ -12,6 +12,15 @@
       "minProperties": 1,
       "additionalProperties": false
     },
+    "Status": {
+      "type": "object",
+      "properties": {
+        "completed": { "type": "boolean" },
+        "date": { "type": "string" }
+      },
+      "required": ["completed"],
+      "additionalProperties": false
+    },
     "Unit": {
       "type": "object",
       "properties": {
@@ -36,6 +45,7 @@
       "type": "array",
       "items": { "$ref": "#/definitions/LocalizedString" }
     },
+    "status": { "$ref": "#/definitions/Status" },
     "children": {
       "type": "array",
       "items": { "$ref": "#/definitions/Unit" }
@@ -46,6 +56,7 @@
     "uri",
     "name",
     "qualificationTitles",
+    "status",
     "children"
   ],
   "additionalProperties": false
