@@ -1,6 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import styled from 'styled-components'
+import styled, { css } from 'styled-components'
 import {
   disabled,
   fadeColor, padded,
@@ -23,6 +23,10 @@ const resolveButtonStyle = type => {
   }
 }
 
+const disabledSupport = css`
+  ${props => props.as === 'a' && props.disabled ? disabled : ''};
+`
+
 const BaseButtonStyle = styled.button`
   display: inline-block;
   border: none;
@@ -37,7 +41,6 @@ const BaseButtonStyle = styled.button`
 
   &:disabled {
     ${disabled};
-    cursor: default;
   }
 
   &:focus {
@@ -51,6 +54,7 @@ const PrimaryButtonStyle = styled(BaseButtonStyle)`
   ${primary};
   ${roundedRectangle};
   ${padded};
+  ${disabledSupport};
 
   &:hover:enabled {
     ${primaryDarker};
@@ -64,6 +68,7 @@ const PrimaryButtonStyle = styled(BaseButtonStyle)`
 const SecondaryButtonStyle = styled(BaseButtonStyle)`
   ${secondary};
   ${rounded};
+  ${disabledSupport};
 
   &:hover:enabled {
     ${secondaryDarker};
@@ -81,6 +86,7 @@ const TextButtonStyle = styled(BaseButtonStyle)`
 
   ${roundedRectangle};
   ${padded};
+  ${disabledSupport};
 
   &:hover:enabled {
     background-color: ${({ theme }) => theme.color.grayLightest};

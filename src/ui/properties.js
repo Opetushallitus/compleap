@@ -45,6 +45,7 @@ export const secondaryDarker = css`
 export const disabled = css`
   color: ${({ theme }) => theme.color.grayDarkest}
   background-color: ${({ theme }) => theme.color.grayLighter};
+  cursor: default;
 `
 
 export const fadeColor = css`
