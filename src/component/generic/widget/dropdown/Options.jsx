@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import PropTypes from 'prop-types'
 import styled from 'styled-components'
-import { bordered, roundedRectangle } from 'ui/properties'
+import { bordered } from 'ui/properties'
 import useKeyCommands from 'component/generic/hook/useKeyCommands'
 
 const Container = styled.div`
@@ -9,7 +9,6 @@ const Container = styled.div`
 `
 
 const ResultsPane = styled.div`
-  ${roundedRectangle};
   ${bordered};
 
   box-sizing: border-box;
@@ -18,6 +17,8 @@ const ResultsPane = styled.div`
   position: absolute;
   background-color: ${({ theme }) => theme.color.white};
   padding: 0;
+  margin: -3px 0 0 0;
+  border-radius: 0 3px;
   max-height: 15rem;
   overflow-y: auto;
 `
