@@ -2,8 +2,6 @@ import React, { useEffect, useRef, useState } from 'react'
 import PropTypes from 'prop-types'
 import styled from 'styled-components'
 import B from 'baconjs'
-import { dispatch } from 'state/state'
-import { InteractionEvent } from 'state/events'
 import Options from 'component/generic/widget/dropdown/Options'
 import Input from 'component/generic/widget/dropdown/Input'
 
@@ -26,7 +24,7 @@ const useInputFilter = (inputBusRef, filterFn, onInputChange, onResultChange) =>
   return () => subscriptions.forEach(unsubscribe => unsubscribe())
 })
 
-const Select = ({ placeholder, options, selectedId, locale = 'fi-FI' }) => {
+const Select = ({ placeholder, options, onSelect, selectedId, locale = 'fi-FI' }) => {
   const [rawInput, setRawInput] = useState('')
   const [isFocused, setIsFocused] = useState(false)
   const [filteredOptions, setFilteredOptions] = useState(options)
@@ -48,7 +46,7 @@ const Select = ({ placeholder, options, selectedId, locale = 'fi-FI' }) => {
   }
 
   const selectOption = id => {
-    dispatch({ type: InteractionEvent.SELECT_EDUCATION_SPECIFIER, data: { id } })
+    onSelect(id)
     resetInput()
     closeOptions()
   }
@@ -85,7 +83,8 @@ const Select = ({ placeholder, options, selectedId, locale = 'fi-FI' }) => {
 
 Select.propTypes = {
   placeholder: PropTypes.string,
-  options: PropTypes.array,
+  options: PropTypes.array.isRequired,
+  onSelect: PropTypes.func.isRequired,
   selectedId: PropTypes.string.isRequired,
   locale: PropTypes.string
 }

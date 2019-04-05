@@ -3,6 +3,8 @@ import PropTypes from 'prop-types'
 import styled from 'styled-components'
 import * as R from 'ramda'
 import educationClassification from 'resources/finnishEducationClassification2016'
+import { dispatch } from 'state/state'
+import { InteractionEvent } from 'state/events'
 import t from 'util/translate'
 import Select from 'component/generic/widget/dropdown/Select'
 
@@ -35,6 +37,7 @@ const EducationSpecifierPicker = ({ selectedId = '', addedIds }) => {
         <Select
           placeholder={t`Hae alaa`}
           options={translatedOptions}
+          onSelect={id => dispatch({ type: InteractionEvent.SELECT_EDUCATION_SPECIFIER, data: { id } })}
           selectedId={selectedId}
         />
       </SelectContainer>
