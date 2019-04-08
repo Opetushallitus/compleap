@@ -8,11 +8,11 @@ import mockRequest from 'util/mockRequest'
 const RandomTempData = () => Math.floor(Math.random() * Math.floor(100))
 
 // TODO Implement API
-const doQueryRecommendations = ({ educations, interests }) => {
+const doQueryRecommendations = ({ unverifiedEducations, verifiedEducations, interests }) => {
   dispatch(RecommendationsStatusEvent.QUERY_PENDING)
 
   return mockRequest(
-    { educations, interests },
+    { unverifiedEducations, verifiedEducations, interests },
     { status: 'ok', data: [RandomTempData(), RandomTempData(), RandomTempData()] }, // random placeholder data
     true
   )
