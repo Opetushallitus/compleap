@@ -1,3 +1,4 @@
+const webpack = require('webpack')
 const merge = require('webpack-merge')
 const common = require('./webpack.common.js')
 
@@ -7,5 +8,10 @@ module.exports = merge(common, {
     splitChunks: {
       chunks: 'all'
     }
-  }
+  },
+  plugins: [
+    new webpack.DefinePlugin({
+      'process.env.MOCK_API_LATENCY_MS': JSON.stringify(500)
+    })
+  ]
 })
