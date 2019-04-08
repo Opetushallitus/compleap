@@ -5,6 +5,7 @@ export const NavigationEvent = Object.freeze({
 })
 
 export const UserEvent = Object.freeze({
+  SELECT_PROFILE: 'SELECT_PROFILE',
   LOGIN: 'LOGIN',
   LOGOUT: 'LOGOUT'
 })

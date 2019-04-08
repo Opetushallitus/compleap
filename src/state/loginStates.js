@@ -20,9 +20,12 @@ const loginStates = {
     },
     [State.loggedOut]: {
       on: {
-        [UserEvent.LOGIN]: {
-          actions: Action.logIn
-        }
+        [UserEvent.SELECT_PROFILE]: {
+          actions: Action.selectProfile
+        },
+        [UserEvent.LOGIN]: [
+          { actions: Action.logIn, cond: (ctx, _) => ctx.user.profileId }
+        ]
       }
     },
     [State.loggedIn]: { }

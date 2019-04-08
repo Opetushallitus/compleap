@@ -1,6 +1,6 @@
 import interests from 'resources/mock/interests'
 import educationToLearningOpportunity from 'resources/mock/educationClassificationToLearningOpportunityCode'
-import koskiData from 'resources/mock/koski/luontoJaYmparistoalanPerustutkinto'
+import { getProfile } from 'resources/mock/koski/profiles'
 import * as R from 'ramda'
 import uuid from 'uuid/v4'
 import { subtopicsLens } from 'state/helper'
@@ -63,7 +63,7 @@ const services = {
     return resolve(learningOpportunityCode)
   }),
 
-  [Service.getVerifiedEducations]: () => {
+  [Service.getVerifiedEducations]: (ctx, _) => {
     const parseKoskiData = koskiData => {
       const placeOfStudyLens = R.lensPath(['toimipiste', 'nimi'])
       const identifierLens = R.lensPath(['koulutusmoduuli', 'tunniste'])
@@ -104,7 +104,7 @@ const services = {
       return topLevelRecords.map(parseRecord(parseChildren))
     }
 
-    return Promise.resolve(parseKoskiData(koskiData))
+    return Promise.resolve(parseKoskiData(getProfile(ctx.user.profileId)))
   },
 
   [Service.clearSession]: () => {

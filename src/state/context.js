@@ -14,6 +14,7 @@ export const context = {
   version: process.env.CONTEXT_VERSION,
   user: {
     isLoggedIn: false,
+    profileId: undefined,
     id: null
   },
   interests: {
@@ -47,6 +48,7 @@ export const context = {
 }
 
 export const Action = Object.freeze({
+  selectProfile: 'selectProfile',
   logIn: 'logIn',
   reload: 'reload',
   setInterestsData: 'setInterestsData',
@@ -63,6 +65,9 @@ export const Action = Object.freeze({
 })
 
 export const actions = {
+  [Action.selectProfile]: assign({
+    user: (ctx, event) => R.assoc('profileId', event.data.id, ctx.user)
+  }),
   [Action.logIn]: assign({
     user: (ctx, event) => R.merge(ctx.user, { isLoggedIn: true, id: event.data.id })
   }),
