@@ -1,6 +1,8 @@
 import translations from 'resources/translations'
 import { lang } from 'util/preferences'
 
+const DEFAULT_LANG = 'fi'
+
 /**
  * Translates given key (or localized string) to the language currently in use.
  * Prefer using this via the tagged template notation when using keys.
@@ -23,7 +25,7 @@ export default keyOrLocalizedString => {
 
     if (!translated) {
       console.warn(`LocalizedString missing translation for language ${lang}: ${JSON.stringify(keyOrLocalizedString)}`)
-      return ''
+      return keyOrLocalizedString[DEFAULT_LANG] || ''
     }
 
     return translated
