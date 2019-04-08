@@ -9,9 +9,16 @@ import Rating from 'model/enum/Rating'
 
 const Container = styled.div`
   display: flex;
+  max-width: 600px;
   justify-content: space-between;
-  align-items: baseline;
+  align-items: center;
   margin: 1rem 0;
+`
+
+const Line = styled.div`
+  border-top: solid 2px ${({ theme }) => theme.color.grayLightest};
+  flex-grow: 1;
+  margin: 0 1rem;
 `
 
 const ThumbButton = styled.button`
@@ -29,13 +36,13 @@ const ThumbButton = styled.button`
 
 const ThumbsUp = styled(ThumbButton)`
   margin-right: 2rem;
-  fill: ${({ active, theme }) => active ? 'green' : theme.color.grayLighter};
+  fill: ${({ active, theme }) => active ? theme.color.positive : theme.color.grayLighter};
 `
 
 const ThumbsDown = styled(ThumbButton)`
   display: inline-block;
   transform: rotate(180deg);
-  fill: ${({ active, theme }) => active ? 'red' : theme.color.grayLighter};
+  fill: ${({ active, theme }) => active ? theme.color.negative : theme.color.grayLighter};
 `
 
 const RatingOptions = ({ id, rating }) => (
@@ -63,6 +70,7 @@ RatingOptions.propTypes = {
 const Unit = ({ id, name, rating }) => (
   <Container>
     {name}
+    <Line/>
     <RatingOptions id={id} rating={rating}/>
   </Container>
 )

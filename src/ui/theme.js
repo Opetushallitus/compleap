@@ -4,6 +4,8 @@ const PrimaryColor = '#fff636'
 const SecondaryColor = '#282828'
 const AccentColor = '#23F0C7'
 const GrayColor = '#bcbcbc'
+const PositiveColor = '#7aba00'
+const NegativeColor = '#F75B5B'
 
 /**
  * App-wide style constants, used via styled-components theming.
@@ -33,6 +35,16 @@ export default {
     accentLightest: lighten(0.4, AccentColor),
     accentDarker: darken(0.15, AccentColor),
     accentDarkest: darken(0.225, AccentColor),
+    positive: PositiveColor,
+    positiveLighter: lighten(0.15, PositiveColor),
+    positiveLightest: lighten(0.4, PositiveColor),
+    positiveDarker: darken(0.15, PositiveColor),
+    positiveDarkest: darken(0.225, PositiveColor),
+    negative: NegativeColor,
+    negativeLighter: lighten(0.15, NegativeColor),
+    negativeLightest: lighten(0.4, NegativeColor),
+    negativeDarker: darken(0.15, NegativeColor),
+    negativeDarkest: darken(0.225, NegativeColor),
     background: lighten(0.2, GrayColor)
   },
   font: {
