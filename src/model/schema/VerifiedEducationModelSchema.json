@@ -12,6 +12,10 @@
       "minProperties": 1,
       "additionalProperties": false
     },
+    "Rating": {
+      "type": "string",
+      "enum": ["NONE", "LIKE", "DISLIKE"]
+    },
     "Status": {
       "type": "object",
       "properties": {
@@ -24,12 +28,16 @@
     "Unit": {
       "type": "object",
       "properties": {
+        "id": { "type": "string" },
         "uri": { "type": "string" },
-        "name": { "$ref": "#/definitions/LocalizedString" }
+        "name": { "$ref": "#/definitions/LocalizedString" },
+        "rating": { "$ref": "#/definitions/Rating" }
       },
       "required": [
+        "id",
         "uri",
-        "name"
+        "name",
+        "rating"
       ],
       "additionalProperties": false
     }
@@ -38,6 +46,7 @@
   "title": "VerifiedEducationModel",
   "type": "object",
   "properties": {
+    "id": { "type": "string" },
     "placeOfStudy": { "#ref": "#/definitions/LocalizedString" },
     "uri": { "type": "string" },
     "name": { "$ref": "#/definitions/LocalizedString" },
@@ -52,6 +61,7 @@
     }
   },
   "required": [
+    "id",
     "placeOfStudy",
     "uri",
     "name",

@@ -18,6 +18,7 @@ export const persist = state => {
   }
 }
 
+// TODO De-serialize validatable types, e.g. VerifiedEducations
 export const restore = () => {
   const restoredStateDef = JSON.parse(window.localStorage.getItem('app-state'))
   if (!restoredStateDef) return undefined

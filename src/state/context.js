@@ -7,8 +7,10 @@ import {
   findTopicIndex,
   isSelectedLens,
   subtopicsLens,
-  topicLens
+  topicLens,
+  updateVerifiedEducationUnitRating
 } from 'state/helper'
+import Rating from 'model/enum/Rating'
 
 export const context = {
   version: process.env.CONTEXT_VERSION,
@@ -61,7 +63,9 @@ export const Action = Object.freeze({
   addUnverifiedEducation: 'addUnverifiedEducation',
   removeUnverifiedEducation: 'removeUnverifiedEducation',
   setEducationError: 'setEducationError',
-  setVerifiedEducationData: 'setVerifiedEducationData'
+  setVerifiedEducationData: 'setVerifiedEducationData',
+  likeEducationUnit: 'likeEducationUnit',
+  dislikeEducationUnit: 'dislikeEducationUnit'
 })
 
 export const actions = {
@@ -134,5 +138,11 @@ export const actions = {
   }),
   [Action.setVerifiedEducationData]: assign({
     education: (ctx, event) => R.assocPath(['data', 'verifiedEducations'], event.data, ctx.education)
+  }),
+  [Action.likeEducationUnit]: assign({
+    education: (ctx, event) => updateVerifiedEducationUnitRating(event.data.id, Rating.LIKE, ctx)
+  }),
+  [Action.dislikeEducationUnit]: assign({
+    education: (ctx, event) => updateVerifiedEducationUnitRating(event.data.id, Rating.DISLIKE, ctx)
   })
 }

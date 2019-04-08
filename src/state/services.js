@@ -7,6 +7,7 @@ import { subtopicsLens } from 'state/helper'
 import { isVocational } from 'util/educationHelper'
 import { stopPersisting } from 'state/state'
 import VerifiedEducation from 'model/VerifiedEducation'
+import Rating from 'model/enum/Rating'
 import { koulutusmoduuliTunnisteToCodeUri, tutkinnonosaTunnisteToCodeUri } from 'util/koski'
 
 export const Service = Object.freeze({
@@ -77,6 +78,7 @@ const services = {
       const topLevelRecords = R.compose(R.flatten, R.map(R.prop('suoritukset')))(koskiData.opiskeluoikeudet)
 
       const parseRecord = parseChildren => record => VerifiedEducation({
+        id: uuid(),
         placeOfStudy: R.view(placeOfStudyLens, record),
         uri: koulutusmoduuliTunnisteToCodeUri(R.view(identifierLens, record)),
         name: R.view(moduleNameLens, record),
@@ -96,8 +98,10 @@ const services = {
 
       const parseChildren = record => R.view(childrenLens, record)
         .map(unit => ({
+          id: uuid(),
           uri: tutkinnonosaTunnisteToCodeUri(R.view(identifierLens, unit)),
-          name: R.view(moduleNameLens, unit)
+          name: R.view(moduleNameLens, unit),
+          rating: Rating.NONE
         }))
         .filter(unit => !!unit.uri)
 

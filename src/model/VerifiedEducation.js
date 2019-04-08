@@ -1,7 +1,8 @@
 import Validatable from 'model/Validatable'
 import schema from 'model/schema/VerifiedEducationModelSchema'
 
-function VerifiedEducationModel (placeOfStudy, uri, name, qualificationTitles, status, children) {
+function VerifiedEducationModel (id, placeOfStudy, uri, name, qualificationTitles, status, children) {
+  this.id = id
   this.placeOfStudy = placeOfStudy
   this.uri = uri
   this.name = name
@@ -13,8 +14,8 @@ function VerifiedEducationModel (placeOfStudy, uri, name, qualificationTitles, s
 VerifiedEducationModel.prototype = Object.create(Validatable.prototype)
 VerifiedEducationModel.constructor = VerifiedEducationModel
 
-function VerifiedEducation ({ placeOfStudy, uri, name, qualificationTitles, status, children }) {
-  const obj = new VerifiedEducationModel(placeOfStudy, uri, name, qualificationTitles, status, children)
+function VerifiedEducation ({ id, placeOfStudy, uri, name, qualificationTitles, status, children }) {
+  const obj = new VerifiedEducationModel(id, placeOfStudy, uri, name, qualificationTitles, status, children)
   obj.validate(schema)
   return obj
 }

@@ -24,6 +24,10 @@ export const emptyButton = css`
   margin: 0;
   padding: 0;
   cursor: pointer;
+
+  &:focus {
+    outline: none;
+  }
 `
 
 export const shadowed = css`

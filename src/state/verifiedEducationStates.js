@@ -1,5 +1,6 @@
 import { Service } from 'state/services'
 import { Action } from 'state/context'
+import { InteractionEvent } from 'state/events'
 
 const State = Object.freeze({
   idle: 'idle',
@@ -35,7 +36,12 @@ const verifiedEducationStates = {
         }
       }
     },
-    [State.success]: { },
+    [State.success]: {
+      on: {
+        [InteractionEvent.LIKE_EDUCATION_UNIT]: { actions: Action.likeEducationUnit },
+        [InteractionEvent.DISLIKE_EDUCATION_UNIT]: { actions: Action.dislikeEducationUnit }
+      }
+    },
     [State.failure]: { }
   }
 }
