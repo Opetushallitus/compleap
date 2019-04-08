@@ -18,6 +18,14 @@ export const bordered = css`
   margin: -1.5px;
 `
 
+export const emptyButton = css`
+  background: none;
+  border: none;
+  margin: 0;
+  padding: 0;
+  cursor: pointer;
+`
+
 export const shadowed = css`
   box-shadow: 1px 1px 10px 1px ${({ theme }) => theme.color.grayLighter};
 `

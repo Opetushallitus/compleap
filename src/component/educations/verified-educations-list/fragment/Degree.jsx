@@ -27,13 +27,7 @@ const Degree = ({ name, qualificationTitles, status, units }) => (
     </DegreeHeaderContainer>
     <p>{t`Kerro mitä pidit opinnoistasi, niin voimme antaa parempia suosituksia. Voit myös jättää valinnan tyhjäksi.`}</p>
     <div>
-      {
-        units.map(({ uri, name }) => (
-          <Unit key={uri}>
-            <div>{t(name)}</div>
-          </Unit>
-        ))
-      }
+      {units.map(({ uri, name }) => <Unit key={uri} name={t(name)}/>)}
     </div>
   </Card>
 )
