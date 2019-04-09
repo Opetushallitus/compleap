@@ -19,7 +19,7 @@ const ListItem = styled.li`
 `
 
 const RecommendationList = ({ recommendations, status }) => {
-  if (status === RecommendationsState.pending) return <Placeholder loading={true}/> // TODO replace with actual loading indicator
+  if (status === RecommendationsState.pending) return <Placeholder/>
 
   return (
     <List>

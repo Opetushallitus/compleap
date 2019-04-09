@@ -6,10 +6,15 @@ import useObservable from 'component/generic/hook/useObservable'
 import { H2 } from 'ui/typography'
 import Degree from 'component/educations/verified-educations-list/fragment/Degree'
 import PlaceOfStudyHeader from 'component/educations/verified-educations-list/fragment/PlaceOfStudyHeader'
+import Placeholder from 'component/educations/verified-educations-list/Placeholder'
 
 const VerifiedEducationsList = () => {
   const context$ = useContext(Context)
+  const status = useObservable(context$, { path: ['value', 'profile', 'education', 'verifiedEducation'] })
   const verifiedEducationsList = useObservable(context$, { path: ['context', 'education', 'data', 'verifiedEducations'] })
+
+  if (status === 'pending') return <Placeholder/>
+  if (status === 'failure') return <div>{'error'}</div>
 
   if (!verifiedEducationsList || verifiedEducationsList.length === 0) return null
 
