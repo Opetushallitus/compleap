@@ -1,0 +1,396 @@
+{
+  "opiskeluoikeudet": [
+    {
+      "oid": "1.2.246.562.15.97817667674",
+      "versionumero": 4,
+      "aikaleima": "2019-04-10T16:11:31.277949",
+      "oppilaitos": {
+        "oid": "1.2.246.562.10.96162204109",
+        "oppilaitosnumero": {
+          "koodiarvo": "10067",
+          "nimi": {
+            "fi": "Jyväskylän ammattiopisto"
+          },
+          "lyhytNimi": {
+            "fi": "Jyväskylän ammattiopisto"
+          },
+          "koodistoUri": "oppilaitosnumero",
+          "koodistoVersio": 1
+        },
+        "nimi": {
+          "fi": "Gradia Jyväskylä"
+        },
+        "kotipaikka": {
+          "koodiarvo": "179",
+          "nimi": {
+            "fi": "Jyväskylä",
+            "sv": "Jyväskylä"
+          },
+          "koodistoUri": "kunta",
+          "koodistoVersio": 1
+        }
+      },
+      "koulutustoimija": {
+        "oid": "1.2.246.562.10.48442622063",
+        "nimi": {
+          "fi": "Jyväskylän Koulutuskuntayhtymä"
+        },
+        "yTunnus": "0208201-1",
+        "kotipaikka": {
+          "koodiarvo": "179",
+          "nimi": {
+            "fi": "Jyväskylä",
+            "sv": "Jyväskylä"
+          },
+          "koodistoUri": "kunta",
+          "koodistoVersio": 1
+        }
+      },
+      "ostettu": false,
+      "tila": {
+        "opiskeluoikeusjaksot": [
+          {
+            "alku": "2016-04-10",
+            "tila": {
+              "koodiarvo": "lasna",
+              "nimi": {
+                "fi": "Läsnä",
+                "sv": "Närvarande"
+              },
+              "koodistoUri": "koskiopiskeluoikeudentila",
+              "koodistoVersio": 1
+            }
+          }
+        ]
+      },
+      "suoritukset": [
+        {
+          "koulutusmoduuli": {
+            "tunniste": {
+              "koodiarvo": "351407",
+              "nimi": {
+                "fi": "Sähkö- ja automaatiotekniikan perustutkinto",
+                "sv": "Grundexamen inom el- och automationsteknik",
+                "en": "Electrical and Autom. Eng., VQ"
+              },
+              "lyhytNimi": {
+                "fi": "Sähkö- ja autom. perustutk",
+                "sv": "Grundexamen inom el- och automationsteknik",
+                "en": "Electrical and Automation Engineering, Vocational Qualification"
+              },
+              "koodistoUri": "koulutus",
+              "koodistoVersio": 6
+            },
+            "perusteenDiaarinumero": "OPH-2638-2017",
+            "perusteenNimi": {
+              "fi": "Sähkö- ja automaatioalan perustutkinto",
+              "sv": "Grundexamen inom el- och automationsbranschen",
+              "en": "Vocational Qualification in Electrical Engineering and Automation Technology"
+            },
+            "koulutustyyppi": {
+              "koodiarvo": "1",
+              "nimi": {
+                "fi": "Ammatillinen perustutkinto",
+                "sv": "yrkesinriktad grundexamen"
+              },
+              "lyhytNimi": {
+                "fi": "Ammatillinen perustutkinto",
+                "sv": "yrkesinriktad grundexamen"
+              },
+              "koodistoUri": "koulutustyyppi",
+              "koodistoVersio": 2
+            }
+          },
+          "suoritustapa": {
+            "koodiarvo": "reformi",
+            "nimi": {
+              "fi": "Reformin mukainen näyttö",
+              "sv": "Reform"
+            },
+            "lyhytNimi": {
+              "fi": "Reformi"
+            },
+            "koodistoUri": "ammatillisentutkinnonsuoritustapa",
+            "koodistoVersio": 1
+          },
+          "toimipiste": {
+            "oid": "1.2.246.562.10.96162204109",
+            "oppilaitosnumero": {
+              "koodiarvo": "10067",
+              "nimi": {
+                "fi": "Jyväskylän ammattiopisto"
+              },
+              "lyhytNimi": {
+                "fi": "Jyväskylän ammattiopisto"
+              },
+              "koodistoUri": "oppilaitosnumero",
+              "koodistoVersio": 1
+            },
+            "nimi": {
+              "fi": "Gradia Jyväskylä"
+            },
+            "kotipaikka": {
+              "koodiarvo": "179",
+              "nimi": {
+                "fi": "Jyväskylä",
+                "sv": "Jyväskylä"
+              },
+              "koodistoUri": "kunta",
+              "koodistoVersio": 1
+            }
+          },
+          "suorituskieli": {
+            "koodiarvo": "FI",
+            "nimi": {
+              "fi": "suomi",
+              "sv": "finska",
+              "en": "Finnish"
+            },
+            "lyhytNimi": {
+              "fi": "suomi",
+              "sv": "finska",
+              "en": "Finnish"
+            },
+            "koodistoUri": "kieli",
+            "koodistoVersio": 1
+          },
+          "osasuoritukset": [
+            {
+              "koulutusmoduuli": {
+                "tunniste": {
+                  "koodiarvo": "106109",
+                  "nimi": {
+                    "fi": "Sähkö- ja automaatiotekniikan perusosaaminen",
+                    "sv": "Basfärdigheter inom el- och automationsteknik"
+                  },
+                  "lyhytNimi": {
+                    "fi": "Sähkö- ja automaatiotekniikan perusosaaminen",
+                    "sv": "Basfärdigheter inom el- och automationsteknik"
+                  },
+                  "koodistoUri": "tutkinnonosat",
+                  "koodistoVersio": 1
+                },
+                "pakollinen": false,
+                "laajuus": {
+                  "arvo": 45.0,
+                  "yksikkö": {
+                    "koodiarvo": "6",
+                    "nimi": {
+                      "fi": "osaamispistettä",
+                      "sv": "kompetenspoäng",
+                      "en": "ECVET competence points"
+                    },
+                    "lyhytNimi": {
+                      "fi": "osp",
+                      "sv": "kp",
+                      "en": "competence points"
+                    },
+                    "koodistoUri": "opintojenlaajuusyksikko",
+                    "koodistoVersio": 1
+                  }
+                }
+              },
+              "tutkinnonOsanRyhmä": {
+                "koodiarvo": "1",
+                "nimi": {
+                  "fi": "Ammatilliset tutkinnon osat",
+                  "sv": "Yrkesinriktade examensdelar"
+                },
+                "koodistoUri": "ammatillisentutkinnonosanryhma",
+                "koodistoVersio": 1
+              },
+              "arviointi": [
+                {
+                  "arvosana": {
+                    "koodiarvo": "2",
+                    "nimi": {
+                      "fi": "2"
+                    },
+                    "lyhytNimi": {
+                      "fi": "2"
+                    },
+                    "koodistoUri": "arviointiasteikkoammatillinen15",
+                    "koodistoVersio": 1
+                  },
+                  "päivä": "2017-02-08",
+                  "hyväksytty": true
+                }
+              ],
+              "tyyppi": {
+                "koodiarvo": "ammatillisentutkinnonosa",
+                "nimi": {
+                  "fi": "Ammatillisen tutkinnon osa",
+                  "sv": "Yrkesexamensdel"
+                },
+                "koodistoUri": "suorituksentyyppi",
+                "koodistoVersio": 1
+              }
+            },
+            {
+              "koulutusmoduuli": {
+                "tunniste": {
+                  "koodiarvo": "400012",
+                  "nimi": {
+                    "fi": "Viestintä- ja vuorovaikutusosaaminen"
+                  },
+                  "lyhytNimi": {
+                    "fi": "Viestintä- ja vuorovaikutusosaaminen"
+                  },
+                  "koodistoUri": "tutkinnonosat",
+                  "koodistoVersio": 1
+                },
+                "pakollinen": false,
+                "laajuus": {
+                  "arvo": 9.0,
+                  "yksikkö": {
+                    "koodiarvo": "6",
+                    "nimi": {
+                      "fi": "osaamispistettä",
+                      "sv": "kompetenspoäng",
+                      "en": "ECVET competence points"
+                    },
+                    "lyhytNimi": {
+                      "fi": "osp",
+                      "sv": "kp",
+                      "en": "competence points"
+                    },
+                    "koodistoUri": "opintojenlaajuusyksikko",
+                    "koodistoVersio": 1
+                  }
+                }
+              },
+              "tutkinnonOsanRyhmä": {
+                "koodiarvo": "2",
+                "nimi": {
+                  "fi": "Yhteiset tutkinnon osat",
+                  "sv": "Gemensamma examensdelar"
+                },
+                "koodistoUri": "ammatillisentutkinnonosanryhma",
+                "koodistoVersio": 1
+              },
+              "arviointi": [
+                {
+                  "arvosana": {
+                    "koodiarvo": "3",
+                    "nimi": {
+                      "fi": "3"
+                    },
+                    "lyhytNimi": {
+                      "fi": "3"
+                    },
+                    "koodistoUri": "arviointiasteikkoammatillinen15",
+                    "koodistoVersio": 1
+                  },
+                  "päivä": "2016-11-15",
+                  "hyväksytty": true
+                }
+              ],
+              "tyyppi": {
+                "koodiarvo": "ammatillisentutkinnonosa",
+                "nimi": {
+                  "fi": "Ammatillisen tutkinnon osa",
+                  "sv": "Yrkesexamensdel"
+                },
+                "koodistoUri": "suorituksentyyppi",
+                "koodistoVersio": 1
+              }
+            },
+            {
+              "koulutusmoduuli": {
+                "tunniste": {
+                  "koodiarvo": "106110",
+                  "nimi": {
+                    "fi": "Sähkö- ja energiatekniikka",
+                    "sv": "El- och energiteknik"
+                  },
+                  "lyhytNimi": {
+                    "fi": "Sähkö- ja energiatekniikka",
+                    "sv": "El- och energiteknik"
+                  },
+                  "koodistoUri": "tutkinnonosat",
+                  "koodistoVersio": 1
+                },
+                "pakollinen": false,
+                "laajuus": {
+                  "arvo": 30.0,
+                  "yksikkö": {
+                    "koodiarvo": "6",
+                    "nimi": {
+                      "fi": "osaamispistettä",
+                      "sv": "kompetenspoäng",
+                      "en": "ECVET competence points"
+                    },
+                    "lyhytNimi": {
+                      "fi": "osp",
+                      "sv": "kp",
+                      "en": "competence points"
+                    },
+                    "koodistoUri": "opintojenlaajuusyksikko",
+                    "koodistoVersio": 1
+                  }
+                }
+              },
+              "tutkinnonOsanRyhmä": {
+                "koodiarvo": "1",
+                "nimi": {
+                  "fi": "Ammatilliset tutkinnon osat",
+                  "sv": "Yrkesinriktade examensdelar"
+                },
+                "koodistoUri": "ammatillisentutkinnonosanryhma",
+                "koodistoVersio": 1
+              },
+              "arviointi": [
+                {
+                  "arvosana": {
+                    "koodiarvo": "3",
+                    "nimi": {
+                      "fi": "3"
+                    },
+                    "lyhytNimi": {
+                      "fi": "3"
+                    },
+                    "koodistoUri": "arviointiasteikkoammatillinen15",
+                    "koodistoVersio": 1
+                  },
+                  "päivä": "2017-03-12",
+                  "hyväksytty": true
+                }
+              ],
+              "tyyppi": {
+                "koodiarvo": "ammatillisentutkinnonosa",
+                "nimi": {
+                  "fi": "Ammatillisen tutkinnon osa",
+                  "sv": "Yrkesexamensdel"
+                },
+                "koodistoUri": "suorituksentyyppi",
+                "koodistoVersio": 1
+              }
+            }
+          ],
+          "tyyppi": {
+            "koodiarvo": "ammatillinentutkinto",
+            "nimi": {
+              "fi": "Ammatillinen tutkinto",
+              "sv": "Yrkesinriktad examen"
+            },
+            "koodistoUri": "suorituksentyyppi",
+            "koodistoVersio": 1
+          }
+        }
+      ],
+      "tyyppi": {
+        "koodiarvo": "ammatillinenkoulutus",
+        "nimi": {
+          "fi": "Ammatillinen koulutus",
+          "sv": "Yrkesutbildning"
+        },
+        "lyhytNimi": {
+          "fi": "Ammatillinen koulutus"
+        },
+        "koodistoUri": "opiskeluoikeudentyyppi",
+        "koodistoVersio": 1
+      },
+      "alkamispäivä": "2016-04-10"
+    }
+  ]
+}
