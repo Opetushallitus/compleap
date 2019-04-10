@@ -106,7 +106,7 @@ const services = {
         children: parseChildren(record)
       })
 
-      const parseQualificationTitles = record => R.map(R.view(nameLens), R.view(qualificationTitlesLens, record))
+      const parseQualificationTitles = record => R.map(R.view(nameLens), R.view(qualificationTitlesLens, record) || [])
 
       const parseStatus = record => {
         const confirmation = R.view(confirmationLens, record)

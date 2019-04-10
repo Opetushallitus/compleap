@@ -22,7 +22,7 @@ Status.propTypes = {
 const Degree = ({ name, qualificationTitles, status, units }) => (
   <Card layout='column'>
     <DegreeHeaderContainer>
-      <H4>{`${qualificationTitles.map(t).join(', ')}: ${t(name)}`}</H4>
+      <H4>{[qualificationTitles.map(t).join(', '), t(name)].filter(v => !!v).join(': ')}</H4>
       <Status status={status}/>
     </DegreeHeaderContainer>
     <p>{t`Kerro mitä pidit opinnoistasi, niin voimme antaa parempia suosituksia. Voit myös jättää valinnan tyhjäksi.`}</p>
