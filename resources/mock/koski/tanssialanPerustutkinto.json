@@ -1,0 +1,914 @@
+{
+  "opiskeluoikeudet": [
+    {
+      "oid": "1.2.246.562.15.63470576404",
+      "versionumero": 17,
+      "aikaleima": "2019-04-10T16:00:47.419393",
+      "oppilaitos": {
+        "oid": "1.2.246.562.10.20417527395",
+        "oppilaitosnumero": {
+          "koodiarvo": "01931",
+          "nimi": {
+            "fi": "Tampereen konservatorio"
+          },
+          "lyhytNimi": {
+            "fi": "Tampereen konservatorio"
+          },
+          "koodistoUri": "oppilaitosnumero",
+          "koodistoVersio": 1
+        },
+        "nimi": {
+          "fi": "Tampereen konservatorio"
+        },
+        "kotipaikka": {
+          "koodiarvo": "837",
+          "nimi": {
+            "fi": "Tampere",
+            "sv": "Tammerfors"
+          },
+          "koodistoUri": "kunta",
+          "koodistoVersio": 1
+        }
+      },
+      "koulutustoimija": {
+        "oid": "1.2.246.562.10.68982650449",
+        "nimi": {
+          "fi": "Tampereen Musiikkiopiston Säätiö sr"
+        },
+        "yTunnus": "0206148-0",
+        "kotipaikka": {
+          "koodiarvo": "837",
+          "nimi": {
+            "fi": "Tampere",
+            "sv": "Tammerfors"
+          },
+          "koodistoUri": "kunta",
+          "koodistoVersio": 1
+        }
+      },
+      "ostettu": false,
+      "tila": {
+        "opiskeluoikeusjaksot": [
+          {
+            "alku": "2015-04-10",
+            "tila": {
+              "koodiarvo": "lasna",
+              "nimi": {
+                "fi": "Läsnä",
+                "sv": "Närvarande"
+              },
+              "koodistoUri": "koskiopiskeluoikeudentila",
+              "koodistoVersio": 1
+            }
+          },
+          {
+            "alku": "2018-09-10",
+            "tila": {
+              "koodiarvo": "valmistunut",
+              "nimi": {
+                "fi": "Valmistunut",
+                "sv": "Utexaminerad"
+              },
+              "koodistoUri": "koskiopiskeluoikeudentila",
+              "koodistoVersio": 1
+            }
+          }
+        ]
+      },
+      "suoritukset": [
+        {
+          "koulutusmoduuli": {
+            "tunniste": {
+              "koodiarvo": "321501",
+              "nimi": {
+                "fi": "Tanssialan perustutkinto",
+                "sv": "Grundexamen i dans",
+                "en": "Dance, VQ"
+              },
+              "lyhytNimi": {
+                "fi": "Tanssialan perustutkinto",
+                "sv": "Grundexamen i dans",
+                "en": "Dance, Vocational Qualification"
+              },
+              "koodistoUri": "koulutus",
+              "koodistoVersio": 6
+            },
+            "perusteenDiaarinumero": "OPH-2766-2017",
+            "perusteenNimi": {
+              "fi": "Tanssialan perustutkinto",
+              "sv": "Grundexamen i dans",
+              "en": "Vocational Qualification in Dance"
+            },
+            "koulutustyyppi": {
+              "koodiarvo": "1",
+              "nimi": {
+                "fi": "Ammatillinen perustutkinto",
+                "sv": "yrkesinriktad grundexamen"
+              },
+              "lyhytNimi": {
+                "fi": "Ammatillinen perustutkinto",
+                "sv": "yrkesinriktad grundexamen"
+              },
+              "koodistoUri": "koulutustyyppi",
+              "koodistoVersio": 2
+            }
+          },
+          "suoritustapa": {
+            "koodiarvo": "reformi",
+            "nimi": {
+              "fi": "Reformin mukainen näyttö",
+              "sv": "Reform"
+            },
+            "lyhytNimi": {
+              "fi": "Reformi"
+            },
+            "koodistoUri": "ammatillisentutkinnonsuoritustapa",
+            "koodistoVersio": 1
+          },
+          "tutkintonimike": [
+            {
+              "koodiarvo": "10093",
+              "nimi": {
+                "fi": "Tanssija",
+                "sv": "Dansare"
+              },
+              "lyhytNimi": {
+                "fi": "Tanssija",
+                "sv": "Dansare"
+              },
+              "koodistoUri": "tutkintonimikkeet",
+              "koodistoVersio": 2
+            }
+          ],
+          "toimipiste": {
+            "oid": "1.2.246.562.10.20417527395",
+            "oppilaitosnumero": {
+              "koodiarvo": "01931",
+              "nimi": {
+                "fi": "Tampereen konservatorio"
+              },
+              "lyhytNimi": {
+                "fi": "Tampereen konservatorio"
+              },
+              "koodistoUri": "oppilaitosnumero",
+              "koodistoVersio": 1
+            },
+            "nimi": {
+              "fi": "Tampereen konservatorio"
+            },
+            "kotipaikka": {
+              "koodiarvo": "837",
+              "nimi": {
+                "fi": "Tampere",
+                "sv": "Tammerfors"
+              },
+              "koodistoUri": "kunta",
+              "koodistoVersio": 1
+            }
+          },
+          "vahvistus": {
+            "päivä": "2018-09-10",
+            "paikkakunta": {
+              "koodiarvo": "837",
+              "nimi": {
+                "fi": "Tampere",
+                "sv": "Tammerfors"
+              },
+              "koodistoUri": "kunta",
+              "koodistoVersio": 1
+            },
+            "myöntäjäOrganisaatio": {
+              "oid": "1.2.246.562.10.20417527395",
+              "oppilaitosnumero": {
+                "koodiarvo": "01931",
+                "nimi": {
+                  "fi": "Tampereen konservatorio"
+                },
+                "lyhytNimi": {
+                  "fi": "Tampereen konservatorio"
+                },
+                "koodistoUri": "oppilaitosnumero",
+                "koodistoVersio": 1
+              },
+              "nimi": {
+                "fi": "Tampereen konservatorio"
+              },
+              "kotipaikka": {
+                "koodiarvo": "837",
+                "nimi": {
+                  "fi": "Tampere",
+                  "sv": "Tammerfors"
+                },
+                "koodistoUri": "kunta",
+                "koodistoVersio": 1
+              }
+            },
+            "myöntäjäHenkilöt": [
+              {
+                "nimi": "Reijo",
+                "titteli": {
+                  "fi": "Rehtori"
+                },
+                "organisaatio": {
+                  "oid": "1.2.246.562.10.20417527395",
+                  "oppilaitosnumero": {
+                    "koodiarvo": "01931",
+                    "nimi": {
+                      "fi": "Tampereen konservatorio"
+                    },
+                    "lyhytNimi": {
+                      "fi": "Tampereen konservatorio"
+                    },
+                    "koodistoUri": "oppilaitosnumero",
+                    "koodistoVersio": 1
+                  },
+                  "nimi": {
+                    "fi": "Tampereen konservatorio"
+                  },
+                  "kotipaikka": {
+                    "koodiarvo": "837",
+                    "nimi": {
+                      "fi": "Tampere",
+                      "sv": "Tammerfors"
+                    },
+                    "koodistoUri": "kunta",
+                    "koodistoVersio": 1
+                  }
+                }
+              }
+            ]
+          },
+          "suorituskieli": {
+            "koodiarvo": "FI",
+            "nimi": {
+              "fi": "suomi",
+              "sv": "finska",
+              "en": "Finnish"
+            },
+            "lyhytNimi": {
+              "fi": "suomi",
+              "sv": "finska",
+              "en": "Finnish"
+            },
+            "koodistoUri": "kieli",
+            "koodistoVersio": 1
+          },
+          "osasuoritukset": [
+            {
+              "koulutusmoduuli": {
+                "tunniste": {
+                  "koodiarvo": "105591",
+                  "nimi": {
+                    "fi": "Tanssijan työhön valmistautuminen",
+                    "sv": "Förberedelse inför arbetet som dansare"
+                  },
+                  "lyhytNimi": {
+                    "fi": "Tanssijan työhön valmistautuminen",
+                    "sv": "Förberedelse inför arbetet som dansare"
+                  },
+                  "koodistoUri": "tutkinnonosat",
+                  "koodistoVersio": 1
+                },
+                "pakollinen": false,
+                "laajuus": {
+                  "arvo": 40.0,
+                  "yksikkö": {
+                    "koodiarvo": "6",
+                    "nimi": {
+                      "fi": "osaamispistettä",
+                      "sv": "kompetenspoäng",
+                      "en": "ECVET competence points"
+                    },
+                    "lyhytNimi": {
+                      "fi": "osp",
+                      "sv": "kp",
+                      "en": "competence points"
+                    },
+                    "koodistoUri": "opintojenlaajuusyksikko",
+                    "koodistoVersio": 1
+                  }
+                }
+              },
+              "tutkinnonOsanRyhmä": {
+                "koodiarvo": "1",
+                "nimi": {
+                  "fi": "Ammatilliset tutkinnon osat",
+                  "sv": "Yrkesinriktade examensdelar"
+                },
+                "koodistoUri": "ammatillisentutkinnonosanryhma",
+                "koodistoVersio": 1
+              },
+              "arviointi": [
+                {
+                  "arvosana": {
+                    "koodiarvo": "3",
+                    "nimi": {
+                      "fi": "3"
+                    },
+                    "lyhytNimi": {
+                      "fi": "3"
+                    },
+                    "koodistoUri": "arviointiasteikkoammatillinen15",
+                    "koodistoVersio": 1
+                  },
+                  "päivä": "2016-02-12",
+                  "hyväksytty": true
+                }
+              ],
+              "tyyppi": {
+                "koodiarvo": "ammatillisentutkinnonosa",
+                "nimi": {
+                  "fi": "Ammatillisen tutkinnon osa",
+                  "sv": "Yrkesexamensdel"
+                },
+                "koodistoUri": "suorituksentyyppi",
+                "koodistoVersio": 1
+              }
+            },
+            {
+              "koulutusmoduuli": {
+                "tunniste": {
+                  "koodiarvo": "105592",
+                  "nimi": {
+                    "fi": "Tanssijan työssä toimiminen",
+                    "sv": "Att arbeta som dansare"
+                  },
+                  "lyhytNimi": {
+                    "fi": "Tanssijan työssä toimiminen",
+                    "sv": "Att arbeta som dansare"
+                  },
+                  "koodistoUri": "tutkinnonosat",
+                  "koodistoVersio": 1
+                },
+                "pakollinen": false,
+                "laajuus": {
+                  "arvo": 50.0,
+                  "yksikkö": {
+                    "koodiarvo": "6",
+                    "nimi": {
+                      "fi": "osaamispistettä",
+                      "sv": "kompetenspoäng",
+                      "en": "ECVET competence points"
+                    },
+                    "lyhytNimi": {
+                      "fi": "osp",
+                      "sv": "kp",
+                      "en": "competence points"
+                    },
+                    "koodistoUri": "opintojenlaajuusyksikko",
+                    "koodistoVersio": 1
+                  }
+                }
+              },
+              "tutkinnonOsanRyhmä": {
+                "koodiarvo": "1",
+                "nimi": {
+                  "fi": "Ammatilliset tutkinnon osat",
+                  "sv": "Yrkesinriktade examensdelar"
+                },
+                "koodistoUri": "ammatillisentutkinnonosanryhma",
+                "koodistoVersio": 1
+              },
+              "arviointi": [
+                {
+                  "arvosana": {
+                    "koodiarvo": "3",
+                    "nimi": {
+                      "fi": "3"
+                    },
+                    "lyhytNimi": {
+                      "fi": "3"
+                    },
+                    "koodistoUri": "arviointiasteikkoammatillinen15",
+                    "koodistoVersio": 1
+                  },
+                  "päivä": "2016-03-15",
+                  "hyväksytty": true
+                }
+              ],
+              "tyyppi": {
+                "koodiarvo": "ammatillisentutkinnonosa",
+                "nimi": {
+                  "fi": "Ammatillisen tutkinnon osa",
+                  "sv": "Yrkesexamensdel"
+                },
+                "koodistoUri": "suorituksentyyppi",
+                "koodistoVersio": 1
+              }
+            },
+            {
+              "koulutusmoduuli": {
+                "tunniste": {
+                  "koodiarvo": "400012",
+                  "nimi": {
+                    "fi": "Viestintä- ja vuorovaikutusosaaminen"
+                  },
+                  "lyhytNimi": {
+                    "fi": "Viestintä- ja vuorovaikutusosaaminen"
+                  },
+                  "koodistoUri": "tutkinnonosat",
+                  "koodistoVersio": 1
+                },
+                "pakollinen": false,
+                "laajuus": {
+                  "arvo": 13.0,
+                  "yksikkö": {
+                    "koodiarvo": "6",
+                    "nimi": {
+                      "fi": "osaamispistettä",
+                      "sv": "kompetenspoäng",
+                      "en": "ECVET competence points"
+                    },
+                    "lyhytNimi": {
+                      "fi": "osp",
+                      "sv": "kp",
+                      "en": "competence points"
+                    },
+                    "koodistoUri": "opintojenlaajuusyksikko",
+                    "koodistoVersio": 1
+                  }
+                }
+              },
+              "tutkinnonOsanRyhmä": {
+                "koodiarvo": "2",
+                "nimi": {
+                  "fi": "Yhteiset tutkinnon osat",
+                  "sv": "Gemensamma examensdelar"
+                },
+                "koodistoUri": "ammatillisentutkinnonosanryhma",
+                "koodistoVersio": 1
+              },
+              "arviointi": [
+                {
+                  "arvosana": {
+                    "koodiarvo": "2",
+                    "nimi": {
+                      "fi": "2"
+                    },
+                    "lyhytNimi": {
+                      "fi": "2"
+                    },
+                    "koodistoUri": "arviointiasteikkoammatillinen15",
+                    "koodistoVersio": 1
+                  },
+                  "päivä": "2017-01-10",
+                  "hyväksytty": true
+                }
+              ],
+              "tyyppi": {
+                "koodiarvo": "ammatillisentutkinnonosa",
+                "nimi": {
+                  "fi": "Ammatillisen tutkinnon osa",
+                  "sv": "Yrkesexamensdel"
+                },
+                "koodistoUri": "suorituksentyyppi",
+                "koodistoVersio": 1
+              }
+            },
+            {
+              "koulutusmoduuli": {
+                "tunniste": {
+                  "koodiarvo": "400013",
+                  "nimi": {
+                    "fi": "Matemaattis-luonnontieteellinen osaaminen"
+                  },
+                  "lyhytNimi": {
+                    "fi": "Matemaattis-luonnontieteellinen osaaminen"
+                  },
+                  "koodistoUri": "tutkinnonosat",
+                  "koodistoVersio": 1
+                },
+                "pakollinen": false,
+                "laajuus": {
+                  "arvo": 6.0,
+                  "yksikkö": {
+                    "koodiarvo": "6",
+                    "nimi": {
+                      "fi": "osaamispistettä",
+                      "sv": "kompetenspoäng",
+                      "en": "ECVET competence points"
+                    },
+                    "lyhytNimi": {
+                      "fi": "osp",
+                      "sv": "kp",
+                      "en": "competence points"
+                    },
+                    "koodistoUri": "opintojenlaajuusyksikko",
+                    "koodistoVersio": 1
+                  }
+                }
+              },
+              "tutkinnonOsanRyhmä": {
+                "koodiarvo": "2",
+                "nimi": {
+                  "fi": "Yhteiset tutkinnon osat",
+                  "sv": "Gemensamma examensdelar"
+                },
+                "koodistoUri": "ammatillisentutkinnonosanryhma",
+                "koodistoVersio": 1
+              },
+              "arviointi": [
+                {
+                  "arvosana": {
+                    "koodiarvo": "1",
+                    "nimi": {
+                      "fi": "1"
+                    },
+                    "lyhytNimi": {
+                      "fi": "1"
+                    },
+                    "koodistoUri": "arviointiasteikkoammatillinen15",
+                    "koodistoVersio": 1
+                  },
+                  "päivä": "2017-02-03",
+                  "hyväksytty": true
+                }
+              ],
+              "tyyppi": {
+                "koodiarvo": "ammatillisentutkinnonosa",
+                "nimi": {
+                  "fi": "Ammatillisen tutkinnon osa",
+                  "sv": "Yrkesexamensdel"
+                },
+                "koodistoUri": "suorituksentyyppi",
+                "koodistoVersio": 1
+              }
+            },
+            {
+              "koulutusmoduuli": {
+                "tunniste": {
+                  "koodiarvo": "400014",
+                  "nimi": {
+                    "fi": "Yhteiskunta- ja työelämäosaaminen"
+                  },
+                  "lyhytNimi": {
+                    "fi": "Yhteiskunta- ja työelämäosaaminen"
+                  },
+                  "koodistoUri": "tutkinnonosat",
+                  "koodistoVersio": 1
+                },
+                "pakollinen": false,
+                "laajuus": {
+                  "arvo": 16.0,
+                  "yksikkö": {
+                    "koodiarvo": "6",
+                    "nimi": {
+                      "fi": "osaamispistettä",
+                      "sv": "kompetenspoäng",
+                      "en": "ECVET competence points"
+                    },
+                    "lyhytNimi": {
+                      "fi": "osp",
+                      "sv": "kp",
+                      "en": "competence points"
+                    },
+                    "koodistoUri": "opintojenlaajuusyksikko",
+                    "koodistoVersio": 1
+                  }
+                }
+              },
+              "tutkinnonOsanRyhmä": {
+                "koodiarvo": "2",
+                "nimi": {
+                  "fi": "Yhteiset tutkinnon osat",
+                  "sv": "Gemensamma examensdelar"
+                },
+                "koodistoUri": "ammatillisentutkinnonosanryhma",
+                "koodistoVersio": 1
+              },
+              "arviointi": [
+                {
+                  "arvosana": {
+                    "koodiarvo": "4",
+                    "nimi": {
+                      "fi": "4"
+                    },
+                    "lyhytNimi": {
+                      "fi": "4"
+                    },
+                    "koodistoUri": "arviointiasteikkoammatillinen15",
+                    "koodistoVersio": 1
+                  },
+                  "päivä": "2017-03-12",
+                  "hyväksytty": true
+                }
+              ],
+              "tyyppi": {
+                "koodiarvo": "ammatillisentutkinnonosa",
+                "nimi": {
+                  "fi": "Ammatillisen tutkinnon osa",
+                  "sv": "Yrkesexamensdel"
+                },
+                "koodistoUri": "suorituksentyyppi",
+                "koodistoVersio": 1
+              }
+            },
+            {
+              "koulutusmoduuli": {
+                "tunniste": {
+                  "koodiarvo": "105590",
+                  "nimi": {
+                    "fi": "Taiteellinen työskentely",
+                    "sv": "Konstnärligt arbete"
+                  },
+                  "lyhytNimi": {
+                    "fi": "Taiteellinen työskentely",
+                    "sv": "Konstnärligt arbete"
+                  },
+                  "koodistoUri": "tutkinnonosat",
+                  "koodistoVersio": 1
+                },
+                "pakollinen": false,
+                "laajuus": {
+                  "arvo": 15.0,
+                  "yksikkö": {
+                    "koodiarvo": "6",
+                    "nimi": {
+                      "fi": "osaamispistettä",
+                      "sv": "kompetenspoäng",
+                      "en": "ECVET competence points"
+                    },
+                    "lyhytNimi": {
+                      "fi": "osp",
+                      "sv": "kp",
+                      "en": "competence points"
+                    },
+                    "koodistoUri": "opintojenlaajuusyksikko",
+                    "koodistoVersio": 1
+                  }
+                }
+              },
+              "tutkinnonOsanRyhmä": {
+                "koodiarvo": "1",
+                "nimi": {
+                  "fi": "Ammatilliset tutkinnon osat",
+                  "sv": "Yrkesinriktade examensdelar"
+                },
+                "koodistoUri": "ammatillisentutkinnonosanryhma",
+                "koodistoVersio": 1
+              },
+              "arviointi": [
+                {
+                  "arvosana": {
+                    "koodiarvo": "4",
+                    "nimi": {
+                      "fi": "4"
+                    },
+                    "lyhytNimi": {
+                      "fi": "4"
+                    },
+                    "koodistoUri": "arviointiasteikkoammatillinen15",
+                    "koodistoVersio": 1
+                  },
+                  "päivä": "2017-03-10",
+                  "hyväksytty": true
+                }
+              ],
+              "tyyppi": {
+                "koodiarvo": "ammatillisentutkinnonosa",
+                "nimi": {
+                  "fi": "Ammatillisen tutkinnon osa",
+                  "sv": "Yrkesexamensdel"
+                },
+                "koodistoUri": "suorituksentyyppi",
+                "koodistoVersio": 1
+              }
+            },
+            {
+              "koulutusmoduuli": {
+                "tunniste": {
+                  "koodiarvo": "400010",
+                  "nimi": {
+                    "fi": "Huippuosaajana toimiminen"
+                  },
+                  "lyhytNimi": {
+                    "fi": "Huippuosaajana toimiminen"
+                  },
+                  "koodistoUri": "tutkinnonosat",
+                  "koodistoVersio": 1
+                },
+                "pakollinen": false,
+                "laajuus": {
+                  "arvo": 15.0,
+                  "yksikkö": {
+                    "koodiarvo": "6",
+                    "nimi": {
+                      "fi": "osaamispistettä",
+                      "sv": "kompetenspoäng",
+                      "en": "ECVET competence points"
+                    },
+                    "lyhytNimi": {
+                      "fi": "osp",
+                      "sv": "kp",
+                      "en": "competence points"
+                    },
+                    "koodistoUri": "opintojenlaajuusyksikko",
+                    "koodistoVersio": 1
+                  }
+                }
+              },
+              "tutkinnonOsanRyhmä": {
+                "koodiarvo": "1",
+                "nimi": {
+                  "fi": "Ammatilliset tutkinnon osat",
+                  "sv": "Yrkesinriktade examensdelar"
+                },
+                "koodistoUri": "ammatillisentutkinnonosanryhma",
+                "koodistoVersio": 1
+              },
+              "arviointi": [
+                {
+                  "arvosana": {
+                    "koodiarvo": "3",
+                    "nimi": {
+                      "fi": "3"
+                    },
+                    "lyhytNimi": {
+                      "fi": "3"
+                    },
+                    "koodistoUri": "arviointiasteikkoammatillinen15",
+                    "koodistoVersio": 1
+                  },
+                  "päivä": "2017-10-17",
+                  "hyväksytty": true
+                }
+              ],
+              "tyyppi": {
+                "koodiarvo": "ammatillisentutkinnonosa",
+                "nimi": {
+                  "fi": "Ammatillisen tutkinnon osa",
+                  "sv": "Yrkesexamensdel"
+                },
+                "koodistoUri": "suorituksentyyppi",
+                "koodistoVersio": 1
+              }
+            },
+            {
+              "koulutusmoduuli": {
+                "tunniste": {
+                  "koodiarvo": "105588",
+                  "nimi": {
+                    "fi": "Esityksen valmistaminen ja toteuttaminen",
+                    "sv": "Att förbereda och genomföra ett uppträdande"
+                  },
+                  "lyhytNimi": {
+                    "fi": "Esityksen valmistaminen ja toteuttaminen",
+                    "sv": "Att förbereda och genomföra ett uppträdande"
+                  },
+                  "koodistoUri": "tutkinnonosat",
+                  "koodistoVersio": 1
+                },
+                "pakollinen": false,
+                "laajuus": {
+                  "arvo": 15.0,
+                  "yksikkö": {
+                    "koodiarvo": "6",
+                    "nimi": {
+                      "fi": "osaamispistettä",
+                      "sv": "kompetenspoäng",
+                      "en": "ECVET competence points"
+                    },
+                    "lyhytNimi": {
+                      "fi": "osp",
+                      "sv": "kp",
+                      "en": "competence points"
+                    },
+                    "koodistoUri": "opintojenlaajuusyksikko",
+                    "koodistoVersio": 1
+                  }
+                }
+              },
+              "tutkinnonOsanRyhmä": {
+                "koodiarvo": "1",
+                "nimi": {
+                  "fi": "Ammatilliset tutkinnon osat",
+                  "sv": "Yrkesinriktade examensdelar"
+                },
+                "koodistoUri": "ammatillisentutkinnonosanryhma",
+                "koodistoVersio": 1
+              },
+              "arviointi": [
+                {
+                  "arvosana": {
+                    "koodiarvo": "4",
+                    "nimi": {
+                      "fi": "4"
+                    },
+                    "lyhytNimi": {
+                      "fi": "4"
+                    },
+                    "koodistoUri": "arviointiasteikkoammatillinen15",
+                    "koodistoVersio": 1
+                  },
+                  "päivä": "2018-02-10",
+                  "hyväksytty": true
+                }
+              ],
+              "tyyppi": {
+                "koodiarvo": "ammatillisentutkinnonosa",
+                "nimi": {
+                  "fi": "Ammatillisen tutkinnon osa",
+                  "sv": "Yrkesexamensdel"
+                },
+                "koodistoUri": "suorituksentyyppi",
+                "koodistoVersio": 1
+              }
+            },
+            {
+              "koulutusmoduuli": {
+                "tunniste": {
+                  "koodiarvo": "400008",
+                  "nimi": {
+                    "fi": "Yritystoiminnan suunnittelu"
+                  },
+                  "lyhytNimi": {
+                    "fi": "Yritystoiminnan suunnittelu"
+                  },
+                  "koodistoUri": "tutkinnonosat",
+                  "koodistoVersio": 1
+                },
+                "pakollinen": false,
+                "laajuus": {
+                  "arvo": 15.0,
+                  "yksikkö": {
+                    "koodiarvo": "6",
+                    "nimi": {
+                      "fi": "osaamispistettä",
+                      "sv": "kompetenspoäng",
+                      "en": "ECVET competence points"
+                    },
+                    "lyhytNimi": {
+                      "fi": "osp",
+                      "sv": "kp",
+                      "en": "competence points"
+                    },
+                    "koodistoUri": "opintojenlaajuusyksikko",
+                    "koodistoVersio": 1
+                  }
+                }
+              },
+              "tutkinnonOsanRyhmä": {
+                "koodiarvo": "1",
+                "nimi": {
+                  "fi": "Ammatilliset tutkinnon osat",
+                  "sv": "Yrkesinriktade examensdelar"
+                },
+                "koodistoUri": "ammatillisentutkinnonosanryhma",
+                "koodistoVersio": 1
+              },
+              "arviointi": [
+                {
+                  "arvosana": {
+                    "koodiarvo": "2",
+                    "nimi": {
+                      "fi": "2"
+                    },
+                    "lyhytNimi": {
+                      "fi": "2"
+                    },
+                    "koodistoUri": "arviointiasteikkoammatillinen15",
+                    "koodistoVersio": 1
+                  },
+                  "päivä": "2018-03-15",
+                  "hyväksytty": true
+                }
+              ],
+              "tyyppi": {
+                "koodiarvo": "ammatillisentutkinnonosa",
+                "nimi": {
+                  "fi": "Ammatillisen tutkinnon osa",
+                  "sv": "Yrkesexamensdel"
+                },
+                "koodistoUri": "suorituksentyyppi",
+                "koodistoVersio": 1
+              }
+            }
+          ],
+          "tyyppi": {
+            "koodiarvo": "ammatillinentutkinto",
+            "nimi": {
+              "fi": "Ammatillinen tutkinto",
+              "sv": "Yrkesinriktad examen"
+            },
+            "koodistoUri": "suorituksentyyppi",
+            "koodistoVersio": 1
+          }
+        }
+      ],
+      "tyyppi": {
+        "koodiarvo": "ammatillinenkoulutus",
+        "nimi": {
+          "fi": "Ammatillinen koulutus",
+          "sv": "Yrkesutbildning"
+        },
+        "lyhytNimi": {
+          "fi": "Ammatillinen koulutus"
+        },
+        "koodistoUri": "opiskeluoikeudentyyppi",
+        "koodistoVersio": 1
+      },
+      "alkamispäivä": "2015-04-10",
+      "päättymispäivä": "2018-09-10"
+    }
+  ]
+}
