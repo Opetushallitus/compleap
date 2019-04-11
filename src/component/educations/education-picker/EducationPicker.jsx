@@ -3,7 +3,7 @@ import * as R from 'ramda'
 import styled from 'styled-components'
 import educations from 'resources/educations'
 import { Context, dispatch } from 'state/state'
-import t from 'util/translate'
+import useTranslation from 'component/generic/hook/useTranslation'
 import { H3 } from 'ui/typography'
 import useObservable from 'component/generic/hook/useObservable'
 import EducationLevelPicker from 'component/educations/education-picker/fragment/EducationLevelPicker'
@@ -31,6 +31,7 @@ const EducationPickerStyle = styled.div`
 
 const EducationPicker = () => {
   const context$ = useContext(Context)
+  const t = useTranslation()
   const isCollapsed = useObservable(context$, { path: ['value', 'profile', 'education', 'unverifiedEducation'] }) === formCollapsed
   const selectionState = useObservable(context$, { path: ['value', 'profile', 'education', 'unverifiedEducation', formOpen, selectionSet] })
 

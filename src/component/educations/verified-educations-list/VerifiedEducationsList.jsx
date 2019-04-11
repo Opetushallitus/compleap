@@ -1,6 +1,6 @@
 import React, { useContext } from 'react'
 import * as R from 'ramda'
-import t from 'util/translate'
+import useTranslation from 'component/generic/hook/useTranslation'
 import { Context } from 'state/state'
 import useObservable from 'component/generic/hook/useObservable'
 import { H2 } from 'ui/typography'
@@ -10,6 +10,7 @@ import Placeholder from 'component/educations/verified-educations-list/Placehold
 
 const VerifiedEducationsList = () => {
   const context$ = useContext(Context)
+  const t = useTranslation()
   const status = useObservable(context$, { path: ['value', 'profile', 'education', 'verifiedEducation'] })
   const verifiedEducationsList = useObservable(context$, { path: ['context', 'education', 'data', 'verifiedEducations'] })
 

@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 import styled from 'styled-components'
 import { dispatch } from 'state/state'
 import { InteractionEvent } from 'state/events'
-import t from 'util/translate'
+import useTranslation from 'component/generic/hook/useTranslation'
 import EducationSpecifierPicker from 'component/educations/education-picker/fragment/EducationSpecifierPicker'
 
 const EducationOptionsList = styled.ul`
@@ -29,36 +29,39 @@ const EducationSpecifierContainer = styled.div`
   margin-left: 1.75rem;
 `
 
-const EducationLevelPicker = ({ options, selectedId, selectedSpecifierId, addedSpecifierIds, showSpecifierPicker = false }) => (
-  <EducationOptionsList>
-    {
-      options.map(([id, education]) => (
-        <EducationOption key={id}>
-          <EducationOptionInput
-            id={id}
-            type='radio'
-            name='level'
-            checked={selectedId === id}
-            onChange={({ target }) => dispatch({ type: InteractionEvent.SELECT_EDUCATION, data: { id: target.id } })}
-          />
-          <EducationOptionLabel htmlFor={id}>
-            {t(education)}
-          </EducationOptionLabel>
-          {
-            selectedId === id && showSpecifierPicker && (
-              <EducationSpecifierContainer>
-                <EducationSpecifierPicker
-                  selectedId={selectedSpecifierId}
-                  addedIds={addedSpecifierIds}
-                />
-              </EducationSpecifierContainer>
-            )
-          }
-        </EducationOption>
-      ))
-    }
-  </EducationOptionsList>
-)
+const EducationLevelPicker = ({ options, selectedId, selectedSpecifierId, addedSpecifierIds, showSpecifierPicker = false }) => {
+  const t = useTranslation()
+  return (
+    <EducationOptionsList>
+      {
+        options.map(([id, education]) => (
+          <EducationOption key={id}>
+            <EducationOptionInput
+              id={id}
+              type='radio'
+              name='level'
+              checked={selectedId === id}
+              onChange={({ target }) => dispatch({ type: InteractionEvent.SELECT_EDUCATION, data: { id: target.id } })}
+            />
+            <EducationOptionLabel htmlFor={id}>
+              {t(education)}
+            </EducationOptionLabel>
+            {
+              selectedId === id && showSpecifierPicker && (
+                <EducationSpecifierContainer>
+                  <EducationSpecifierPicker
+                    selectedId={selectedSpecifierId}
+                    addedIds={addedSpecifierIds}
+                  />
+                </EducationSpecifierContainer>
+              )
+            }
+          </EducationOption>
+        ))
+      }
+    </EducationOptionsList>
+  )
+}
 
 EducationLevelPicker.propTypes = {
   options: PropTypes.array.isRequired,

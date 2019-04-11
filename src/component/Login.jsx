@@ -5,7 +5,7 @@ import styled from 'styled-components'
 import { Context, dispatch } from 'state/state'
 import { UserEvent } from 'state/events'
 import { transition } from 'router/router'
-import t from 'util/translate'
+import useTranslation from 'component/generic/hook/useTranslation'
 import LinkButton from 'component/generic/widget/LinkButton'
 import Box from 'component/generic/widget/Box'
 import AuthIcon from 'resources/asset/auth.svg'
@@ -30,6 +30,7 @@ const SelectContainer = styled.div`
 
 const Login = () => {
   const context$ = useContext(Context)
+  const t = useTranslation()
   const profileOptions = Object.entries(profileMapping)
     .map(([id, { description }]) => ({ id, label: description }))
     .map(R.over(R.lensProp('label'), t))

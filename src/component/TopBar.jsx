@@ -2,7 +2,7 @@ import React, { useContext } from 'react'
 import styled from 'styled-components'
 import { Context, dispatch } from 'state/state'
 import useObservable from 'component/generic/hook/useObservable'
-import t from 'util/translate'
+import useTranslation from 'component/generic/hook/useTranslation'
 import logo from 'resources/asset/compleap-logo.png'
 import LinkButton from 'component/generic/widget/LinkButton'
 import Button from 'component/generic/widget/Button'
@@ -77,6 +77,7 @@ const LogoutButton = styled(Button)`
 
 const TopBar = () => {
   const context$ = useContext(Context)
+  const t = useTranslation()
   const currentLanguage = useObservable(context$, { path: ['context', 'user', 'language'] })
   const isLoggedIn = useObservable(context$, { path: ['context', 'user', 'isLoggedIn'] })
   const isLoggingOut = useObservable(context$, { path: ['value'] }) === PageState.logout

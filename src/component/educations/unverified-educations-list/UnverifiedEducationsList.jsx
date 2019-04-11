@@ -4,7 +4,7 @@ import educations from 'resources/educations'
 import educationClassification from 'resources/finnishEducationClassification2016'
 import { Context, dispatch } from 'state/state'
 import useObservable from 'component/generic/hook/useObservable'
-import t from 'util/translate'
+import useTranslation from 'component/generic/hook/useTranslation'
 import Card from 'component/generic/widget/Card'
 import Button from 'component/generic/widget/Button'
 import { InteractionEvent } from 'state/events'
@@ -16,6 +16,7 @@ const DetailsText = styled.p`
 
 const UnverifiedEducationsList = () => {
   const context$ = useContext(Context)
+  const t = useTranslation()
   const unverifiedEducationsList = useObservable(context$, { path: ['context', 'education', 'data', 'unverifiedEducations'] })
 
   if (!unverifiedEducationsList) return null

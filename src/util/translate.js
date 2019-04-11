@@ -1,17 +1,23 @@
 import translations from 'resources/translations'
-import { lang } from 'util/preferences'
+import { state } from 'state/state'
 
-const DEFAULT_LANG = 'fi'
+const currentLanguage$ = state.view(['context', 'user', 'language'])
 
 /**
  * Translates given key (or localized string) to the language currently in use.
  * Prefer using this via the tagged template notation when using keys.
+ * Prefer getting the translate function via hook to reactively respond to language changes.
  * @example <pre><code>t`CompLeap`</code></pre>
  * @param {string} keyOrLocalizedString Term (non-interpolated string when using tagged template) to look up from the translation map
  * OR localized string object
+ * @param {string?} language Current language (language to translate the term to).
+ * Defaults to synchronously getting the current language from user preference property.
  * @returns {string} Translated text if translation found, else keyOrLocalizedString
  */
-export default keyOrLocalizedString => {
+const translate = (keyOrLocalizedString, language) => {
+  if (!language) console.error('Translating without bound language. Translation function should be used via hook.')
+  const lang = language || currentLanguage$.get()
+
   const isTaggedTemplate = keyOrLocalizedString.hasOwnProperty('raw')
 
   if (isTaggedTemplate && keyOrLocalizedString.length > 1) {
@@ -25,7 +31,12 @@ export default keyOrLocalizedString => {
 
     if (!translated) {
       console.warn(`LocalizedString missing translation for language ${lang}: ${JSON.stringify(keyOrLocalizedString)}`)
-      return keyOrLocalizedString[DEFAULT_LANG] || ''
+      const fallback = keyOrLocalizedString['en'] || keyOrLocalizedString['fi']
+      if (!fallback) {
+        console.error(`No translation to fall back to for LocalizedString: ${JSON.stringify(keyOrLocalizedString)}`)
+      }
+
+      return fallback || ''
     }
 
     return translated
@@ -42,3 +53,5 @@ export default keyOrLocalizedString => {
 
   return translated
 }
+
+export const getTranslationFnForLanguage = lang => keyOrLocalizedString => translate(keyOrLocalizedString, lang)

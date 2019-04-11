@@ -5,7 +5,7 @@ import * as R from 'ramda'
 import educationClassification from 'resources/finnishEducationClassification2016'
 import { dispatch } from 'state/state'
 import { InteractionEvent } from 'state/events'
-import t from 'util/translate'
+import useTranslation from 'component/generic/hook/useTranslation'
 import Select from 'component/generic/widget/dropdown/Select'
 
 // TODO This only serves here as a filter for available education options
@@ -27,6 +27,7 @@ const SelectContainer = styled.div`
 `
 
 const EducationSpecifierPicker = ({ selectedId = '', addedIds }) => {
+  const t = useTranslation()
   const availableOptions = specifiers.filter(({ id }) => !addedIds.includes(id))
   const translatedOptions = availableOptions.map(option => R.over(R.lensProp('label'), t, option))
 

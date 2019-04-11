@@ -1,8 +1,9 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import t from 'util/translate'
+import useTranslation from 'component/generic/hook/useTranslation'
 
 const SummaryHeader = ({ field, education, credits, creditUnit, numApplicationOptions }) => {
+  const t = useTranslation()
   const title = `${field} (${education}, ${credits} ${creditUnit}) ${numApplicationOptions} ${t`hakukohdetta`}`
   return <div>{title}</div>
 }

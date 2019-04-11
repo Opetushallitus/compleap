@@ -1,6 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
-import t from 'util/translate'
+import useTranslation from 'component/generic/hook/useTranslation'
 import { roundedRectangle, shadowed } from 'ui/properties'
 
 const Message = styled.div`
@@ -12,12 +12,15 @@ const Message = styled.div`
   margin: 2rem 0 4rem 0;
 `
 
-const RequireInterestsMessage = () => (
-  <Message>
-    <b>
-      {t`Valitse ensin vähintään 5 kiinnostuksen kohdetta.`}
-    </b>
-  </Message>
-)
+const RequireInterestsMessage = () => {
+  const t = useTranslation()
+  return (
+    <Message>
+      <b>
+        {t`Valitse ensin vähintään 5 kiinnostuksen kohdetta.`}
+      </b>
+    </Message>
+  )
+}
 
 export default RequireInterestsMessage

@@ -1,7 +1,7 @@
 import React, { useContext } from 'react'
 import B from 'baconjs'
 import * as R from 'ramda'
-import t from 'util/translate'
+import useTranslation from 'component/generic/hook/useTranslation'
 import { H1 } from 'ui/typography'
 import { Context } from 'state/state'
 import { subtopicsLens } from 'state/helper'
@@ -19,6 +19,7 @@ const countSelectedTopics = R.compose(R.length, R.filter(R.propEq('selected', tr
 // TODO Pass correct data to recommendations query
 const Recommendations = () => {
   const context$ = useContext(Context)
+  const t = useTranslation()
   const status = useObservable(context$, { path: ['value', 'profile', 'recommendations'] })
 
   const unverifiedEducations$ = context$.map(({ context }) => context.education.data.unverifiedEducations)

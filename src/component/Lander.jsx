@@ -1,6 +1,6 @@
 import React, { useContext } from 'react'
 import styled from 'styled-components'
-import t from 'util/translate'
+import useTranslation from 'component/generic/hook/useTranslation'
 import Box from 'component/generic/widget/Box'
 import LinkButton from 'component/generic/widget/LinkButton'
 import { Context, dispatch } from 'state/state'
@@ -49,16 +49,20 @@ const LanderButton = styled(LinkButton)`
   font-weight: 500;
 `
 
-const Brief = () => (
-  <BriefContainer>
-    <h1>{t`Onko kiinnostavan opiskelupaikan etsiminen hankalaa?`}</h1>
-    <p>{t`CompLeap auttaa sinua sopivan opiskelupaikan etsimisessä, sinun tarvitsee vain kertoa millaiset asiat sinua kiinnostavat ja mitä olet opiskellut tähän mennessä.`}</p>
-  </BriefContainer>
-)
+const Brief = () => {
+  const t = useTranslation()
+  return (
+    <BriefContainer>
+      <h1>{t`Onko kiinnostavan opiskelupaikan etsiminen hankalaa?`}</h1>
+      <p>{t`CompLeap auttaa sinua sopivan opiskelupaikan etsimisessä, sinun tarvitsee vain kertoa millaiset asiat sinua kiinnostavat ja mitä olet opiskellut tähän mennessä.`}</p>
+    </BriefContainer>
+  )
+}
 
 const LoginPrompt = () => {
   const context$ = useContext(Context)
   const isLoggedIn = useObservable(context$, { path: ['context', 'user', 'isLoggedIn'] })
+  const t = useTranslation()
   const loginButtonText = isLoggedIn ? t`Jatka profiiliisi` : t`Kirjaudu sisään`
 
   return (

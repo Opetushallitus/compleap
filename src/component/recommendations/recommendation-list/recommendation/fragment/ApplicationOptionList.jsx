@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import PropTypes from 'prop-types'
 import styled from 'styled-components'
 import * as R from 'ramda'
-import t from 'util/translate'
+import useTranslation from 'component/generic/hook/useTranslation'
 import ApplicationOption from 'component/recommendations/recommendation-list/recommendation/fragment/ApplicationOption'
 import Button from 'component/generic/widget/Button'
 
@@ -25,6 +25,7 @@ const ShowMoreButtonContainer = styled.div`
 
 const ApplicationOptionList = ({ options }) => {
   const [showAll, setShowAll] = useState(false)
+  const t = useTranslation()
   const optionsToShow = showAll ? options : R.take(TRUNCATED_LIST_LENGTH, options)
 
   return (

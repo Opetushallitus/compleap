@@ -1,6 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
-import t from 'util/translate'
+import useTranslation from 'component/generic/hook/useTranslation'
 import Box from 'component/generic/widget/Box'
 import Button from 'component/generic/widget/Button'
 import { H1 } from 'ui/typography'
@@ -21,14 +21,17 @@ const Divider = styled.hr`
   margin: 1rem 20% 2rem 20%;
 `
 
-const NotFound = () => (
-  <Container align='center'>
-    <Content>
-      <H1>{t`Sivua ei löytynyt`}</H1>
-      <Divider/>
-      <Button onClick={() => window.location.reload()}>{t`Palaa takaisin aloitussivulle`}</Button>
-    </Content>
-  </Container>
-)
+const NotFound = () => {
+  const t = useTranslation()
+  return (
+    <Container align='center'>
+      <Content>
+        <H1>{t`Sivua ei löytynyt`}</H1>
+        <Divider/>
+        <Button onClick={() => window.location.reload()}>{t`Palaa takaisin aloitussivulle`}</Button>
+      </Content>
+    </Container>
+  )
+}
 
 export default NotFound

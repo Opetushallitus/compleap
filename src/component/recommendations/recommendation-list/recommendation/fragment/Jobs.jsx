@@ -1,14 +1,17 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import t from 'util/translate'
+import useTranslation from 'component/generic/hook/useTranslation'
 
-const Jobs = ({ jobs }) => (
-  jobs && jobs.length > 0 && (
-    <p>
-      {t`Työpaikat` + ': ' + jobs.join(', ') + '.'}
-    </p>
+const Jobs = ({ jobs }) => {
+  const t = useTranslation()
+  return (
+    jobs && jobs.length > 0 && (
+      <p>
+        {t`Työpaikat` + ': ' + jobs.join(', ') + '.'}
+      </p>
+    )
   )
-)
+}
 
 Jobs.propTypes = {
   jobs: PropTypes.array

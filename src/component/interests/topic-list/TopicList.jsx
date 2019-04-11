@@ -1,6 +1,6 @@
 import React, { useContext } from 'react'
 import styled from 'styled-components'
-import t from 'util/translate'
+import useTranslation from 'component/generic/hook/useTranslation'
 import { H2 } from 'ui/typography'
 import Interest from 'component/interests/interest/Interest'
 import useObservable from 'component/generic/hook/useObservable'
@@ -20,6 +20,7 @@ const TopicListItem = styled.li`
 
 const TopicList = () => {
   const context$ = useContext(Context)
+  const t = useTranslation()
   const interests = useObservable(context$, { path: ['context', 'interests', 'data'] })
   const status = useObservable(context$, { path: ['value', 'profile', 'interests'] })
 
