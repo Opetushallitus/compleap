@@ -32,11 +32,19 @@
   },
   "Valmistunut ammatillisesta – luonto- ja ympäristöalan perustutkinto": {
     "fi": "Valmistunut ammatillisesta – luonto- ja ympäristöalan perustutkinto",
-    "en": "Graduated from vocational – Natural and Environmental Protection"
+    "en": "Graduated from vocational – Vocational qualification in Natural and Environmental Protection"
   },
   "Valmistunut ammatillisesta – tanssialan perustutkinto": {
     "fi": "Valmistunut ammatillisesta – tanssialan perustutkinto",
     "en": "Graduated from vocational – Vocational Qualification in Dance"
+  },
+  "Keskeytynyt ammatillinen – Sähkö- ja automaatioalan perustutkinto": {
+    "fi": "Keskeytynyt ammatillinen – Sähkö- ja automaatioalan perustutkinto",
+    "en": "Discontinued vocational – Vocational qualification in Electrical Engineering and Automation Technology"
+  },
+  "Keskeytynyt ammatillinen – Sosiaali- ja terveysalan perustutkinto": {
+    "fi": "Keskeytynyt ammatillinen – Sosiaali- ja terveysalan perustutkinto",
+    "en": "Discontinued vocational – Vocational qualification in Social and Health Care"
   },
   "Koulutukset": {
     "fi": "Koulutukset",
