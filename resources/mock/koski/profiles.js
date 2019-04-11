@@ -1,6 +1,7 @@
 import natureAndEnvironment from 'resources/mock/koski/luontoJaYmparistoalanPerustutkinto'
 import dance from 'resources/mock/koski/tanssialanPerustutkinto'
 import electrical from 'resources/mock/koski/sahkoJaAutomaatioalanPerustutkinto'
+import social from 'resources/mock/koski/sosiaaliJaTerveysalanPerustutkinto'
 
 export const profileMapping = {
   '1': {
@@ -14,6 +15,10 @@ export const profileMapping = {
   '3': {
     description: 'Keskeytynyt ammatillinen – Sähkö- ja automaatioalan perustutkinto',
     data: electrical
+  },
+  '4': {
+    description: 'Keskeytynyt ammatillinen – Sosiaali- ja terveysalan perustutkinto',
+    data: social
   }
 }
 

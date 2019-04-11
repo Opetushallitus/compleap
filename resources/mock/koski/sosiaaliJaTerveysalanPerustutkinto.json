@@ -1,0 +1,547 @@
+{
+  "opiskeluoikeudet": [
+    {
+      "oid": "1.2.246.562.15.76104513817",
+      "versionumero": 7,
+      "aikaleima": "2019-04-11T12:23:36.696723",
+      "oppilaitos": {
+        "oid": "1.2.246.562.10.81934895871",
+        "oppilaitosnumero": {
+          "koodiarvo": "10053",
+          "nimi": {
+            "fi": "Koulutuskeskus Salpaus"
+          },
+          "lyhytNimi": {
+            "fi": "Koulutuskeskus Salpaus"
+          },
+          "koodistoUri": "oppilaitosnumero",
+          "koodistoVersio": 1
+        },
+        "nimi": {
+          "fi": "Koulutuskeskus Salpaus"
+        },
+        "kotipaikka": {
+          "koodiarvo": "398",
+          "nimi": {
+            "fi": "Lahti",
+            "sv": "Lahtis"
+          },
+          "koodistoUri": "kunta",
+          "koodistoVersio": 1
+        }
+      },
+      "koulutustoimija": {
+        "oid": "1.2.246.562.10.594252633210",
+        "nimi": {
+          "fi": "Koulutuskeskus Salpaus -kuntayhtymä"
+        },
+        "yTunnus": "0993644-6",
+        "kotipaikka": {
+          "koodiarvo": "398",
+          "nimi": {
+            "fi": "Lahti",
+            "sv": "Lahtis"
+          },
+          "koodistoUri": "kunta",
+          "koodistoVersio": 1
+        }
+      },
+      "ostettu": false,
+      "tila": {
+        "opiskeluoikeusjaksot": [
+          {
+            "alku": "2017-08-01",
+            "tila": {
+              "koodiarvo": "lasna",
+              "nimi": {
+                "fi": "Läsnä",
+                "sv": "Närvarande"
+              },
+              "koodistoUri": "koskiopiskeluoikeudentila",
+              "koodistoVersio": 1
+            }
+          }
+        ]
+      },
+      "suoritukset": [
+        {
+          "koulutusmoduuli": {
+            "tunniste": {
+              "koodiarvo": "371101",
+              "nimi": {
+                "fi": "Sosiaali- ja terveysalan perustutkinto",
+                "sv": "Grundexamen inom social- och hälsovård",
+                "en": "Practical Nurse, VQ"
+              },
+              "lyhytNimi": {
+                "fi": "Sos-terv. perust.",
+                "sv": "Grundexamen inom social- och hälsovård",
+                "en": "Practical Nurse, Social and Health Care, Vocational Qualification"
+              },
+              "koodistoUri": "koulutus",
+              "koodistoVersio": 6
+            },
+            "perusteenDiaarinumero": "OPH-2629-2017",
+            "perusteenNimi": {
+              "fi": "Sosiaali- ja terveysalan perustutkinto",
+              "sv": "Grundexamen inom social- och hälsovårdsbranschen",
+              "en": "Vocational Qualification in Social and Health Care"
+            },
+            "koulutustyyppi": {
+              "koodiarvo": "1",
+              "nimi": {
+                "fi": "Ammatillinen perustutkinto",
+                "sv": "yrkesinriktad grundexamen"
+              },
+              "lyhytNimi": {
+                "fi": "Ammatillinen perustutkinto",
+                "sv": "yrkesinriktad grundexamen"
+              },
+              "koodistoUri": "koulutustyyppi",
+              "koodistoVersio": 2
+            }
+          },
+          "suoritustapa": {
+            "koodiarvo": "reformi",
+            "nimi": {
+              "fi": "Reformin mukainen näyttö",
+              "sv": "Reform"
+            },
+            "lyhytNimi": {
+              "fi": "Reformi"
+            },
+            "koodistoUri": "ammatillisentutkinnonsuoritustapa",
+            "koodistoVersio": 1
+          },
+          "osaamisala": [
+            {
+              "osaamisala": {
+                "koodiarvo": "1791",
+                "nimi": {
+                  "fi": "Perustason ensihoidon osaamisala",
+                  "sv": "Kompetensområdet för akutvård på grundnivå"
+                },
+                "lyhytNimi": {
+                  "fi": "Perustason ensihoidon osaamisala",
+                  "sv": "Kompetensområdet för akutvård på grundnivå"
+                },
+                "koodistoUri": "osaamisala",
+                "koodistoVersio": 3
+              }
+            }
+          ],
+          "toimipiste": {
+            "oid": "1.2.246.562.10.81934895871",
+            "oppilaitosnumero": {
+              "koodiarvo": "10053",
+              "nimi": {
+                "fi": "Koulutuskeskus Salpaus"
+              },
+              "lyhytNimi": {
+                "fi": "Koulutuskeskus Salpaus"
+              },
+              "koodistoUri": "oppilaitosnumero",
+              "koodistoVersio": 1
+            },
+            "nimi": {
+              "fi": "Koulutuskeskus Salpaus"
+            },
+            "kotipaikka": {
+              "koodiarvo": "398",
+              "nimi": {
+                "fi": "Lahti",
+                "sv": "Lahtis"
+              },
+              "koodistoUri": "kunta",
+              "koodistoVersio": 1
+            }
+          },
+          "suorituskieli": {
+            "koodiarvo": "FI",
+            "nimi": {
+              "fi": "suomi",
+              "sv": "finska",
+              "en": "Finnish"
+            },
+            "lyhytNimi": {
+              "fi": "suomi",
+              "sv": "finska",
+              "en": "Finnish"
+            },
+            "koodistoUri": "kieli",
+            "koodistoVersio": 1
+          },
+          "osasuoritukset": [
+            {
+              "koulutusmoduuli": {
+                "tunniste": {
+                  "koodiarvo": "400012",
+                  "nimi": {
+                    "fi": "Viestintä- ja vuorovaikutusosaaminen"
+                  },
+                  "lyhytNimi": {
+                    "fi": "Viestintä- ja vuorovaikutusosaaminen"
+                  },
+                  "koodistoUri": "tutkinnonosat",
+                  "koodistoVersio": 1
+                },
+                "pakollinen": false,
+                "laajuus": {
+                  "arvo": 11.0,
+                  "yksikkö": {
+                    "koodiarvo": "6",
+                    "nimi": {
+                      "fi": "osaamispistettä",
+                      "sv": "kompetenspoäng",
+                      "en": "ECVET competence points"
+                    },
+                    "lyhytNimi": {
+                      "fi": "osp",
+                      "sv": "kp",
+                      "en": "competence points"
+                    },
+                    "koodistoUri": "opintojenlaajuusyksikko",
+                    "koodistoVersio": 1
+                  }
+                }
+              },
+              "tutkinnonOsanRyhmä": {
+                "koodiarvo": "2",
+                "nimi": {
+                  "fi": "Yhteiset tutkinnon osat",
+                  "sv": "Gemensamma examensdelar"
+                },
+                "koodistoUri": "ammatillisentutkinnonosanryhma",
+                "koodistoVersio": 1
+              },
+              "arviointi": [
+                {
+                  "arvosana": {
+                    "koodiarvo": "3",
+                    "nimi": {
+                      "fi": "3"
+                    },
+                    "lyhytNimi": {
+                      "fi": "3"
+                    },
+                    "koodistoUri": "arviointiasteikkoammatillinen15",
+                    "koodistoVersio": 1
+                  },
+                  "päivä": "2018-09-11",
+                  "hyväksytty": true
+                }
+              ],
+              "tyyppi": {
+                "koodiarvo": "ammatillisentutkinnonosa",
+                "nimi": {
+                  "fi": "Ammatillisen tutkinnon osa",
+                  "sv": "Yrkesexamensdel"
+                },
+                "koodistoUri": "suorituksentyyppi",
+                "koodistoVersio": 1
+              }
+            },
+            {
+              "koulutusmoduuli": {
+                "tunniste": {
+                  "koodiarvo": "400014",
+                  "nimi": {
+                    "fi": "Yhteiskunta- ja työelämäosaaminen"
+                  },
+                  "lyhytNimi": {
+                    "fi": "Yhteiskunta- ja työelämäosaaminen"
+                  },
+                  "koodistoUri": "tutkinnonosat",
+                  "koodistoVersio": 1
+                },
+                "pakollinen": false,
+                "laajuus": {
+                  "arvo": 9.0,
+                  "yksikkö": {
+                    "koodiarvo": "6",
+                    "nimi": {
+                      "fi": "osaamispistettä",
+                      "sv": "kompetenspoäng",
+                      "en": "ECVET competence points"
+                    },
+                    "lyhytNimi": {
+                      "fi": "osp",
+                      "sv": "kp",
+                      "en": "competence points"
+                    },
+                    "koodistoUri": "opintojenlaajuusyksikko",
+                    "koodistoVersio": 1
+                  }
+                }
+              },
+              "tutkinnonOsanRyhmä": {
+                "koodiarvo": "2",
+                "nimi": {
+                  "fi": "Yhteiset tutkinnon osat",
+                  "sv": "Gemensamma examensdelar"
+                },
+                "koodistoUri": "ammatillisentutkinnonosanryhma",
+                "koodistoVersio": 1
+              },
+              "arviointi": [
+                {
+                  "arvosana": {
+                    "koodiarvo": "2",
+                    "nimi": {
+                      "fi": "2"
+                    },
+                    "lyhytNimi": {
+                      "fi": "2"
+                    },
+                    "koodistoUri": "arviointiasteikkoammatillinen15",
+                    "koodistoVersio": 1
+                  },
+                  "päivä": "2019-02-15",
+                  "hyväksytty": true
+                }
+              ],
+              "tyyppi": {
+                "koodiarvo": "ammatillisentutkinnonosa",
+                "nimi": {
+                  "fi": "Ammatillisen tutkinnon osa",
+                  "sv": "Yrkesexamensdel"
+                },
+                "koodistoUri": "suorituksentyyppi",
+                "koodistoVersio": 1
+              }
+            },
+            {
+              "koulutusmoduuli": {
+                "tunniste": {
+                  "koodiarvo": "106251",
+                  "nimi": {
+                    "fi": "Terveyden, turvallisuuden ja hyvinvoinnin edistäminen"
+                  },
+                  "lyhytNimi": {
+                    "fi": "Terveyden, turvallisuuden ja hyvinvoinnin edistäminen"
+                  },
+                  "koodistoUri": "tutkinnonosat",
+                  "koodistoVersio": 1
+                },
+                "pakollinen": false,
+                "laajuus": {
+                  "arvo": 25.0,
+                  "yksikkö": {
+                    "koodiarvo": "6",
+                    "nimi": {
+                      "fi": "osaamispistettä",
+                      "sv": "kompetenspoäng",
+                      "en": "ECVET competence points"
+                    },
+                    "lyhytNimi": {
+                      "fi": "osp",
+                      "sv": "kp",
+                      "en": "competence points"
+                    },
+                    "koodistoUri": "opintojenlaajuusyksikko",
+                    "koodistoVersio": 1
+                  }
+                }
+              },
+              "tutkinnonOsanRyhmä": {
+                "koodiarvo": "1",
+                "nimi": {
+                  "fi": "Ammatilliset tutkinnon osat",
+                  "sv": "Yrkesinriktade examensdelar"
+                },
+                "koodistoUri": "ammatillisentutkinnonosanryhma",
+                "koodistoVersio": 1
+              },
+              "arviointi": [
+                {
+                  "arvosana": {
+                    "koodiarvo": "4",
+                    "nimi": {
+                      "fi": "4"
+                    },
+                    "lyhytNimi": {
+                      "fi": "4"
+                    },
+                    "koodistoUri": "arviointiasteikkoammatillinen15",
+                    "koodistoVersio": 1
+                  },
+                  "päivä": "2017-05-02",
+                  "hyväksytty": true
+                }
+              ],
+              "tyyppi": {
+                "koodiarvo": "ammatillisentutkinnonosa",
+                "nimi": {
+                  "fi": "Ammatillisen tutkinnon osa",
+                  "sv": "Yrkesexamensdel"
+                },
+                "koodistoUri": "suorituksentyyppi",
+                "koodistoVersio": 1
+              }
+            },
+            {
+              "koulutusmoduuli": {
+                "tunniste": {
+                  "koodiarvo": "106252",
+                  "nimi": {
+                    "fi": "Toiminnalliset menetelmät hyvinvoinnin edistämisessä"
+                  },
+                  "lyhytNimi": {
+                    "fi": "Toiminnalliset menetelmät hyvinvoinnin edistämisessä"
+                  },
+                  "koodistoUri": "tutkinnonosat",
+                  "koodistoVersio": 1
+                },
+                "pakollinen": false,
+                "laajuus": {
+                  "arvo": 15.0,
+                  "yksikkö": {
+                    "koodiarvo": "6",
+                    "nimi": {
+                      "fi": "osaamispistettä",
+                      "sv": "kompetenspoäng",
+                      "en": "ECVET competence points"
+                    },
+                    "lyhytNimi": {
+                      "fi": "osp",
+                      "sv": "kp",
+                      "en": "competence points"
+                    },
+                    "koodistoUri": "opintojenlaajuusyksikko",
+                    "koodistoVersio": 1
+                  }
+                }
+              },
+              "tutkinnonOsanRyhmä": {
+                "koodiarvo": "1",
+                "nimi": {
+                  "fi": "Ammatilliset tutkinnon osat",
+                  "sv": "Yrkesinriktade examensdelar"
+                },
+                "koodistoUri": "ammatillisentutkinnonosanryhma",
+                "koodistoVersio": 1
+              },
+              "arviointi": [
+                {
+                  "arvosana": {
+                    "koodiarvo": "3",
+                    "nimi": {
+                      "fi": "3"
+                    },
+                    "lyhytNimi": {
+                      "fi": "3"
+                    },
+                    "koodistoUri": "arviointiasteikkoammatillinen15",
+                    "koodistoVersio": 1
+                  },
+                  "päivä": "2018-01-15",
+                  "hyväksytty": true
+                }
+              ],
+              "tyyppi": {
+                "koodiarvo": "ammatillisentutkinnonosa",
+                "nimi": {
+                  "fi": "Ammatillisen tutkinnon osa",
+                  "sv": "Yrkesexamensdel"
+                },
+                "koodistoUri": "suorituksentyyppi",
+                "koodistoVersio": 1
+              }
+            },
+            {
+              "koulutusmoduuli": {
+                "tunniste": {
+                  "koodiarvo": "106243",
+                  "nimi": {
+                    "fi": "Näytteenotto ja asiakaspalvelu lähihoitajan työssä"
+                  },
+                  "lyhytNimi": {
+                    "fi": "Näytteenotto ja asiakaspalvelu lähihoitajan työssä"
+                  },
+                  "koodistoUri": "tutkinnonosat",
+                  "koodistoVersio": 1
+                },
+                "pakollinen": false,
+                "laajuus": {
+                  "arvo": 15.0,
+                  "yksikkö": {
+                    "koodiarvo": "6",
+                    "nimi": {
+                      "fi": "osaamispistettä",
+                      "sv": "kompetenspoäng",
+                      "en": "ECVET competence points"
+                    },
+                    "lyhytNimi": {
+                      "fi": "osp",
+                      "sv": "kp",
+                      "en": "competence points"
+                    },
+                    "koodistoUri": "opintojenlaajuusyksikko",
+                    "koodistoVersio": 1
+                  }
+                }
+              },
+              "tutkinnonOsanRyhmä": {
+                "koodiarvo": "1",
+                "nimi": {
+                  "fi": "Ammatilliset tutkinnon osat",
+                  "sv": "Yrkesinriktade examensdelar"
+                },
+                "koodistoUri": "ammatillisentutkinnonosanryhma",
+                "koodistoVersio": 1
+              },
+              "arviointi": [
+                {
+                  "arvosana": {
+                    "koodiarvo": "2",
+                    "nimi": {
+                      "fi": "2"
+                    },
+                    "lyhytNimi": {
+                      "fi": "2"
+                    },
+                    "koodistoUri": "arviointiasteikkoammatillinen15",
+                    "koodistoVersio": 1
+                  },
+                  "päivä": "2018-04-04",
+                  "hyväksytty": true
+                }
+              ],
+              "tyyppi": {
+                "koodiarvo": "ammatillisentutkinnonosa",
+                "nimi": {
+                  "fi": "Ammatillisen tutkinnon osa",
+                  "sv": "Yrkesexamensdel"
+                },
+                "koodistoUri": "suorituksentyyppi",
+                "koodistoVersio": 1
+              }
+            }
+          ],
+          "tyyppi": {
+            "koodiarvo": "ammatillinentutkinto",
+            "nimi": {
+              "fi": "Ammatillinen tutkinto",
+              "sv": "Yrkesinriktad examen"
+            },
+            "koodistoUri": "suorituksentyyppi",
+            "koodistoVersio": 1
+          }
+        }
+      ],
+      "tyyppi": {
+        "koodiarvo": "ammatillinenkoulutus",
+        "nimi": {
+          "fi": "Ammatillinen koulutus",
+          "sv": "Yrkesutbildning"
+        },
+        "lyhytNimi": {
+          "fi": "Ammatillinen koulutus"
+        },
+        "koodistoUri": "opiskeluoikeudentyyppi",
+        "koodistoVersio": 1
+      },
+      "alkamispäivä": "2017-08-01"
+    }
+  ]
+}
