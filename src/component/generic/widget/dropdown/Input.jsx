@@ -23,6 +23,11 @@ const InputField = styled.input`
 `
 
 const IconContainer = styled.div`
+  ${bordered};
+
+  box-sizing: border-box;
+  border-left: none;
+  margin: 0;
   position: absolute;
   right: 0;
   top: 0;
@@ -32,6 +37,7 @@ const IconContainer = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
+  background-color: ${({ theme }) => theme.color.white};
 `
 
 const TriangleIcon = styled.svg`
