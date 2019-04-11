@@ -6,7 +6,7 @@ import t from 'util/translate'
 import logo from 'resources/asset/compleap-logo.png'
 import LinkButton from 'component/generic/widget/LinkButton'
 import Button from 'component/generic/widget/Button'
-import { padded, roundedRectangle } from 'ui/properties'
+import { fadeColor, padded, roundedRectangle } from 'ui/properties'
 import { UserEvent } from 'state/events'
 import { PageState } from 'state/machine'
 
@@ -27,6 +27,29 @@ const TopBarContent = styled.nav`
 const TopBarElementContainer = styled.div`
   display: flex;
   align-items: center;
+`
+
+const LanguageButton = styled(Button)`
+  ${fadeColor};
+
+  color: ${({ theme, active }) => active ? theme.color.white : theme.color.gray};
+  text-decoration: ${({ active }) => active ? 'underline' : 'none'};
+  padding: 0.5rem;
+
+  &:not(:first-child) {
+    margin: 0 1.5rem 0 0.5rem;
+  }
+
+  &:hover {
+    color: ${({ theme }) => theme.color.white};
+  }
+`
+
+const Divider = styled.div`
+  border-right: solid 1px ${({ theme }) => theme.color.gray};
+  height: 2rem;
+  width: 0;
+  margin: 0 0.5rem;
 `
 
 const Image = styled.img`
@@ -54,6 +77,7 @@ const LogoutButton = styled(Button)`
 
 const TopBar = () => {
   const context$ = useContext(Context)
+  const currentLanguage = useObservable(context$, { path: ['context', 'user', 'language'] })
   const isLoggedIn = useObservable(context$, { path: ['context', 'user', 'isLoggedIn'] })
   const isLoggingOut = useObservable(context$, { path: ['value'] }) === PageState.logout
 
@@ -65,18 +89,36 @@ const TopBar = () => {
             <Image src={logo}/>
           </LinkButton>
         </TopBarElementContainer>
-        {
-          isLoggedIn &&
-          <TopBarElementContainer>
-            <LogoutButton
-              type='empty'
-              onClick={() => dispatch(UserEvent.LOGOUT)}
-              disabled={isLoggingOut}
-            >
-              {t`Kirjaudu ulos`}
-            </LogoutButton>
-          </TopBarElementContainer>
-        }
+        <TopBarElementContainer>
+          <LanguageButton
+            type='empty'
+            value={'fi'}
+            active={currentLanguage === 'fi'}
+            onClick={({ target }) => dispatch({ type: UserEvent.SELECT_LANGUAGE, data: { language: target.value } })}
+          >
+            {'FI'}
+          </LanguageButton>
+          <LanguageButton
+            type='empty'
+            value={'en'}
+            active={currentLanguage === 'en'}
+            onClick={({ target }) => dispatch({ type: UserEvent.SELECT_LANGUAGE, data: { language: target.value } })}
+          >
+            {'EN'}
+          </LanguageButton>
+          {isLoggedIn && (
+            <React.Fragment>
+              <Divider/>
+              <LogoutButton
+                type='empty'
+                onClick={() => dispatch(UserEvent.LOGOUT)}
+                disabled={isLoggingOut}
+              >
+                {t`Kirjaudu ulos`}
+              </LogoutButton>
+            </React.Fragment>
+          )}
+        </TopBarElementContainer>
       </TopBarContent>
     </TopBarContainer>
   )

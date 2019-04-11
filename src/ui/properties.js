@@ -61,5 +61,5 @@ export const disabled = css`
 `
 
 export const fadeColor = css`
-  transition: background-color 150ms;
+  transition: background-color 150ms, color 150ms;
 `

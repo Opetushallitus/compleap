@@ -66,7 +66,8 @@ export const machine = Machine({
       { target: PageState.profile, cond: (ctx, _) => ctx.user.isLoggedIn },
       { target: PageState.login }
     ],
-    [UserEvent.LOGOUT]: PageState.logout
+    [UserEvent.LOGOUT]: PageState.logout,
+    [UserEvent.SELECT_LANGUAGE]: { actions: Action.selectLanguage }
   }
 }, {
   services,

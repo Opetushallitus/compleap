@@ -15,6 +15,7 @@ import Rating from 'model/enum/Rating'
 export const context = {
   version: process.env.CONTEXT_VERSION,
   user: {
+    language: process.env.USER_LANGUAGE || 'en',
     isLoggedIn: false,
     profileId: undefined,
     id: null
@@ -50,6 +51,7 @@ export const context = {
 }
 
 export const Action = Object.freeze({
+  selectLanguage: 'selectLanguage',
   selectProfile: 'selectProfile',
   logIn: 'logIn',
   reload: 'reload',
@@ -69,6 +71,9 @@ export const Action = Object.freeze({
 })
 
 export const actions = {
+  [Action.selectLanguage]: assign({
+    user: (ctx, event) => R.assoc('language', event.data.language, ctx.user)
+  }),
   [Action.selectProfile]: assign({
     user: (ctx, event) => R.assoc('profileId', event.data.id, ctx.user)
   }),
