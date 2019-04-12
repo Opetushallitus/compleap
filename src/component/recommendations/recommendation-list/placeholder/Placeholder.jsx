@@ -13,6 +13,7 @@ const Container = styled.div`
   border: dashed 3px ${({ theme }) => theme.color.grayLightest}
   padding: 1rem;
   opacity: ${({ loading }) => loading ? 0.4 : 1.0};
+  margin: 1rem 0;
 `
 
 const SpinnerContainer = styled.div`
@@ -45,14 +46,6 @@ const Placeholder = () => {
       <SpinnerContainer>
         <Spinner/>
       </SpinnerContainer>
-
-      <Text width='80%'/>
-      <Text width='65%' darker={true}/>
-      <Text width='82%'/>
-      <Text width='86%' darker={true}/>
-      <Text width='70%'/>
-
-      <br/>
 
       <Expander>
         <Text width='80%' darker={true}/>

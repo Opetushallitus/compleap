@@ -47,6 +47,11 @@ export const context = {
       // TODO Use separate errors for verified and unverified education
       error: undefined
     }
+  },
+  recommendations: {
+    options: {
+      locations: []
+    }
   }
 }
 
@@ -67,7 +72,9 @@ export const Action = Object.freeze({
   setEducationError: 'setEducationError',
   setVerifiedEducationData: 'setVerifiedEducationData',
   likeEducationUnit: 'likeEducationUnit',
-  dislikeEducationUnit: 'dislikeEducationUnit'
+  dislikeEducationUnit: 'dislikeEducationUnit',
+  addRecommendationLocationFilter: 'addRecommendationLocationFilter',
+  removeRecommendationLocationFilter: 'removeRecommendationLocationFilter'
 })
 
 export const actions = {
@@ -149,5 +156,11 @@ export const actions = {
   }),
   [Action.dislikeEducationUnit]: assign({
     education: (ctx, event) => updateVerifiedEducationUnitRating(event.data.id, Rating.DISLIKE, ctx)
+  }),
+  [Action.addRecommendationLocationFilter]: assign({
+    recommendations: (ctx, event) => R.over(R.lensPath(['options', 'locations']), R.append(event.data.id), ctx.recommendations)
+  }),
+  [Action.removeRecommendationLocationFilter]: assign({
+    recommendations: (ctx, event) => R.over(R.lensPath(['options', 'locations']), R.reject(R.equals(event.data.id)), ctx.recommendations)
   })
 }

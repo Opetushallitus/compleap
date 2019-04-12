@@ -1,10 +1,12 @@
-import React, { useState } from 'react'
+import React, { useContext, useState } from 'react'
 import PropTypes from 'prop-types'
 import styled from 'styled-components'
 import * as R from 'ramda'
 import useTranslation from 'component/generic/hook/useTranslation'
 import ApplicationOption from 'component/recommendations/recommendation-list/recommendation/fragment/ApplicationOption'
 import Button from 'component/generic/widget/Button'
+import { Context } from 'state/state'
+import useObservable from 'component/generic/hook/useObservable'
 
 const TRUNCATED_LIST_LENGTH = 2
 
@@ -23,10 +25,20 @@ const ShowMoreButtonContainer = styled.div`
   justify-content: center;
 `
 
+const NoResults = styled.div`
+  background-color: ${({ theme }) => theme.color.negativeLightest};
+  border: solid 1px ${({ theme }) => theme.color.negative};
+  padding: 1rem;
+  margin: 1rem 0;
+`
+
 const ApplicationOptionList = ({ options }) => {
   const [showAll, setShowAll] = useState(false)
   const t = useTranslation()
-  const optionsToShow = showAll ? options : R.take(TRUNCATED_LIST_LENGTH, options)
+  const context$ = useContext(Context)
+  const locationIdWhitelist = useObservable(context$, { path: ['context', 'recommendations', 'options', 'locations'] })
+  const currentMatchingOptions = locationIdWhitelist.length > 0 ? options.filter(option => locationIdWhitelist.includes(option.region)) : options
+  const optionsToShow = showAll ? currentMatchingOptions : R.take(TRUNCATED_LIST_LENGTH, currentMatchingOptions)
 
   return (
     <React.Fragment>
@@ -45,13 +57,19 @@ const ApplicationOptionList = ({ options }) => {
       </ApplicationOptionListStyle>
 
       {
-        options.length > TRUNCATED_LIST_LENGTH && (
+        currentMatchingOptions.length === 0 && (
+          <NoResults>{t`Ei hakukohteita nykyisillä rajauksilla`}</NoResults>
+        )
+      }
+
+      {
+        currentMatchingOptions.length > TRUNCATED_LIST_LENGTH && (
           <ShowMoreButtonContainer>
             <Button type='text' onClick={() => setShowAll(!showAll)}>
               {
                 showAll
                   ? t`Näytä vähemmän`
-                  : t`Näytä loput` + ` ${options.length - TRUNCATED_LIST_LENGTH} ` + t`hakukohdetta`
+                  : t`Näytä loput` + ` ${currentMatchingOptions.length - TRUNCATED_LIST_LENGTH} ` + t`hakukohdetta`
               }
             </Button>
           </ShowMoreButtonContainer>

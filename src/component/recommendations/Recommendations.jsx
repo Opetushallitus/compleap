@@ -9,6 +9,7 @@ import useObservable from 'component/generic/hook/useObservable'
 import useRecommendationsQuery from 'component/recommendations/useRecommendationsQuery'
 import RequireInterestsMessage from 'component/recommendations/require-interests/RequireInterestsMessage'
 import RecommendationList from 'component/recommendations/recommendation-list/RecommendationList'
+import LocationFilter from 'component/recommendations/location-filter/LocationFilter'
 
 const MIN_INTERESTS_REQUIRED = 5
 
@@ -48,7 +49,12 @@ const Recommendations = () => {
       </p>
       {
         hasRequiredInterests
-          ? <RecommendationList recommendations={recommendations} status={status}/>
+          ? (
+            <React.Fragment>
+              <LocationFilter/>
+              <RecommendationList recommendations={recommendations} status={status}/>
+            </React.Fragment>
+          )
           : <RequireInterestsMessage/>
       }
     </React.Fragment>

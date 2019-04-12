@@ -1,0 +1,78 @@
+{
+  "01":	{
+    "fi": "Uusimaa",
+    "en": "Uusimaa"
+  },
+  "02":	{
+    "fi": "Varsinais-Suomi",
+    "en": "Southwest Finland"
+  },
+  "04":	{
+    "fi": "Satakunta",
+    "en": "Satakunta"
+  },
+  "05":	{
+    "fi": "Kanta-Häme",
+    "en": "Kanta-Häme"
+  },
+  "06":	{
+    "fi": "Pirkanmaa",
+    "en": "Pirkanmaa"
+  },
+  "07":	{
+    "fi": "Päijät-Häme",
+    "en": "Päijät-Häme"
+  },
+  "08":	{
+    "fi": "Kymenlaakso",
+    "en": "Kymenlaakso"
+  },
+  "09":	{
+    "fi": "Etelä-Karjala",
+    "en": "South Karelia"
+  },
+  "10":	{
+    "fi": "Etelä-Savo",
+    "en": "South Savo"
+  },
+  "11":	{
+    "fi": "Pohjois-Savo",
+    "en": "North Savo"
+  },
+  "12":	{
+    "fi": "Pohjois-Karjala",
+    "en": "North Karelia"
+  },
+  "13":	{
+    "fi": "Keski-Suomi",
+    "en": "Central Finland"
+  },
+  "14":	{
+    "fi": "Etelä-Pohjanmaa",
+    "en": "South Ostrobothnia"
+  },
+  "15":	{
+    "fi": "Pohjanmaa",
+    "en": "Ostrobothnia"
+  },
+  "16":	{
+    "fi": "Keski-Pohjanmaa",
+    "en": "Central Ostrobothnia"
+  },
+  "17":	{
+    "fi": "Pohjois-Pohjanmaa",
+    "en": "North Ostrobothnia"
+  },
+  "18":	{
+    "fi": "Kainuu",
+    "en": "Kainuu"
+  },
+  "19":	{
+    "fi": "Lappi",
+    "en": "Lapland"
+  },
+  "21":	{
+    "fi": "Ahvenanmaa",
+    "en": "Åland"
+  }
+}

@@ -42,7 +42,7 @@ export default {
     positiveDarkest: darken(0.225, PositiveColor),
     negative: NegativeColor,
     negativeLighter: lighten(0.15, NegativeColor),
-    negativeLightest: lighten(0.4, NegativeColor),
+    negativeLightest: lighten(0.3, NegativeColor),
     negativeDarker: darken(0.15, NegativeColor),
     negativeDarkest: darken(0.225, NegativeColor),
     background: lighten(0.2, GrayColor)

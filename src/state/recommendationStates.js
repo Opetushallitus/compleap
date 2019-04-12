@@ -1,4 +1,5 @@
-import { RecommendationsStatusEvent } from 'state/events'
+import { InteractionEvent, RecommendationsStatusEvent } from 'state/events'
+import { Action } from 'state/context'
 
 export const RecommendationsState = Object.freeze({
   idle: 'idle',
@@ -30,6 +31,14 @@ const recommendationStates = {
       on: {
         [RecommendationsStatusEvent.QUERY_PENDING]: RecommendationsState.pending
       }
+    }
+  },
+  on: {
+    [InteractionEvent.ADD_RECOMMENDATION_LOCATION_FILTER]: {
+      actions: Action.addRecommendationLocationFilter
+    },
+    [InteractionEvent.REMOVE_RECOMMENDATION_LOCATION_FILTER]: {
+      actions: Action.removeRecommendationLocationFilter
     }
   }
 }

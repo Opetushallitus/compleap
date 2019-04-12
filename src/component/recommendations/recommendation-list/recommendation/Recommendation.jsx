@@ -15,44 +15,45 @@ const applicationOptions = [
   {
     id: '1',
     organization: 'Stadin ammattiopisto, Ilkantien toimipaikka, Helsinki',
+    region: '01',
     applicationStatus: 'Haku käynnissä',
     readMoreLink: '#profile'
   },
   {
     id: '2',
     organization: 'Omnia, Espoo',
+    region: '01',
     applicationStatus: 'Haku käynnissä',
     readMoreLink: '#profile'
   },
   {
     id: '3',
     organization: 'Ammattiopisto Live, Metsälän toimipaikka, Helsinki',
+    region: '01',
     applicationStatus: 'Hakuaika 14.3. - 15.4. 2019',
     readMoreLink: '#profile'
   }
 ]
 
-const Recommendation = ({ recommendationData }) => {
-  const Header = (
-    <SummaryHeader
-      field='Autokorinkorjaaja'
-      education='Ammatillinen tutkinto'
-      credits={180}
-      creditUnit='osp'
-      numApplicationOptions={96}
-    />
-  )
+const Header = (
+  <SummaryHeader
+    field='Autokorinkorjaaja'
+    education='Ammatillinen tutkinto'
+    credits={180}
+    creditUnit='osp'
+    numApplicationOptions={96}
+  />
+)
 
-  return (
-    <Expander header={Header}>
-      <Brief/>
-      <Description/>
-      <Jobs jobs={['autoliikkeet', 'autokorinkorjaamot', 'pienet laaja-alaiset yleiskorjaamot', 'oma yritys']}/>
-      <CertificateDisclaimer/>
-      <ApplicationOptionList options={applicationOptions}/>
-    </Expander>
-  )
-}
+const Recommendation = ({ recommendationData }) => (
+  <Expander header={Header}>
+    <Brief/>
+    <Description/>
+    <Jobs jobs={['autoliikkeet', 'autokorinkorjaamot', 'pienet laaja-alaiset yleiskorjaamot', 'oma yritys']}/>
+    <CertificateDisclaimer/>
+    <ApplicationOptionList options={applicationOptions}/>
+  </Expander>
+)
 
 Recommendation.propTypes = {
   recommendationData: PropTypes.object.isRequired
