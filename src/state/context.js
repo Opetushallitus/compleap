@@ -15,7 +15,7 @@ import Rating from 'model/enum/Rating'
 export const context = {
   version: process.env.CONTEXT_VERSION,
   user: {
-    language: process.env.USER_LANGUAGE || 'en',
+    language: process.env.DEFAULT_LANGUAGE || 'en',
     isLoggedIn: false,
     profileId: undefined,
     id: null

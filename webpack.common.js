@@ -57,7 +57,6 @@ module.exports = {
     }),
     new webpack.DefinePlugin({
       'process.env.CONTEXT_VERSION': JSON.stringify('6'),
-      'process.env.LANGUAGE': JSON.stringify('en'),
       'process.env.DEFAULT_LANGUAGE': JSON.stringify('en')
     })
   ]
