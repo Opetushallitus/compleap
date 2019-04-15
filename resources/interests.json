@@ -1,0 +1,1186 @@
+[
+  {
+    "topic": {
+      "fi": "Taide ja kulttuuri",
+      "en": "Art and Culture"
+    },
+    "subtopics": [
+      {
+        "topic": {
+          "fi": "Kielitiede",
+          "sv": "Språkvetenskap",
+          "en": "Linguistics"
+        }
+      },
+      {
+        "topic": {
+          "fi": "Kirjallisuus",
+          "sv": "Litteratur",
+          "en": "Literature"
+        }
+      },
+      {
+        "topic": {
+          "fi": "Musiikki",
+          "sv": "Musik",
+          "en": "Music"
+        }
+      },
+      {
+        "topic": {
+          "fi": "Taide yleensä",
+          "sv": "Konst i allmänhet",
+          "en": "Art in general"
+        }
+      },
+      {
+        "topic": {
+          "fi": "Taidesuuntaukset ja -tyylit",
+          "sv": "Konstriktningar och -stilar",
+          "en": "Art periods and genres"
+        }
+      },
+      {
+        "topic": {
+          "fi": "Taidehistoria",
+          "sv": "Konsthistoria",
+          "en": "Art History"
+        }
+      },
+      {
+        "topic": {
+          "fi": "Arkkitehtuuri",
+          "sv": "Arkitektur",
+          "en": "Architecture"
+        }
+      },
+      {
+        "topic": {
+          "fi": "Kuvataide",
+          "sv": "Bildkonst",
+          "en": "Visual Arts"
+        }
+      },
+      {
+        "topic": {
+          "fi": "Maalaustaide",
+          "sv": "Målarkonst",
+          "en": "Painting"
+        }
+      },
+      {
+        "topic": {
+          "fi": "Grafiikka",
+          "sv": "Grafik",
+          "en": "Graphic Arts"
+        }
+      },
+      {
+        "topic": {
+          "fi": "Kuvanveisto",
+          "sv": "Skulptur",
+          "en": "Sculpture"
+        }
+      },
+      {
+        "topic": {
+          "fi": "Sisustus",
+          "sv": "Inredning",
+          "en": "Interior decoration"
+        }
+      },
+      {
+        "topic": {
+          "fi": "Teatteri",
+          "sv": "Teater",
+          "en": "Theatre"
+        }
+      },
+      {
+        "topic": {
+          "fi": "Tanssi",
+          "sv": "Dans",
+          "en": "Dance"
+        }
+      },
+      {
+        "topic": {
+          "fi": "Valokuvaus",
+          "sv": "Fotografering",
+          "en": "Photography"
+        }
+      },
+      {
+        "topic": {
+          "fi": "Elokuva",
+          "sv": "Film",
+          "en": "Film"
+        }
+      },
+      {
+        "topic": {
+          "fi": "Kirjapainoala",
+          "sv": "Boktryckarbranschen",
+          "en": "Printing"
+        }
+      },
+      {
+        "topic": {
+          "fi": "Museot",
+          "sv": "Museer",
+          "en": "Museums"
+        }
+      },
+      {
+        "topic": {
+          "fi": "Näyttelyt",
+          "sv": "Utställningar",
+          "en": "Exhibitions"
+        }
+      },
+      {
+        "topic": {
+          "fi": "Tekstiiliteollisuus",
+          "sv": "Textilindustri",
+          "en": "Textile Industry"
+        }
+      },
+      {
+        "topic": {
+          "fi": "Vaatetusteollisuus",
+          "sv": "Konfektionsindustri",
+          "en": "Clothing Industry"
+        }
+      },
+      {
+        "topic": {
+          "fi": "Jalkineteollisuus",
+          "sv": "Skoindustri",
+          "en": "Footwear Industry"
+        }
+      },
+      {
+        "topic": {
+          "fi": "Nahkateollisuus",
+          "sv": "Läderindustri",
+          "en": "Leather Industry"
+        }
+      },
+      {
+        "topic": {
+          "fi": "Käsityöt",
+          "sv": "Handarbeten",
+          "en": "Handicrafts"
+        }
+      },
+      {
+        "topic": {
+          "fi": "Taideteollisuus",
+          "sv": "Konstindustri",
+          "en": "Applied Arts"
+        }
+      },
+      {
+        "topic": {
+          "fi": "Keraaminen teollisuus",
+          "sv": "Keramisk industri",
+          "en": "Ceramics Industry"
+        }
+      },
+      {
+        "topic": {
+          "fi": "Lasiteollisuus",
+          "sv": "Glasindustri",
+          "en": "Glass Industry"
+        }
+      }
+    ]
+  },
+  {
+    "topic": {
+      "fi": "Luonto ja ympäristö",
+      "en": "Nature and Environment"
+    },
+    "subtopics": [
+      {
+        "topic": {
+          "fi": "Kasvitiede",
+          "sv": "Botanik",
+          "en": "Botany"
+        }
+      },
+      {
+        "topic": {
+          "fi": "Eläintiede",
+          "sv": "Zoologi",
+          "en": "Zoology"
+        }
+      },
+      {
+        "topic": {
+          "fi": "Luonnonsuojelu",
+          "sv": "Naturskydd",
+          "en": "Nature Protection"
+        }
+      },
+      {
+        "topic": {
+          "fi": "Ympäristönsuojelu",
+          "sv": "Miljövård",
+          "en": "Environmental Conservation"
+        }
+      },
+      {
+        "topic": {
+          "fi": "Ympäristö",
+          "sv": "Miljö",
+          "en": "Environment"
+        }
+      },
+      {
+        "topic": {
+          "fi": "Metsätalous",
+          "sv": "Skogsbruk",
+          "en": "Forestry"
+        }
+      },
+      {
+        "topic": {
+          "fi": "Metsänhoito",
+          "sv": "Skogsskötsel",
+          "en": "Silviculture"
+        }
+      },
+      {
+        "topic": {
+          "fi": "Maatalous",
+          "sv": "Lantbruk",
+          "en": "Agriculture"
+        }
+      },
+      {
+        "topic": {
+          "fi": "Maanviljely",
+          "sv": "Jordbruk",
+          "en": "Farming"
+        }
+      },
+      {
+        "topic": {
+          "fi": "Puutarhanhoito",
+          "sv": "Trädgårdsskötsel",
+          "en": "Horticulture"
+        }
+      },
+      {
+        "topic": {
+          "fi": "Kotieläintalous",
+          "sv": "Husdjursskötsel",
+          "en": "Animal Husbandry"
+        }
+      },
+      {
+        "topic": {
+          "fi": "Turkisteollisuus",
+          "sv": "Pälsindustri",
+          "en": "Fur Industry"
+        }
+      },
+      {
+        "topic": {
+          "fi": "Metsäteollisuus",
+          "sv": "Skogsindustri",
+          "en": "Forest Industry"
+        }
+      },
+      {
+        "topic": {
+          "fi": "Kalastus",
+          "sv": "Fiske",
+          "en": "Fishery"
+        }
+      },
+      {
+        "topic": {
+          "fi": "Metsästys",
+          "sv": "Jakt",
+          "en": "Hunting"
+        }
+      },
+      {
+        "topic": {
+          "fi": "Biologia",
+          "sv": "Biologi",
+          "en": "Biology"
+        }
+      }
+    ]
+  },
+  {
+    "topic": {
+      "fi": "Maantiede ja yhteiskuntasuunnittelu",
+      "en": "Geography and Societal Planning"
+    },
+    "subtopics": [
+      {
+        "topic": {
+          "fi": "Jätteet",
+          "sv": "Avfall",
+          "en": "Waste"
+        }
+      },
+      {
+        "topic": {
+          "fi": "Energia",
+          "sv": "Energi",
+          "en": "Energy"
+        }
+      },
+      {
+        "topic": {
+          "fi": "Polttoaineet",
+          "sv": "Bränslen",
+          "en": "Fuels"
+        }
+      },
+      {
+        "topic": {
+          "fi": "Yhdyskuntasuunnittelu",
+          "sv": "Samhällsplanering",
+          "en": "Community Planning"
+        }
+      },
+      {
+        "topic": {
+          "fi": "Aluesuunnittelu",
+          "sv": "Regionplanering",
+          "en": "Regional Planning"
+        }
+      },
+      {
+        "topic": {
+          "fi": "Maantiede",
+          "sv": "Geografi",
+          "en": "Geography"
+        }
+      },
+      {
+        "topic": {
+          "fi": "Karttaoppi",
+          "sv": "Kartografi",
+          "en": "Cartography"
+        }
+      },
+      {
+        "topic": {
+          "fi": "Geologia",
+          "sv": "Geologi",
+          "en": "Geology"
+        }
+      }
+    ]
+  },
+  {
+    "topic": {
+      "fi": "Yhteiskunta ja talous",
+      "en": "Society and Economy"
+    },
+    "subtopics": [
+      {
+        "topic": {
+          "fi": "Filosofia",
+          "sv": "Filosofi",
+          "en": "Philosophy"
+        }
+      },
+      {
+        "topic": {
+          "fi": "Sosiologia",
+          "sv": "Sociologi",
+          "en": "Sociology"
+        }
+      },
+      {
+        "topic": {
+          "fi": "Sosiaalipsykologia",
+          "sv": "Socialpsykologi",
+          "en": "Social Psychology"
+        }
+      },
+      {
+        "topic": {
+          "fi": "Valtio-oppi",
+          "sv": "Statskunskap",
+          "en": "Political Science"
+        }
+      },
+      {
+        "topic": {
+          "fi": "Politiikka",
+          "sv": "Politik",
+          "en": "Politics"
+        }
+      },
+      {
+        "topic": {
+          "fi": "Kansainvälinen politiikka",
+          "sv": "Internationell politik",
+          "en": "International Politics"
+        }
+      },
+      {
+        "topic": {
+          "fi": "Oikeus",
+          "sv": "Juridik",
+          "en": "Justice"
+        }
+      },
+      {
+        "topic": {
+          "fi": "Lainsäädäntö",
+          "sv": "Lagstiftning",
+          "en": "Legislation"
+        }
+      },
+      {
+        "topic": {
+          "fi": "Hallinto",
+          "sv": "Förvaltning",
+          "en": "Administration"
+        }
+      },
+      {
+        "topic": {
+          "fi": "Organisaatiotutkimus",
+          "sv": "Organisationsforskning",
+          "en": "Organisational Research"
+        }
+      },
+      {
+        "topic": {
+          "fi": "Julkinen hallinto",
+          "sv": "Offentlig förvaltning",
+          "en": "Public Administration"
+        }
+      },
+      {
+        "topic": {
+          "fi": "Sosiaalipolitiikka",
+          "sv": "Socialpolitik",
+          "en": "Social Policy"
+        }
+      },
+      {
+        "topic": {
+          "fi": "Yhteiskuntapolitiikka",
+          "sv": "Samhällspolitik",
+          "en": "Social Development Policy"
+        }
+      },
+      {
+        "topic": {
+          "fi": "Sosiaaliturva",
+          "sv": "Socialskydd",
+          "en": "Social Security"
+        }
+      },
+      {
+        "topic": {
+          "fi": "Taloustieteet",
+          "sv": "Ekonomi",
+          "en": "Economics"
+        }
+      },
+      {
+        "topic": {
+          "fi": "Kansantalous",
+          "sv": "Nationalekonomi",
+          "en": "National Economy"
+        }
+      },
+      {
+        "topic": {
+          "fi": "Liiketalous",
+          "sv": "Företagsekonomi",
+          "en": "Business Economics"
+        }
+      },
+      {
+        "topic": {
+          "fi": "Kauppa",
+          "sv": "Handel",
+          "en": "Commerce"
+        }
+      },
+      {
+        "topic": {
+          "fi": "Väestötiede",
+          "sv": "Befolkningslära",
+          "en": "Demography"
+        }
+      },
+      {
+        "topic": {
+          "fi": "Työelämä",
+          "sv": "Arbetsliv",
+          "en": "Work"
+        }
+      }
+    ]
+  },
+  {
+    "topic": {
+      "fi": "Turvallisuus ",
+      "en": "Safety and Security"
+    },
+    "subtopics": [
+      {
+        "topic": {
+          "fi": "Sodankäynti",
+          "sv": "Krigföring",
+          "en": "Warfare"
+        }
+      },
+      {
+        "topic": {
+          "fi": "Sotatekniikka",
+          "sv": "Krigsteknik",
+          "en": "Military Technology"
+        }
+      },
+      {
+        "topic": {
+          "fi": "Maanpuolustus",
+          "sv": "Försvar",
+          "en": "Defence"
+        }
+      },
+      {
+        "topic": {
+          "fi": "Palotoimi",
+          "sv": "Brandväsen",
+          "en": "Fire Protection"
+        }
+      },
+      {
+        "topic": {
+          "fi": "Pelastustoimi",
+          "sv": "Räddningsväsen",
+          "en": "Rescue Services"
+        }
+      },
+      {
+        "topic": {
+          "fi": "Tapaturmantorjunta",
+          "sv": "Olycksförebyggande",
+          "en": "Accident Prevention"
+        }
+      },
+      {
+        "topic": {
+          "fi": "Turvallisuustekniikka",
+          "sv": "Säkerhetsteknik",
+          "en": "Safety Engineering"
+        }
+      },
+      {
+        "topic": {
+          "fi": "Poliisi",
+          "sv": "Polisen",
+          "en": "Police"
+        }
+      }
+    ]
+  },
+  {
+    "topic": {
+      "fi": "Koulutus",
+      "en": "Education"
+    },
+    "subtopics": [
+      {
+        "topic": {
+          "fi": "Kasvatus",
+          "sv": "Uppfostran",
+          "en": "Upbringing"
+        }
+      },
+      {
+        "topic": {
+          "fi": "Opetus",
+          "sv": "Undervisning",
+          "en": "Teaching"
+        }
+      },
+      {
+        "topic": {
+          "fi": "Koulutus",
+          "sv": "Utbildning",
+          "en": "Education"
+        }
+      },
+      {
+        "topic": {
+          "fi": "Luokanopettaja",
+          "sv": "Klasslärare",
+          "en": "Class Teacher"
+        }
+      },
+      {
+        "topic": {
+          "fi": "Lastentarhanopettaja",
+          "sv": "Barnträdgårdslärare ",
+          "en": "Kindergarten Teachers"
+        }
+      }
+    ]
+  },
+  {
+    "topic": {
+      "fi": "Terveys ja hyvinvointi",
+      "en": "Health and Welfare"
+    },
+    "subtopics": [
+      {
+        "topic": {
+          "fi": "Terveydenhuolto",
+          "sv": "Hälsovård",
+          "en": "Health Care"
+        }
+      },
+      {
+        "topic": {
+          "fi": "Lääketiede",
+          "sv": "Medicin",
+          "en": "Medicine"
+        }
+      },
+      {
+        "topic": {
+          "fi": "Fysiologia",
+          "sv": "Fysiologi",
+          "en": "Physiology"
+        }
+      },
+      {
+        "topic": {
+          "fi": "Psykiatria",
+          "sv": "Psykiatri",
+          "en": "Psychiatry"
+        }
+      },
+      {
+        "topic": {
+          "fi": "Hammaslääketiede",
+          "sv": "Odontologi",
+          "en": "Dentistry"
+        }
+      },
+      {
+        "topic": {
+          "fi": "Eläinlääketiede",
+          "sv": "Veterinärmedicin",
+          "en": "Veterinary Medicine"
+        }
+      },
+      {
+        "topic": {
+          "fi": "Farmasia",
+          "sv": "Farmaci",
+          "en": "Pharmacy"
+        }
+      },
+      {
+        "topic": {
+          "fi": "Liikunta",
+          "sv": "Motion",
+          "en": "Exercise"
+        }
+      },
+      {
+        "topic": {
+          "fi": "Urheilu",
+          "sv": "Idrott",
+          "en": "Sports"
+        }
+      },
+      {
+        "topic": {
+          "fi": "Psykologia",
+          "sv": "Psykologi",
+          "en": "Psychology"
+        }
+      },
+      {
+        "topic": {
+          "fi": "Kauneudenhoito",
+          "sv": "Skönhetsvård",
+          "en": "Beauty Care"
+        }
+      },
+      {
+        "topic": {
+          "fi": "Hoitomenetelmät",
+          "sv": "Behandlingsmetoder",
+          "en": "Treatments"
+        }
+      },
+      {
+        "topic": {
+          "fi": "Hoitotyö",
+          "sv": "Vårdarbete",
+          "en": "Nursing "
+        }
+      },
+      {
+        "topic": {
+          "fi": "Kosmetologi",
+          "sv": "Kosmetolog",
+          "en": "Cosmetologist"
+        }
+      }
+    ]
+  },
+  {
+    "topic": {
+      "fi": "Viestintä",
+      "en": "Communication"
+    },
+    "subtopics": [
+      {
+        "topic": {
+          "fi": "Viestintä",
+          "sv": "Kommunikation",
+          "en": "Communication"
+        }
+      },
+      {
+        "topic": {
+          "fi": "Joukkoviestintä",
+          "sv": "Masskommunikation",
+          "en": "Mass Communication"
+        }
+      },
+      {
+        "topic": {
+          "fi": "Mainonta",
+          "sv": "Reklam",
+          "en": "Advertising"
+        }
+      },
+      {
+        "topic": {
+          "fi": "Julkaisutoiminta",
+          "sv": "Publikationsverksamhet",
+          "en": "Publishing"
+        }
+      }
+    ]
+  },
+  {
+    "topic": {
+      "fi": "Informaatiotekniikka",
+      "en": "Information Technology"
+    },
+    "subtopics": [
+      {
+        "topic": {
+          "fi": "Sähkötekniikka",
+          "sv": "Elteknik",
+          "en": "Electrical Engineering"
+        }
+      },
+      {
+        "topic": {
+          "fi": "Elektroniikka",
+          "sv": "Elektronik",
+          "en": "Electronics"
+        }
+      },
+      {
+        "topic": {
+          "fi": "Tietotekniikka",
+          "sv": "Datateknik",
+          "en": "Information Technology"
+        }
+      },
+      {
+        "topic": {
+          "fi": "Tietojenkäsittely",
+          "sv": "Informationsbehandling",
+          "en": "Data processing"
+        }
+      },
+      {
+        "topic": {
+          "fi": "Tietoliikennetekniikka",
+          "sv": "Datakommunikationsteknik",
+          "en": "Communications Technology"
+        }
+      },
+      {
+        "topic": {
+          "fi": "Äänitekniikka",
+          "sv": "Ljudteknik",
+          "en": "Sound Engineering"
+        }
+      },
+      {
+        "topic": {
+          "fi": "Kirjastot",
+          "sv": "Bibliotek",
+          "en": "Libraries"
+        }
+      },
+      {
+        "topic": {
+          "fi": "Arkistot",
+          "sv": "Arkiv",
+          "en": "Archives"
+        }
+      },
+      {
+        "topic": {
+          "fi": "Tietopalvelu",
+          "sv": "Informationstjänst",
+          "en": "Information Services"
+        }
+      }
+    ]
+  },
+  {
+    "topic": {
+      "fi": "Rakennusala",
+      "en": "Construction Sector"
+    },
+    "subtopics": [
+      {
+        "topic": {
+          "fi": "Rakentaminen",
+          "sv": "Byggnadsverksamhet",
+          "en": "Construction"
+        }
+      },
+      {
+        "topic": {
+          "fi": "Rakennusteollisuus",
+          "sv": "Byggnadsindustri",
+          "en": "Building Industry"
+        }
+      },
+      {
+        "topic": {
+          "fi": "Talonrakennus",
+          "sv": "Husbyggnad",
+          "en": "Housing Construction"
+        }
+      },
+      {
+        "topic": {
+          "fi": "Maarakennus",
+          "sv": "Markbyggnad",
+          "en": "Earth Construction"
+        }
+      },
+      {
+        "topic": {
+          "fi": "Vesirakennus",
+          "sv": "Vattenbyggnad",
+          "en": "Hydraulic Engineering"
+        }
+      },
+      {
+        "topic": {
+          "fi": "Tienrakennus",
+          "sv": "Vägbyggnad",
+          "en": "Road Construction"
+        }
+      },
+      {
+        "topic": {
+          "fi": "Asuminen",
+          "sv": "Boende",
+          "en": "Housing"
+        }
+      }
+    ]
+  },
+  {
+    "topic": {
+      "fi": "Matkailu- ja ravintola-ala",
+      "en": "Tourism and Restaurant Sector"
+    },
+    "subtopics": [
+      {
+        "topic": {
+          "fi": "Matkailu",
+          "sv": "Turism",
+          "en": "Travel"
+        }
+      },
+      {
+        "topic": {
+          "fi": "Ravitsemus",
+          "sv": "Näring",
+          "en": "Nutrition"
+        }
+      },
+      {
+        "topic": {
+          "fi": "Ravintola-ala",
+          "sv": "Restaurangbranschen",
+          "en": "Restaurant Sector"
+        }
+      },
+      {
+        "topic": {
+          "fi": "Elintarvikeala",
+          "sv": "Livsmedelsbranschen",
+          "en": "Food Sector"
+        }
+      },
+      {
+        "topic": {
+          "fi": "Majoitusala",
+          "sv": "Hotellbranschen",
+          "en": "Accommodation Sector"
+        }
+      },
+      {
+        "topic": {
+          "fi": "Kotitalous",
+          "sv": "Huslig ekonomi",
+          "en": "Domestic economy"
+        }
+      }
+    ]
+  },
+  {
+    "topic": {
+      "fi": "Liikenne ja logistiikka",
+      "en": "Traffic and Logistics"
+    },
+    "subtopics": [
+      {
+        "topic": {
+          "fi": "Liikenne",
+          "sv": "Trafik",
+          "en": "Traffic"
+        }
+      },
+      {
+        "topic": {
+          "fi": "Kuljetus",
+          "sv": "Transport",
+          "en": "Transport"
+        }
+      },
+      {
+        "topic": {
+          "fi": "Posti",
+          "sv": "Post",
+          "en": "Mail"
+        }
+      },
+      {
+        "topic": {
+          "fi": "Pakkausteollisuus",
+          "sv": "Förpackningsindustri",
+          "en": "Packaging Industry"
+        }
+      }
+    ]
+  },
+  {
+    "topic": {
+      "fi": "Historia ja uskonto",
+      "en": "History and Religion"
+    },
+    "subtopics": [
+      {
+        "topic": {
+          "fi": "Antropologia",
+          "sv": "Antropologi",
+          "en": "Anthropology"
+        }
+      },
+      {
+        "topic": {
+          "fi": "Kansanperinne",
+          "sv": "Folktradition",
+          "en": "Folklore"
+        }
+      },
+      {
+        "topic": {
+          "fi": "Kulttuuriantropologia",
+          "sv": "Kulturantropologi",
+          "en": "Cultural Anthropology"
+        }
+      },
+      {
+        "topic": {
+          "fi": "Arkeologia",
+          "sv": "Arkeologi",
+          "en": "Archaeology"
+        }
+      },
+      {
+        "topic": {
+          "fi": "Historia",
+          "sv": "Historia",
+          "en": "History"
+        }
+      },
+      {
+        "topic": {
+          "fi": "Uskonto",
+          "sv": "Religion",
+          "en": "Religion"
+        }
+      },
+      {
+        "topic": {
+          "fi": "Teologia",
+          "sv": "Teologi",
+          "en": "Theology"
+        }
+      },
+      {
+        "topic": {
+          "fi": "Uskontotiede",
+          "sv": "Religionsvetenskap",
+          "en": "Religious Studies"
+        }
+      }
+    ]
+  },
+  {
+    "topic": {
+      "fi": "Matematiikka ja fysiikka",
+      "en": "Mathematics and Physics"
+    },
+    "subtopics": [
+      {
+        "topic": {
+          "fi": "Matematiikka",
+          "sv": "Matematik",
+          "en": "Mathematics"
+        }
+      },
+      {
+        "topic": {
+          "fi": "Tilastotiede",
+          "sv": "Statistik",
+          "en": "Statistics"
+        }
+      },
+      {
+        "topic": {
+          "fi": "Fysiikka",
+          "sv": "Fysik",
+          "en": "Physics"
+        }
+      },
+      {
+        "topic": {
+          "fi": "Kemia",
+          "sv": "Kemi",
+          "en": "Chemistry"
+        }
+      },
+      {
+        "topic": {
+          "fi": "Tähtitiede",
+          "sv": "Astronomi",
+          "en": "Astronomy"
+        }
+      },
+      {
+        "topic": {
+          "fi": "Avaruustutkimus",
+          "sv": "Rymdforskning",
+          "en": "Space Research"
+        }
+      }
+    ]
+  },
+  {
+    "topic": {
+      "fi": "Muu teollisuus",
+      "en": "Other Industries"
+    },
+    "subtopics": [
+      {
+        "topic": {
+          "fi": "Metalliteollisuus",
+          "sv": "Metallindustri",
+          "en": "Metal Industry"
+        }
+      },
+      {
+        "topic": {
+          "fi": "Konepajateollisuus",
+          "sv": "Verkstadsindustri",
+          "en": "Mechanical Engineering Industry"
+        }
+      },
+      {
+        "topic": {
+          "fi": "Hienomekaaninen teollisuus",
+          "sv": "Finmekanisk industri",
+          "en": "Precision Engineering Industry"
+        }
+      },
+      {
+        "topic": {
+          "fi": "Kemianteollisuus",
+          "sv": "Kemisk industri",
+          "en": "Chemicals Industry"
+        }
+      },
+      {
+        "topic": {
+          "fi": "Muoviteollisuus",
+          "sv": "Plastindustri",
+          "en": "Plastic Industry"
+        }
+      },
+      {
+        "topic": {
+          "fi": "Kumiteollisuus",
+          "sv": "Gummiindustri",
+          "en": "Rubber Industry"
+        }
+      },
+      {
+        "topic": {
+          "fi": "Massa- ja paperiteollisuus",
+          "sv": "Massa- och pappersindustri",
+          "en": "Pulp and Paper Industry"
+        }
+      },
+      {
+        "topic": {
+          "fi": "Paperiteollisuus",
+          "sv": "Pappersindustri",
+          "en": "Paper Industry"
+        }
+      },
+      {
+        "topic": {
+          "fi": "Puuteollisuus",
+          "sv": "Träindustri",
+          "en": "Wood Industry"
+        }
+      },
+      {
+        "topic": {
+          "fi": "Kaivosteollisuus",
+          "sv": "Bergsbruk",
+          "en": "Mining Industry"
+        }
+      }
+    ]
+  }
+]
