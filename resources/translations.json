@@ -582,6 +582,18 @@
     "fi": "Lue lisää",
     "en": "Read more"
   },
+  "Alue": {
+    "fi": "Alue",
+    "en": "Region"
+  },
+  "Lisää rajaus": {
+    "fi": "Lisää rajaus",
+    "en": "Add limit"
+  },
+  "Ei hakukohteita nykyisillä rajauksilla": {
+    "fi": "Ei hakukohteita nykyisillä rajauksilla",
+    "en": "No results with current limits"
+  },
   "Sivua ei löytynyt": {
     "fi": "Sivua ei löytynyt",
     "en": "Page couldn't be found"
