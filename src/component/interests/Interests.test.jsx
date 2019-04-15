@@ -7,6 +7,9 @@ const mockState = queryStatus => jest.doMock('state/state', () => {
 
   const state = Atom({
     context: {
+      user: {
+        language: 'fi'
+      },
       interests: {
         data: [{
           topic: 'Autot',
@@ -35,7 +38,8 @@ const mockState = queryStatus => jest.doMock('state/state', () => {
   })
 
   return {
-    Context: React.createContext(state)
+    Context: React.createContext(state),
+    state: Atom(state)
   }
 })
 
@@ -44,7 +48,7 @@ describe('Interests', () => {
     jest.clearAllMocks()
   })
 
-  it('should show loading indicator when fetching suggestions', () => {
+  it('should show loading indicator (placeholder tags) when fetching suggestions', () => {
     let Interests
     mockState('pending')
     jest.isolateModules(() => { Interests = require('./Interests').default })

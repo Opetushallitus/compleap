@@ -3,23 +3,28 @@
 exports[`Education should show added educations 1`] = `
 Array [
   <h1
-    className="sc-ifAKCX bztiCN"
+    className="sc-bdVaJa hqCxXu"
   >
     Koulutukset
   </h1>,
+  <h2
+    className="sc-bwzfXH krgDD"
+  >
+    Ulkomailla suoritetut tutkinnot
+  </h2>,
   <div
-    className="sc-htoDjs eewNkD"
+    className="sc-ifAKCX dOlJFM"
   >
     <div>
       <h3
-        className="sc-bZQynM kbVxzK"
+        className="sc-htpNat cxoWVD"
       >
         Perusopetus
       </h3>
     </div>
     <div>
       <button
-        className="sc-bdVaJa sc-bxivhb lhKMRF"
+        className="sc-kpOJdX sc-jKJlTe hXbFZE"
         onClick={[Function]}
       >
         Poista tutkinto
@@ -27,23 +32,23 @@ Array [
     </div>
   </div>,
   <div
-    className="sc-htoDjs eewNkD"
+    className="sc-ifAKCX dOlJFM"
   >
     <div>
       <h3
-        className="sc-bZQynM kbVxzK"
+        className="sc-htpNat cxoWVD"
       >
         Ammatillinen tutkinto
       </h3>
       <p
-        className="sc-dnqmqq feeNAA"
+        className="sc-hMqMXs dtCVTd"
       >
         Käsityöalat
       </p>
     </div>
     <div>
       <button
-        className="sc-bdVaJa sc-bxivhb lhKMRF"
+        className="sc-kpOJdX sc-jKJlTe hXbFZE"
         onClick={[Function]}
       >
         Poista tutkinto
@@ -51,7 +56,7 @@ Array [
     </div>
   </div>,
   <button
-    className="sc-bdVaJa sc-htpNat fPDwvT"
+    className="sc-kpOJdX sc-ckVGcZ fbtVZP"
     onClick={[Function]}
   >
     Lisää muualla kuin Suomessa suoritettu tutkinto

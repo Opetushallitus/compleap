@@ -11,6 +11,6 @@ describe('Lander', () => {
   })
 
   it('should show login button', async () => {
-    await expect(page).toMatchElement('a', { text: 'Kirjaudu sisään' })
+    await expect(page).toMatchElement('a', { text: 'Log in' })
   })
 })

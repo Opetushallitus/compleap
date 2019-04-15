@@ -7,6 +7,9 @@ const mockState = formState => jest.doMock('state/state', () => {
 
   const state = Atom({
     context: {
+      user: {
+        language: 'fi'
+      },
       interests: {
         data: [],
         error: undefined
@@ -27,13 +30,16 @@ const mockState = formState => jest.doMock('state/state', () => {
     },
     value: {
       profile: {
-        education: formState
+        education: {
+          unverifiedEducation: formState
+        }
       }
     }
   })
 
   return {
-    Context: React.createContext(state)
+    Context: React.createContext(state),
+    state: Atom(state)
   }
 })
 

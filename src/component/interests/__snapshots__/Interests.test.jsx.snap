@@ -1,15 +1,22 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Interests should show error when fetching interest suggestions failed 1`] = `
-<div>
-  error
-</div>
+Array [
+  <h1
+    className="sc-cMljjf ghKTLH"
+  >
+    Kiinnostukset
+  </h1>,
+  <div>
+    error
+  </div>,
+]
 `;
 
 exports[`Interests should show interest suggestions when fetched successfully 1`] = `
 Array [
   <h1
-    className="sc-jTzLTM gbZaCQ"
+    className="sc-kAzzGY fPsSYY"
   >
     Kiinnostukset
   </h1>,
@@ -17,15 +24,15 @@ Array [
     Valitse mahdollisimman tarkasti mitkä allaolevista asioista sinua kiinnostavat. Mitä tarkemmin valitset, sitä tarkemmin pystymme etsimään sinulle sopivia koulutuksia.
   </p>,
   <h2
-    className="sc-fjdhpX dnlSsS"
+    className="sc-chPdSV bVBjBE"
   >
     Valitse seuraavista ainakin 5 sinua kiinnostavaa asiaa
   </h2>,
   <ul
-    className="sc-kAzzGY jpPCrv"
+    className="sc-jWBwVP cOfFIQ"
   >
     <li
-      className="sc-chPdSV DotLc"
+      className="sc-brqgnP ilwzVH"
     >
       <div
         style={
@@ -35,14 +42,14 @@ Array [
         }
       >
         <button
-          className="sc-iwsKbI gSRIic"
+          className="sc-kpOJdX jsGued"
           onClick={[Function]}
           selected={true}
           value="Autot"
         >
           Autot
           <div
-            className="sc-gZMcBi cdXOPR"
+            className="sc-dxgOiQ hhNrT"
             selected={true}
           >
             <svg
@@ -61,10 +68,10 @@ Array [
         </button>
       </div>
       <ul
-        className="sc-gqjmRU kOdtII"
+        className="sc-ckVGcZ dMLQoV"
       >
         <li
-          className="sc-VigVT fehrhF"
+          className="sc-jKJlTe ivktGD"
         >
           <div
             style={
@@ -74,14 +81,14 @@ Array [
             }
           >
             <button
-              className="sc-iwsKbI dHsgxa"
+              className="sc-kpOJdX iIMEAZ"
               onClick={[Function]}
               selected={false}
               value="Virittely ja korjaaminen"
             >
               Virittely ja korjaaminen
               <div
-                className="sc-gZMcBi gzOsZU"
+                className="sc-dxgOiQ laCMQ"
                 selected={false}
               >
                 <svg
@@ -106,8 +113,144 @@ Array [
 ]
 `;
 
-exports[`Interests should show loading indicator when fetching suggestions 1`] = `
-<div>
-  loading
-</div>
+exports[`Interests should show loading indicator (placeholder tags) when fetching suggestions 1`] = `
+Array [
+  <h1
+    className="sc-bdVaJa hqCxXu"
+  >
+    Kiinnostukset
+  </h1>,
+  <div
+    className="sc-iwsKbI laYIiJ"
+  >
+    <div
+      className="sc-VigVT TyGGh"
+    >
+      <div
+        className="sc-htoDjs cKmTuq"
+      >
+        <div
+          className="sc-dnqmqq jcnWGu"
+        />
+        <div
+          className="sc-dnqmqq jcnWGu"
+        />
+        <div
+          className="sc-dnqmqq jcnWGu"
+        />
+        <div
+          className="sc-dnqmqq jcnWGu"
+        />
+      </div>
+    </div>
+    <div
+      className="sc-gZMcBi bIDViS"
+    >
+      <div
+        className="sc-fjdhpX khYAnD"
+        width="55%"
+      />
+      <div
+        className="sc-fjdhpX hABshK"
+        width="77%"
+      />
+      <div
+        className="sc-fjdhpX ezCgPo"
+        width="65%"
+      />
+    </div>
+    <div
+      className="sc-gqjmRU ksnVNk"
+    >
+      <div
+        className="sc-jTzLTM hDugnc"
+        width="2rem"
+      />
+      <div
+        className="sc-jTzLTM eRznqm"
+        width="3rem"
+      />
+      <div
+        className="sc-jTzLTM jtDwYV"
+        width="5rem"
+      />
+      <div
+        className="sc-jTzLTM bYVLcY"
+        width="4rem"
+      />
+      <div
+        className="sc-jTzLTM iIkCPF"
+        width="3rem"
+      />
+      <div
+        className="sc-jTzLTM UOrTg"
+        width="2rem"
+      />
+      <div
+        className="sc-jTzLTM bYVLcY"
+        width="4rem"
+      />
+      <div
+        className="sc-jTzLTM eRznqm"
+        width="3rem"
+      />
+      <div
+        className="sc-jTzLTM jtDwYV"
+        width="5rem"
+      />
+      <div
+        className="sc-jTzLTM kfvbdv"
+        width="4rem"
+      />
+      <div
+        className="sc-jTzLTM UOrTg"
+        width="2rem"
+      />
+      <div
+        className="sc-jTzLTM eRznqm"
+        width="3rem"
+      />
+      <div
+        className="sc-jTzLTM jtDwYV"
+        width="5rem"
+      />
+      <div
+        className="sc-jTzLTM bYVLcY"
+        width="4rem"
+      />
+      <div
+        className="sc-jTzLTM eRznqm"
+        width="3rem"
+      />
+      <div
+        className="sc-jTzLTM bYVLcY"
+        width="4rem"
+      />
+      <div
+        className="sc-jTzLTM iIkCPF"
+        width="3rem"
+      />
+      <div
+        className="sc-jTzLTM bYVLcY"
+        width="4rem"
+      />
+      <div
+        className="sc-jTzLTM eRznqm"
+        width="3rem"
+      />
+      <div
+        className="sc-jTzLTM UOrTg"
+        width="2rem"
+      />
+      <div
+        className="sc-jTzLTM jtDwYV"
+        width="5rem"
+      />
+      <div
+        className="sc-jTzLTM bYVLcY"
+        width="4rem"
+      />
+    </div>
+  </div>,
+]
 `;
