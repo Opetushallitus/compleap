@@ -1,4 +1,4 @@
-import interests from 'resources/mock/interests'
+import interests from 'resources/interests'
 import educationToLearningOpportunity from 'resources/mock/educationClassificationToLearningOpportunityCode'
 import { getProfile } from 'resources/mock/koski/profiles'
 import * as R from 'ramda'
@@ -36,7 +36,6 @@ const services = {
     Service.getInterestSuggestions,
     Promise.resolve(
       interests
-        .slice(0, 25)
         .map(interest => R.assoc('id', uuid(), interest))
         .map(interest => R.assoc('selected', false, interest))
         .map(interest => R.over(subtopicsLens(),

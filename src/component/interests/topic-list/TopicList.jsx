@@ -38,7 +38,7 @@ const TopicList = () => {
       <H2>{t`Valitse seuraavista ainakin 5 sinua kiinnostavaa asiaa`}</H2>
       <StyledTagList>
         {interests.map(v => (
-          <TopicListItem key={v.topic}>
+          <TopicListItem key={v.id}>
             <Interest interest={v}/>
           </TopicListItem>
         ))}
