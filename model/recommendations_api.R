@@ -7,15 +7,15 @@
 
 options(stringsAsFactors = FALSE)
 
-require(devtools)
-install_github("bmschmidt/wordVectors")
+#library(devtools)
+#install_github("bmschmidt/wordVectors")
 
-require(plumber)
-require(jsonlite)
-require(dplyr)
-require(rvest)
-require(wordVectors)
-require(udpipe)
+library(plumber)
+library(jsonlite)
+library(dplyr)
+library(rvest)
+library(wordVectors)
+library(udpipe)
 
 
 ###########################################
