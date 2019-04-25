@@ -5,6 +5,7 @@ import useTranslation from 'component/generic/hook/useTranslation'
 import { H1 } from 'ui/typography'
 import { Context } from 'state/state'
 import { subtopicsLens } from 'state/helper'
+import { flattenInterests, flattenUnverifiedEducation, flattenVerifiedEducation } from 'util/recommendationsQueryDataHelper'
 import useObservable from 'component/generic/hook/useObservable'
 import useRecommendationsQuery from 'component/recommendations/useRecommendationsQuery'
 import RequireInterestsMessage from 'component/recommendations/require-interests/RequireInterestsMessage'
@@ -17,7 +18,6 @@ const extractSubtopics = R.compose(R.flatten, R.map(R.view(subtopicsLens())))
 const withoutSubtopics = R.map(R.omit('subtopics'))
 const countSelectedTopics = R.compose(R.length, R.filter(R.propEq('selected', true)))
 
-// TODO Pass correct data to recommendations query
 const Recommendations = () => {
   const context$ = useContext(Context)
   const t = useTranslation()
@@ -32,9 +32,9 @@ const Recommendations = () => {
   const hasRequiredInterests$ = numSelectedInterests$.map(v => v >= MIN_INTERESTS_REQUIRED).toProperty()
 
   const queryParams$ = B.combineTemplate({
-    unverifiedEducations: unverifiedEducations$,
-    verifiedEducations: verifiedEducations$,
-    interests: interests$
+    unverifiedEducations: flattenUnverifiedEducation(unverifiedEducations$),
+    verifiedEducations: flattenVerifiedEducation(verifiedEducations$),
+    interests: flattenInterests(interests$)
   })
   const recommendationsResponse = useRecommendationsQuery(queryParams$, hasRequiredInterests$)
 
