@@ -24,13 +24,13 @@ require(udpipe)
 ## load needed global data and models
 
 # load the language model
-udmodel_finnish <- udpipe_load_model(file = "./model/models/finnish-tdt-ud-2.3-181115.udpipe")
+udmodel_finnish <- udpipe_load_model(file = "./models/finnish-tdt-ud-2.3-181115.udpipe")
 
 # read word2vec model - vectorized presentation of finnish corpus
-word_model <- read.binary.vectors("./model/models/tarjonta_vectors.bin")
+word_model <- read.binary.vectors("./models/tarjonta_vectors.bin")
 
 # read doc2vec model - vectorized presentation of vocational education offering descriptions (tarjonta)
-doc_model <- read.binary.vectors("./model/models/tarjonta_doc2vec_model.bin")
+doc_model <- read.binary.vectors("./models/tarjonta_doc2vec_model.bin")
 
 # load offering metadata
 offering <- readRDS("./model/data/tarjonta.rds")
