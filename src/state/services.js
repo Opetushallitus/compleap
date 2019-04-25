@@ -31,7 +31,6 @@ const wrapAsMock = (serviceTitle, promise) => {
 }
 
 const services = {
-// TODO: implement APIs
   [Service.getInterestSuggestions]: () => wrapAsMock(
     Service.getInterestSuggestions,
     Promise.resolve(
