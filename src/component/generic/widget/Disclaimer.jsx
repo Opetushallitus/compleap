@@ -5,7 +5,7 @@ import { children } from 'util/proptype'
 const IconSection = styled.div`
   width: 3rem;
   display: flex;
-  margin: 1rem;
+  margin: 1rem 1rem 1rem 0;
 `
 
 const ExclamationMarkContainer = styled.div`
@@ -22,6 +22,7 @@ const DisclaimerBox = styled.div`
   display: flex;
   background-color: ${({ theme }) => theme.color.primaryLightest};
   border: solid 1px ${({ theme }) => theme.color.primary};
+  padding: 0 1rem;
 `
 
 const Disclaimer = ({ children }) => (
