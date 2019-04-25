@@ -1,4 +1,5 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 import styled from 'styled-components'
 import { padded, roundedRectangle } from 'ui/properties'
 import Spinner from 'component/generic/widget/Spinner'
@@ -40,12 +41,14 @@ const Expander = styled.div`
   padding: 1rem 0 1rem 1rem;
 `
 
-const Placeholder = () => {
+const Placeholder = ({ showSpinner = false }) => {
   return (
     <Container>
-      <SpinnerContainer>
-        <Spinner/>
-      </SpinnerContainer>
+      {showSpinner && (
+        <SpinnerContainer>
+          <Spinner/>
+        </SpinnerContainer>
+      )}
 
       <Expander>
         <Text width='80%' darker={true}/>
@@ -61,6 +64,10 @@ const Placeholder = () => {
       </Expander>
     </Container>
   )
+}
+
+Placeholder.propTypes = {
+  showSpinner: PropTypes.bool
 }
 
 export default Placeholder

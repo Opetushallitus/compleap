@@ -19,7 +19,8 @@ const ListItem = styled.li`
 `
 
 const RecommendationList = ({ recommendations, status }) => {
-  if (status === RecommendationsState.pending) return <Placeholder/>
+  if (status === RecommendationsState.idle) return <Placeholder showSpinner={false}/>
+  if (status === RecommendationsState.pending) return <Placeholder showSpinner={true}/>
 
   return (
     <List>

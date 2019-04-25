@@ -18,18 +18,19 @@ const recommendationStates = {
     },
     [RecommendationsState.pending]: {
       on: {
+        [RecommendationsStatusEvent.QUERY_PARAM_CHANGE]: RecommendationsState.idle,
         [RecommendationsStatusEvent.QUERY_SUCCESS]: RecommendationsState.success,
         [RecommendationsStatusEvent.QUERY_FAILURE]: RecommendationsState.failure
       }
     },
     [RecommendationsState.success]: {
       on: {
-        [RecommendationsStatusEvent.QUERY_PENDING]: RecommendationsState.pending
+        [RecommendationsStatusEvent.QUERY_PARAM_CHANGE]: RecommendationsState.idle
       }
     },
     [RecommendationsState.failure]: {
       on: {
-        [RecommendationsStatusEvent.QUERY_PENDING]: RecommendationsState.pending
+        [RecommendationsStatusEvent.QUERY_PARAM_CHANGE]: RecommendationsState.idle
       }
     }
   },

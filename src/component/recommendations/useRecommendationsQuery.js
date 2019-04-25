@@ -5,6 +5,7 @@ import { dispatch } from 'state/state'
 import { RecommendationsStatusEvent } from 'state/events'
 import mockRequest from 'util/mockRequest'
 
+const QueryDebounceMs = 1000
 const RandomTempData = () => Math.floor(Math.random() * Math.floor(100))
 
 // TODO Implement API
@@ -22,12 +23,19 @@ export default (queryParams$, shouldDoQuery$) => {
   const [results, setResults] = useState()
 
   useEffect(() => {
-    const query$ = queryParams$
-      .filter(shouldDoQuery$)
+    const paramChange$ = queryParams$
       .skipDuplicates(R.equals)
+
+    const query$ = queryParams$
+      .skipDuplicates(R.equals)
+      .filter(shouldDoQuery$)
+      .debounce(QueryDebounceMs)
       .flatMapLatest(params => B.fromPromise(doQueryRecommendations(params)))
 
     const subscriptions = [
+      paramChange$
+        .onValue(() => dispatch(RecommendationsStatusEvent.QUERY_PARAM_CHANGE)),
+
       query$
         .onValue(results => {
           setResults(results)

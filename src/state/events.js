@@ -26,6 +26,7 @@ export const InteractionEvent = Object.freeze({
 })
 
 export const RecommendationsStatusEvent = Object.freeze({
+  QUERY_PARAM_CHANGE: 'QUERY_PARAM_CHANGE',
   QUERY_PENDING: 'QUERY_PENDING',
   QUERY_SUCCESS: 'QUERY_SUCCESS',
   QUERY_FAILURE: 'QUERY_FAILURE'
