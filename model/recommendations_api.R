@@ -7,8 +7,8 @@
 
 options(stringsAsFactors = FALSE)
 
-#library(devtools)
-#install_github("bmschmidt/wordVectors")
+library(devtools)
+install_github("bmschmidt/wordVectors")
 
 library(plumber)
 library(jsonlite)
