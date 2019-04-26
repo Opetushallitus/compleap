@@ -33,7 +33,7 @@ word_model <- read.binary.vectors("./models/tarjonta_vectors.bin")
 doc_model <- read.binary.vectors("./models/tarjonta_doc2vec_model.bin")
 
 # load offering metadata
-offering <- readRDS("./model/data/tarjonta.rds")
+offering <- readRDS("./models/data/tarjonta.rds")
 
 ############################################################################################################
 ## API function that takes in list of study program units and outputs list of tarjonta with meta information 
