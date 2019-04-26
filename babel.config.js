@@ -3,7 +3,7 @@ module.exports = function (api) {
 
   const presets = [
     ['@babel/preset-env', {
-      'targets': {
+      targets: {
         'browsers': [
           '> 0.5%',
           'last 3 versions',
@@ -15,11 +15,7 @@ module.exports = function (api) {
     '@babel/preset-react'
   ]
 
-  const plugins = [
-    ['@babel/plugin-transform-runtime', {
-      'regenerator': true
-    }]
-  ]
+  const plugins = []
 
   if (process.env.NODE_ENV === 'production') plugins.push(['transform-remove-console'])
 
