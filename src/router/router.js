@@ -18,8 +18,18 @@ history.listen(location => {
   dispatch(transition)
 })
 
+/**
+ * Harmonize pathnames to include leading slash for all browsers.
+ * (IE does not include leading slash in location object's pathname.)
+ * @param pathname pathname of a Location object
+ */
+function ensureLeadingSlash (pathname) {
+  return pathname.startsWith('/') ? pathname : `/${pathname}`
+}
+
 function createPath (location) {
-  return location.pathname + location.hash
+  const pathname = ensureLeadingSlash(location.pathname)
+  return pathname + location.hash
 }
 
 function resolve (path) {
