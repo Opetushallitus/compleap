@@ -6,9 +6,15 @@ import { InteractionEvent } from 'state/events'
 import Chip from 'component/generic/widget/Chip'
 import useTranslation from 'component/generic/hook/useTranslation'
 
+/**
+ * Use 'display: contents' for modern browsers (to flatten the topic and subtopic lists).
+ * Fall back to wrapped flex list with IE and Edge.
+ */
 const SubtopicList = styled.ul`
-  display: contents;
+  display: flex;
   flex-wrap: wrap;
+  display: contents;
+  list-style: none;
   vertical-align: top;
   padding: 0;
 `

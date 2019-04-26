@@ -8,13 +8,20 @@ import { Context } from 'state/state'
 import Placeholder from 'component/interests/topic-list/Placeholder'
 
 const StyledTagList = styled.ul`
+  width: 100%; // Required for IE to prevent overflow
   list-style: none;
   display: flex;
   flex-wrap: wrap;
   padding: 0;
 `
 
+/**
+ * Use 'display: contents' for modern browsers (to flatten the topic and subtopic lists).
+ * Fall back to wrapped flex list with IE and Edge.
+ */
 const TopicListItem = styled.li`
+  display: flex;
+  flex-wrap: wrap;
   display: contents;
 `
 
