@@ -44,7 +44,8 @@
     "providerProvince": { "type": "string" },
     "similarity": { "type": "number" },
     "koulutuskoodi": { "type": "string" },
-    "creditvalue": { "type": "string" }
+    "creditvalue": { "type": "string" },
+    "creditunitshort": { "type": "string" }
   },
   "required": [
     "fi",
