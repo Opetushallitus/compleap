@@ -1,14 +1,14 @@
 import React from 'react'
 import PropTypes from 'prop-types'
+import useTranslation from 'component/generic/hook/useTranslation'
 import Expander from 'component/generic/widget/Expander'
 import SummaryHeader from './fragment/SummaryHeader'
 import Brief from './fragment/Brief'
 import Description from './fragment/Description'
 import CertificateDisclaimer from './fragment/CertificateDisclaimer'
-import ApplicationOptionList from 'component/recommendations/recommendation-results/recommendation-list/recommendation/application-option-list/ApplicationOptionList'
-import useTranslation from 'component/generic/hook/useTranslation'
+import ApplicationOptionList from './application-option-list/ApplicationOptionList'
 
-const Recommendation = ({ title, recommendations }) => {
+const RecommendationGroup = ({ title, recommendations }) => {
   const t = useTranslation()
 
   const Header = (
@@ -29,9 +29,9 @@ const Recommendation = ({ title, recommendations }) => {
   )
 }
 
-Recommendation.propTypes = {
+RecommendationGroup.propTypes = {
   title: PropTypes.string.isRequired,
   recommendations: PropTypes.array.isRequired
 }
 
-export default Recommendation
+export default RecommendationGroup
