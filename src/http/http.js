@@ -9,9 +9,10 @@ const throwOnError = response => {
   return response
 }
 
-const get = async (url, queryParams) => fetch(url + (queryParams ? `?${qs.stringify(queryParams)}` : ''))
-  .then(throwOnError)
-  .then(res => res.json())
+const get = async (url, queryParams, qsOptions = {}) =>
+  fetch(url + (queryParams ? `?${qs.stringify(queryParams, qsOptions)}` : ''))
+    .then(throwOnError)
+    .then(res => res.json())
 
 const post = async (url, data) => fetch(url, { method: 'POST', body: JSON.stringify(data) })
   .then(throwOnError)

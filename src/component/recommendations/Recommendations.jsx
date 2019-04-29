@@ -5,7 +5,7 @@ import useTranslation from 'component/generic/hook/useTranslation'
 import { H1 } from 'ui/typography'
 import { Context } from 'state/state'
 import { subtopicsLens } from 'state/helper'
-import { flattenInterests, flattenUnverifiedEducation, flattenVerifiedEducation } from 'util/recommendationsQueryDataHelper'
+import { pickAndFlattenInterests, pickAndFlattenUnverifiedEducation, pickAndFlattenVerifiedEducation } from 'util/recommendationsQueryDataHelper'
 import useObservable from 'component/generic/hook/useObservable'
 import useRecommendationsQuery from 'component/recommendations/useRecommendationsQuery'
 import RecommendationResults from 'component/recommendations/recommendation-results/RecommendationResults'
@@ -31,9 +31,9 @@ const Recommendations = () => {
   const hasRequiredInterests$ = numSelectedInterests$.map(v => v >= MIN_INTERESTS_REQUIRED).toProperty()
 
   const queryParams$ = B.combineTemplate({
-    unverifiedEducations: flattenUnverifiedEducation(unverifiedEducations$),
-    verifiedEducations: flattenVerifiedEducation(verifiedEducations$),
-    interests: flattenInterests(interests$)
+    unverifiedEducations: pickAndFlattenUnverifiedEducation(unverifiedEducations$),
+    verifiedEducations: pickAndFlattenVerifiedEducation(verifiedEducations$),
+    interests: pickAndFlattenInterests(interests$)
   })
   // TODO Remove extra condition after other options for querying recommendations are implemented (query by interests, unverified edu)
   const doQueryWhen$ = hasRequiredInterests$.and(verifiedEducations$.map(v => v.length !== 0))

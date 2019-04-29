@@ -1,14 +1,23 @@
 const INPUT_LANG_FOR_RECOMMENDATIONS = 'fi'
 
-export const flattenUnverifiedEducation = unverifiedEducations$ => unverifiedEducations$.map(educations =>
+export const pickAndFlattenUnverifiedEducation = unverifiedEducations$ => unverifiedEducations$.map(educations =>
   educations.filter(v => !!v.code).map(v => v.code)
 )
 
-export const flattenVerifiedEducation = verifiedEducations$ => verifiedEducations$.map(educations =>
-  educations.flatMap(education => education.children.map(v => v.uri))
+const pickVerifiedEducation = educations => {
+  const hasUpvoted = educations.some(ed => ed.rating === 'LIKE')
+  const hasDownvoted = educations.some(ed => ed.rating === 'DISLIKE')
+
+  if (!hasUpvoted && !hasDownvoted) return educations
+  else if (!hasUpvoted && hasDownvoted) return educations.filter(ed => ed.rating !== 'DISLIKE')
+  return educations.filter(ed => ed.rating === 'LIKE')
+}
+
+export const pickAndFlattenVerifiedEducation = verifiedEducations$ => verifiedEducations$.map(educations =>
+  educations.flatMap(education => pickVerifiedEducation(education.children).map(v => v.uri))
 )
 
-export const flattenInterests = interests$ => interests$.map(interests =>
+export const pickAndFlattenInterests = interests$ => interests$.map(interests =>
   interests.filter(interest => interest.selected).map(interest => [
     interest.topic,
     interest.subtopics.filter(subtopic => subtopic.selected).map(subtopic => subtopic.topic)

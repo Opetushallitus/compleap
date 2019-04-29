@@ -21,7 +21,17 @@ const doQueryRecommendations = ({ unverifiedEducations, verifiedEducations, inte
     )
   }
 
-  return http.get(ApiEndpoint, { uris: R.head(verifiedEducations), n: 5 }).then(res => res[0])
+  return (
+    http.get(
+      ApiEndpoint, {
+        uris: verifiedEducations,
+        n: 5
+      }, {
+        encode: false,
+        arrayFormat: 'comma'
+      }
+    ).then(res => res[0])
+  )
 }
 
 export default (queryParams$, shouldDoQuery$) => {
