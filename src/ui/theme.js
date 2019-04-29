@@ -63,5 +63,9 @@ export default {
     maxContentWidth: '920px',
     breakpointFull: '600px',
     footerHeight: '3rem'
+  },
+  z: {
+    base: 0,
+    popup: 1
   }
 }

@@ -6,6 +6,7 @@ import useKeyCommands from 'component/generic/hook/useKeyCommands'
 
 const Container = styled.div`
   position: relative;
+  z-index: ${({ theme }) => theme.z.popup};
 `
 
 const ResultsPane = styled.div`
