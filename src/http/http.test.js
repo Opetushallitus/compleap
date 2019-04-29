@@ -10,8 +10,8 @@ describe('http', () => {
   const requestData = { test: 'value' }
   const responseData = { status: 'ok' }
 
-  const get = () => Promise.resolve({ json: () => responseData })
-  const post = () => Promise.resolve({ json: () => responseData })
+  const get = () => Promise.resolve({ ok: true, json: () => responseData })
+  const post = () => Promise.resolve({ ok: true, json: () => responseData })
 
   const dataToFetchPostArgument = data => ({ method: 'POST', body: JSON.stringify(data) })
 

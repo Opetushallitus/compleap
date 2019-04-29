@@ -8,9 +8,8 @@ import { subtopicsLens } from 'state/helper'
 import { flattenInterests, flattenUnverifiedEducation, flattenVerifiedEducation } from 'util/recommendationsQueryDataHelper'
 import useObservable from 'component/generic/hook/useObservable'
 import useRecommendationsQuery from 'component/recommendations/useRecommendationsQuery'
+import RecommendationResults from 'component/recommendations/recommendation-results/RecommendationResults'
 import RequireInterestsMessage from 'component/recommendations/require-interests/RequireInterestsMessage'
-import RecommendationList from 'component/recommendations/recommendation-list/RecommendationList'
-import LocationFilter from 'component/recommendations/location-filter/LocationFilter'
 
 const MIN_INTERESTS_REQUIRED = 5
 
@@ -36,9 +35,11 @@ const Recommendations = () => {
     verifiedEducations: flattenVerifiedEducation(verifiedEducations$),
     interests: flattenInterests(interests$)
   })
-  const recommendationsResponse = useRecommendationsQuery(queryParams$, hasRequiredInterests$)
+  // TODO Remove extra condition after other options for querying recommendations are implemented (query by interests, unverified edu)
+  const doQueryWhen$ = hasRequiredInterests$.and(verifiedEducations$.map(v => v.length !== 0))
+  const recommendationsResponse = useRecommendationsQuery(queryParams$, doQueryWhen$)
 
-  const recommendations = recommendationsResponse && recommendationsResponse.data
+  const recommendations = recommendationsResponse || []
   const hasRequiredInterests = useObservable(hasRequiredInterests$, { skipDuplicates: true })
 
   return (
@@ -49,12 +50,7 @@ const Recommendations = () => {
       </p>
       {
         hasRequiredInterests
-          ? (
-            <React.Fragment>
-              <LocationFilter/>
-              <RecommendationList recommendations={recommendations} status={status}/>
-            </React.Fragment>
-          )
+          ? <RecommendationResults recommendations={recommendations} status={status}/>
           : <RequireInterestsMessage/>
       }
     </React.Fragment>

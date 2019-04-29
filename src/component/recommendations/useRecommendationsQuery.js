@@ -4,19 +4,24 @@ import * as R from 'ramda'
 import { dispatch } from 'state/state'
 import { RecommendationsStatusEvent } from 'state/events'
 import mockRequest from 'util/mockRequest'
+import http from 'http/http'
 
 const QueryDebounceMs = 1000
+const ApiEndpoint = '/match'
 const RandomTempData = () => Math.floor(Math.random() * Math.floor(100))
 
-// TODO Implement API
 const doQueryRecommendations = ({ unverifiedEducations, verifiedEducations, interests }) => {
   dispatch(RecommendationsStatusEvent.QUERY_PENDING)
 
-  return mockRequest(
-    { unverifiedEducations, verifiedEducations, interests },
-    { status: 'ok', data: [RandomTempData(), RandomTempData(), RandomTempData()] }, // random placeholder data
-    true
-  )
+  if (process.env.API_URL === 'mock') {
+    return mockRequest(
+      { unverifiedEducations, verifiedEducations, interests },
+      { status: 'ok', data: [RandomTempData(), RandomTempData(), RandomTempData()] }, // random placeholder data
+      true
+    )
+  }
+
+  return http.get(ApiEndpoint, { uris: R.head(verifiedEducations), n: 5 }).then(res => res[0])
 }
 
 export default (queryParams$, shouldDoQuery$) => {

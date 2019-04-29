@@ -7,7 +7,7 @@ import Select from 'component/generic/widget/dropdown/Select'
 import useTranslation from 'component/generic/hook/useTranslation'
 import { InteractionEvent } from 'state/events'
 import useObservable from 'component/generic/hook/useObservable'
-import Tag from 'component/recommendations/location-filter/fragment/Tag'
+import Tag from 'component/recommendations/recommendation-results/location-filter/fragment/Tag'
 
 const Container = styled.div`
   display: flex;

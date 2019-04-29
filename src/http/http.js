@@ -2,11 +2,20 @@
 See https://github.com/Opetushallitus/oma-opintopolku-loki/blob/master/frontend/src/http/http.js
  */
 
-const get = async url => fetch(url).then(res => res.json())
-const post = async (url, data) => fetch(url, {
-  method: 'POST',
-  body: JSON.stringify(data)
-}).then(res => res.json())
+import qs from 'qs'
+
+const throwOnError = response => {
+  if (!response.ok) throw new Error(response.statusText)
+  return response
+}
+
+const get = async (url, queryParams) => fetch(url + (queryParams ? `?${qs.stringify(queryParams)}` : ''))
+  .then(throwOnError)
+  .then(res => res.json())
+
+const post = async (url, data) => fetch(url, { method: 'POST', body: JSON.stringify(data) })
+  .then(throwOnError)
+  .then(res => res.json())
 
 const request = async (url, method, data = {}) => {
   switch (method) {
