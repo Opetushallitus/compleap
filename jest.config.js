@@ -16,6 +16,7 @@ module.exports = {
     '^.+\\.svg$': 'jest-svg-transformer'
   },
   setupFilesAfterEnv: [
-    '<rootDir>/src/polyfills.js'
+    '<rootDir>/src/polyfills.js',
+    'expect-puppeteer'
   ]
 }
