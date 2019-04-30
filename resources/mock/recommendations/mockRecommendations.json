@@ -1,0 +1,73 @@
+[
+  {
+    "document": "1.2.246.562.17.52822933298",
+    "similarity": 0.9043,
+    "koulutuskoodi": "koulutus_351741",
+    "name": "Puusepänteollisuuden osaamisala",
+    "creditValue": "180",
+    "creditUnitShort": "osp",
+    "provider_name": "Turun ammatti-instituutti, Jatkuvan haun hakutoimisto",
+    "provider_province": "Varsinais-Suomi",
+    "FI": true,
+    "SV": false,
+    "EN": false,
+    "application_name": [
+      "Turun ammatti-instituutti, jatkuva haku 2019 (PT)"
+    ],
+    "application_on_going": [
+      true
+    ],
+    "application_start": [
+      1538994179986
+    ],
+    "application_end": [
+      null
+    ]
+  },
+  {
+    "document": "1.2.246.562.17.33237402186",
+    "similarity": 0.8943,
+    "name": "Tekniikan erikoisammattitutkinto, aikuiskoulutus, Kuopio",
+    "provider_name": "Rastor Oy, Kuopion yksikkö",
+    "provider_province": "Pohjois-Savo",
+    "FI": true,
+    "SV": false,
+    "EN": false,
+    "application_name": [
+      "Tekniikan ala"
+    ],
+    "application_on_going": [
+      true
+    ],
+    "application_start": [
+      1491552000000
+    ],
+    "application_end": [
+      null
+    ]
+  },
+  {
+    "document": "1.2.246.562.13.48425406682_1.2.246.562.10.45497399738_2019_Syksy_UUSI",
+    "similarity": 0.8932,
+    "koulutuskoodi": "koulutus_351741",
+    "name": "Puuteollisuuden perustutkinto",
+    "creditValue": "180",
+    "provider_name": "Saimaan ammattiopisto Sampo, Tekniikan ala, Imatra",
+    "provider_province": "Etelä-Karjala",
+    "FI": true,
+    "SV": false,
+    "EN": false,
+    "application_name": [
+      "Yhteishaku ammatilliseen ja lukioon, kevät 2019"
+    ],
+    "application_on_going": [
+      false
+    ],
+    "application_start": [
+      1550556000000
+    ],
+    "application_end": [
+      1552395620518
+    ]
+  }
+]

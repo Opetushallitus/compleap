@@ -9,17 +9,13 @@ import http from 'http/http'
 const QueryDebounceMs = 1000
 const ApiEndpoint = '/match'
 const NumRecommendations = 20
-const RandomTempData = () => Math.floor(Math.random() * Math.floor(100))
 
 const doQueryRecommendations = ({ unverifiedEducations, verifiedEducations, interests }) => {
   dispatch(RecommendationsStatusEvent.QUERY_PENDING)
 
-  if (process.env.API_URL === 'mock') {
-    return mockRequest(
-      { unverifiedEducations, verifiedEducations, interests },
-      { status: 'ok', data: [RandomTempData(), RandomTempData(), RandomTempData()] }, // random placeholder data
-      true
-    )
+  if (process.env.USE_MOCK_API === 'true') {
+    const mockRecommendations = require('resources/mock/recommendations/mockRecommendations')
+    return mockRequest({ unverifiedEducations, verifiedEducations, interests }, mockRecommendations, true)
   }
 
   return (
