@@ -29,10 +29,10 @@ Array [
     Valitse seuraavista ainakin 5 sinua kiinnostavaa asiaa
   </h2>,
   <ul
-    className="sc-jWBwVP cOfFIQ"
+    className="sc-jWBwVP krmyvL"
   >
     <li
-      className="sc-brqgnP ilwzVH"
+      className="sc-brqgnP lcnAMd"
     >
       <div
         style={
@@ -68,7 +68,7 @@ Array [
         </button>
       </div>
       <ul
-        className="sc-ckVGcZ dMLQoV"
+        className="sc-ckVGcZ iUctNF"
       >
         <li
           className="sc-jKJlTe ivktGD"
