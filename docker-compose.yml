@@ -1,0 +1,15 @@
+version: "3.7"
+services:
+  dev-nginx:
+    image: nginx:latest
+    container_name: compleap-dev-nginx
+    volumes:
+      - ./scripts/nginx/nginx.conf:/etc/nginx/nginx.conf:ro
+    ports:
+      - "7000:7000"
+  model-api:
+    build: ./model
+    container_name: compleap-model-api
+    ports:
+      - "8000:8000"
+
