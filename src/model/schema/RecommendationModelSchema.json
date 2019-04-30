@@ -19,8 +19,7 @@
     "applicationEnd": {
       "type": "array",
       "items": { "$ref": "#/definitions/NullableNumber" },
-      "minItems": 1,
-      "maxItems": 1
+      "minItems": 1
     },
     "applicationName": {
       "type": "array",
@@ -35,8 +34,7 @@
     "applicationStart": {
       "type": "array",
       "items": { "type": "number" },
-      "minItems": 1,
-      "maxItems": 1
+      "minItems": 1
     },
     "document": { "$ref": "#/definitions/DocumentId" },
     "name": { "type": "string" },
