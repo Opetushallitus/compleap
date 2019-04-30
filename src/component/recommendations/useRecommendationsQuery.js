@@ -8,6 +8,7 @@ import http from 'http/http'
 
 const QueryDebounceMs = 1000
 const ApiEndpoint = '/match'
+const NumRecommendations = 20
 const RandomTempData = () => Math.floor(Math.random() * Math.floor(100))
 
 const doQueryRecommendations = ({ unverifiedEducations, verifiedEducations, interests }) => {
@@ -25,7 +26,7 @@ const doQueryRecommendations = ({ unverifiedEducations, verifiedEducations, inte
     http.get(
       ApiEndpoint, {
         uris: verifiedEducations,
-        n: 5
+        n: NumRecommendations
       }, {
         encode: false,
         arrayFormat: 'comma'
