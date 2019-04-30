@@ -135,7 +135,7 @@
     "en": "Fields of interest"
   },
   "Valitse mahdollisimman tarkasti mitkä allaolevista asioista sinua kiinnostavat. Mitä tarkemmin valitset, sitä tarkemmin pystymme etsimään sinulle sopivia koulutuksia.": {
-    "fi": "Valitse mahdollisimman tarkasti mitkä allaolevista asioista sinua kiinnostavat. Mitä tarkemmin valitset, sitä tarkemmin pystymme etsimään sinulle sopivia koulutuksia.",
+    "fi": "Valitse mahdollisimman tarkasti mitkä alla olevista asioista sinua kiinnostavat. Mitä tarkemmin valitset, sitä paremmin pystymme etsimään sinulle sopivia koulutuksia.",
     "en": "Select as accurately as possible what interests you from the options below. The more accurately you select, the more accurately we can find education that is suitable for you."
   },
   "Valitse seuraavista ainakin 5 sinua kiinnostavaa asiaa": {
@@ -555,7 +555,7 @@
     "en": "Showing the most suitable study places from your selected area based on your studies and selected fields of interests. You can restrict the area further, if you want."
   },
   "Valitse ensin vähintään 5 kiinnostuksen kohdetta.": {
-    "fi": "Valitse ensin vähintään 5 kiinnostuksen kohdetta.",
+    "fi": "Valitse ensin vähintään viisi kiinnostuksen kohdetta.",
     "en": "Select first at least 5 fields of interest."
   },
   "hakukohdetta": {
@@ -592,7 +592,7 @@
   },
   "Ei hakukohteita nykyisillä rajauksilla": {
     "fi": "Ei hakukohteita nykyisillä rajauksilla",
-    "en": "No results with current limits"
+    "en": "No results with current filters"
   },
   "Haku alkaa": {
     "fi": "Haku alkaa",
