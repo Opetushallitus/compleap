@@ -594,6 +594,18 @@
     "fi": "Ei hakukohteita nykyisillä rajauksilla",
     "en": "No results with current limits"
   },
+  "Haku alkaa": {
+    "fi": "Haku alkaa",
+    "en": "Application period starts"
+  },
+  "Haku käynnissä": {
+    "fi": "Haku käynnissä",
+    "en": "Application period ongoing"
+  },
+  "Haku päättynyt": {
+    "fi": "Haku päättynyt",
+    "en": "Application period ended"
+  },
   "Sivua ei löytynyt": {
     "fi": "Sivua ei löytynyt",
     "en": "Page couldn't be found"

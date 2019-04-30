@@ -18,7 +18,7 @@ const ApplicationOption = ({ organization, applicationStatus, readMoreLink }) =>
   return (
     <Container>
       <Partial width='50%'>{organization}</Partial>
-      <Partial width='30%'>{t(applicationStatus)}</Partial>
+      <Partial width='30%'>{applicationStatus}</Partial>
       <Partial width='20%'><LinkButton href={readMoreLink} type='text'>{t`Lue lisää`}</LinkButton></Partial>
     </Container>
   )
