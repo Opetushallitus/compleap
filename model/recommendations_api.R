@@ -89,9 +89,11 @@ clear_html_tags <- function(text) {
 get_study_unit <- function(study_unit_uri) {
   baseurl <- "https://virkailija.opintopolku.fi/eperusteet-service/api/tutkinnonosat"
   result <- fromJSON(paste0(baseurl,"?koodiUri=", study_unit_uri))
-  description <- paste(result$data$nimi$fi, 
-                       result$data$ammattitaitovaatimukset$fi,
-                       result$data$ammattitaidonOsoittamistavat$fi, collapse = "\n")
+  result <- as.data.frame(result)
+  result <- filter(result, data.id == max(data.id))
+  description <- paste(result$data.nimi$fi, 
+                       result$data.ammattitaitovaatimukset$fi,
+                       result$data.ammattitaidonOsoittamistavat$fi, collapse = "\n")
   description <- clear_html_tags(description)
   return(description)
 }
