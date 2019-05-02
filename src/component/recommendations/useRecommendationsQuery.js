@@ -7,20 +7,19 @@ import mockRequest from 'util/mockRequest'
 import http from 'http/http'
 
 const QueryDebounceMs = 1000
-const ApiEndpoint = '/match'
 const NumRecommendations = 20
 
 const doQueryRecommendations = ({ unverifiedEducations, verifiedEducations, interests }) => {
   dispatch(RecommendationsStatusEvent.QUERY_PENDING)
 
-  if (process.env.USE_MOCK_API === 'true') {
+  if (process.env.API_ENDPOINT === 'mock') {
     const mockRecommendations = require('resources/mock/recommendations/mockRecommendations')
     return mockRequest({ unverifiedEducations, verifiedEducations, interests }, mockRecommendations, true)
   }
 
   return (
     http.get(
-      ApiEndpoint, {
+      process.env.API_ENDPOINT, {
         uris: verifiedEducations,
         n: NumRecommendations
       }, {

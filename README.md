@@ -50,7 +50,7 @@ To use the local recommendations API together with the client app (using the web
 docker-compose up
 ```
 
-Then, switch from mock API to the locally served API by changing the `USE_MOCK_API` environment variable from `true` to `false`.
+Then, switch from mock API to the locally served API by changing the `API_ENDPOINT` environment variable from `mock` to `/match`.
 Rebuild the client / restart the dev server.
 
 The client is now connected to the API can be accessed from `localhost:7000`.

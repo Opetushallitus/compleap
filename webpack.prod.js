@@ -11,7 +11,8 @@ module.exports = merge(common, {
   },
   plugins: [
     new webpack.DefinePlugin({
-      'process.env.MOCK_API_LATENCY_MS': JSON.stringify(500)
+      'process.env.MOCK_API_LATENCY_MS': JSON.stringify(500),
+      'process.env.API_ENDPOINT': JSON.stringify('https://api.compleap.testiopintopolku.fi/match')
     })
   ]
 })
