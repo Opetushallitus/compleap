@@ -9,6 +9,7 @@ services:
       - "7000:7000"
   model-api:
     build: ./model
+    image: compleap-model-api
     container_name: compleap-model-api
     ports:
       - "8000:8000"
