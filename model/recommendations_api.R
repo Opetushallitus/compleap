@@ -91,13 +91,15 @@ get_study_unit <- function(study_unit_uri) {
   result <- fromJSON(paste0(baseurl,"?koodiUri=", study_unit_uri))
   result <- as.data.frame(result)
   result <- filter(result, data.id == max(data.id))
-  description <- paste(result$data.nimi$fi, 
-                       result$data.ammattitaitovaatimukset$fi,
-                       result$data.ammattitaidonOsoittamistavat$fi, collapse = "\n")
+  string1 <- ifelse(is.element("fi", names(result$data.nimi)), result$data.nimi$fi, "")
+  string2 <- ifelse(is.element("fi", names(result$data.ammattitaitovaatimukset)),
+                    result$data.ammattitaitovaatimukset$fi,"")
+  string3 <- ifelse(is.element("fi", names(result$data.ammattitaidonOsoittamistavat)),
+                    result$data.ammattitaidonOsoittamistavat$fi,"")
+  description <- paste(string1,string2, string3, collapse = "\n")
   description <- clear_html_tags(description)
   return(description)
 }
-
 
 # function to loop through all study unit uris and output them as one document
 study_units_to_text <- function(study_units) {
