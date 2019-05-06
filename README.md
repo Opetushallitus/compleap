@@ -47,7 +47,7 @@ The API is now available at `localhost:8000`.
 
 First, switch from mock API to the locally served API by changing the `API_ENDPOINT` environment variable from `mock` to `/match`.
 
-To use the local recommendations API together with the client app (using the webpack-dev-server), both the API and an Nginx reverse proxy can be started by running:
+To use the local recommendations API together with the client app (being served from e.g. the webpack-dev-server), both the API and an Nginx reverse proxy can be started by running:
 ```shell
 docker-compose up
 ```
