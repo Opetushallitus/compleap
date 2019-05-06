@@ -4,12 +4,25 @@ CompLeap Proof-of-Concept (POC).
 
 ## Technologies and development tools
 
+- Node.js & NPM (https://nodejs.org/en/) (dependency management)
 - React (https://reactjs.org/) (views)
 - webpack (https://webpack.js.org/) and Babel (https://babeljs.io/) (build)
 - styled-components (https://www.styled-components.com/) (styles)
 - JavaScript Standard Style (https://standardjs.com/) and ESLint (https://eslint.org/) (code style)
 
 ## Installing dependencies
+
+Ensure that you are using a correct version of Node.js and NPM:
+
+```shell
+node --version
+# v10.15.3
+
+npm --version
+# 6.4.1
+```
+
+Install dependencies:
 
 ```shell
 npm i
