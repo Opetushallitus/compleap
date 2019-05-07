@@ -84,27 +84,27 @@
   },
   "Perusopetus": {
     "fi": "Perusopetus",
-    "en": "Elementary education"
+    "en": "Basic education (primary and lower secondary education)"
   },
   "Ammatillinen tutkinto": {
     "fi": "Ammatillinen tutkinto",
-    "en": "Vocational degree"
+    "en": "Vocational education and training"
   },
   "Lukio tai vastaava": {
     "fi": "Lukio tai vastaava",
-    "en": "High school or similar"
+    "en": "General upper secondary education"
   },
   "Kandidaatti – korkeakoulu / yliopisto": {
     "fi": "Kandidaatti – korkeakoulu / yliopisto",
-    "en": "Bachelor – polytechnic / university"
+    "en": "Higher education – Bachelor’s degree"
   },
   "Maisteri – korkeakoulu / yliopisto": {
     "fi": "Maisteri – korkeakoulu / yliopisto",
-    "en": "Masters – university"
+    "en": "Higher education – Master’s degree"
   },
   "Jatkotutkinto – korkeakoulu / yliopisto": {
     "fi": "Jatkotutkinto – korkeakoulu / yliopisto",
-    "en": "Licentiate or doctorate – university"
+    "en": "Higher education – Doctorate degree"
   },
   "Miltä alalta tutkinto on?": {
     "fi": "Miltä alalta tutkinto on?",
