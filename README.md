@@ -1,14 +1,28 @@
-# CompLeap Proof-of-Concept
+# CompLeap Prototype
 
-CompLeap Proof-of-Concept (POC).
+This repository contains source code for Compleap Prototype components. This source code acts as an example implementation of the prototyped CompLeap service. The prototype application demonstrates a learner profile that makes use of information about learner's skills, competences, and interests. With the aid of this information, learning opportunity recommendations are offered to help the learner realise new areas where the competences and interests could be combined.
+
+In terms of source code, the prototype application is divided into two main components:
+
+- Client-side application (`model` directory)
+- Recommendations application (`src` directory)
 
 ## Technologies and development tools
+
+- JavaScript with ECMAScript 2015 features (programming language for the client app)
+- R (programming language for the recommendations app)
+
+The client app also makes use of the following core technologies and development tools:
 
 - Node.js & NPM (https://nodejs.org/en/) (dependency management)
 - React (https://reactjs.org/) (views)
 - webpack (https://webpack.js.org/) and Babel (https://babeljs.io/) (build)
 - styled-components (https://www.styled-components.com/) (styles)
 - JavaScript Standard Style (https://standardjs.com/) and ESLint (https://eslint.org/) (code style)
+
+In addition, following tools are used to ease the development:
+
+- Docker (https://www.docker.com/) and Docker Compose (https://docs.docker.com/compose/) (development environment)
 
 ## Installing dependencies
 
