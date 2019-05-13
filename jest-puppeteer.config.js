@@ -1,6 +1,7 @@
 module.exports = {
   server: {
     command: `./node_modules/.bin/http-server -p ${process.env.TEST_PORT} dist`,
-    port: parseInt(process.env.TEST_PORT)
+    port: parseInt(process.env.TEST_PORT),
+    launchTimeout: 15000
   }
 }

@@ -11,7 +11,7 @@
     "build:dev": "./node_modules/.bin/webpack --config webpack.dev.js",
     "build:prod": "NODE_ENV=production ./node_modules/.bin/webpack --config webpack.prod.js",
     "start:dev": "./node_modules/.bin/webpack-dev-server --config webpack.dev.js",
-    "test": "./node_modules/.bin/concurrently \"npm run test:ui\" \"npm run test:component\"",
+    "test": "npm run test:component; npm run test:ui",
     "test:ui": "npm run build:prod && JEST_ENV=jest-environment-puppeteer ./node_modules/.bin/jest --testPathPattern=page.spec.js",
     "test:component": "JEST_ENV=jsdom ./node_modules/.bin/jest --testPathPattern=test.js"
   },
@@ -41,7 +41,6 @@
     "babel-loader": "^8.0.5",
     "babel-plugin-transform-remove-console": "^6.9.4",
     "clean-webpack-plugin": "^1.0.1",
-    "concurrently": "^4.1.0",
     "dotenv": "^6.2.0",
     "eslint": "^5.13.0",
     "eslint-config-standard": "^12.0.0",
