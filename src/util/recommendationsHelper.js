@@ -1,5 +1,3 @@
-const INPUT_LANG_FOR_RECOMMENDATIONS = 'fi'
-
 export const pickAndFlattenUnverifiedEducation = unverifiedEducations$ => unverifiedEducations$.map(educations =>
   educations.filter(v => !!v.code).map(v => v.code)
 )
@@ -19,9 +17,9 @@ export const pickAndFlattenVerifiedEducation = verifiedEducations$ => verifiedEd
 
 export const pickAndFlattenInterests = interests$ => interests$.map(interests =>
   interests.filter(interest => interest.selected).map(interest => [
-    interest.topic,
-    interest.subtopics.filter(subtopic => subtopic.selected).map(subtopic => subtopic.topic)
-  ]).flat(2).map(langs => langs[INPUT_LANG_FOR_RECOMMENDATIONS])
+    interest.id,
+    interest.subtopics.filter(subtopic => subtopic.selected).map(subtopic => subtopic.id)
+  ]).flat(2)
 )
 
 export const resolveApplicationStatus = applicationOption => {
