@@ -13,7 +13,1285 @@ Array [
 ]
 `;
 
-exports[`Interests should show interest suggestions when fetched successfully 1`] = `
+exports[`Interests should show loading indicator (placeholder tags) when fetching suggestions 1`] = `
+Array [
+  <h1
+    className="sc-bdVaJa hqCxXu"
+  >
+    Kiinnostukset
+  </h1>,
+  <div
+    className="sc-iwsKbI laYIiJ"
+  >
+    <div
+      className="sc-VigVT TyGGh"
+    >
+      <div
+        className="sc-htoDjs cKmTuq"
+      >
+        <div
+          className="sc-dnqmqq jcnWGu"
+        />
+        <div
+          className="sc-dnqmqq jcnWGu"
+        />
+        <div
+          className="sc-dnqmqq jcnWGu"
+        />
+        <div
+          className="sc-dnqmqq jcnWGu"
+        />
+      </div>
+    </div>
+    <div
+      className="sc-gZMcBi bIDViS"
+    >
+      <div
+        className="sc-fjdhpX khYAnD"
+        width="55%"
+      />
+      <div
+        className="sc-fjdhpX hABshK"
+        width="77%"
+      />
+      <div
+        className="sc-fjdhpX ezCgPo"
+        width="65%"
+      />
+    </div>
+    <div
+      className="sc-gqjmRU ksnVNk"
+    >
+      <div
+        className="sc-jTzLTM hDugnc"
+        width="2rem"
+      />
+      <div
+        className="sc-jTzLTM eRznqm"
+        width="3rem"
+      />
+      <div
+        className="sc-jTzLTM jtDwYV"
+        width="5rem"
+      />
+      <div
+        className="sc-jTzLTM bYVLcY"
+        width="4rem"
+      />
+      <div
+        className="sc-jTzLTM iIkCPF"
+        width="3rem"
+      />
+      <div
+        className="sc-jTzLTM UOrTg"
+        width="2rem"
+      />
+      <div
+        className="sc-jTzLTM bYVLcY"
+        width="4rem"
+      />
+      <div
+        className="sc-jTzLTM eRznqm"
+        width="3rem"
+      />
+      <div
+        className="sc-jTzLTM jtDwYV"
+        width="5rem"
+      />
+      <div
+        className="sc-jTzLTM kfvbdv"
+        width="4rem"
+      />
+      <div
+        className="sc-jTzLTM UOrTg"
+        width="2rem"
+      />
+      <div
+        className="sc-jTzLTM eRznqm"
+        width="3rem"
+      />
+      <div
+        className="sc-jTzLTM jtDwYV"
+        width="5rem"
+      />
+      <div
+        className="sc-jTzLTM bYVLcY"
+        width="4rem"
+      />
+      <div
+        className="sc-jTzLTM eRznqm"
+        width="3rem"
+      />
+      <div
+        className="sc-jTzLTM bYVLcY"
+        width="4rem"
+      />
+      <div
+        className="sc-jTzLTM iIkCPF"
+        width="3rem"
+      />
+      <div
+        className="sc-jTzLTM bYVLcY"
+        width="4rem"
+      />
+      <div
+        className="sc-jTzLTM eRznqm"
+        width="3rem"
+      />
+      <div
+        className="sc-jTzLTM UOrTg"
+        width="2rem"
+      />
+      <div
+        className="sc-jTzLTM jtDwYV"
+        width="5rem"
+      />
+      <div
+        className="sc-jTzLTM bYVLcY"
+        width="4rem"
+      />
+    </div>
+  </div>,
+]
+`;
+
+exports[`Interests should show subtopics for selected topic 1`] = `
+Array [
+  <h1
+    className="sc-gisBJw XTDgv"
+  >
+    Kiinnostukset
+  </h1>,
+  <p>
+    Valitse mahdollisimman tarkasti mitkä alla olevista asioista sinua kiinnostavat. Mitä tarkemmin valitset, sitä paremmin pystymme etsimään sinulle sopivia koulutuksia.
+  </p>,
+  <h2
+    className="sc-kjoXOD fqWmcX"
+  >
+    Valitse seuraavista ainakin 5 sinua kiinnostavaa asiaa
+  </h2>,
+  <ul
+    className="sc-gGBfsJ kjplem"
+  >
+    <li
+      className="sc-jnlKLf jfaUqU"
+    >
+      <div
+        style={
+          Object {
+            "display": "contents",
+          }
+        }
+      >
+        <button
+          className="sc-kgAjT bqiwtL"
+          onClick={[Function]}
+          selected={false}
+          value="Taide ja kulttuuri"
+        >
+          Taide ja kulttuuri
+          <div
+            className="sc-cJSrbW hjWkEx"
+            selected={false}
+          >
+            <svg
+              data-file-name="SvgCheckmark"
+              style={
+                Object {
+                  "height": "1rem",
+                  "marginTop": "0.7rem",
+                  "stroke": "#e2e2e2",
+                  "strokeWidth": 2,
+                  "width": "1rem",
+                }
+              }
+            />
+          </div>
+        </button>
+      </div>
+    </li>
+    <li
+      className="sc-jnlKLf jfaUqU"
+    >
+      <div
+        style={
+          Object {
+            "display": "contents",
+          }
+        }
+      >
+        <button
+          className="sc-kgAjT hYDzhW"
+          onClick={[Function]}
+          selected={true}
+          value="Luonto ja ympäristö"
+        >
+          Luonto ja ympäristö
+          <div
+            className="sc-cJSrbW jkPxLP"
+            selected={true}
+          >
+            <svg
+              data-file-name="SvgCheckmark"
+              style={
+                Object {
+                  "height": "1rem",
+                  "marginTop": "0.7rem",
+                  "stroke": "#ffffff",
+                  "strokeWidth": 2,
+                  "width": "1rem",
+                }
+              }
+            />
+          </div>
+        </button>
+      </div>
+      <ul
+        className="sc-ksYbfQ inszrT"
+      >
+        <li
+          className="sc-hmzhuo bCtADB"
+        >
+          <div
+            style={
+              Object {
+                "display": "contents",
+              }
+            }
+          >
+            <button
+              className="sc-kgAjT gyDiuh"
+              onClick={[Function]}
+              selected={false}
+              value="Kasvitiede"
+            >
+              Kasvitiede
+              <div
+                className="sc-cJSrbW iIFodz"
+                selected={false}
+              >
+                <svg
+                  data-file-name="SvgCheckmark"
+                  style={
+                    Object {
+                      "height": "1rem",
+                      "marginTop": "0.7rem",
+                      "stroke": "#e2e2e2",
+                      "strokeWidth": 2,
+                      "width": "1rem",
+                    }
+                  }
+                />
+              </div>
+            </button>
+          </div>
+        </li>
+        <li
+          className="sc-hmzhuo bCtADB"
+        >
+          <div
+            style={
+              Object {
+                "display": "contents",
+              }
+            }
+          >
+            <button
+              className="sc-kgAjT gyDiuh"
+              onClick={[Function]}
+              selected={false}
+              value="Eläintiede"
+            >
+              Eläintiede
+              <div
+                className="sc-cJSrbW iIFodz"
+                selected={false}
+              >
+                <svg
+                  data-file-name="SvgCheckmark"
+                  style={
+                    Object {
+                      "height": "1rem",
+                      "marginTop": "0.7rem",
+                      "stroke": "#e2e2e2",
+                      "strokeWidth": 2,
+                      "width": "1rem",
+                    }
+                  }
+                />
+              </div>
+            </button>
+          </div>
+        </li>
+        <li
+          className="sc-hmzhuo bCtADB"
+        >
+          <div
+            style={
+              Object {
+                "display": "contents",
+              }
+            }
+          >
+            <button
+              className="sc-kgAjT gyDiuh"
+              onClick={[Function]}
+              selected={false}
+              value="Luonnonsuojelu"
+            >
+              Luonnonsuojelu
+              <div
+                className="sc-cJSrbW iIFodz"
+                selected={false}
+              >
+                <svg
+                  data-file-name="SvgCheckmark"
+                  style={
+                    Object {
+                      "height": "1rem",
+                      "marginTop": "0.7rem",
+                      "stroke": "#e2e2e2",
+                      "strokeWidth": 2,
+                      "width": "1rem",
+                    }
+                  }
+                />
+              </div>
+            </button>
+          </div>
+        </li>
+        <li
+          className="sc-hmzhuo bCtADB"
+        >
+          <div
+            style={
+              Object {
+                "display": "contents",
+              }
+            }
+          >
+            <button
+              className="sc-kgAjT gyDiuh"
+              onClick={[Function]}
+              selected={false}
+              value="Ympäristönsuojelu"
+            >
+              Ympäristönsuojelu
+              <div
+                className="sc-cJSrbW iIFodz"
+                selected={false}
+              >
+                <svg
+                  data-file-name="SvgCheckmark"
+                  style={
+                    Object {
+                      "height": "1rem",
+                      "marginTop": "0.7rem",
+                      "stroke": "#e2e2e2",
+                      "strokeWidth": 2,
+                      "width": "1rem",
+                    }
+                  }
+                />
+              </div>
+            </button>
+          </div>
+        </li>
+        <li
+          className="sc-hmzhuo bCtADB"
+        >
+          <div
+            style={
+              Object {
+                "display": "contents",
+              }
+            }
+          >
+            <button
+              className="sc-kgAjT gyDiuh"
+              onClick={[Function]}
+              selected={false}
+              value="Ympäristö"
+            >
+              Ympäristö
+              <div
+                className="sc-cJSrbW iIFodz"
+                selected={false}
+              >
+                <svg
+                  data-file-name="SvgCheckmark"
+                  style={
+                    Object {
+                      "height": "1rem",
+                      "marginTop": "0.7rem",
+                      "stroke": "#e2e2e2",
+                      "strokeWidth": 2,
+                      "width": "1rem",
+                    }
+                  }
+                />
+              </div>
+            </button>
+          </div>
+        </li>
+        <li
+          className="sc-hmzhuo bCtADB"
+        >
+          <div
+            style={
+              Object {
+                "display": "contents",
+              }
+            }
+          >
+            <button
+              className="sc-kgAjT gyDiuh"
+              onClick={[Function]}
+              selected={false}
+              value="Metsätalous"
+            >
+              Metsätalous
+              <div
+                className="sc-cJSrbW iIFodz"
+                selected={false}
+              >
+                <svg
+                  data-file-name="SvgCheckmark"
+                  style={
+                    Object {
+                      "height": "1rem",
+                      "marginTop": "0.7rem",
+                      "stroke": "#e2e2e2",
+                      "strokeWidth": 2,
+                      "width": "1rem",
+                    }
+                  }
+                />
+              </div>
+            </button>
+          </div>
+        </li>
+        <li
+          className="sc-hmzhuo bCtADB"
+        >
+          <div
+            style={
+              Object {
+                "display": "contents",
+              }
+            }
+          >
+            <button
+              className="sc-kgAjT gyDiuh"
+              onClick={[Function]}
+              selected={false}
+              value="Metsänhoito"
+            >
+              Metsänhoito
+              <div
+                className="sc-cJSrbW iIFodz"
+                selected={false}
+              >
+                <svg
+                  data-file-name="SvgCheckmark"
+                  style={
+                    Object {
+                      "height": "1rem",
+                      "marginTop": "0.7rem",
+                      "stroke": "#e2e2e2",
+                      "strokeWidth": 2,
+                      "width": "1rem",
+                    }
+                  }
+                />
+              </div>
+            </button>
+          </div>
+        </li>
+        <li
+          className="sc-hmzhuo bCtADB"
+        >
+          <div
+            style={
+              Object {
+                "display": "contents",
+              }
+            }
+          >
+            <button
+              className="sc-kgAjT gyDiuh"
+              onClick={[Function]}
+              selected={false}
+              value="Maatalous"
+            >
+              Maatalous
+              <div
+                className="sc-cJSrbW iIFodz"
+                selected={false}
+              >
+                <svg
+                  data-file-name="SvgCheckmark"
+                  style={
+                    Object {
+                      "height": "1rem",
+                      "marginTop": "0.7rem",
+                      "stroke": "#e2e2e2",
+                      "strokeWidth": 2,
+                      "width": "1rem",
+                    }
+                  }
+                />
+              </div>
+            </button>
+          </div>
+        </li>
+        <li
+          className="sc-hmzhuo bCtADB"
+        >
+          <div
+            style={
+              Object {
+                "display": "contents",
+              }
+            }
+          >
+            <button
+              className="sc-kgAjT gyDiuh"
+              onClick={[Function]}
+              selected={false}
+              value="Maanviljely"
+            >
+              Maanviljely
+              <div
+                className="sc-cJSrbW iIFodz"
+                selected={false}
+              >
+                <svg
+                  data-file-name="SvgCheckmark"
+                  style={
+                    Object {
+                      "height": "1rem",
+                      "marginTop": "0.7rem",
+                      "stroke": "#e2e2e2",
+                      "strokeWidth": 2,
+                      "width": "1rem",
+                    }
+                  }
+                />
+              </div>
+            </button>
+          </div>
+        </li>
+        <li
+          className="sc-hmzhuo bCtADB"
+        >
+          <div
+            style={
+              Object {
+                "display": "contents",
+              }
+            }
+          >
+            <button
+              className="sc-kgAjT gyDiuh"
+              onClick={[Function]}
+              selected={false}
+              value="Puutarhanhoito"
+            >
+              Puutarhanhoito
+              <div
+                className="sc-cJSrbW iIFodz"
+                selected={false}
+              >
+                <svg
+                  data-file-name="SvgCheckmark"
+                  style={
+                    Object {
+                      "height": "1rem",
+                      "marginTop": "0.7rem",
+                      "stroke": "#e2e2e2",
+                      "strokeWidth": 2,
+                      "width": "1rem",
+                    }
+                  }
+                />
+              </div>
+            </button>
+          </div>
+        </li>
+        <li
+          className="sc-hmzhuo bCtADB"
+        >
+          <div
+            style={
+              Object {
+                "display": "contents",
+              }
+            }
+          >
+            <button
+              className="sc-kgAjT gyDiuh"
+              onClick={[Function]}
+              selected={false}
+              value="Kotieläintalous"
+            >
+              Kotieläintalous
+              <div
+                className="sc-cJSrbW iIFodz"
+                selected={false}
+              >
+                <svg
+                  data-file-name="SvgCheckmark"
+                  style={
+                    Object {
+                      "height": "1rem",
+                      "marginTop": "0.7rem",
+                      "stroke": "#e2e2e2",
+                      "strokeWidth": 2,
+                      "width": "1rem",
+                    }
+                  }
+                />
+              </div>
+            </button>
+          </div>
+        </li>
+        <li
+          className="sc-hmzhuo bCtADB"
+        >
+          <div
+            style={
+              Object {
+                "display": "contents",
+              }
+            }
+          >
+            <button
+              className="sc-kgAjT gyDiuh"
+              onClick={[Function]}
+              selected={false}
+              value="Turkisteollisuus"
+            >
+              Turkisteollisuus
+              <div
+                className="sc-cJSrbW iIFodz"
+                selected={false}
+              >
+                <svg
+                  data-file-name="SvgCheckmark"
+                  style={
+                    Object {
+                      "height": "1rem",
+                      "marginTop": "0.7rem",
+                      "stroke": "#e2e2e2",
+                      "strokeWidth": 2,
+                      "width": "1rem",
+                    }
+                  }
+                />
+              </div>
+            </button>
+          </div>
+        </li>
+        <li
+          className="sc-hmzhuo bCtADB"
+        >
+          <div
+            style={
+              Object {
+                "display": "contents",
+              }
+            }
+          >
+            <button
+              className="sc-kgAjT gyDiuh"
+              onClick={[Function]}
+              selected={false}
+              value="Metsäteollisuus"
+            >
+              Metsäteollisuus
+              <div
+                className="sc-cJSrbW iIFodz"
+                selected={false}
+              >
+                <svg
+                  data-file-name="SvgCheckmark"
+                  style={
+                    Object {
+                      "height": "1rem",
+                      "marginTop": "0.7rem",
+                      "stroke": "#e2e2e2",
+                      "strokeWidth": 2,
+                      "width": "1rem",
+                    }
+                  }
+                />
+              </div>
+            </button>
+          </div>
+        </li>
+        <li
+          className="sc-hmzhuo bCtADB"
+        >
+          <div
+            style={
+              Object {
+                "display": "contents",
+              }
+            }
+          >
+            <button
+              className="sc-kgAjT gyDiuh"
+              onClick={[Function]}
+              selected={false}
+              value="Kalastus"
+            >
+              Kalastus
+              <div
+                className="sc-cJSrbW iIFodz"
+                selected={false}
+              >
+                <svg
+                  data-file-name="SvgCheckmark"
+                  style={
+                    Object {
+                      "height": "1rem",
+                      "marginTop": "0.7rem",
+                      "stroke": "#e2e2e2",
+                      "strokeWidth": 2,
+                      "width": "1rem",
+                    }
+                  }
+                />
+              </div>
+            </button>
+          </div>
+        </li>
+        <li
+          className="sc-hmzhuo bCtADB"
+        >
+          <div
+            style={
+              Object {
+                "display": "contents",
+              }
+            }
+          >
+            <button
+              className="sc-kgAjT gyDiuh"
+              onClick={[Function]}
+              selected={false}
+              value="Metsästys"
+            >
+              Metsästys
+              <div
+                className="sc-cJSrbW iIFodz"
+                selected={false}
+              >
+                <svg
+                  data-file-name="SvgCheckmark"
+                  style={
+                    Object {
+                      "height": "1rem",
+                      "marginTop": "0.7rem",
+                      "stroke": "#e2e2e2",
+                      "strokeWidth": 2,
+                      "width": "1rem",
+                    }
+                  }
+                />
+              </div>
+            </button>
+          </div>
+        </li>
+        <li
+          className="sc-hmzhuo bCtADB"
+        >
+          <div
+            style={
+              Object {
+                "display": "contents",
+              }
+            }
+          >
+            <button
+              className="sc-kgAjT gyDiuh"
+              onClick={[Function]}
+              selected={false}
+              value="Biologia"
+            >
+              Biologia
+              <div
+                className="sc-cJSrbW iIFodz"
+                selected={false}
+              >
+                <svg
+                  data-file-name="SvgCheckmark"
+                  style={
+                    Object {
+                      "height": "1rem",
+                      "marginTop": "0.7rem",
+                      "stroke": "#e2e2e2",
+                      "strokeWidth": 2,
+                      "width": "1rem",
+                    }
+                  }
+                />
+              </div>
+            </button>
+          </div>
+        </li>
+      </ul>
+    </li>
+    <li
+      className="sc-jnlKLf jfaUqU"
+    >
+      <div
+        style={
+          Object {
+            "display": "contents",
+          }
+        }
+      >
+        <button
+          className="sc-kgAjT bqiwtL"
+          onClick={[Function]}
+          selected={false}
+          value="Maantiede ja yhteiskuntasuunnittelu"
+        >
+          Maantiede ja yhteiskuntasuunnittelu
+          <div
+            className="sc-cJSrbW hjWkEx"
+            selected={false}
+          >
+            <svg
+              data-file-name="SvgCheckmark"
+              style={
+                Object {
+                  "height": "1rem",
+                  "marginTop": "0.7rem",
+                  "stroke": "#e2e2e2",
+                  "strokeWidth": 2,
+                  "width": "1rem",
+                }
+              }
+            />
+          </div>
+        </button>
+      </div>
+    </li>
+    <li
+      className="sc-jnlKLf jfaUqU"
+    >
+      <div
+        style={
+          Object {
+            "display": "contents",
+          }
+        }
+      >
+        <button
+          className="sc-kgAjT bqiwtL"
+          onClick={[Function]}
+          selected={false}
+          value="Yhteiskunta ja talous"
+        >
+          Yhteiskunta ja talous
+          <div
+            className="sc-cJSrbW hjWkEx"
+            selected={false}
+          >
+            <svg
+              data-file-name="SvgCheckmark"
+              style={
+                Object {
+                  "height": "1rem",
+                  "marginTop": "0.7rem",
+                  "stroke": "#e2e2e2",
+                  "strokeWidth": 2,
+                  "width": "1rem",
+                }
+              }
+            />
+          </div>
+        </button>
+      </div>
+    </li>
+    <li
+      className="sc-jnlKLf jfaUqU"
+    >
+      <div
+        style={
+          Object {
+            "display": "contents",
+          }
+        }
+      >
+        <button
+          className="sc-kgAjT bqiwtL"
+          onClick={[Function]}
+          selected={false}
+          value="Turvallisuus "
+        >
+          Turvallisuus 
+          <div
+            className="sc-cJSrbW hjWkEx"
+            selected={false}
+          >
+            <svg
+              data-file-name="SvgCheckmark"
+              style={
+                Object {
+                  "height": "1rem",
+                  "marginTop": "0.7rem",
+                  "stroke": "#e2e2e2",
+                  "strokeWidth": 2,
+                  "width": "1rem",
+                }
+              }
+            />
+          </div>
+        </button>
+      </div>
+    </li>
+    <li
+      className="sc-jnlKLf jfaUqU"
+    >
+      <div
+        style={
+          Object {
+            "display": "contents",
+          }
+        }
+      >
+        <button
+          className="sc-kgAjT bqiwtL"
+          onClick={[Function]}
+          selected={false}
+          value="Koulutus"
+        >
+          Koulutus
+          <div
+            className="sc-cJSrbW hjWkEx"
+            selected={false}
+          >
+            <svg
+              data-file-name="SvgCheckmark"
+              style={
+                Object {
+                  "height": "1rem",
+                  "marginTop": "0.7rem",
+                  "stroke": "#e2e2e2",
+                  "strokeWidth": 2,
+                  "width": "1rem",
+                }
+              }
+            />
+          </div>
+        </button>
+      </div>
+    </li>
+    <li
+      className="sc-jnlKLf jfaUqU"
+    >
+      <div
+        style={
+          Object {
+            "display": "contents",
+          }
+        }
+      >
+        <button
+          className="sc-kgAjT bqiwtL"
+          onClick={[Function]}
+          selected={false}
+          value="Terveys ja hyvinvointi"
+        >
+          Terveys ja hyvinvointi
+          <div
+            className="sc-cJSrbW hjWkEx"
+            selected={false}
+          >
+            <svg
+              data-file-name="SvgCheckmark"
+              style={
+                Object {
+                  "height": "1rem",
+                  "marginTop": "0.7rem",
+                  "stroke": "#e2e2e2",
+                  "strokeWidth": 2,
+                  "width": "1rem",
+                }
+              }
+            />
+          </div>
+        </button>
+      </div>
+    </li>
+    <li
+      className="sc-jnlKLf jfaUqU"
+    >
+      <div
+        style={
+          Object {
+            "display": "contents",
+          }
+        }
+      >
+        <button
+          className="sc-kgAjT bqiwtL"
+          onClick={[Function]}
+          selected={false}
+          value="Viestintä"
+        >
+          Viestintä
+          <div
+            className="sc-cJSrbW hjWkEx"
+            selected={false}
+          >
+            <svg
+              data-file-name="SvgCheckmark"
+              style={
+                Object {
+                  "height": "1rem",
+                  "marginTop": "0.7rem",
+                  "stroke": "#e2e2e2",
+                  "strokeWidth": 2,
+                  "width": "1rem",
+                }
+              }
+            />
+          </div>
+        </button>
+      </div>
+    </li>
+    <li
+      className="sc-jnlKLf jfaUqU"
+    >
+      <div
+        style={
+          Object {
+            "display": "contents",
+          }
+        }
+      >
+        <button
+          className="sc-kgAjT bqiwtL"
+          onClick={[Function]}
+          selected={false}
+          value="Informaatiotekniikka"
+        >
+          Informaatiotekniikka
+          <div
+            className="sc-cJSrbW hjWkEx"
+            selected={false}
+          >
+            <svg
+              data-file-name="SvgCheckmark"
+              style={
+                Object {
+                  "height": "1rem",
+                  "marginTop": "0.7rem",
+                  "stroke": "#e2e2e2",
+                  "strokeWidth": 2,
+                  "width": "1rem",
+                }
+              }
+            />
+          </div>
+        </button>
+      </div>
+    </li>
+    <li
+      className="sc-jnlKLf jfaUqU"
+    >
+      <div
+        style={
+          Object {
+            "display": "contents",
+          }
+        }
+      >
+        <button
+          className="sc-kgAjT bqiwtL"
+          onClick={[Function]}
+          selected={false}
+          value="Rakennusala"
+        >
+          Rakennusala
+          <div
+            className="sc-cJSrbW hjWkEx"
+            selected={false}
+          >
+            <svg
+              data-file-name="SvgCheckmark"
+              style={
+                Object {
+                  "height": "1rem",
+                  "marginTop": "0.7rem",
+                  "stroke": "#e2e2e2",
+                  "strokeWidth": 2,
+                  "width": "1rem",
+                }
+              }
+            />
+          </div>
+        </button>
+      </div>
+    </li>
+    <li
+      className="sc-jnlKLf jfaUqU"
+    >
+      <div
+        style={
+          Object {
+            "display": "contents",
+          }
+        }
+      >
+        <button
+          className="sc-kgAjT bqiwtL"
+          onClick={[Function]}
+          selected={false}
+          value="Matkailu- ja ravintola-ala"
+        >
+          Matkailu- ja ravintola-ala
+          <div
+            className="sc-cJSrbW hjWkEx"
+            selected={false}
+          >
+            <svg
+              data-file-name="SvgCheckmark"
+              style={
+                Object {
+                  "height": "1rem",
+                  "marginTop": "0.7rem",
+                  "stroke": "#e2e2e2",
+                  "strokeWidth": 2,
+                  "width": "1rem",
+                }
+              }
+            />
+          </div>
+        </button>
+      </div>
+    </li>
+    <li
+      className="sc-jnlKLf jfaUqU"
+    >
+      <div
+        style={
+          Object {
+            "display": "contents",
+          }
+        }
+      >
+        <button
+          className="sc-kgAjT bqiwtL"
+          onClick={[Function]}
+          selected={false}
+          value="Liikenne ja logistiikka"
+        >
+          Liikenne ja logistiikka
+          <div
+            className="sc-cJSrbW hjWkEx"
+            selected={false}
+          >
+            <svg
+              data-file-name="SvgCheckmark"
+              style={
+                Object {
+                  "height": "1rem",
+                  "marginTop": "0.7rem",
+                  "stroke": "#e2e2e2",
+                  "strokeWidth": 2,
+                  "width": "1rem",
+                }
+              }
+            />
+          </div>
+        </button>
+      </div>
+    </li>
+    <li
+      className="sc-jnlKLf jfaUqU"
+    >
+      <div
+        style={
+          Object {
+            "display": "contents",
+          }
+        }
+      >
+        <button
+          className="sc-kgAjT bqiwtL"
+          onClick={[Function]}
+          selected={false}
+          value="Historia ja uskonto"
+        >
+          Historia ja uskonto
+          <div
+            className="sc-cJSrbW hjWkEx"
+            selected={false}
+          >
+            <svg
+              data-file-name="SvgCheckmark"
+              style={
+                Object {
+                  "height": "1rem",
+                  "marginTop": "0.7rem",
+                  "stroke": "#e2e2e2",
+                  "strokeWidth": 2,
+                  "width": "1rem",
+                }
+              }
+            />
+          </div>
+        </button>
+      </div>
+    </li>
+    <li
+      className="sc-jnlKLf jfaUqU"
+    >
+      <div
+        style={
+          Object {
+            "display": "contents",
+          }
+        }
+      >
+        <button
+          className="sc-kgAjT bqiwtL"
+          onClick={[Function]}
+          selected={false}
+          value="Matematiikka ja fysiikka"
+        >
+          Matematiikka ja fysiikka
+          <div
+            className="sc-cJSrbW hjWkEx"
+            selected={false}
+          >
+            <svg
+              data-file-name="SvgCheckmark"
+              style={
+                Object {
+                  "height": "1rem",
+                  "marginTop": "0.7rem",
+                  "stroke": "#e2e2e2",
+                  "strokeWidth": 2,
+                  "width": "1rem",
+                }
+              }
+            />
+          </div>
+        </button>
+      </div>
+    </li>
+  </ul>,
+]
+`;
+
+exports[`Interests should show top level interest suggestions when fetched successfully 1`] = `
 Array [
   <h1
     className="sc-kAzzGY fPsSYY"
@@ -550,147 +1828,5 @@ Array [
       </div>
     </li>
   </ul>,
-]
-`;
-
-exports[`Interests should show loading indicator (placeholder tags) when fetching suggestions 1`] = `
-Array [
-  <h1
-    className="sc-bdVaJa hqCxXu"
-  >
-    Kiinnostukset
-  </h1>,
-  <div
-    className="sc-iwsKbI laYIiJ"
-  >
-    <div
-      className="sc-VigVT TyGGh"
-    >
-      <div
-        className="sc-htoDjs cKmTuq"
-      >
-        <div
-          className="sc-dnqmqq jcnWGu"
-        />
-        <div
-          className="sc-dnqmqq jcnWGu"
-        />
-        <div
-          className="sc-dnqmqq jcnWGu"
-        />
-        <div
-          className="sc-dnqmqq jcnWGu"
-        />
-      </div>
-    </div>
-    <div
-      className="sc-gZMcBi bIDViS"
-    >
-      <div
-        className="sc-fjdhpX khYAnD"
-        width="55%"
-      />
-      <div
-        className="sc-fjdhpX hABshK"
-        width="77%"
-      />
-      <div
-        className="sc-fjdhpX ezCgPo"
-        width="65%"
-      />
-    </div>
-    <div
-      className="sc-gqjmRU ksnVNk"
-    >
-      <div
-        className="sc-jTzLTM hDugnc"
-        width="2rem"
-      />
-      <div
-        className="sc-jTzLTM eRznqm"
-        width="3rem"
-      />
-      <div
-        className="sc-jTzLTM jtDwYV"
-        width="5rem"
-      />
-      <div
-        className="sc-jTzLTM bYVLcY"
-        width="4rem"
-      />
-      <div
-        className="sc-jTzLTM iIkCPF"
-        width="3rem"
-      />
-      <div
-        className="sc-jTzLTM UOrTg"
-        width="2rem"
-      />
-      <div
-        className="sc-jTzLTM bYVLcY"
-        width="4rem"
-      />
-      <div
-        className="sc-jTzLTM eRznqm"
-        width="3rem"
-      />
-      <div
-        className="sc-jTzLTM jtDwYV"
-        width="5rem"
-      />
-      <div
-        className="sc-jTzLTM kfvbdv"
-        width="4rem"
-      />
-      <div
-        className="sc-jTzLTM UOrTg"
-        width="2rem"
-      />
-      <div
-        className="sc-jTzLTM eRznqm"
-        width="3rem"
-      />
-      <div
-        className="sc-jTzLTM jtDwYV"
-        width="5rem"
-      />
-      <div
-        className="sc-jTzLTM bYVLcY"
-        width="4rem"
-      />
-      <div
-        className="sc-jTzLTM eRznqm"
-        width="3rem"
-      />
-      <div
-        className="sc-jTzLTM bYVLcY"
-        width="4rem"
-      />
-      <div
-        className="sc-jTzLTM iIkCPF"
-        width="3rem"
-      />
-      <div
-        className="sc-jTzLTM bYVLcY"
-        width="4rem"
-      />
-      <div
-        className="sc-jTzLTM eRznqm"
-        width="3rem"
-      />
-      <div
-        className="sc-jTzLTM UOrTg"
-        width="2rem"
-      />
-      <div
-        className="sc-jTzLTM jtDwYV"
-        width="5rem"
-      />
-      <div
-        className="sc-jTzLTM bYVLcY"
-        width="4rem"
-      />
-    </div>
-  </div>,
 ]
 `;

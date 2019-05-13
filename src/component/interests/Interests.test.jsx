@@ -11,7 +11,7 @@ const interestsData = interests
     interest
   ))
 
-const mockState = queryStatus => jest.doMock('state/state', () => {
+const mockState = (queryStatus, data = interestsData) => jest.doMock('state/state', () => {
   const Atom = require('bacon.atom')
   const React = require('react')
 
@@ -21,7 +21,7 @@ const mockState = queryStatus => jest.doMock('state/state', () => {
         language: 'fi'
       },
       interests: {
-        data: interestsData,
+        data,
         error: undefined
       },
       education: {
@@ -70,6 +70,16 @@ describe('Interests', () => {
   it('should show error when fetching interest suggestions failed', () => {
     let Interests
     mockState('failure')
+    jest.isolateModules(() => { Interests = require('./Interests').default })
+
+    const renderedJSON = createRendererWithTheme(<Interests/>).toJSON()
+    expect(renderedJSON).toMatchSnapshot()
+  })
+
+  it('should show subtopics for selected topic', () => {
+    let Interests
+    const data = R.over(R.lensIndex(1), R.assoc('selected', true), interestsData)
+    mockState('success', data)
     jest.isolateModules(() => { Interests = require('./Interests').default })
 
     const renderedJSON = createRendererWithTheme(<Interests/>).toJSON()
