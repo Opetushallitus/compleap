@@ -42,15 +42,15 @@ Array [
         }
       >
         <button
-          className="sc-kpOJdX jsGued"
+          className="sc-kpOJdX fGnFRR"
           onClick={[Function]}
-          selected={true}
-          value="Autot"
+          selected={false}
+          value="Taide ja kulttuuri"
         >
-          Autot
+          Taide ja kulttuuri
           <div
-            className="sc-dxgOiQ hhNrT"
-            selected={true}
+            className="sc-dxgOiQ cyadVE"
+            selected={false}
           >
             <svg
               data-file-name="SvgCheckmark"
@@ -58,7 +58,7 @@ Array [
                 Object {
                   "height": "1rem",
                   "marginTop": "0.7rem",
-                  "stroke": "#ffffff",
+                  "stroke": "#e2e2e2",
                   "strokeWidth": 2,
                   "width": "1rem",
                 }
@@ -67,47 +67,487 @@ Array [
           </div>
         </button>
       </div>
-      <ul
-        className="sc-ckVGcZ iUctNF"
+    </li>
+    <li
+      className="sc-brqgnP lcnAMd"
+    >
+      <div
+        style={
+          Object {
+            "display": "contents",
+          }
+        }
       >
-        <li
-          className="sc-jKJlTe ivktGD"
+        <button
+          className="sc-kpOJdX fGnFRR"
+          onClick={[Function]}
+          selected={false}
+          value="Luonto ja ympäristö"
         >
+          Luonto ja ympäristö
           <div
-            style={
-              Object {
-                "display": "contents",
-              }
-            }
+            className="sc-dxgOiQ cyadVE"
+            selected={false}
           >
-            <button
-              className="sc-kpOJdX iIMEAZ"
-              onClick={[Function]}
-              selected={false}
-              value="Virittely ja korjaaminen"
-            >
-              Virittely ja korjaaminen
-              <div
-                className="sc-dxgOiQ laCMQ"
-                selected={false}
-              >
-                <svg
-                  data-file-name="SvgCheckmark"
-                  style={
-                    Object {
-                      "height": "1rem",
-                      "marginTop": "0.7rem",
-                      "stroke": "#e2e2e2",
-                      "strokeWidth": 2,
-                      "width": "1rem",
-                    }
-                  }
-                />
-              </div>
-            </button>
+            <svg
+              data-file-name="SvgCheckmark"
+              style={
+                Object {
+                  "height": "1rem",
+                  "marginTop": "0.7rem",
+                  "stroke": "#e2e2e2",
+                  "strokeWidth": 2,
+                  "width": "1rem",
+                }
+              }
+            />
           </div>
-        </li>
-      </ul>
+        </button>
+      </div>
+    </li>
+    <li
+      className="sc-brqgnP lcnAMd"
+    >
+      <div
+        style={
+          Object {
+            "display": "contents",
+          }
+        }
+      >
+        <button
+          className="sc-kpOJdX fGnFRR"
+          onClick={[Function]}
+          selected={false}
+          value="Maantiede ja yhteiskuntasuunnittelu"
+        >
+          Maantiede ja yhteiskuntasuunnittelu
+          <div
+            className="sc-dxgOiQ cyadVE"
+            selected={false}
+          >
+            <svg
+              data-file-name="SvgCheckmark"
+              style={
+                Object {
+                  "height": "1rem",
+                  "marginTop": "0.7rem",
+                  "stroke": "#e2e2e2",
+                  "strokeWidth": 2,
+                  "width": "1rem",
+                }
+              }
+            />
+          </div>
+        </button>
+      </div>
+    </li>
+    <li
+      className="sc-brqgnP lcnAMd"
+    >
+      <div
+        style={
+          Object {
+            "display": "contents",
+          }
+        }
+      >
+        <button
+          className="sc-kpOJdX fGnFRR"
+          onClick={[Function]}
+          selected={false}
+          value="Yhteiskunta ja talous"
+        >
+          Yhteiskunta ja talous
+          <div
+            className="sc-dxgOiQ cyadVE"
+            selected={false}
+          >
+            <svg
+              data-file-name="SvgCheckmark"
+              style={
+                Object {
+                  "height": "1rem",
+                  "marginTop": "0.7rem",
+                  "stroke": "#e2e2e2",
+                  "strokeWidth": 2,
+                  "width": "1rem",
+                }
+              }
+            />
+          </div>
+        </button>
+      </div>
+    </li>
+    <li
+      className="sc-brqgnP lcnAMd"
+    >
+      <div
+        style={
+          Object {
+            "display": "contents",
+          }
+        }
+      >
+        <button
+          className="sc-kpOJdX fGnFRR"
+          onClick={[Function]}
+          selected={false}
+          value="Turvallisuus "
+        >
+          Turvallisuus 
+          <div
+            className="sc-dxgOiQ cyadVE"
+            selected={false}
+          >
+            <svg
+              data-file-name="SvgCheckmark"
+              style={
+                Object {
+                  "height": "1rem",
+                  "marginTop": "0.7rem",
+                  "stroke": "#e2e2e2",
+                  "strokeWidth": 2,
+                  "width": "1rem",
+                }
+              }
+            />
+          </div>
+        </button>
+      </div>
+    </li>
+    <li
+      className="sc-brqgnP lcnAMd"
+    >
+      <div
+        style={
+          Object {
+            "display": "contents",
+          }
+        }
+      >
+        <button
+          className="sc-kpOJdX fGnFRR"
+          onClick={[Function]}
+          selected={false}
+          value="Koulutus"
+        >
+          Koulutus
+          <div
+            className="sc-dxgOiQ cyadVE"
+            selected={false}
+          >
+            <svg
+              data-file-name="SvgCheckmark"
+              style={
+                Object {
+                  "height": "1rem",
+                  "marginTop": "0.7rem",
+                  "stroke": "#e2e2e2",
+                  "strokeWidth": 2,
+                  "width": "1rem",
+                }
+              }
+            />
+          </div>
+        </button>
+      </div>
+    </li>
+    <li
+      className="sc-brqgnP lcnAMd"
+    >
+      <div
+        style={
+          Object {
+            "display": "contents",
+          }
+        }
+      >
+        <button
+          className="sc-kpOJdX fGnFRR"
+          onClick={[Function]}
+          selected={false}
+          value="Terveys ja hyvinvointi"
+        >
+          Terveys ja hyvinvointi
+          <div
+            className="sc-dxgOiQ cyadVE"
+            selected={false}
+          >
+            <svg
+              data-file-name="SvgCheckmark"
+              style={
+                Object {
+                  "height": "1rem",
+                  "marginTop": "0.7rem",
+                  "stroke": "#e2e2e2",
+                  "strokeWidth": 2,
+                  "width": "1rem",
+                }
+              }
+            />
+          </div>
+        </button>
+      </div>
+    </li>
+    <li
+      className="sc-brqgnP lcnAMd"
+    >
+      <div
+        style={
+          Object {
+            "display": "contents",
+          }
+        }
+      >
+        <button
+          className="sc-kpOJdX fGnFRR"
+          onClick={[Function]}
+          selected={false}
+          value="Viestintä"
+        >
+          Viestintä
+          <div
+            className="sc-dxgOiQ cyadVE"
+            selected={false}
+          >
+            <svg
+              data-file-name="SvgCheckmark"
+              style={
+                Object {
+                  "height": "1rem",
+                  "marginTop": "0.7rem",
+                  "stroke": "#e2e2e2",
+                  "strokeWidth": 2,
+                  "width": "1rem",
+                }
+              }
+            />
+          </div>
+        </button>
+      </div>
+    </li>
+    <li
+      className="sc-brqgnP lcnAMd"
+    >
+      <div
+        style={
+          Object {
+            "display": "contents",
+          }
+        }
+      >
+        <button
+          className="sc-kpOJdX fGnFRR"
+          onClick={[Function]}
+          selected={false}
+          value="Informaatiotekniikka"
+        >
+          Informaatiotekniikka
+          <div
+            className="sc-dxgOiQ cyadVE"
+            selected={false}
+          >
+            <svg
+              data-file-name="SvgCheckmark"
+              style={
+                Object {
+                  "height": "1rem",
+                  "marginTop": "0.7rem",
+                  "stroke": "#e2e2e2",
+                  "strokeWidth": 2,
+                  "width": "1rem",
+                }
+              }
+            />
+          </div>
+        </button>
+      </div>
+    </li>
+    <li
+      className="sc-brqgnP lcnAMd"
+    >
+      <div
+        style={
+          Object {
+            "display": "contents",
+          }
+        }
+      >
+        <button
+          className="sc-kpOJdX fGnFRR"
+          onClick={[Function]}
+          selected={false}
+          value="Rakennusala"
+        >
+          Rakennusala
+          <div
+            className="sc-dxgOiQ cyadVE"
+            selected={false}
+          >
+            <svg
+              data-file-name="SvgCheckmark"
+              style={
+                Object {
+                  "height": "1rem",
+                  "marginTop": "0.7rem",
+                  "stroke": "#e2e2e2",
+                  "strokeWidth": 2,
+                  "width": "1rem",
+                }
+              }
+            />
+          </div>
+        </button>
+      </div>
+    </li>
+    <li
+      className="sc-brqgnP lcnAMd"
+    >
+      <div
+        style={
+          Object {
+            "display": "contents",
+          }
+        }
+      >
+        <button
+          className="sc-kpOJdX fGnFRR"
+          onClick={[Function]}
+          selected={false}
+          value="Matkailu- ja ravintola-ala"
+        >
+          Matkailu- ja ravintola-ala
+          <div
+            className="sc-dxgOiQ cyadVE"
+            selected={false}
+          >
+            <svg
+              data-file-name="SvgCheckmark"
+              style={
+                Object {
+                  "height": "1rem",
+                  "marginTop": "0.7rem",
+                  "stroke": "#e2e2e2",
+                  "strokeWidth": 2,
+                  "width": "1rem",
+                }
+              }
+            />
+          </div>
+        </button>
+      </div>
+    </li>
+    <li
+      className="sc-brqgnP lcnAMd"
+    >
+      <div
+        style={
+          Object {
+            "display": "contents",
+          }
+        }
+      >
+        <button
+          className="sc-kpOJdX fGnFRR"
+          onClick={[Function]}
+          selected={false}
+          value="Liikenne ja logistiikka"
+        >
+          Liikenne ja logistiikka
+          <div
+            className="sc-dxgOiQ cyadVE"
+            selected={false}
+          >
+            <svg
+              data-file-name="SvgCheckmark"
+              style={
+                Object {
+                  "height": "1rem",
+                  "marginTop": "0.7rem",
+                  "stroke": "#e2e2e2",
+                  "strokeWidth": 2,
+                  "width": "1rem",
+                }
+              }
+            />
+          </div>
+        </button>
+      </div>
+    </li>
+    <li
+      className="sc-brqgnP lcnAMd"
+    >
+      <div
+        style={
+          Object {
+            "display": "contents",
+          }
+        }
+      >
+        <button
+          className="sc-kpOJdX fGnFRR"
+          onClick={[Function]}
+          selected={false}
+          value="Historia ja uskonto"
+        >
+          Historia ja uskonto
+          <div
+            className="sc-dxgOiQ cyadVE"
+            selected={false}
+          >
+            <svg
+              data-file-name="SvgCheckmark"
+              style={
+                Object {
+                  "height": "1rem",
+                  "marginTop": "0.7rem",
+                  "stroke": "#e2e2e2",
+                  "strokeWidth": 2,
+                  "width": "1rem",
+                }
+              }
+            />
+          </div>
+        </button>
+      </div>
+    </li>
+    <li
+      className="sc-brqgnP lcnAMd"
+    >
+      <div
+        style={
+          Object {
+            "display": "contents",
+          }
+        }
+      >
+        <button
+          className="sc-kpOJdX fGnFRR"
+          onClick={[Function]}
+          selected={false}
+          value="Matematiikka ja fysiikka"
+        >
+          Matematiikka ja fysiikka
+          <div
+            className="sc-dxgOiQ cyadVE"
+            selected={false}
+          >
+            <svg
+              data-file-name="SvgCheckmark"
+              style={
+                Object {
+                  "height": "1rem",
+                  "marginTop": "0.7rem",
+                  "stroke": "#e2e2e2",
+                  "strokeWidth": 2,
+                  "width": "1rem",
+                }
+              }
+            />
+          </div>
+        </button>
+      </div>
     </li>
   </ul>,
 ]

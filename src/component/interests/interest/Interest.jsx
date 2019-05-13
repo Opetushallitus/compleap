@@ -51,7 +51,7 @@ const Interest = ({ interest, parentId }) => {
 
 Interest.propTypes = {
   interest: PropTypes.object,
-  parentId: PropTypes.string
+  parentId: PropTypes.number
 }
 
 export default Interest

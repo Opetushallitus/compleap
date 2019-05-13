@@ -35,12 +35,9 @@ const services = {
     Service.getInterestSuggestions,
     Promise.resolve(
       interests
-        .map(interest => R.assoc('id', uuid(), interest))
         .map(interest => R.assoc('selected', false, interest))
         .map(interest => R.over(subtopicsLens(),
-          subtopics => subtopics
-            .map(v => R.assoc('id', uuid(), v))
-            .map(R.assoc('selected', false)),
+          subtopics => subtopics.map(R.assoc('selected', false)),
           interest
         )))
   ),

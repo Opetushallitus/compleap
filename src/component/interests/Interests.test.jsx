@@ -1,5 +1,15 @@
 import React from 'react'
+import * as R from 'ramda'
 import createRendererWithTheme from 'test/util/createRendererWithTheme'
+import interests from 'resources/interests'
+import { subtopicsLens } from 'state/helper'
+
+const interestsData = interests
+  .map(interest => R.assoc('selected', false, interest))
+  .map(interest => R.over(subtopicsLens(),
+    subtopics => subtopics.map(R.assoc('selected', false)),
+    interest
+  ))
 
 const mockState = queryStatus => jest.doMock('state/state', () => {
   const Atom = require('bacon.atom')
@@ -11,16 +21,7 @@ const mockState = queryStatus => jest.doMock('state/state', () => {
         language: 'fi'
       },
       interests: {
-        data: [{
-          topic: 'Autot',
-          id: '1',
-          selected: true,
-          subtopics: [{
-            topic: 'Virittely ja korjaaminen',
-            id: '2',
-            selected: false
-          }]
-        }],
+        data: interestsData,
         error: undefined
       },
       education: {
@@ -57,7 +58,7 @@ describe('Interests', () => {
     expect(renderedJSON).toMatchSnapshot()
   })
 
-  it('should show interest suggestions when fetched successfully', () => {
+  it('should show top level interest suggestions when fetched successfully', () => {
     let Interests
     mockState('success')
     jest.isolateModules(() => { Interests = require('./Interests').default })
