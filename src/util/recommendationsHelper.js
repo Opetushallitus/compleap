@@ -1,3 +1,6 @@
+import * as R from 'ramda'
+import { subtopicsLens } from 'state/helper'
+
 export const pickAndFlattenUnverifiedEducation = unverifiedEducations$ => unverifiedEducations$.map(educations =>
   educations.filter(v => !!v.code).map(v => v.code)
 )
@@ -21,6 +24,15 @@ export const pickAndFlattenInterests = interests$ => interests$.map(interests =>
     interest.subtopics.filter(subtopic => subtopic.selected).map(subtopic => subtopic.id)
   ]).flat(2)
 )
+
+const extractSubtopics = R.compose(R.flatten, R.map(R.view(subtopicsLens())))
+const withoutSubtopics = R.map(R.omit('subtopics'))
+const countSelectedTopics = R.compose(R.length, R.filter(R.propEq('selected', true)))
+
+export const countSelectedInterests = interests$ => {
+  const flattenedTopics$ = interests$.map(interests => R.concat(withoutSubtopics(interests), extractSubtopics(interests)))
+  return flattenedTopics$.map(countSelectedTopics)
+}
 
 export const resolveApplicationStatus = applicationOption => {
   const { id, applicationOnGoing, applicationStart, applicationEnd } = applicationOption
