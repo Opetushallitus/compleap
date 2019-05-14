@@ -1,5 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
+import styled from 'styled-components'
 import useTranslation from 'component/generic/hook/useTranslation'
 import Button from 'component/generic/widget/Button'
 
@@ -31,6 +32,10 @@ const GotoRecommendationsButton = () => {
   return <Button onClick={() => {}}>{t`Näytä suositukset`}</Button>
 }
 
+const ButtonContainer = styled.div`
+  margin-top: 0.5rem;
+`
+
 const InterestCountMessage = ({ numSelectedInterests }) => {
   const hasRequiredInterests = numSelectedInterests >= process.env.MIN_INTERESTS
   const hasTooManyInterests = numSelectedInterests > process.env.MAX_INTERESTS
@@ -42,7 +47,7 @@ const InterestCountMessage = ({ numSelectedInterests }) => {
         hasRequiredInterests={hasRequiredInterests}
         hasTooManyInterests={hasTooManyInterests}
       />
-      {hasRequiredInterests && <GotoRecommendationsButton/>}
+      {hasRequiredInterests && <ButtonContainer><GotoRecommendationsButton/></ButtonContainer>}
     </React.Fragment>
   )
 }

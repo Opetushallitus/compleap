@@ -7,10 +7,14 @@ import { children } from 'util/proptype'
 const FloatingBannerContent = styled.div`
   position: fixed;
   bottom: 0;
-  height: 3rem;
   width: 100%;
+  padding: 0.5rem 0;
+  display: flex;
+  flex-flow: column;
+  align-items: center;
   background-color: ${({ theme }) => theme.color.white};
   z-index: ${({ theme }) => theme.z.popup};
+  box-shadow: 1px 1px 10px 1px ${({ theme }) => theme.color.gray};
 `
 
 const Portal = ({ children }) => ReactDOM.createPortal(children, document.getElementById('overlay-root'))
