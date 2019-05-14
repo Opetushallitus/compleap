@@ -32,7 +32,9 @@ const Notification = ({ box, offset = 0, children }) => {
       if (!hold.current) {
         window.requestAnimationFrame(() => {
           const targetRect = box.current.getBoundingClientRect()
-          setShow(window.innerHeight > targetRect.y + offset)
+          const topTrigger = targetRect.y + offset
+          const bottomTrigger = targetRect.y + targetRect.height + 100
+          setShow(window.innerHeight > topTrigger && window.innerHeight < bottomTrigger)
           hold.current = false
         })
 
