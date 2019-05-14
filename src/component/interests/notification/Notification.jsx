@@ -1,14 +1,15 @@
 import React, { useEffect, useRef, useState } from 'react'
 import ReactDOM from 'react-dom'
-import styled from 'styled-components'
 import PropTypes from 'prop-types'
+import styled from 'styled-components'
+import posed, { PoseGroup } from 'react-pose'
 import { children } from 'util/proptype'
 
 const FloatingBannerContent = styled.div`
   position: fixed;
   bottom: 0;
   width: 100%;
-  min-height: 3rem;
+  height: 80px;
   padding: 0.5rem 0;
   display: flex;
   flex-flow: column;
@@ -20,6 +21,11 @@ const FloatingBannerContent = styled.div`
 `
 
 const Portal = ({ children }) => ReactDOM.createPortal(children, document.getElementById('overlay-root'))
+
+const Contents = posed(FloatingBannerContent)({
+  enter: { opacity: 1, bottom: 0 },
+  exit: { opacity: 0, bottom: -100 }
+})
 
 const Notification = ({ container, offsetTop = 0, offsetBottom = 0, children }) => {
   const [show, setShow] = useState(false)
@@ -45,11 +51,15 @@ const Notification = ({ container, offsetTop = 0, offsetBottom = 0, children }) 
     })
   })
 
-  return show && (
+  return (
     <Portal>
-      <FloatingBannerContent>
-        {children}
-      </FloatingBannerContent>
+      <PoseGroup flipMove={false}>
+        {show && (
+          <Contents key='contents'>
+            {children}
+          </Contents>
+        )}
+      </PoseGroup>
     </Portal>
   )
 }
