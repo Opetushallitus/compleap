@@ -1,12 +1,13 @@
-import React from 'react'
+import React, { forwardRef } from 'react'
 import PropTypes from 'prop-types'
 import useTranslation from 'component/generic/hook/useTranslation'
 
-const Message = ({ numSelectedInterests, hasRequiredInterests, hasTooManyInterests }) => {
+// eslint-disable-next-line react/display-name
+const Message = forwardRef(function message ({ numSelectedInterests, hasRequiredInterests, hasTooManyInterests }, ref) {
   const t = useTranslation()
 
   return (
-    <div>
+    <div ref={ref}>
       {t`Kiinnostuksia valittu`}
       {' '}
       {`${numSelectedInterests} / ${process.env.MIN_INTERESTS}`}
@@ -17,7 +18,7 @@ const Message = ({ numSelectedInterests, hasRequiredInterests, hasTooManyInteres
       }
     </div>
   )
-}
+})
 
 Message.propTypes = {
   numSelectedInterests: PropTypes.number.isRequired,

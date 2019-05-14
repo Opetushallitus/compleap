@@ -23,8 +23,8 @@ const FloatingBannerContent = styled.div`
 const Portal = ({ children }) => ReactDOM.createPortal(children, document.getElementById('overlay-root'))
 
 const Contents = posed(FloatingBannerContent)({
-  enter: { opacity: 1, bottom: 0 },
-  exit: { opacity: 0, bottom: -100 }
+  enter: { bottom: 0, transition: { duration: 300 }, delayChildren: 150, staggerChildren: 100 },
+  exit: { bottom: -100, transition: { duration: 300 }, delay: 150 }
 })
 
 const Notification = ({ container, offsetTop = 0, offsetBottom = 0, children }) => {
