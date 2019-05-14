@@ -27,18 +27,30 @@ Message.propTypes = {
   hasTooManyInterests: PropTypes.bool.isRequired
 }
 
-const GotoRecommendationsButton = () => {
+const GotoRecommendationsButton = ({ posY }) => {
   const t = useTranslation()
-  return <Button onClick={() => {}}>{t`Näytä suositukset`}</Button>
+  const goto = () => {
+    window.scrollTo({
+      top: posY,
+      behavior: 'smooth'
+    })
+  }
+  return <Button onClick={goto}>{t`Näytä suositukset`}</Button>
+}
+
+GotoRecommendationsButton.propTypes = {
+  posY: PropTypes.number.isRequired
 }
 
 const ButtonContainer = styled.div`
   margin-top: 0.5rem;
 `
 
-const InterestCountMessage = ({ numSelectedInterests }) => {
+const InterestCountNotification = ({ numSelectedInterests, container }) => {
   const hasRequiredInterests = numSelectedInterests >= process.env.MIN_INTERESTS
   const hasTooManyInterests = numSelectedInterests > process.env.MAX_INTERESTS
+  const containerRect = container.current.getBoundingClientRect()
+  const nextSectionY = containerRect.y + window.scrollY + containerRect.height + 50
 
   return (
     <React.Fragment>
@@ -47,13 +59,18 @@ const InterestCountMessage = ({ numSelectedInterests }) => {
         hasRequiredInterests={hasRequiredInterests}
         hasTooManyInterests={hasTooManyInterests}
       />
-      {hasRequiredInterests && <ButtonContainer><GotoRecommendationsButton/></ButtonContainer>}
+      {hasRequiredInterests && (
+        <ButtonContainer>
+          <GotoRecommendationsButton posY={nextSectionY}/>
+        </ButtonContainer>
+      )}
     </React.Fragment>
   )
 }
 
-InterestCountMessage.propTypes = {
-  numSelectedInterests: PropTypes.number.isRequired
+InterestCountNotification.propTypes = {
+  numSelectedInterests: PropTypes.number.isRequired,
+  container: PropTypes.node.isRequired
 }
 
-export default InterestCountMessage
+export default InterestCountNotification
