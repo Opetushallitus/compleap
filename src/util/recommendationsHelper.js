@@ -23,12 +23,12 @@ export const pickAndFlattenInterests = interests$ => interests$.map(interests =>
 )
 
 export const resolveApplicationStatus = applicationOption => {
-  const { document, applicationOnGoing, applicationStart, applicationEnd } = applicationOption
+  const { id, applicationOnGoing, applicationStart, applicationEnd } = applicationOption
 
   if (applicationOnGoing) {
     if (applicationEnd && Date.now() > applicationEnd) {
       console.error(
-        `Stale recommendation encountered (${document}): ` +
+        `Stale recommendation encountered (${id}): ` +
         `application end time (${applicationEnd}) is in the past, but application is marked as ongoing.`
       )
 
@@ -37,7 +37,7 @@ export const resolveApplicationStatus = applicationOption => {
 
     if (applicationStart && Date.now() < applicationStart) {
       console.error(
-        `Mismatching application period for ${document}: ` +
+        `Mismatching application period in ${id}: ` +
         `application start time (${applicationStart}) is in the future, but application is marked as ongoing.`
       )
 
@@ -63,7 +63,7 @@ export const resolveApplicationStatus = applicationOption => {
 
   if (applicationStart && applicationEnd && applicationStart <= Date.now() <= applicationEnd) {
     console.error(
-      `Mismatching application period for ${document}: ` +
+      `Mismatching application period in ${id}: ` +
       `Application is not marked as ongoing, but start time (${applicationStart}) is in the past and end time (${applicationEnd}) in the future.`
     )
 
@@ -71,7 +71,7 @@ export const resolveApplicationStatus = applicationOption => {
   }
 
   console.error(
-    `Ill-defined application status: application start is ${applicationStart}, end is ${applicationEnd}, and ongoing-status is ${applicationOnGoing}.`
+    `Ill-defined application status in ${id}: application start is ${applicationStart}, end is ${applicationEnd}, and ongoing-status is ${applicationOnGoing}.`
   )
 
   return ({ message: '' })

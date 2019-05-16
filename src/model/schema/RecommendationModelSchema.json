@@ -2,9 +2,6 @@
   "$schema": "http://json-schema.org/draft-07/schema#",
 
   "definitions": {
-    "NullableNumber": {
-      "oneOf": [{ "type": "number" }, { "type": "null" }]
-    },
     "DocumentId": {
       "type": "string"
     }
@@ -13,48 +10,36 @@
   "title": "RecommendationModel",
   "type": "object",
   "properties": {
-    "fi": { "type": "boolean" },
-    "sv": { "type": "boolean" },
-    "en": { "type": "boolean" },
-    "applicationEnd": {
-      "type": "array",
-      "items": { "$ref": "#/definitions/NullableNumber" },
-      "minItems": 1
-    },
-    "applicationName": {
-      "type": "array",
-      "items": { "type": "string" },
-      "minItems": 1
-    },
-    "applicationOnGoing": {
-      "type": "array",
-      "items": { "type": "boolean" },
-      "minItems": 1
-    },
-    "applicationStart": {
-      "type": "array",
-      "items": { "type": "number" },
-      "minItems": 1
-    },
-    "document": { "$ref": "#/definitions/DocumentId" },
+    "applicationEnd": { "type": "number" },
+    "applicationName": { "type": "string" },
+    "applicationOnGoing": { "type": "boolean" },
+    "applicationStart": { "type": "number" },
+    "id": { "$ref": "#/definitions/DocumentId" },
     "name": { "type": "string" },
+    "offerId": { "type": "string" },
+    "degreeTitle": { "type": "string" },
+    "educationCode": { "type": "string" },
+    "educationDegreeName": { "type": "string" },
+    "educationDomain": { "type": "string" },
+    "goals": { "type": "string" },
     "providerName": { "type": "string" },
     "providerProvince": { "type": "string" },
     "similarity": { "type": "number" },
     "koulutuskoodi": { "type": "string" },
-    "creditvalue": { "type": "string" },
-    "creditunitshort": { "type": "string" }
+    "creditValue": { "type": "string" },
+    "creditUnitShort": { "type": "string" }
   },
   "required": [
-    "fi",
-    "sv",
-    "en",
-    "applicationEnd",
     "applicationName",
     "applicationOnGoing",
     "applicationStart",
-    "document",
+    "id",
     "name",
+    "degreeTitle",
+    "educationCode",
+    "educationDegreeName",
+    "educationDomain",
+    "goals",
     "providerName",
     "providerProvince",
     "similarity"

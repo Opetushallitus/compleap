@@ -21,13 +21,13 @@ const ApplicationOptions = ({ options }) => {
     <ApplicationOptionListStyle>
       {
         options.map(option => {
-          const { document, providerName } = option
+          const { id, providerName } = option
           const { message, parameter } = resolveApplicationStatus(option)
           const applicationStatus = t(message) + (parameter ? ` ${parameter}` : '')
           const link = '' // TODO Make url
 
           return (
-            <ApplicationOptionListItemStyle key={document}>
+            <ApplicationOptionListItemStyle key={id}>
               <ApplicationOption
                 organization={providerName}
                 applicationStatus={applicationStatus}

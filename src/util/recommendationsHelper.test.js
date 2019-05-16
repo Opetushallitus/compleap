@@ -3,7 +3,7 @@ import { resolveApplicationStatus } from './recommendationsHelper'
 describe('Resolving application status', () => {
   it('succeeds for valid ongoing application', () => {
     const data = {
-      'document': 'test',
+      'id': 'test',
       'applicationOnGoing': true,
       'applicationStart': null,
       'applicationEnd': null
@@ -16,7 +16,7 @@ describe('Resolving application status', () => {
 
   it('succeeds for valid ongoing application with explicit start time', () => {
     const data = {
-      'document': 'test',
+      'id': 'test',
       'applicationOnGoing': true,
       'applicationStart': 1538994179986,
       'applicationEnd': null
@@ -32,7 +32,7 @@ describe('Resolving application status', () => {
     const end = new Date(today.getFullYear() + 1, today.getMonth(), today.getDate())
 
     const data = {
-      'document': 'test',
+      'id': 'test',
       'applicationOnGoing': true,
       'applicationStart': 1538994179986,
       'applicationEnd': end
@@ -45,7 +45,7 @@ describe('Resolving application status', () => {
 
   it('succeeds for valid ended application with explicit start and end dates', () => {
     const data = {
-      'document': 'test',
+      'id': 'test',
       'applicationOnGoing': false,
       'applicationStart': 1538994179986,
       'applicationEnd': 1556620447719
@@ -58,7 +58,7 @@ describe('Resolving application status', () => {
 
   it('succeeds for stale data', () => {
     const data = {
-      'document': 'test',
+      'id': 'test',
       'applicationOnGoing': true,
       'applicationStart': 1538994179986,
       'applicationEnd': 1556620447719
@@ -75,7 +75,7 @@ describe('Resolving application status', () => {
     const end = new Date(today.getFullYear() + 2, today.getMonth(), today.getDate())
 
     const data = {
-      'document': 'test',
+      'id': 'test',
       'applicationOnGoing': false,
       'applicationStart': start.valueOf(),
       'applicationEnd': end.valueOf()
@@ -92,7 +92,7 @@ describe('Resolving application status', () => {
     const start = new Date(today.getFullYear() + 1, today.getMonth(), today.getDate())
 
     const data = {
-      'document': 'test',
+      'id': 'test',
       'applicationOnGoing': true,
       'applicationStart': start,
       'applicationEnd': null
@@ -109,7 +109,7 @@ describe('Resolving application status', () => {
     const end = new Date(today.getFullYear() + 1, today.getMonth(), today.getDate())
 
     const data = {
-      'document': 'test',
+      'id': 'test',
       'applicationOnGoing': false,
       'applicationStart': 1538994179986,
       'applicationEnd': end
@@ -122,7 +122,7 @@ describe('Resolving application status', () => {
 
   it('reverts to empty message when data in inconclusive', () => {
     const data = {
-      'document': 'test',
+      'id': 'test',
       'applicationOnGoing': null,
       'applicationStart': null,
       'applicationEnd': null
