@@ -49,7 +49,10 @@ const RecommendationList = ({ recommendations, status }) => {
   const validatedRecommendations = recommendations.map(recommendation => Recommendation(recommendation))
 
   const locationIdWhitelist = useObservable(context$, { path: ['context', 'recommendations', 'options', 'locations'] })
-  const optionsWithRegionIds = validatedRecommendations.map(option => R.assoc('regionId', findRegionId(option.providerProvince), option))
+  const existingVerifiedEducation = useObservable(context$, { path: ['context', 'education', 'data', 'verifiedEducations'] }).map(v => v.uri)
+
+  const optionsWithoutExistingVerified = validatedRecommendations.filter(({ koulutuskoodi }) => !existingVerifiedEducation.includes(koulutuskoodi))
+  const optionsWithRegionIds = optionsWithoutExistingVerified.map(option => R.assoc('regionId', findRegionId(option.providerProvince), option))
   const currentMatchingOptions = locationIdWhitelist.length > 0 ? optionsWithRegionIds.filter(option => locationIdWhitelist.includes(option.regionId)) : optionsWithRegionIds
 
   const groupedByEducation = R.compose(Object.entries, R.groupBy(v => v.name))(currentMatchingOptions)
