@@ -570,6 +570,14 @@
     "fi": "on tutkintonimike, johon valmistutaan osaamisalasta",
     "en": "is the degree title for specialisation"
   },
+  "ovat tutkintonimikkeitä, joihin valmistutaan osaamisalasta": {
+    "fi": "ovat tutkintonimikkeitä, joihin valmistutaan osaamisalasta",
+    "en": "are degree titles for specialisation"
+  },
+  "ja": {
+    "fi": "ja",
+    "en": "and"
+  },
   "joka kuuluu tutkintoon": {
     "fi": "joka kuuluu tutkintoon",
     "en": "belonging to the degree"
