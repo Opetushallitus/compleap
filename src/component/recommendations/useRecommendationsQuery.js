@@ -21,6 +21,7 @@ const doQueryRecommendations = ({ unverifiedEducations, verifiedEducations, inte
     http.get(
       process.env.API_ENDPOINT, {
         uris: verifiedEducations,
+        terms: interests,
         n: NumRecommendations
       }, {
         encode: false,
