@@ -55,17 +55,17 @@ const RecommendationList = ({ recommendations, status }) => {
   const optionsWithRegionIds = optionsWithoutExistingVerified.map(option => R.assoc('regionId', findRegionId(option.providerProvince), option))
   const currentMatchingOptions = locationIdWhitelist.length > 0 ? optionsWithRegionIds.filter(option => locationIdWhitelist.includes(option.regionId)) : optionsWithRegionIds
 
-  const groupedByEducation = R.compose(Object.entries, R.groupBy(v => v.name))(currentMatchingOptions)
+  const groupedBySpecialisation = R.compose(Object.entries, R.groupBy(v => v.name))(currentMatchingOptions)
 
   if (status === RecommendationsState.idle) return <Placeholder showSpinner={false}/>
   if (status === RecommendationsState.pending) return <Placeholder showSpinner={true}/>
-  if (groupedByEducation.length === 0) return <NoResultsContainer><Alert level='warn'><p>{t`Ei hakukohteita nykyisillä rajauksilla`}</p></Alert></NoResultsContainer>
+  if (groupedBySpecialisation.length === 0) return <NoResultsContainer><Alert level='warn'><p>{t`Ei hakukohteita nykyisillä rajauksilla`}</p></Alert></NoResultsContainer>
 
   return (
     <List>
-      {groupedByEducation.map(([degreeTitle, recommendations]) => (
-        <ListItem key={degreeTitle}>
-          <RecommendationGroup title={degreeTitle} recommendations={recommendations}/>
+      {groupedBySpecialisation.map(([specialisation, recommendations]) => (
+        <ListItem key={specialisation}>
+          <RecommendationGroup recommendations={recommendations}/>
         </ListItem>
       ))}
     </List>

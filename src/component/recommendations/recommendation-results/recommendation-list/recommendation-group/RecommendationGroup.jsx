@@ -1,6 +1,5 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import useTranslation from 'component/generic/hook/useTranslation'
 import Expander from 'component/generic/widget/Expander'
 import SummaryHeader from './fragment/SummaryHeader'
 import Brief from './fragment/Brief'
@@ -8,20 +7,26 @@ import Description from './fragment/Description'
 import CertificateDisclaimer from './fragment/CertificateDisclaimer'
 import ApplicationOptionList from './application-option-list/ApplicationOptionList'
 
-const RecommendationGroup = ({ title, recommendations }) => {
-  const t = useTranslation()
+const RecommendationGroup = ({ recommendations }) => {
+  const head = recommendations[0]
+  const { name, degreeTitle, educationCode, educationDegreeName } = head
 
   const Header = (
     <SummaryHeader
+      degreeTitle={degreeTitle}
+      name={name}
+      education={educationDegreeName}
       numApplicationOptions={recommendations.length}
-      field={title}
-      education={t`Ammatillinen tutkinto`} // TODO Replace hard-coded type with data from API when supporting multiple types
     />
   )
 
   return (
     <Expander header={Header}>
-      <Brief/>
+      <Brief
+        name={name}
+        degreeTitle={degreeTitle}
+        educationCode={educationCode}
+      />
       <Description/>
       <CertificateDisclaimer/>
       <ApplicationOptionList options={recommendations}/>
@@ -30,7 +35,6 @@ const RecommendationGroup = ({ title, recommendations }) => {
 }
 
 RecommendationGroup.propTypes = {
-  title: PropTypes.string.isRequired,
   recommendations: PropTypes.array.isRequired
 }
 
