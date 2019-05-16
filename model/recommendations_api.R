@@ -70,23 +70,25 @@ function(uris, terms, n) {
   terms <- unlist(terms)
   
   # find vectors for given inputs
-  if(length(uris > 0) & !is.na(uris))
+  if(length(uris > 0) & !is.na(uris)) {
     unit_vecs <- units_model[rownames(units_model) %in% uris,]
+  } else unit_vecs <- c()
   if(length(terms) > 0 & !is.na(terms)) {
     interest_vecs <- interests_model[rownames(interests_model) %in% terms,]
     interest_vecs <- interest_vecs[!is.na(interest_vecs[,1]),]
-  }
+  } else interest_vecs <- c()
   
   # combine input vectors and calculate similarities to offering document vectors
   input_vecs <- rbind(unit_vecs, interest_vecs)
   
   # find matching education offers
   #matches <- cosineSimilarity(offering_model, input_vecs)
-  matches <- closest_to(offering_model, input_vecs)
-  names(matches) <- c("id","similarity") 
-  
-  # match offering with metadata 
-  matches <- left_join(matches, offering, by = "id")
+  if(!is.null(input_vecs)) {
+    matches <- closest_to(offering_model, input_vecs)
+    names(matches) <- c("id","similarity")
+    # match offering with metadata 
+    matches <- left_join(matches, offering, by = "id")
+  } stop("No units or interests selected")
   
   # return matches (which is serialized as JSON)
   return(list(matches))
