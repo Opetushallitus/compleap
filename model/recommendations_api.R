@@ -1,6 +1,6 @@
 # API to DOC2VEC model for CompLeap
 
-#setwd("/home/rstudio/")
+#setwd("/home/rstudio/compleap/model/")
 
 # Reads in list of study unit codes and interests
 # outputs recommended offering list (number of recommendations can be specified)
@@ -41,49 +41,62 @@ interests_model <- read.binary.vectors("./models/interests_doc2vec_model.bin")
 # read doc2vec model - vectorized presentation of unit descriptions (tutkinnon osat)
 units_model <- read.binary.vectors("./models/units_doc2vec_model.bin")
 
+# read doc2vec model - vectorized presentation of qualifications
+qualifications_model <- read.binary.vectors("./models/qualifications_doc2vec_model.bin")
+
 # load offering metadata
 tarjonta <- readRDS("./data/tarjonta.rds")
 offering <- readRDS("./data/application_info.rds")
 
 
 ############################################################################################################
-## API function that takes in list of study program units and outputs list of tarjonta with meta information
+## API function that takes in list of study program units (or qualifications) and terms
+## Outputs list of tarjonta with meta information
 ## Recommendations on institution offering level
 
 # uris <- c("tutkinnonosat_100125", "tutkinnonosat_100126", "tutkinnonosat_100122",
 #           "tutkinnonosat_100124", "tutkinnonosat_100123", "tutkinnonosat_100121",
 #           "tutkinnonosat_100129", "tutkinnonosat_100131", "tutkinnonosat_100130")
+# uris <- c("koulutus_487141", "koulutus_381141")
 # terms <- c(1,20,34,45,58)
 
 #* @apiTitle CompLeap recommendation API
 
 #* Get similar openings in vocational education with given study units and interests
-#* @param uris The study unit uris to be matched with openings
+#* @param uris The study unit (or qualification) uris to be matched with openings
 #* @param terms:int The interest terms ids to be matched with openings
 #* @param n:int The number of recommendations to return
+#* @param type: The type of uris in input (valid values "unit" or "qualification")
 #* @get /v2/match
-function(uris, terms, n) {
+function(uris, terms, n, type = "unit") {
 
   n <- as.numeric(n) + 1
   uris <- unlist(strsplit(uris, ","))
   terms <- unlist(terms)
 
+  if(type == "unit") {
+    model <- units_model
+  } else if (type == "qualification") {
+    model <- qualifications_model
+  } else stop ("Wrong input type for uris!")
+  
   # find vectors for given inputs
-  if(length(uris > 0) & !is.na(uris)) {
-    unit_vecs <- units_model[rownames(units_model) %in% uris,]
-  } else unit_vecs <- c()
-  if(length(terms) > 0 & !is.na(terms)) {
+  if(length(uris) > 0 & !is.null(uris)) {
+    vecs <- model[rownames(model) %in% uris,]
+  } else vecs <- c()
+  
+  if(length(terms) > 0 & !is.null(terms)) {
     interest_vecs <- interests_model[rownames(interests_model) %in% terms,]
     interest_vecs <- interest_vecs[!is.na(interest_vecs[,1]),]
   } else interest_vecs <- c()
 
   # combine input vectors and calculate similarities to offering document vectors
-  input_vecs <- rbind(unit_vecs, interest_vecs)
+  input_vecs <- rbind(vecs, interest_vecs)
 
   # find matching education offers
   #matches <- cosineSimilarity(offering_model, input_vecs)
   if(!is.null(input_vecs)) {
-    matches <- closest_to(offering_model, input_vecs)
+    matches <- closest_to(offering_model, input_vecs, n)
     names(matches) <- c("offer_id","similarity")
     # match offering with metadata
     matches <- left_join(matches, offering, by = "offer_id")
