@@ -84,9 +84,9 @@ function(uris, terms, n) {
   #matches <- cosineSimilarity(offering_model, input_vecs)
   if(!is.null(input_vecs)) {
     matches <- closest_to(offering_model, input_vecs)
-    names(matches) <- c("id","similarity")
+    names(matches) <- c("offer_id","similarity")
     # match offering with metadata
-    matches <- left_join(matches, offering, by = "id")
+    matches <- left_join(matches, offering, by = "offer_id")
   } else stop("No units or interests selected")
 
   # return matches (which is serialized as JSON)
