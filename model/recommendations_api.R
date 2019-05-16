@@ -50,6 +50,11 @@ offering <- readRDS("./data/application_info.rds")
 ## API function that takes in list of study program units and outputs list of tarjonta with meta information
 ## Recommendations on institution offering level
 
+# uris <- c("tutkinnonosat_100125", "tutkinnonosat_100126", "tutkinnonosat_100122",
+#           "tutkinnonosat_100124", "tutkinnonosat_100123", "tutkinnonosat_100121",
+#           "tutkinnonosat_100129", "tutkinnonosat_100131", "tutkinnonosat_100130")
+# terms <- c(1,20,34,45,58)
+
 #* @apiTitle CompLeap recommendation API
 
 #* Get similar openings in vocational education with given study units and interests
@@ -57,12 +62,6 @@ offering <- readRDS("./data/application_info.rds")
 #* @param terms:int The interest terms ids to be matched with openings
 #* @param n:int The number of recommendations to return
 #* @get /v2/match
-
-# uris <- c("tutkinnonosat_100125", "tutkinnonosat_100126", "tutkinnonosat_100122",
-#           "tutkinnonosat_100124", "tutkinnonosat_100123", "tutkinnonosat_100121",
-#           "tutkinnonosat_100129", "tutkinnonosat_100131", "tutkinnonosat_100130")
-# terms <- c(1,20,34,45,58)
-
 function(uris, terms, n) {
 
   n <- as.numeric(n) + 1
