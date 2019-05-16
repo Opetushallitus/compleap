@@ -4,7 +4,7 @@ import * as R from 'ramda'
 import ApplicationOptions from './fragment/ApplicationOptions'
 import ShowMoreButton from './fragment/ShowMoreButton'
 
-const TRUNCATED_LIST_LENGTH = 2
+const TRUNCATED_LIST_LENGTH = 10
 
 const ApplicationOptionList = ({ options }) => {
   const [showAll, setShowAll] = useState(false)
