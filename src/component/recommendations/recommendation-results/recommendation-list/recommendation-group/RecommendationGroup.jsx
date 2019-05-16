@@ -9,7 +9,7 @@ import ApplicationOptionList from './application-option-list/ApplicationOptionLi
 
 const RecommendationGroup = ({ recommendations }) => {
   const head = recommendations[0]
-  const { name, degreeTitle, educationCode, educationDegreeName } = head
+  const { name, degreeTitle, educationCode, educationDegreeName, goals } = head
 
   const Header = (
     <SummaryHeader
@@ -27,7 +27,7 @@ const RecommendationGroup = ({ recommendations }) => {
         degreeTitle={degreeTitle}
         educationCode={educationCode}
       />
-      <Description/>
+      <Description text={goals}/>
       <CertificateDisclaimer/>
       <ApplicationOptionList options={recommendations}/>
     </Expander>
