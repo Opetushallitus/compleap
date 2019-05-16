@@ -2,11 +2,11 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import useTranslation from 'component/generic/hook/useTranslation'
 
-const SummaryHeader = ({ degreeTitle, name, education, numApplicationOptions }) => {
+const SummaryHeader = ({ degreeTitle, name, educationDegreeName, numApplicationOptions }) => {
   const t = useTranslation()
   const title = (
     degreeTitle +
-    ` (${name}, ${t(education)}) ` +
+    ` (${name}, ${t(educationDegreeName.toLowerCase())}) ` +
     numApplicationOptions + ' ' +
     t`hakukohdetta`
   )
@@ -16,7 +16,7 @@ const SummaryHeader = ({ degreeTitle, name, education, numApplicationOptions }) 
 SummaryHeader.propTypes = {
   degreeTitle: PropTypes.string.isRequired,
   name: PropTypes.string.isRequired,
-  education: PropTypes.string.isRequired,
+  educationDegreeName: PropTypes.string.isRequired,
   numApplicationOptions: PropTypes.number.isRequired
 }
 

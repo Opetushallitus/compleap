@@ -15,7 +15,7 @@ const RecommendationGroup = ({ recommendations }) => {
     <SummaryHeader
       degreeTitle={degreeTitle}
       name={name}
-      education={educationDegreeName}
+      educationDegreeName={educationDegreeName}
       numApplicationOptions={recommendations.length}
     />
   )

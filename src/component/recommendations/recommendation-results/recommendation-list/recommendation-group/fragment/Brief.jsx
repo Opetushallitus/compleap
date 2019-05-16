@@ -8,10 +8,11 @@ const Brief = ({ name, degreeTitle, educationCode }) => {
     <p>
       <b>
         <i>{degreeTitle}</i>
-        {` ${t('on tutkintonimike, johon valmistutaan tutkintoon')} `}
-        <i>{educationCode}</i>
-        {` ${t('kuuluvasta osaamisalasta')} `}
+        {` ${t('on tutkintonimike, johon valmistutaan osaamisalasta')} `}
         <i>{name}</i>
+        {', '}
+        {`${t('joka kuuluu tutkintoon')} `}
+        <i>{educationCode}</i>
         {'.'}
       </b>
     </p>
