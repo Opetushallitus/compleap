@@ -1,14 +1,15 @@
 # API to DOC2VEC model for CompLeap
 
+#setwd("/home/rstudio/")
 
-# Reads in list of study unit codes
-# outputs recommended list of tarjonta ids (number of recommendations can be specified)
+# Reads in list of study unit codes and interests
+# outputs recommended offering list (number of recommendations can be specified)
 # 
 
 options(stringsAsFactors = FALSE)
 
-library(devtools)
-install_github("bmschmidt/wordVectors")
+# library(devtools)
+# install_github("bmschmidt/wordVectors")
 
 library(plumber)
 library(jsonlite)
@@ -24,19 +25,79 @@ library(udpipe)
 ## load needed global data and models
 
 # load the language model
-udmodel_finnish <- udpipe_load_model(file = "./models/finnish-tdt-ud-2.3-181115.udpipe")
+udmodel_finnish <- udpipe_load_model(file = "./model/models/finnish-tdt-ud-2.3-181115.udpipe")
 
 # read word2vec model - vectorized presentation of finnish corpus
-word_model <- read.binary.vectors("./models/tarjonta_vectors.bin")
+word_model <- read.binary.vectors("./model/models/tarjonta_vectors.bin")
+#word2vec_model <- read.binary.vectors("./model/models/lemma_word_vectors.bin")
 
 # read doc2vec model - vectorized presentation of vocational education offering descriptions (tarjonta)
-doc_model <- read.binary.vectors("./models/tarjonta_doc2vec_model.bin")
+doc_model <- read.binary.vectors("./model/models/tarjonta_doc2vec_model.bin")
+offering_model <- read.binary.vectors("./model/models/offering_doc2vec_model.bin")
+
+# read doc2vec model - vectorized presentation of interests terms
+interests_model <- read.binary.vectors("./model/models/interests_doc2vec_model.bin")
+
+# read doc2vec model - vectorized presentation of unit descriptions (tutkinnon osat)
+units_model <- read.binary.vectors("./model/models/units_doc2vec_model.bin")
 
 # load offering metadata
-offering <- readRDS("./data/tarjonta.rds")
+tarjonta <- readRDS("./model/data/tarjonta.rds")
+offering <- readRDS("./model/data/application_info.rds")
+
 
 ############################################################################################################
 ## API function that takes in list of study program units and outputs list of tarjonta with meta information 
+## Recommendations on institution offering level
+
+#* @apiTitle CompLeap recommendation API
+
+#* Get similar openings in vocational education with given study units and interests
+#* @param uris The study unit uris to be matched with openings
+#* @param terms:int The interest terms ids to be matched with openings
+#* @param n:int The number of recommendations to return
+#* @get /v2/match
+
+# uris <- c("tutkinnonosat_100125", "tutkinnonosat_100126", "tutkinnonosat_100122",
+#           "tutkinnonosat_100124", "tutkinnonosat_100123", "tutkinnonosat_100121",
+#           "tutkinnonosat_100129", "tutkinnonosat_100131", "tutkinnonosat_100130")
+# terms <- c(1,20,34,45,58)
+
+function(uris, terms, n) {
+  
+  n <- as.numeric(n) + 1 
+  uris <- unlist(strsplit(uris, ","))
+  terms <- unlist(terms)
+  
+  # find vectors for given inputs
+  if(length(uris > 0) & !is.na(uris))
+    unit_vecs <- units_model[rownames(units_model) %in% uris,]
+  if(length(terms) > 0 & !is.na(terms)) {
+    interest_vecs <- interests_model[rownames(interests_model) %in% terms,]
+    interest_vecs <- interest_vecs[!is.na(interest_vecs[,1]),]
+  }
+  
+  # combine input vectors and calculate similarities to offering document vectors
+  input_vecs <- rbind(unit_vecs, interest_vecs)
+  
+  # find matching education offers
+  #matches <- cosineSimilarity(offering_model, input_vecs)
+  matches <- closest_to(offering_model, input_vecs)
+  names(matches) <- c("id","similarity") 
+  
+  # match offering with metadata 
+  matches <- left_join(matches, offering, by = "id")
+  
+  # return matches (which is serialized as JSON)
+  return(list(matches))
+  
+}
+
+
+############################################################################################################
+## API function that takes in list of study program units and 
+## and list of interests terms outputs list of tarjonta with meta information 
+## Recommendations on competence area level
 
 #* @apiTitle CompLeap recommendation API
 
@@ -52,7 +113,7 @@ function(uris, n) {
   # fetch, clean and vectorize given study units
   skills <- study_units_to_text(uris)
   skill_vec <- text_to_vec(skills, word_model, udmodel_finnish, lemmatize = TRUE)
-
+  
   # find matching educations and clean
   matches <- similar_documents(skill_vec, doc_model, n)
   names(matches) <- c("document","similarity") 
@@ -141,7 +202,7 @@ text_to_vec <- function(text, w2v_model, lang_model, lemmatize = FALSE) {
   
   return(vec)
 }
-  
+
 
 # function to return n closest vectors to given vector(s) 
 similar_documents <- function(vec, d2v_model, n) {
