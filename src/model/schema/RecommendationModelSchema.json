@@ -27,7 +27,8 @@
     "similarity": { "type": "number" },
     "koulutuskoodi": { "type": "string" },
     "creditValue": { "type": "string" },
-    "creditUnitShort": { "type": "string" }
+    "creditUnitShort": { "type": "string" },
+    "type": { "type": "string" }
   },
   "required": [
     "applicationName",
@@ -42,7 +43,8 @@
     "goals",
     "providerName",
     "providerProvince",
-    "similarity"
+    "similarity",
+    "type"
   ],
   "additionalProperties": false
 }
