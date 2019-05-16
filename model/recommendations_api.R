@@ -4,7 +4,7 @@
 
 # Reads in list of study unit codes and interests
 # outputs recommended offering list (number of recommendations can be specified)
-# 
+#
 
 options(stringsAsFactors = FALSE)
 
@@ -25,29 +25,29 @@ library(udpipe)
 ## load needed global data and models
 
 # load the language model
-udmodel_finnish <- udpipe_load_model(file = "./model/models/finnish-tdt-ud-2.3-181115.udpipe")
+udmodel_finnish <- udpipe_load_model(file = "./models/finnish-tdt-ud-2.3-181115.udpipe")
 
 # read word2vec model - vectorized presentation of finnish corpus
-word_model <- read.binary.vectors("./model/models/tarjonta_vectors.bin")
+word_model <- read.binary.vectors("./models/tarjonta_vectors.bin")
 #word2vec_model <- read.binary.vectors("./model/models/lemma_word_vectors.bin")
 
 # read doc2vec model - vectorized presentation of vocational education offering descriptions (tarjonta)
-doc_model <- read.binary.vectors("./model/models/tarjonta_doc2vec_model.bin")
-offering_model <- read.binary.vectors("./model/models/offering_doc2vec_model.bin")
+doc_model <- read.binary.vectors("./models/tarjonta_doc2vec_model.bin")
+offering_model <- read.binary.vectors("./models/offering_doc2vec_model.bin")
 
 # read doc2vec model - vectorized presentation of interests terms
-interests_model <- read.binary.vectors("./model/models/interests_doc2vec_model.bin")
+interests_model <- read.binary.vectors("./models/interests_doc2vec_model.bin")
 
 # read doc2vec model - vectorized presentation of unit descriptions (tutkinnon osat)
-units_model <- read.binary.vectors("./model/models/units_doc2vec_model.bin")
+units_model <- read.binary.vectors("./models/units_doc2vec_model.bin")
 
 # load offering metadata
-tarjonta <- readRDS("./model/data/tarjonta.rds")
-offering <- readRDS("./model/data/application_info.rds")
+tarjonta <- readRDS("./data/tarjonta.rds")
+offering <- readRDS("./data/application_info.rds")
 
 
 ############################################################################################################
-## API function that takes in list of study program units and outputs list of tarjonta with meta information 
+## API function that takes in list of study program units and outputs list of tarjonta with meta information
 ## Recommendations on institution offering level
 
 #* @apiTitle CompLeap recommendation API
@@ -64,11 +64,11 @@ offering <- readRDS("./model/data/application_info.rds")
 # terms <- c(1,20,34,45,58)
 
 function(uris, terms, n) {
-  
-  n <- as.numeric(n) + 1 
+
+  n <- as.numeric(n) + 1
   uris <- unlist(strsplit(uris, ","))
   terms <- unlist(terms)
-  
+
   # find vectors for given inputs
   if(length(uris > 0) & !is.na(uris)) {
     unit_vecs <- units_model[rownames(units_model) %in% uris,]
@@ -77,28 +77,28 @@ function(uris, terms, n) {
     interest_vecs <- interests_model[rownames(interests_model) %in% terms,]
     interest_vecs <- interest_vecs[!is.na(interest_vecs[,1]),]
   } else interest_vecs <- c()
-  
+
   # combine input vectors and calculate similarities to offering document vectors
   input_vecs <- rbind(unit_vecs, interest_vecs)
-  
+
   # find matching education offers
   #matches <- cosineSimilarity(offering_model, input_vecs)
   if(!is.null(input_vecs)) {
     matches <- closest_to(offering_model, input_vecs)
     names(matches) <- c("id","similarity")
-    # match offering with metadata 
+    # match offering with metadata
     matches <- left_join(matches, offering, by = "id")
   } stop("No units or interests selected")
-  
+
   # return matches (which is serialized as JSON)
   return(list(matches))
-  
+
 }
 
 
 ############################################################################################################
-## API function that takes in list of study program units and 
-## and list of interests terms outputs list of tarjonta with meta information 
+## API function that takes in list of study program units and
+## and list of interests terms outputs list of tarjonta with meta information
 ## Recommendations on competence area level
 
 #* @apiTitle CompLeap recommendation API
@@ -108,25 +108,25 @@ function(uris, terms, n) {
 #* @param n:int The number of recommendations to return
 #* @get /match
 function(uris, n) {
-  
-  n <- as.numeric(n) + 1 
+
+  n <- as.numeric(n) + 1
   uris <- unlist(strsplit(uris, ","))
-  
+
   # fetch, clean and vectorize given study units
   skills <- study_units_to_text(uris)
   skill_vec <- text_to_vec(skills, word_model, udmodel_finnish, lemmatize = TRUE)
-  
+
   # find matching educations and clean
   matches <- similar_documents(skill_vec, doc_model, n)
-  names(matches) <- c("document","similarity") 
+  names(matches) <- c("document","similarity")
   matches <- filter(matches, document != "vec")
-  
-  # match offering with metadata 
+
+  # match offering with metadata
   matches <- left_join(matches, select(offering, -doc), by = c("document" = "id"))
-  
+
   # return matches (which is serialized as JSON)
   return(list(matches))
-  
+
 }
 
 
@@ -145,8 +145,8 @@ clear_html_tags <- function(text) {
 }
 
 
-# fetches study unit description from ePerusteet API and returns its description 
-# parameters: 
+# fetches study unit description from ePerusteet API and returns its description
+# parameters:
 # @study unit URI (koodiUri)
 # @evaluation score (osaamistaso id) - NOT YET DONE
 get_study_unit <- function(study_unit_uri) {
@@ -183,30 +183,30 @@ study_units_to_text <- function(study_units) {
 # @lang_model - language model to be used with udpipe
 # @lemmatize - TRUE/FALSE to indicate wheather to lemmatize text
 text_to_vec <- function(text, w2v_model, lang_model, lemmatize = FALSE) {
-  
+
   # prep text for model i.e tokenise, lemmatise and clean using given udpipe language model
   text_model <- udpipe_annotate(lang_model, x = text, parser = "none")
   text_model <- as.data.frame(text_model)
-  
+
   if(lemmatize) {
     text_model$token <- text_model$lemma
   }
-  
+
   text_model$token <- tolower(text_model$token)
   text_model$token <- gsub("#","",text_model$token)
-  
+
   # use given  word2vec model to make document vector by averaging word vectors
   model_df <- as.data.frame(w2v_model)
   doc <- text_model %>% select(token) %>% group_by(token) %>% mutate(count = n()) %>% ungroup()
   temp <- cbind(doc, model_df[doc$token, ])
   temp[,3:202] <- temp$count * temp[,3:202]
   vec <- colMeans(temp[,3:202], na.rm = TRUE)
-  
+
   return(vec)
 }
 
 
-# function to return n closest vectors to given vector(s) 
+# function to return n closest vectors to given vector(s)
 similar_documents <- function(vec, d2v_model, n) {
   if(ncol(d2v_model) == length(vec)) {
     d2v_model <- rbind(d2v_model, vec)
