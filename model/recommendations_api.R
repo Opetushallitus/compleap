@@ -87,7 +87,7 @@ function(uris, terms, n) {
     names(matches) <- c("id","similarity")
     # match offering with metadata
     matches <- left_join(matches, offering, by = "id")
-  } stop("No units or interests selected")
+  } else stop("No units or interests selected")
 
   # return matches (which is serialized as JSON)
   return(list(matches))
