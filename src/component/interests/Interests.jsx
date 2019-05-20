@@ -22,7 +22,7 @@ const Interests = () => {
     <div ref={container}>
       <H1>{t`Kiinnostukset`}</H1>
       <TopicList/>
-      {numSelectedInterests && (
+      {numSelectedInterests > 0 && (
         <Notification container={container} offsetTop={250} offsetBottom={100}>
           <InterestCountNotification numSelectedInterests={numSelectedInterests} container={container}/>
         </Notification>
