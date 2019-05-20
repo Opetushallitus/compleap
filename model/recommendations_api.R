@@ -72,15 +72,11 @@ offering <- readRDS("./data/application_info.rds")
 #* @param n:int The number of recommendations to return
 #* @param type: The type of uris in input (valid values "unit" or "qualification")
 #* @get /v2/match
-function(uris, terms, n, type = "unit") {
+function(uris = "", terms, n, type = "unit") {
 
   n <- as.numeric(n) + 1
-  if(exists("uris")) {
-    uris <- unlist(strsplit(uris, ","))
-  } else uris <- c()
-  if(exists("terms")) {
-    terms <- as.integer(unlist(strsplit(terms, ",")))
-  } else terms <- c()
+  uris <- unlist(strsplit(uris, ","))
+  terms <- as.integer(unlist(strsplit(terms, ",")))
 
   if(type == "unit") {
     model <- units_model
