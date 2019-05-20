@@ -75,8 +75,12 @@ offering <- readRDS("./data/application_info.rds")
 function(uris, terms, n, type = "unit") {
 
   n <- as.numeric(n) + 1
-  uris <- unlist(strsplit(uris, ","))
-  terms <- as.integer(unlist(strsplit(terms, ",")))
+  if(exists("uris")) {
+    uris <- unlist(strsplit(uris, ","))
+  } else uris <- c()
+  if(exists("terms")) {
+    terms <- as.integer(unlist(strsplit(terms, ",")))
+  } else terms <- c()
 
   if(type == "unit") {
     model <- units_model
@@ -94,17 +98,19 @@ function(uris, terms, n, type = "unit") {
     interest_vecs <- interest_vecs[!is.na(interest_vecs[,1]),]
   } else interest_vecs <- c()
   
-  # combine input vectors and calculate similarities to offering document vectors
+  # combine input vectors 
   input_vecs <- rbind(vecs, interest_vecs)
   
   # find matching education offers
   if(!is.null(input_vecs)) {
-    #matches <- closest_to(offering_model, input_vecs, n)
+    
+    #calculate similarities to offering document vectors and average
     matches <- cosineSimilarity(offering_model, input_vecs)
     matches <- as.data.frame(cbind(rownames(matches),rowMeans(matches)))
     names(matches) <- c("offer_id","similarity")
     matches <- matches[order(matches$similarity, decreasing = TRUE),]
     matches <- matches[1:(n-1),]
+    
     # match offering with metadata
     matches <- left_join(matches, offering, by = "offer_id")
   } else stop("No units or interests selected")
