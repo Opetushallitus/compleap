@@ -24,7 +24,7 @@
     "goals": { "type": "string" },
     "providerName": { "type": "string" },
     "providerProvince": { "type": "string" },
-    "similarity": { "type": "number" },
+    "similarity": { "type": "string" },
     "koulutuskoodi": { "type": "string" },
     "creditValue": { "type": "string" },
     "creditUnitShort": { "type": "string" },
