@@ -142,6 +142,26 @@
     "fi": "Valitse seuraavista ainakin 5 sinua kiinnostavaa asiaa",
     "en": "Select at least 5 topics from the following"
   },
+  "Kiinnostuksia valittu": {
+    "fi": "Kiinnostuksia valittu",
+    "en": "Selected interests"
+  },
+  "– voit jatkaa kiinnostusten lisäämistä, tämä tarkentaa suosituksia": {
+    "fi": "– voit jatkaa kiinnostusten lisäämistä, tämä tarkentaa suosituksia",
+    "en": "– you can continue adding fields of interest, this makes recommendations more accurate"
+  },
+  "– suositukset ovat epätarkkoja, jos yli": {
+    "fi": "– suositukset ovat epätarkkoja, jos yli",
+    "en": "– recommendations are inaccurate if over"
+  },
+  "kiinnostusta on valittu": {
+    "fi": "kiinnostusta on valittu",
+    "en": "interests are selected"
+  },
+  "Näytä suositukset": {
+    "fi": "Näytä suositukset",
+    "en": "Show recommendations"
+  },
   "Sosiaalitieteet": {
     "fi": "Sosiaalitieteet",
     "en": "Sociology and cultural studies"
