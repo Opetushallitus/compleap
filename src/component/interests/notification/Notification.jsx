@@ -9,7 +9,8 @@ const FloatingBannerContent = styled.div`
   position: fixed;
   bottom: 0;
   width: 100%;
-  height: 80px;
+  min-height: 80px;
+  box-sizing: border-box;
   padding: 0.5rem;
   display: flex;
   flex-flow: column;
