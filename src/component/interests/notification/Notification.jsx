@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom'
 import PropTypes from 'prop-types'
 import styled from 'styled-components'
 import posed, { PoseGroup } from 'react-pose'
-import { children } from 'util/proptype'
+import { children, ref } from 'util/proptype'
 
 const FloatingBannerContent = styled.div`
   position: fixed;
@@ -66,7 +66,7 @@ const Notification = ({ container, offsetTop = 0, offsetBottom = 0, children }) 
 }
 
 Notification.propTypes = {
-  container: PropTypes.node.isRequired,
+  container: ref.isRequired,
   offsetTop: PropTypes.number,
   offsetBottom: PropTypes.number,
   children

@@ -2,6 +2,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import styled from 'styled-components'
 import posed, { PoseGroup } from 'react-pose'
+import { ref } from 'util/proptype'
 import Message from './fragment/Message'
 import GotoRecommendationsButton from './fragment/GotoRecommendationsButton'
 
@@ -52,7 +53,7 @@ const InterestCountNotification = ({ numSelectedInterests, container }) => {
 
 InterestCountNotification.propTypes = {
   numSelectedInterests: PropTypes.number.isRequired,
-  container: PropTypes.node.isRequired
+  container: ref.isRequired
 }
 
 export default InterestCountNotification
