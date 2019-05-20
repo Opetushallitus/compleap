@@ -36,7 +36,7 @@ const Notification = ({ container, offsetTop = 0, offsetBottom = 0, children }) 
   const hold = useRef(false)
 
   useEffect(() => {
-    window.addEventListener('scroll', () => {
+    const handler = () => {
       lastPos.current = window.scrollY + window.innerHeight
 
       if (!hold.current) {
@@ -50,7 +50,9 @@ const Notification = ({ container, offsetTop = 0, offsetBottom = 0, children }) 
 
         hold.current = true
       }
-    })
+    }
+    window.addEventListener('scroll', handler)
+    return () => window.removeEventListener('scroll', handler)
   })
 
   return (
