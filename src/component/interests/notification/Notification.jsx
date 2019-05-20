@@ -10,11 +10,12 @@ const FloatingBannerContent = styled.div`
   bottom: 0;
   width: 100%;
   height: 80px;
-  padding: 0.5rem 0;
+  padding: 0.5rem;
   display: flex;
   flex-flow: column;
   align-items: center;
   justify-content: center;
+  text-align: center;
   background-color: ${({ theme }) => theme.color.white};
   z-index: ${({ theme }) => theme.z.popup};
   box-shadow: 1px 1px 10px 1px ${({ theme }) => theme.color.gray};
