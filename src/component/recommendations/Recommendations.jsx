@@ -35,9 +35,7 @@ const Recommendations = () => {
     verifiedEducations: pickAndFlattenVerifiedEducation(verifiedEducations$),
     interests: pickAndFlattenInterests(interests$)
   })
-  // TODO Remove extra condition after other options for querying recommendations are implemented (unverified edu)
-  const doQueryWhen$ = hasRequiredInterests$.and(verifiedEducations$.map(v => v.length !== 0))
-  const recommendationsResponse = useRecommendationsQuery(queryParams$, doQueryWhen$)
+  const recommendationsResponse = useRecommendationsQuery(queryParams$, hasRequiredInterests$)
 
   const recommendations = recommendationsResponse || []
   const hasRequiredInterests = useObservable(hasRequiredInterests$, { skipDuplicates: true })

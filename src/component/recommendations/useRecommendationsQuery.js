@@ -17,12 +17,15 @@ const doQueryRecommendations = ({ unverifiedEducations, verifiedEducations, inte
     return mockRequest({ unverifiedEducations, verifiedEducations, interests }, mockRecommendations, true)
   }
 
+  const type = verifiedEducations.length > 0 ? 'unit' : unverifiedEducations.length > 0 ? 'qualification' : undefined
+
   return (
     http.get(
       process.env.API_ENDPOINT, {
-        uris: verifiedEducations,
+        uris: type === 'unit' ? verifiedEducations : type === 'qualification' ? unverifiedEducations : undefined,
         terms: interests,
-        n: NumRecommendations
+        n: NumRecommendations,
+        type
       }, {
         encode: false,
         arrayFormat: 'comma'
