@@ -1,20 +1,52 @@
-import React, { forwardRef } from 'react'
+import React, { forwardRef, useEffect, useState } from 'react'
 import PropTypes from 'prop-types'
+import styled from 'styled-components'
+import posed from 'react-pose'
 import useTranslation from 'component/generic/hook/useTranslation'
+
+const AnimationDuration = 200
+
+const Count = styled.div`
+  display: inline-block;
+`
+
+const PosedCount = posed(Count)({
+  idle: {
+    transform: 'scale(1.0)',
+    transition: {
+      duration: AnimationDuration
+    }
+  },
+  active: {
+    transform: 'scale(1.3)',
+    transition: {
+      duration: AnimationDuration
+    }
+  }
+})
 
 // eslint-disable-next-line react/display-name
 const Message = forwardRef(function message ({ numSelectedInterests, hasRequiredInterests, hasTooManyInterests }, ref) {
   const t = useTranslation()
+  const [counterState, setCounterState] = useState('idle')
+  const [animationTimer, setAnimationTimer] = useState(null)
+
+  useEffect(() => {
+    clearTimeout(animationTimer)
+    setCounterState('active')
+    setAnimationTimer(setTimeout(() => { setCounterState('idle') }, AnimationDuration))
+  }, [numSelectedInterests])
 
   return (
     <div ref={ref}>
       {t`Kiinnostuksia valittu`}
       {' '}
-      {`${numSelectedInterests} / ${process.env.MIN_INTERESTS}`}
+      <PosedCount key={numSelectedInterests} pose={counterState}>{numSelectedInterests}</PosedCount>
+      {` / ${process.env.MIN_INTERESTS} `}
       {
         hasTooManyInterests
-          ? t`– suositukset ovat epätarkkoja, jos kiinnostuksia on valittu yli` + ' ' + process.env.MAX_INTERESTS
-          : hasRequiredInterests && t` – voit jatkaa kiinnostusten lisäämistä, tämä tarkentaa suosituksia`
+          ? t`– suositukset ovat epätarkkoja, jos yli` + ' ' + process.env.MAX_INTERESTS + ' ' + t`kiinnostusta on valittu`
+          : hasRequiredInterests && (' ' + t`– voit jatkaa kiinnostusten lisäämistä, tämä tarkentaa suosituksia`)
       }
     </div>
   )
