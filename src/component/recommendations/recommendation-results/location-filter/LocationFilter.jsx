@@ -46,7 +46,7 @@ const LocationFilter = () => {
 
   return (
     <Container>
-      <Label>{t`Alue` + ':'}</Label>
+      <Label>{t`Sijainti` + ':'}</Label>
       <InputContainer>
         <Select
           placeholder={t`Lisää rajaus`}
