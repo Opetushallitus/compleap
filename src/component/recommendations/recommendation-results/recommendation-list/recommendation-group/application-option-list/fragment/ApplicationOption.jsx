@@ -6,7 +6,7 @@ import LinkButton from 'component/generic/widget/LinkButton'
 
 const Container = styled.div`
   display: flex;
-  align-items: baseline;
+  align-items: center;
 `
 
 const Partial = styled.div`

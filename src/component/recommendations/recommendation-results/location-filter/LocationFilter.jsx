@@ -11,6 +11,7 @@ import Tag from 'component/recommendations/recommendation-results/location-filte
 
 const Container = styled.div`
   display: flex;
+  flex-wrap: wrap;
   align-items: baseline;
 `
 
@@ -20,6 +21,7 @@ const Label = styled.b`
 
 const InputContainer = styled.div`
   min-width: 150px;
+  margin-bottom: 0.5rem;
 `
 
 const LocationTagList = styled.ul`
