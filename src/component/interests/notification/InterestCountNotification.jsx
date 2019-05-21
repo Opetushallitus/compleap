@@ -27,6 +27,8 @@ const PosedButton = posed(ButtonContainer)({
 })
 
 const InterestCountNotification = ({ numSelectedInterests, container }) => {
+  if (numSelectedInterests === undefined) return null
+
   const hasRequiredInterests = numSelectedInterests >= process.env.MIN_INTERESTS
   const hasTooManyInterests = numSelectedInterests > process.env.MAX_INTERESTS
   const containerRect = container.current.getBoundingClientRect()
@@ -52,7 +54,7 @@ const InterestCountNotification = ({ numSelectedInterests, container }) => {
 }
 
 InterestCountNotification.propTypes = {
-  numSelectedInterests: PropTypes.number.isRequired,
+  numSelectedInterests: PropTypes.number,
   container: ref.isRequired
 }
 
