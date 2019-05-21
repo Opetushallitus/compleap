@@ -58,9 +58,9 @@
     "fi": "Olemme tunnistaneet sinulta seuraavat koulutukset:",
     "en": "We have identified your following education:"
   },
-  "Kerro mitä pidit opinnoistasi, niin voimme antaa parempia suosituksia. Voit myös jättää valinnan tyhjäksi.": {
-    "fi": "Kerro mitä pidit opinnoistasi, niin voimme antaa parempia suosituksia. Voit myös jättää valinnan tyhjäksi.",
-    "en": "Tell us how you liked your education, and we can give you better recommendations. You can also leave the selection empty."
+  "Merkitse mitä pidit opintojesi aiheista, niin voimme antaa parempia suosituksia koulutuksista. Voit myös jättää valinnan tyhjäksi.": {
+    "fi": "Merkitse mitä pidit opintojesi aiheista, niin voimme antaa parempia suosituksia koulutuksista. Voit myös jättää valinnan tyhjäksi.",
+    "en": "Tell us how you liked the topics of your education, and we can give you better recommendations for learning opportunities. You can also leave the selection empty."
   },
   "Valmistunut": {
     "fi": "Valmistunut",
@@ -134,13 +134,17 @@
     "fi": "Kiinnostukset",
     "en": "Fields of interest"
   },
-  "Valitse mahdollisimman tarkasti mitkä allaolevista asioista sinua kiinnostavat. Mitä tarkemmin valitset, sitä tarkemmin pystymme etsimään sinulle sopivia koulutuksia.": {
-    "fi": "Valitse mahdollisimman tarkasti mitkä alla olevista asioista sinua kiinnostavat. Mitä tarkemmin valitset, sitä paremmin pystymme etsimään sinulle sopivia koulutuksia.",
-    "en": "Select as accurately as possible what interests you from the options below. The more accurately you select, the more accurately we can find education that is suitable for you."
+  "Seuraavaksi kartoitamme sinua kiinnostavia aiheita.": {
+    "fi": "Seuraavaksi kartoitamme sinua kiinnostavia aiheita.",
+    "en": "Next we will look at your fields of interest."
   },
-  "Valitse seuraavista ainakin 5 sinua kiinnostavaa asiaa": {
-    "fi": "Valitse seuraavista ainakin 5 sinua kiinnostavaa asiaa",
-    "en": "Select at least 5 topics from the following"
+  "Valitse": {
+    "fi": "Valitse",
+    "en": "Choose"
+  },
+  "aihetta, joiden parissa sinua kiinnostaisi työskennellä.": {
+    "fi": "aihetta, joiden parissa sinua kiinnostaisi työskennellä.",
+    "en": "topics you'd like to work with."
   },
   "Kiinnostuksia valittu": {
     "fi": "Kiinnostuksia valittu",

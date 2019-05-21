@@ -32,7 +32,7 @@ const Degree = ({ name, qualificationTitles, status, units }) => {
         <H4>{[qualificationTitles.map(t).join(', '), t(name)].filter(v => !!v).join(': ')}</H4>
         <Status status={status}/>
       </DegreeHeaderContainer>
-      <p>{t`Kerro mitä pidit opinnoistasi, niin voimme antaa parempia suosituksia. Voit myös jättää valinnan tyhjäksi.`}</p>
+      <p>{t`Merkitse mitä pidit opintojesi aiheista, niin voimme antaa parempia suosituksia koulutuksista. Voit myös jättää valinnan tyhjäksi.`}</p>
       <div>
         {units.map(({ id, uri, name, rating }) => (
           <Unit

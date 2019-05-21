@@ -37,12 +37,9 @@ const TopicList = () => {
   return (
     <React.Fragment>
       <p>
-        {t(
-          'Valitse mahdollisimman tarkasti mitkä allaolevista asioista sinua kiinnostavat. ' +
-          'Mitä tarkemmin valitset, sitä tarkemmin pystymme etsimään sinulle sopivia koulutuksia.'
-        )}
+        {t`Seuraavaksi kartoitamme sinua kiinnostavia aiheita.`}
       </p>
-      <H2>{t`Valitse seuraavista ainakin 5 sinua kiinnostavaa asiaa`}</H2>
+      <H2>{t`Valitse` + ` ${process.env.MIN_INTERESTS} – ${process.env.MAX_INTERESTS} ` + t`aihetta, joiden parissa sinua kiinnostaisi työskennellä.`}</H2>
       <StyledTagList>
         {interests.map(v => (
           <TopicListItem key={v.id}>
