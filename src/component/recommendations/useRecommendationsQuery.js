@@ -7,7 +7,7 @@ import mockRequest from 'util/mockRequest'
 import http from 'http/http'
 
 const QueryDebounceMs = 1000
-const NumRecommendations = 20
+const NumRecommendations = 10
 
 const doQueryRecommendations = ({ unverifiedEducations, verifiedEducations, interests }) => {
   dispatch(RecommendationsStatusEvent.QUERY_PENDING)
