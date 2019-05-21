@@ -45,8 +45,8 @@ const ThumbsDown = styled(ThumbButton)`
   fill: ${({ active, theme }) => active ? theme.color.negative : theme.color.grayLighter};
 `
 
-const RatingOptions = ({ id, rating }) => (
-  <div>
+const RatingOptions = ({ className, id, rating }) => (
+  <div className={className}>
     <ThumbsUp
       onClick={() => dispatch({ type: InteractionEvent.LIKE_EDUCATION_UNIT, data: { id } })}
       active={rating === Rating.LIKE}
@@ -62,7 +62,12 @@ const RatingOptions = ({ id, rating }) => (
   </div>
 )
 
+const StyledRatingOptions = styled(RatingOptions)`
+  flex-shrink: 0;
+`
+
 RatingOptions.propTypes = {
+  className: PropTypes.string,
   id: PropTypes.string.isRequired,
   rating: PropTypes.oneOf(Object.values(Rating)).isRequired
 }
@@ -71,7 +76,7 @@ const Unit = ({ id, name, rating }) => (
   <Container>
     {name}
     <Line/>
-    <RatingOptions id={id} rating={rating}/>
+    <StyledRatingOptions id={id} rating={rating}/>
   </Container>
 )
 
