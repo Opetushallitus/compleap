@@ -26,7 +26,7 @@ const ApplicationOption = ({ organization, applicationStatus, readMoreLink }) =>
 
 ApplicationOption.propTypes = {
   organization: PropTypes.string.isRequired,
-  applicationStatus: PropTypes.string.isRequired,
+  applicationStatus: PropTypes.node.isRequired,
   readMoreLink: PropTypes.string.isRequired
 }
 
