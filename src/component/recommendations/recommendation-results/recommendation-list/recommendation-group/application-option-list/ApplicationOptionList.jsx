@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import PropTypes from 'prop-types'
 import * as R from 'ramda'
+import Header from './fragment/Header'
 import ApplicationOptions from './fragment/ApplicationOptions'
 import ShowMoreButton from './fragment/ShowMoreButton'
 
@@ -12,6 +13,7 @@ const ApplicationOptionList = ({ options }) => {
 
   return (
     <React.Fragment>
+      <Header numOptions={options.length}/>
       <ApplicationOptions options={optionsToShow}/>
 
       {options.length > TRUNCATED_LIST_LENGTH && (

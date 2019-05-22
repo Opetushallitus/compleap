@@ -594,25 +594,17 @@
     "fi": "hakukohdetta",
     "en": "learning opportunities"
   },
-  "on tutkintonimike, johon valmistutaan osaamisalasta": {
-    "fi": "on tutkintonimike, johon valmistutaan osaamisalasta",
-    "en": "is the degree title for specialisation"
-  },
-  "ovat tutkintonimikkeitä, joihin valmistutaan osaamisalasta": {
-    "fi": "ovat tutkintonimikkeitä, joihin valmistutaan osaamisalasta",
-    "en": "are degree titles for specialisation"
-  },
-  "ja": {
-    "fi": "ja",
-    "en": "and"
-  },
-  "joka kuuluu tutkintoon": {
-    "fi": "joka kuuluu tutkintoon",
-    "en": "belonging to the degree"
-  },
   "Huomaa, että sinun on pyydettäessä pystyttävä näyttämään todistukset aikaisemmista opinnoistasi. Tällä tavoin varmistetaan, että pystyt oikeasti hakemaan haluamaasi koulutukseen.": {
     "fi": "Huomaa, että sinun on pyydettäessä pystyttävä näyttämään todistukset aikaisemmista opinnoistasi. Tällä tavoin varmistetaan, että pystyt oikeasti hakemaan haluamaasi koulutukseen.",
     "en": "Note that you will have to be able to show certificates from your previous studies if asked. This ensures that you can actually apply for the education you wish to apply for."
+  },
+  "Kyseistä tutkintoa voi opiskella seuraavissa oppilaitoksissa": {
+    "fi": "Kyseistä tutkintoa voi opiskella seuraavissa oppilaitoksissa",
+    "en": "Studies for the degree are offered at the following places"
+  },
+  "Huomaa, että opintojen sisältö saattaa vaihdella opiskelupaikoittain.": {
+    "fi": "Huomaa, että opintojen sisältö saattaa vaihdella opiskelupaikoittain.",
+    "en": "Note that the study contents may differ by place of study"
   },
   "Näytä loput": {
     "fi": "Näytä loput",

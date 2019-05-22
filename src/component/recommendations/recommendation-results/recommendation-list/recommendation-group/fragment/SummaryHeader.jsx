@@ -1,22 +1,29 @@
 import React from 'react'
 import PropTypes from 'prop-types'
+import styled from 'styled-components'
 import useTranslation from 'component/generic/hook/useTranslation'
 
-const SummaryHeader = ({ degreeTitles, name, educationDegreeName, numApplicationOptions }) => {
+const SummaryRow = styled.div`
+  &:not(:last-child) {
+    margin-bottom: 0.5rem;
+  }
+`
+
+const SummaryHeader = ({ name, degreeTitles, educationCode, numApplicationOptions }) => {
   const t = useTranslation()
-  const title = (
-    degreeTitles.join(', ') +
-    ` (${name}, ${t(educationDegreeName.toLowerCase())}) ` +
-    numApplicationOptions + ' ' +
-    t`hakukohdetta`
+  return (
+    <summary>
+      <SummaryRow><b>{degreeTitles.join(', ')}</b></SummaryRow>
+      <SummaryRow><i>{`${name}: ${educationCode}`}</i></SummaryRow>
+      <SummaryRow>{`${numApplicationOptions} ${t`hakukohdetta`}`}</SummaryRow>
+    </summary>
   )
-  return <div>{title}</div>
 }
 
 SummaryHeader.propTypes = {
-  degreeTitles: PropTypes.array.isRequired,
   name: PropTypes.string.isRequired,
-  educationDegreeName: PropTypes.string.isRequired,
+  degreeTitles: PropTypes.array.isRequired,
+  educationCode: PropTypes.string.isRequired,
   numApplicationOptions: PropTypes.number.isRequired
 }
 
