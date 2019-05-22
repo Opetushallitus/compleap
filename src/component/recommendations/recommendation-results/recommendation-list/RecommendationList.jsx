@@ -8,7 +8,7 @@ import useObservable from 'component/generic/hook/useObservable'
 import { Context } from 'state/state'
 import { RecommendationsState } from 'state/recommendationStates'
 import Recommendation from 'model/Recommendation'
-import Placeholder from './placeholder/Placeholder'
+import Placeholder from './Placeholder'
 import RecommendationGroup from './recommendation-group/RecommendationGroup'
 import Alert from 'component/generic/widget/Alert'
 
