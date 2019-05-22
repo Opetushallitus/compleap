@@ -21,10 +21,10 @@ const ApplicationOptions = ({ options }) => {
     <ApplicationOptionListStyle>
       {
         options.map(option => {
-          const { id, providerName } = option
+          const { id, providerName, type } = option
           const { message, parameter } = resolveApplicationStatus(option)
           const applicationStatus = t(message) + (parameter ? ` ${parameter}` : '')
-          const link = '' // TODO Make url
+          const link = `${process.env.RECOMMENDATION_CTA_BASE_URL}/${type.toLowerCase()}/${id}`
 
           return (
             <ApplicationOptionListItemStyle key={id}>

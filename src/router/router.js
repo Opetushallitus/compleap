@@ -39,6 +39,13 @@ function resolve (path) {
 }
 
 function transition (event) {
+  const isExternal = event.currentTarget.origin !== window.location.origin
+
+  if (isExternal) {
+    console.debug(`Opening external link to ${event.currentTarget.href}`)
+    return
+  }
+
   event.preventDefault()
   history.push(undefined, { path: createPath(event.currentTarget) })
 }

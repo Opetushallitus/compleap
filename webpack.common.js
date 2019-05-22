@@ -1,3 +1,5 @@
+require('dotenv').config()
+
 const webpack = require('webpack')
 const path = require('path')
 
@@ -59,7 +61,8 @@ module.exports = {
       'process.env.CONTEXT_VERSION': JSON.stringify('15'),
       'process.env.DEFAULT_LANGUAGE': JSON.stringify('en'),
       'process.env.MIN_INTERESTS': JSON.stringify(3),
-      'process.env.MAX_INTERESTS': JSON.stringify(10)
+      'process.env.MAX_INTERESTS': JSON.stringify(10),
+      'process.env.RECOMMENDATION_CTA_BASE_URL': JSON.stringify(process.env.RECOMMENDATION_CTA_BASE_URL)
     })
   ]
 }
