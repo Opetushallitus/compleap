@@ -578,9 +578,13 @@
     "fi": "Näytetään opintojesi ja valitsemiesi kiinnostusten perusteella sinulle sopivimpia opiskelupaikkoja hakualueeltasi. Voit halutessasi rajata aluetta tarkemmin.",
     "en": "Showing the most suitable study places from your selected area based on your studies and selected fields of interests. You can restrict the area further, if you want."
   },
-  "Valitse ensin vähintään 5 kiinnostuksen kohdetta.": {
-    "fi": "Valitse ensin vähintään viisi kiinnostuksen kohdetta.",
-    "en": "Select first at least 5 fields of interest."
+  "Valitse ensin vähintään": {
+    "fi": "Valitse ensin vähintään",
+    "en": "Select first at least"
+  },
+  "kiinnostuksen kohdetta.": {
+    "fi": "kiinnostuksen kohdetta.",
+    "en": "fields of interest."
   },
   "ammatillinen koulutus": {
     "fi": "ammatillinen koulutus",

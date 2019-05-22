@@ -17,7 +17,7 @@ const RequireInterestsMessage = () => {
   return (
     <Message>
       <b>
-        {t`Valitse ensin vähintään 5 kiinnostuksen kohdetta.`}
+        {t`Valitse ensin vähintään` + ` ${process.env.MIN_INTERESTS} ` + t`kiinnostuksen kohdetta.`}
       </b>
     </Message>
   )
