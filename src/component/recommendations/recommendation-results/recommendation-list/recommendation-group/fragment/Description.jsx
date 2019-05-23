@@ -8,7 +8,7 @@ const Paragraph = styled.p`
 `
 
 const splitIntoParagraphs = text => {
-  const splits = text.split(/(\.)([^. ])/)
+  const splits = text.split(/(\.)([^. )])/)
   return splits.reduce((res, v, i) => {
     if (i === 0) return R.append(v, res)
     if (v === '.') return R.adjust(res.length - 1, x => x + v, res)
