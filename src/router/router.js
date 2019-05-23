@@ -39,7 +39,7 @@ function resolve (path) {
 }
 
 function transition (event) {
-  const isExternal = event.currentTarget.origin !== window.location.origin
+  const isExternal = event.currentTarget.hostname !== window.location.hostname
 
   if (isExternal) {
     console.debug(`Opening external link to ${event.currentTarget.href}`)
