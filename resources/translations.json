@@ -10,21 +10,21 @@
     "fi": "CompLeap auttaa sinua sopivan opiskelupaikan etsimisessä, sinun tarvitsee vain kertoa millaiset asiat sinua kiinnostavat ja mitä olet opiskellut tähän mennessä.",
     "en": "Compleap helps you in finding a suitable study place, you only have to tell what interests you and what you have studied so far."
   },
-  "Oletko valmis? Aloita kirjautumalla sisään!": {
-    "fi": "Oletko valmis? Aloita kirjautumalla sisään!",
-    "en": "Are you ready? Start by logging in."
+  "CompLeap pystyy käyttämään aiemmin tehtyjä opintojasi apuna sopivan opiskelupaikan etsimisessä.": {
+    "fi": "CompLeap pystyy käyttämään aiemmin tehtyjä opintojasi apuna sopivan opiskelupaikan etsimisessä.",
+    "en": "CompLeap can use your prior studies in recommendations for suitable places of study."
   },
-  "Kirjautumalla sisään CompLeap pystyy käyttämään Suomessa tehtyjä opintojasi apuna sopivan opiskelupaikan etsimisessä.": {
-    "fi": "Kirjautumalla sisään CompLeap pystyy käyttämään Suomessa tehtyjä opintojasi apuna sopivan opiskelupaikan etsimisessä.",
-    "en": "By logging in, CompLeap can use the studies you have done in Finland to help find a suitable study place for you."
+  "Oletko valmis? Aloita valitsemalla toinen seuraavista vaihtoehdoista!": {
+    "fi": "Oletko valmis? Aloita valitsemalla toinen seuraavista vaihtoehdoista!",
+    "en": "Are you ready? Start by selecting one of the following options!"
   },
-  "Kirjaudu sisään": {
-    "fi": "Kirjaudu sisään",
-    "en": "Log in"
+  "Olen opiskellut tutkintoa Suomessa": {
+    "fi": "Olen opiskellut tutkintoa Suomessa",
+    "en": "I have studied for a degree in Finland"
   },
-  "Jatka kirjautumatta": {
-    "fi": "Jatka kirjautumatta",
-    "en": "Continue without logging in"
+  "En ole opiskellut tutkintoa Suomessa": {
+    "fi": "En ole opiskellut tutkintoa Suomessa",
+    "en": "I haven't studied for a degree in Finland"
   },
   "Valitse profiili": {
     "fi": "Valitse profiili",

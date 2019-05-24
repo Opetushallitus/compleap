@@ -45,7 +45,6 @@ const LoginContainer = styled.section`
 
 const LanderButton = styled(LinkButton)`
   padding: 1rem 2.5rem;
-  text-transform: uppercase;
   font-weight: 500;
 `
 
@@ -55,6 +54,7 @@ const Brief = () => {
     <BriefContainer>
       <h1>{t`Onko kiinnostavan opiskelupaikan etsiminen hankalaa?`}</h1>
       <p>{t`CompLeap auttaa sinua sopivan opiskelupaikan etsimisessä, sinun tarvitsee vain kertoa millaiset asiat sinua kiinnostavat ja mitä olet opiskellut tähän mennessä.`}</p>
+      <p>{t`CompLeap pystyy käyttämään aiemmin tehtyjä opintojasi apuna sopivan opiskelupaikan etsimisessä.`}</p>
     </BriefContainer>
   )
 }
@@ -63,29 +63,27 @@ const LoginPrompt = () => {
   const context$ = useContext(Context)
   const isLoggedIn = useObservable(context$, { path: ['context', 'user', 'isLoggedIn'] })
   const t = useTranslation()
-  const loginButtonText = isLoggedIn ? t`Jatka profiiliisi` : t`Kirjaudu sisään`
+  const loginButtonText = isLoggedIn ? t`Jatka profiiliisi` : t`Olen opiskellut tutkintoa Suomessa`
 
   return (
     <LoginContainer>
-      {!isLoggedIn && <h2>{t`Oletko valmis? Aloita kirjautumalla sisään!`}</h2>}
+      {!isLoggedIn && <h2>{t`Oletko valmis? Aloita valitsemalla toinen seuraavista vaihtoehdoista!`}</h2>}
       <div>
         <LanderButton href='#profile'>{loginButtonText}</LanderButton>
       </div>
       {!isLoggedIn && (
         <React.Fragment>
           <div>
-            <LinkButton
-              type='text'
+            <LanderButton
               href='#profile'
               onClick={event => {
                 dispatch({ type: UserEvent.LOGIN, data: { id: null } })
                 transition(event)
               }}
             >
-              {t`Jatka kirjautumatta`}
-            </LinkButton>
+              {t`En ole opiskellut tutkintoa Suomessa`}
+            </LanderButton>
           </div>
-          <p>{t`Kirjautumalla sisään CompLeap pystyy käyttämään Suomessa tehtyjä opintojasi apuna sopivan opiskelupaikan etsimisessä.`}</p>
         </React.Fragment>
       )}
     </LoginContainer>
