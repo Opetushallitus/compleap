@@ -657,5 +657,9 @@
   "Kirjaudu ulos": {
     "fi": "Kirjaudu ulos",
     "en": "Log out"
+  },
+  "Tapahtui odottamaton virhe eikä tietoja pystytä juuri nyt näyttämään.": {
+    "fi": "Tapahtui odottamaton virhe eikä tietoja pystytä juuri nyt näyttämään.",
+    "en": "An unexpected error occurred and the information cannot be shown."
   }
 }
