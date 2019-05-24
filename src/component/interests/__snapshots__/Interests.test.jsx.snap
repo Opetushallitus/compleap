@@ -1,25 +1,25 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Interests should show error when fetching interest suggestions failed 1`] = `
-Array [
+<div>
   <h1
-    className="sc-cMljjf ghKTLH"
+    className="sc-dVhcbM gPsyUa"
   >
     Kiinnostukset
-  </h1>,
+  </h1>
   <div>
     error
-  </div>,
-]
+  </div>
+</div>
 `;
 
 exports[`Interests should show loading indicator (placeholder tags) when fetching suggestions 1`] = `
-Array [
+<div>
   <h1
     className="sc-bdVaJa hqCxXu"
   >
     Kiinnostukset
-  </h1>,
+  </h1>
   <div
     className="sc-iwsKbI laYIiJ"
   >
@@ -151,30 +151,30 @@ Array [
         width="4rem"
       />
     </div>
-  </div>,
-]
+  </div>
+</div>
 `;
 
 exports[`Interests should show subtopics for selected topic 1`] = `
-Array [
+<div>
   <h1
-    className="sc-gisBJw XTDgv"
+    className="sc-ktHwxA fqWARb"
   >
     Kiinnostukset
-  </h1>,
+  </h1>
   <p>
-    Valitse mahdollisimman tarkasti mitkä alla olevista asioista sinua kiinnostavat. Mitä tarkemmin valitset, sitä paremmin pystymme etsimään sinulle sopivia koulutuksia.
-  </p>,
+    Seuraavaksi kartoitamme sinua kiinnostavia aiheita.
+  </p>
   <h2
-    className="sc-kjoXOD fqWmcX"
+    className="sc-cIShpX uxCpR"
   >
-    Valitse seuraavista ainakin 5 sinua kiinnostavaa asiaa
-  </h2>,
+    Valitse 3 – 8 aihetta, joiden parissa sinua kiinnostaisi työskennellä.
+  </h2>
   <ul
-    className="sc-gGBfsJ kjplem"
+    className="sc-gzOgki hbJuDZ"
   >
     <li
-      className="sc-jnlKLf jfaUqU"
+      className="sc-iyvyFf mNlOA"
     >
       <div
         style={
@@ -184,14 +184,14 @@ Array [
         }
       >
         <button
-          className="sc-kgAjT bqiwtL"
+          className="sc-iELTvK fLYLHq"
           onClick={[Function]}
           selected={false}
           value="Taide ja kulttuuri"
         >
           Taide ja kulttuuri
           <div
-            className="sc-cJSrbW hjWkEx"
+            className="sc-cmTdod idZNkE"
             selected={false}
           >
             <svg
@@ -211,7 +211,7 @@ Array [
       </div>
     </li>
     <li
-      className="sc-jnlKLf jfaUqU"
+      className="sc-iyvyFf mNlOA"
     >
       <div
         style={
@@ -221,14 +221,14 @@ Array [
         }
       >
         <button
-          className="sc-kgAjT hYDzhW"
+          className="sc-iELTvK kzASCa"
           onClick={[Function]}
           selected={true}
           value="Luonto ja ympäristö"
         >
           Luonto ja ympäristö
           <div
-            className="sc-cJSrbW jkPxLP"
+            className="sc-cmTdod eRUlwx"
             selected={true}
           >
             <svg
@@ -247,10 +247,10 @@ Array [
         </button>
       </div>
       <ul
-        className="sc-ksYbfQ inszrT"
+        className="sc-jwKygS kVErd"
       >
         <li
-          className="sc-hmzhuo bCtADB"
+          className="sc-btzYZH bstvwU"
         >
           <div
             style={
@@ -260,14 +260,14 @@ Array [
             }
           >
             <button
-              className="sc-kgAjT gyDiuh"
+              className="sc-iELTvK dWLOio"
               onClick={[Function]}
               selected={false}
               value="Kasvitiede"
             >
               Kasvitiede
               <div
-                className="sc-cJSrbW iIFodz"
+                className="sc-cmTdod iAjVvk"
                 selected={false}
               >
                 <svg
@@ -287,7 +287,7 @@ Array [
           </div>
         </li>
         <li
-          className="sc-hmzhuo bCtADB"
+          className="sc-btzYZH bstvwU"
         >
           <div
             style={
@@ -297,14 +297,14 @@ Array [
             }
           >
             <button
-              className="sc-kgAjT gyDiuh"
+              className="sc-iELTvK dWLOio"
               onClick={[Function]}
               selected={false}
               value="Eläintiede"
             >
               Eläintiede
               <div
-                className="sc-cJSrbW iIFodz"
+                className="sc-cmTdod iAjVvk"
                 selected={false}
               >
                 <svg
@@ -324,7 +324,7 @@ Array [
           </div>
         </li>
         <li
-          className="sc-hmzhuo bCtADB"
+          className="sc-btzYZH bstvwU"
         >
           <div
             style={
@@ -334,14 +334,14 @@ Array [
             }
           >
             <button
-              className="sc-kgAjT gyDiuh"
+              className="sc-iELTvK dWLOio"
               onClick={[Function]}
               selected={false}
               value="Luonnonsuojelu"
             >
               Luonnonsuojelu
               <div
-                className="sc-cJSrbW iIFodz"
+                className="sc-cmTdod iAjVvk"
                 selected={false}
               >
                 <svg
@@ -361,7 +361,7 @@ Array [
           </div>
         </li>
         <li
-          className="sc-hmzhuo bCtADB"
+          className="sc-btzYZH bstvwU"
         >
           <div
             style={
@@ -371,14 +371,14 @@ Array [
             }
           >
             <button
-              className="sc-kgAjT gyDiuh"
+              className="sc-iELTvK dWLOio"
               onClick={[Function]}
               selected={false}
               value="Ympäristönsuojelu"
             >
               Ympäristönsuojelu
               <div
-                className="sc-cJSrbW iIFodz"
+                className="sc-cmTdod iAjVvk"
                 selected={false}
               >
                 <svg
@@ -398,7 +398,7 @@ Array [
           </div>
         </li>
         <li
-          className="sc-hmzhuo bCtADB"
+          className="sc-btzYZH bstvwU"
         >
           <div
             style={
@@ -408,14 +408,14 @@ Array [
             }
           >
             <button
-              className="sc-kgAjT gyDiuh"
+              className="sc-iELTvK dWLOio"
               onClick={[Function]}
               selected={false}
               value="Ympäristö"
             >
               Ympäristö
               <div
-                className="sc-cJSrbW iIFodz"
+                className="sc-cmTdod iAjVvk"
                 selected={false}
               >
                 <svg
@@ -435,7 +435,7 @@ Array [
           </div>
         </li>
         <li
-          className="sc-hmzhuo bCtADB"
+          className="sc-btzYZH bstvwU"
         >
           <div
             style={
@@ -445,14 +445,14 @@ Array [
             }
           >
             <button
-              className="sc-kgAjT gyDiuh"
+              className="sc-iELTvK dWLOio"
               onClick={[Function]}
               selected={false}
               value="Metsätalous"
             >
               Metsätalous
               <div
-                className="sc-cJSrbW iIFodz"
+                className="sc-cmTdod iAjVvk"
                 selected={false}
               >
                 <svg
@@ -472,7 +472,7 @@ Array [
           </div>
         </li>
         <li
-          className="sc-hmzhuo bCtADB"
+          className="sc-btzYZH bstvwU"
         >
           <div
             style={
@@ -482,14 +482,14 @@ Array [
             }
           >
             <button
-              className="sc-kgAjT gyDiuh"
+              className="sc-iELTvK dWLOio"
               onClick={[Function]}
               selected={false}
               value="Metsänhoito"
             >
               Metsänhoito
               <div
-                className="sc-cJSrbW iIFodz"
+                className="sc-cmTdod iAjVvk"
                 selected={false}
               >
                 <svg
@@ -509,7 +509,7 @@ Array [
           </div>
         </li>
         <li
-          className="sc-hmzhuo bCtADB"
+          className="sc-btzYZH bstvwU"
         >
           <div
             style={
@@ -519,14 +519,14 @@ Array [
             }
           >
             <button
-              className="sc-kgAjT gyDiuh"
+              className="sc-iELTvK dWLOio"
               onClick={[Function]}
               selected={false}
               value="Maatalous"
             >
               Maatalous
               <div
-                className="sc-cJSrbW iIFodz"
+                className="sc-cmTdod iAjVvk"
                 selected={false}
               >
                 <svg
@@ -546,7 +546,7 @@ Array [
           </div>
         </li>
         <li
-          className="sc-hmzhuo bCtADB"
+          className="sc-btzYZH bstvwU"
         >
           <div
             style={
@@ -556,14 +556,14 @@ Array [
             }
           >
             <button
-              className="sc-kgAjT gyDiuh"
+              className="sc-iELTvK dWLOio"
               onClick={[Function]}
               selected={false}
               value="Maanviljely"
             >
               Maanviljely
               <div
-                className="sc-cJSrbW iIFodz"
+                className="sc-cmTdod iAjVvk"
                 selected={false}
               >
                 <svg
@@ -583,7 +583,7 @@ Array [
           </div>
         </li>
         <li
-          className="sc-hmzhuo bCtADB"
+          className="sc-btzYZH bstvwU"
         >
           <div
             style={
@@ -593,14 +593,14 @@ Array [
             }
           >
             <button
-              className="sc-kgAjT gyDiuh"
+              className="sc-iELTvK dWLOio"
               onClick={[Function]}
               selected={false}
               value="Puutarhanhoito"
             >
               Puutarhanhoito
               <div
-                className="sc-cJSrbW iIFodz"
+                className="sc-cmTdod iAjVvk"
                 selected={false}
               >
                 <svg
@@ -620,7 +620,7 @@ Array [
           </div>
         </li>
         <li
-          className="sc-hmzhuo bCtADB"
+          className="sc-btzYZH bstvwU"
         >
           <div
             style={
@@ -630,14 +630,14 @@ Array [
             }
           >
             <button
-              className="sc-kgAjT gyDiuh"
+              className="sc-iELTvK dWLOio"
               onClick={[Function]}
               selected={false}
               value="Kotieläintalous"
             >
               Kotieläintalous
               <div
-                className="sc-cJSrbW iIFodz"
+                className="sc-cmTdod iAjVvk"
                 selected={false}
               >
                 <svg
@@ -657,7 +657,7 @@ Array [
           </div>
         </li>
         <li
-          className="sc-hmzhuo bCtADB"
+          className="sc-btzYZH bstvwU"
         >
           <div
             style={
@@ -667,14 +667,14 @@ Array [
             }
           >
             <button
-              className="sc-kgAjT gyDiuh"
+              className="sc-iELTvK dWLOio"
               onClick={[Function]}
               selected={false}
               value="Turkisteollisuus"
             >
               Turkisteollisuus
               <div
-                className="sc-cJSrbW iIFodz"
+                className="sc-cmTdod iAjVvk"
                 selected={false}
               >
                 <svg
@@ -694,7 +694,7 @@ Array [
           </div>
         </li>
         <li
-          className="sc-hmzhuo bCtADB"
+          className="sc-btzYZH bstvwU"
         >
           <div
             style={
@@ -704,14 +704,14 @@ Array [
             }
           >
             <button
-              className="sc-kgAjT gyDiuh"
+              className="sc-iELTvK dWLOio"
               onClick={[Function]}
               selected={false}
               value="Metsäteollisuus"
             >
               Metsäteollisuus
               <div
-                className="sc-cJSrbW iIFodz"
+                className="sc-cmTdod iAjVvk"
                 selected={false}
               >
                 <svg
@@ -731,7 +731,7 @@ Array [
           </div>
         </li>
         <li
-          className="sc-hmzhuo bCtADB"
+          className="sc-btzYZH bstvwU"
         >
           <div
             style={
@@ -741,14 +741,14 @@ Array [
             }
           >
             <button
-              className="sc-kgAjT gyDiuh"
+              className="sc-iELTvK dWLOio"
               onClick={[Function]}
               selected={false}
               value="Kalastus"
             >
               Kalastus
               <div
-                className="sc-cJSrbW iIFodz"
+                className="sc-cmTdod iAjVvk"
                 selected={false}
               >
                 <svg
@@ -768,7 +768,7 @@ Array [
           </div>
         </li>
         <li
-          className="sc-hmzhuo bCtADB"
+          className="sc-btzYZH bstvwU"
         >
           <div
             style={
@@ -778,14 +778,14 @@ Array [
             }
           >
             <button
-              className="sc-kgAjT gyDiuh"
+              className="sc-iELTvK dWLOio"
               onClick={[Function]}
               selected={false}
               value="Metsästys"
             >
               Metsästys
               <div
-                className="sc-cJSrbW iIFodz"
+                className="sc-cmTdod iAjVvk"
                 selected={false}
               >
                 <svg
@@ -805,7 +805,7 @@ Array [
           </div>
         </li>
         <li
-          className="sc-hmzhuo bCtADB"
+          className="sc-btzYZH bstvwU"
         >
           <div
             style={
@@ -815,14 +815,14 @@ Array [
             }
           >
             <button
-              className="sc-kgAjT gyDiuh"
+              className="sc-iELTvK dWLOio"
               onClick={[Function]}
               selected={false}
               value="Biologia"
             >
               Biologia
               <div
-                className="sc-cJSrbW iIFodz"
+                className="sc-cmTdod iAjVvk"
                 selected={false}
               >
                 <svg
@@ -844,7 +844,7 @@ Array [
       </ul>
     </li>
     <li
-      className="sc-jnlKLf jfaUqU"
+      className="sc-iyvyFf mNlOA"
     >
       <div
         style={
@@ -854,14 +854,14 @@ Array [
         }
       >
         <button
-          className="sc-kgAjT bqiwtL"
+          className="sc-iELTvK fLYLHq"
           onClick={[Function]}
           selected={false}
           value="Maantiede ja yhteiskuntasuunnittelu"
         >
           Maantiede ja yhteiskuntasuunnittelu
           <div
-            className="sc-cJSrbW hjWkEx"
+            className="sc-cmTdod idZNkE"
             selected={false}
           >
             <svg
@@ -881,7 +881,7 @@ Array [
       </div>
     </li>
     <li
-      className="sc-jnlKLf jfaUqU"
+      className="sc-iyvyFf mNlOA"
     >
       <div
         style={
@@ -891,14 +891,14 @@ Array [
         }
       >
         <button
-          className="sc-kgAjT bqiwtL"
+          className="sc-iELTvK fLYLHq"
           onClick={[Function]}
           selected={false}
           value="Yhteiskunta ja talous"
         >
           Yhteiskunta ja talous
           <div
-            className="sc-cJSrbW hjWkEx"
+            className="sc-cmTdod idZNkE"
             selected={false}
           >
             <svg
@@ -918,7 +918,7 @@ Array [
       </div>
     </li>
     <li
-      className="sc-jnlKLf jfaUqU"
+      className="sc-iyvyFf mNlOA"
     >
       <div
         style={
@@ -928,14 +928,14 @@ Array [
         }
       >
         <button
-          className="sc-kgAjT bqiwtL"
+          className="sc-iELTvK fLYLHq"
           onClick={[Function]}
           selected={false}
           value="Turvallisuus "
         >
           Turvallisuus 
           <div
-            className="sc-cJSrbW hjWkEx"
+            className="sc-cmTdod idZNkE"
             selected={false}
           >
             <svg
@@ -955,7 +955,7 @@ Array [
       </div>
     </li>
     <li
-      className="sc-jnlKLf jfaUqU"
+      className="sc-iyvyFf mNlOA"
     >
       <div
         style={
@@ -965,14 +965,14 @@ Array [
         }
       >
         <button
-          className="sc-kgAjT bqiwtL"
+          className="sc-iELTvK fLYLHq"
           onClick={[Function]}
           selected={false}
           value="Koulutus"
         >
           Koulutus
           <div
-            className="sc-cJSrbW hjWkEx"
+            className="sc-cmTdod idZNkE"
             selected={false}
           >
             <svg
@@ -992,7 +992,7 @@ Array [
       </div>
     </li>
     <li
-      className="sc-jnlKLf jfaUqU"
+      className="sc-iyvyFf mNlOA"
     >
       <div
         style={
@@ -1002,14 +1002,14 @@ Array [
         }
       >
         <button
-          className="sc-kgAjT bqiwtL"
+          className="sc-iELTvK fLYLHq"
           onClick={[Function]}
           selected={false}
           value="Terveys ja hyvinvointi"
         >
           Terveys ja hyvinvointi
           <div
-            className="sc-cJSrbW hjWkEx"
+            className="sc-cmTdod idZNkE"
             selected={false}
           >
             <svg
@@ -1029,7 +1029,7 @@ Array [
       </div>
     </li>
     <li
-      className="sc-jnlKLf jfaUqU"
+      className="sc-iyvyFf mNlOA"
     >
       <div
         style={
@@ -1039,14 +1039,14 @@ Array [
         }
       >
         <button
-          className="sc-kgAjT bqiwtL"
+          className="sc-iELTvK fLYLHq"
           onClick={[Function]}
           selected={false}
           value="Viestintä"
         >
           Viestintä
           <div
-            className="sc-cJSrbW hjWkEx"
+            className="sc-cmTdod idZNkE"
             selected={false}
           >
             <svg
@@ -1066,7 +1066,7 @@ Array [
       </div>
     </li>
     <li
-      className="sc-jnlKLf jfaUqU"
+      className="sc-iyvyFf mNlOA"
     >
       <div
         style={
@@ -1076,14 +1076,14 @@ Array [
         }
       >
         <button
-          className="sc-kgAjT bqiwtL"
+          className="sc-iELTvK fLYLHq"
           onClick={[Function]}
           selected={false}
           value="Informaatiotekniikka"
         >
           Informaatiotekniikka
           <div
-            className="sc-cJSrbW hjWkEx"
+            className="sc-cmTdod idZNkE"
             selected={false}
           >
             <svg
@@ -1103,7 +1103,7 @@ Array [
       </div>
     </li>
     <li
-      className="sc-jnlKLf jfaUqU"
+      className="sc-iyvyFf mNlOA"
     >
       <div
         style={
@@ -1113,14 +1113,14 @@ Array [
         }
       >
         <button
-          className="sc-kgAjT bqiwtL"
+          className="sc-iELTvK fLYLHq"
           onClick={[Function]}
           selected={false}
           value="Rakennusala"
         >
           Rakennusala
           <div
-            className="sc-cJSrbW hjWkEx"
+            className="sc-cmTdod idZNkE"
             selected={false}
           >
             <svg
@@ -1140,7 +1140,7 @@ Array [
       </div>
     </li>
     <li
-      className="sc-jnlKLf jfaUqU"
+      className="sc-iyvyFf mNlOA"
     >
       <div
         style={
@@ -1150,14 +1150,14 @@ Array [
         }
       >
         <button
-          className="sc-kgAjT bqiwtL"
+          className="sc-iELTvK fLYLHq"
           onClick={[Function]}
           selected={false}
           value="Matkailu- ja ravintola-ala"
         >
           Matkailu- ja ravintola-ala
           <div
-            className="sc-cJSrbW hjWkEx"
+            className="sc-cmTdod idZNkE"
             selected={false}
           >
             <svg
@@ -1177,7 +1177,7 @@ Array [
       </div>
     </li>
     <li
-      className="sc-jnlKLf jfaUqU"
+      className="sc-iyvyFf mNlOA"
     >
       <div
         style={
@@ -1187,14 +1187,14 @@ Array [
         }
       >
         <button
-          className="sc-kgAjT bqiwtL"
+          className="sc-iELTvK fLYLHq"
           onClick={[Function]}
           selected={false}
           value="Liikenne ja logistiikka"
         >
           Liikenne ja logistiikka
           <div
-            className="sc-cJSrbW hjWkEx"
+            className="sc-cmTdod idZNkE"
             selected={false}
           >
             <svg
@@ -1214,7 +1214,7 @@ Array [
       </div>
     </li>
     <li
-      className="sc-jnlKLf jfaUqU"
+      className="sc-iyvyFf mNlOA"
     >
       <div
         style={
@@ -1224,14 +1224,14 @@ Array [
         }
       >
         <button
-          className="sc-kgAjT bqiwtL"
+          className="sc-iELTvK fLYLHq"
           onClick={[Function]}
           selected={false}
           value="Historia ja uskonto"
         >
           Historia ja uskonto
           <div
-            className="sc-cJSrbW hjWkEx"
+            className="sc-cmTdod idZNkE"
             selected={false}
           >
             <svg
@@ -1251,7 +1251,7 @@ Array [
       </div>
     </li>
     <li
-      className="sc-jnlKLf jfaUqU"
+      className="sc-iyvyFf mNlOA"
     >
       <div
         style={
@@ -1261,14 +1261,14 @@ Array [
         }
       >
         <button
-          className="sc-kgAjT bqiwtL"
+          className="sc-iELTvK fLYLHq"
           onClick={[Function]}
           selected={false}
           value="Matematiikka ja fysiikka"
         >
           Matematiikka ja fysiikka
           <div
-            className="sc-cJSrbW hjWkEx"
+            className="sc-cmTdod idZNkE"
             selected={false}
           >
             <svg
@@ -1287,30 +1287,30 @@ Array [
         </button>
       </div>
     </li>
-  </ul>,
-]
+  </ul>
+</div>
 `;
 
 exports[`Interests should show top level interest suggestions when fetched successfully 1`] = `
-Array [
+<div>
   <h1
-    className="sc-kAzzGY fPsSYY"
+    className="sc-jKJlTe hLLFbS"
   >
     Kiinnostukset
-  </h1>,
+  </h1>
   <p>
-    Valitse mahdollisimman tarkasti mitkä alla olevista asioista sinua kiinnostavat. Mitä tarkemmin valitset, sitä paremmin pystymme etsimään sinulle sopivia koulutuksia.
-  </p>,
+    Seuraavaksi kartoitamme sinua kiinnostavia aiheita.
+  </p>
   <h2
-    className="sc-chPdSV bVBjBE"
+    className="sc-eNQAEJ jNgNok"
   >
-    Valitse seuraavista ainakin 5 sinua kiinnostavaa asiaa
-  </h2>,
+    Valitse 3 – 8 aihetta, joiden parissa sinua kiinnostaisi työskennellä.
+  </h2>
   <ul
-    className="sc-jWBwVP krmyvL"
+    className="sc-jlyJG psyvI"
   >
     <li
-      className="sc-brqgnP lcnAMd"
+      className="sc-gipzik iOyWbu"
     >
       <div
         style={
@@ -1320,14 +1320,14 @@ Array [
         }
       >
         <button
-          className="sc-kpOJdX fGnFRR"
+          className="sc-kkGfuU ksYOEb"
           onClick={[Function]}
           selected={false}
           value="Taide ja kulttuuri"
         >
           Taide ja kulttuuri
           <div
-            className="sc-dxgOiQ cyadVE"
+            className="sc-iAyFgw eGBEg"
             selected={false}
           >
             <svg
@@ -1347,7 +1347,7 @@ Array [
       </div>
     </li>
     <li
-      className="sc-brqgnP lcnAMd"
+      className="sc-gipzik iOyWbu"
     >
       <div
         style={
@@ -1357,14 +1357,14 @@ Array [
         }
       >
         <button
-          className="sc-kpOJdX fGnFRR"
+          className="sc-kkGfuU ksYOEb"
           onClick={[Function]}
           selected={false}
           value="Luonto ja ympäristö"
         >
           Luonto ja ympäristö
           <div
-            className="sc-dxgOiQ cyadVE"
+            className="sc-iAyFgw eGBEg"
             selected={false}
           >
             <svg
@@ -1384,7 +1384,7 @@ Array [
       </div>
     </li>
     <li
-      className="sc-brqgnP lcnAMd"
+      className="sc-gipzik iOyWbu"
     >
       <div
         style={
@@ -1394,14 +1394,14 @@ Array [
         }
       >
         <button
-          className="sc-kpOJdX fGnFRR"
+          className="sc-kkGfuU ksYOEb"
           onClick={[Function]}
           selected={false}
           value="Maantiede ja yhteiskuntasuunnittelu"
         >
           Maantiede ja yhteiskuntasuunnittelu
           <div
-            className="sc-dxgOiQ cyadVE"
+            className="sc-iAyFgw eGBEg"
             selected={false}
           >
             <svg
@@ -1421,7 +1421,7 @@ Array [
       </div>
     </li>
     <li
-      className="sc-brqgnP lcnAMd"
+      className="sc-gipzik iOyWbu"
     >
       <div
         style={
@@ -1431,14 +1431,14 @@ Array [
         }
       >
         <button
-          className="sc-kpOJdX fGnFRR"
+          className="sc-kkGfuU ksYOEb"
           onClick={[Function]}
           selected={false}
           value="Yhteiskunta ja talous"
         >
           Yhteiskunta ja talous
           <div
-            className="sc-dxgOiQ cyadVE"
+            className="sc-iAyFgw eGBEg"
             selected={false}
           >
             <svg
@@ -1458,7 +1458,7 @@ Array [
       </div>
     </li>
     <li
-      className="sc-brqgnP lcnAMd"
+      className="sc-gipzik iOyWbu"
     >
       <div
         style={
@@ -1468,14 +1468,14 @@ Array [
         }
       >
         <button
-          className="sc-kpOJdX fGnFRR"
+          className="sc-kkGfuU ksYOEb"
           onClick={[Function]}
           selected={false}
           value="Turvallisuus "
         >
           Turvallisuus 
           <div
-            className="sc-dxgOiQ cyadVE"
+            className="sc-iAyFgw eGBEg"
             selected={false}
           >
             <svg
@@ -1495,7 +1495,7 @@ Array [
       </div>
     </li>
     <li
-      className="sc-brqgnP lcnAMd"
+      className="sc-gipzik iOyWbu"
     >
       <div
         style={
@@ -1505,14 +1505,14 @@ Array [
         }
       >
         <button
-          className="sc-kpOJdX fGnFRR"
+          className="sc-kkGfuU ksYOEb"
           onClick={[Function]}
           selected={false}
           value="Koulutus"
         >
           Koulutus
           <div
-            className="sc-dxgOiQ cyadVE"
+            className="sc-iAyFgw eGBEg"
             selected={false}
           >
             <svg
@@ -1532,7 +1532,7 @@ Array [
       </div>
     </li>
     <li
-      className="sc-brqgnP lcnAMd"
+      className="sc-gipzik iOyWbu"
     >
       <div
         style={
@@ -1542,14 +1542,14 @@ Array [
         }
       >
         <button
-          className="sc-kpOJdX fGnFRR"
+          className="sc-kkGfuU ksYOEb"
           onClick={[Function]}
           selected={false}
           value="Terveys ja hyvinvointi"
         >
           Terveys ja hyvinvointi
           <div
-            className="sc-dxgOiQ cyadVE"
+            className="sc-iAyFgw eGBEg"
             selected={false}
           >
             <svg
@@ -1569,7 +1569,7 @@ Array [
       </div>
     </li>
     <li
-      className="sc-brqgnP lcnAMd"
+      className="sc-gipzik iOyWbu"
     >
       <div
         style={
@@ -1579,14 +1579,14 @@ Array [
         }
       >
         <button
-          className="sc-kpOJdX fGnFRR"
+          className="sc-kkGfuU ksYOEb"
           onClick={[Function]}
           selected={false}
           value="Viestintä"
         >
           Viestintä
           <div
-            className="sc-dxgOiQ cyadVE"
+            className="sc-iAyFgw eGBEg"
             selected={false}
           >
             <svg
@@ -1606,7 +1606,7 @@ Array [
       </div>
     </li>
     <li
-      className="sc-brqgnP lcnAMd"
+      className="sc-gipzik iOyWbu"
     >
       <div
         style={
@@ -1616,14 +1616,14 @@ Array [
         }
       >
         <button
-          className="sc-kpOJdX fGnFRR"
+          className="sc-kkGfuU ksYOEb"
           onClick={[Function]}
           selected={false}
           value="Informaatiotekniikka"
         >
           Informaatiotekniikka
           <div
-            className="sc-dxgOiQ cyadVE"
+            className="sc-iAyFgw eGBEg"
             selected={false}
           >
             <svg
@@ -1643,7 +1643,7 @@ Array [
       </div>
     </li>
     <li
-      className="sc-brqgnP lcnAMd"
+      className="sc-gipzik iOyWbu"
     >
       <div
         style={
@@ -1653,14 +1653,14 @@ Array [
         }
       >
         <button
-          className="sc-kpOJdX fGnFRR"
+          className="sc-kkGfuU ksYOEb"
           onClick={[Function]}
           selected={false}
           value="Rakennusala"
         >
           Rakennusala
           <div
-            className="sc-dxgOiQ cyadVE"
+            className="sc-iAyFgw eGBEg"
             selected={false}
           >
             <svg
@@ -1680,7 +1680,7 @@ Array [
       </div>
     </li>
     <li
-      className="sc-brqgnP lcnAMd"
+      className="sc-gipzik iOyWbu"
     >
       <div
         style={
@@ -1690,14 +1690,14 @@ Array [
         }
       >
         <button
-          className="sc-kpOJdX fGnFRR"
+          className="sc-kkGfuU ksYOEb"
           onClick={[Function]}
           selected={false}
           value="Matkailu- ja ravintola-ala"
         >
           Matkailu- ja ravintola-ala
           <div
-            className="sc-dxgOiQ cyadVE"
+            className="sc-iAyFgw eGBEg"
             selected={false}
           >
             <svg
@@ -1717,7 +1717,7 @@ Array [
       </div>
     </li>
     <li
-      className="sc-brqgnP lcnAMd"
+      className="sc-gipzik iOyWbu"
     >
       <div
         style={
@@ -1727,14 +1727,14 @@ Array [
         }
       >
         <button
-          className="sc-kpOJdX fGnFRR"
+          className="sc-kkGfuU ksYOEb"
           onClick={[Function]}
           selected={false}
           value="Liikenne ja logistiikka"
         >
           Liikenne ja logistiikka
           <div
-            className="sc-dxgOiQ cyadVE"
+            className="sc-iAyFgw eGBEg"
             selected={false}
           >
             <svg
@@ -1754,7 +1754,7 @@ Array [
       </div>
     </li>
     <li
-      className="sc-brqgnP lcnAMd"
+      className="sc-gipzik iOyWbu"
     >
       <div
         style={
@@ -1764,14 +1764,14 @@ Array [
         }
       >
         <button
-          className="sc-kpOJdX fGnFRR"
+          className="sc-kkGfuU ksYOEb"
           onClick={[Function]}
           selected={false}
           value="Historia ja uskonto"
         >
           Historia ja uskonto
           <div
-            className="sc-dxgOiQ cyadVE"
+            className="sc-iAyFgw eGBEg"
             selected={false}
           >
             <svg
@@ -1791,7 +1791,7 @@ Array [
       </div>
     </li>
     <li
-      className="sc-brqgnP lcnAMd"
+      className="sc-gipzik iOyWbu"
     >
       <div
         style={
@@ -1801,14 +1801,14 @@ Array [
         }
       >
         <button
-          className="sc-kpOJdX fGnFRR"
+          className="sc-kkGfuU ksYOEb"
           onClick={[Function]}
           selected={false}
           value="Matematiikka ja fysiikka"
         >
           Matematiikka ja fysiikka
           <div
-            className="sc-dxgOiQ cyadVE"
+            className="sc-iAyFgw eGBEg"
             selected={false}
           >
             <svg
@@ -1827,6 +1827,6 @@ Array [
         </button>
       </div>
     </li>
-  </ul>,
-]
+  </ul>
+</div>
 `;

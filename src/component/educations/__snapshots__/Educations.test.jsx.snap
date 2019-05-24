@@ -24,7 +24,7 @@ Array [
     </div>
     <div>
       <button
-        className="sc-kpOJdX sc-jKJlTe hXbFZE"
+        className="sc-dxgOiQ sc-eNQAEJ feRaVf"
         onClick={[Function]}
       >
         Poista tutkinto
@@ -41,14 +41,14 @@ Array [
         Ammatillinen tutkinto
       </h3>
       <p
-        className="sc-hMqMXs dtCVTd"
+        className="sc-kEYyzF eCZsRO"
       >
         Käsityöalat
       </p>
     </div>
     <div>
       <button
-        className="sc-kpOJdX sc-jKJlTe hXbFZE"
+        className="sc-dxgOiQ sc-eNQAEJ feRaVf"
         onClick={[Function]}
       >
         Poista tutkinto
@@ -56,7 +56,7 @@ Array [
     </div>
   </div>,
   <button
-    className="sc-kpOJdX sc-ckVGcZ fbtVZP"
+    className="sc-dxgOiQ sc-jKJlTe cqBPrt"
     onClick={[Function]}
   >
     Lisää muualla kuin Suomessa suoritettu tutkinto
