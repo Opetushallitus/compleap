@@ -12,8 +12,8 @@
     "build:prod": "NODE_ENV=production ./node_modules/.bin/webpack --config webpack.prod.js",
     "start:dev": "./node_modules/.bin/webpack-dev-server --config webpack.dev.js",
     "test": "npm run test:component; npm run test:ui",
-    "test:ui": "npm run build:prod && JEST_ENV=jest-environment-puppeteer ./node_modules/.bin/jest --testPathPattern=page.spec.js",
-    "test:component": "JEST_ENV=jsdom ./node_modules/.bin/jest --testPathPattern=test.js"
+    "test:ui": "npm run build:prod && ./node_modules/.bin/jest --testPathPattern=page.spec.js --env=jest-environment-puppeteer",
+    "test:component": "./node_modules/.bin/jest --testPathPattern=test.js --env=jsdom"
   },
   "dependencies": {
     "ajv": "^6.10.0",

@@ -45,8 +45,14 @@ const mockState = (queryStatus, data = interestsData) => jest.doMock('state/stat
 })
 
 describe('Interests', () => {
+  beforeAll(() => {
+    process.env.MIN_INTERESTS = 3
+    process.env.MAX_INTERESTS = 8
+  })
+
   beforeEach(() => {
     jest.clearAllMocks()
+    jest.mock('component/interests/notification/Notification', () => () => null)
   })
 
   it('should show loading indicator (placeholder tags) when fetching suggestions', () => {
