@@ -24,6 +24,11 @@ const Container = styled.div`
   flex-direction: column;
   text-align: ${({ align }) => align};
   align-items: ${({ align }) => alignToFlex(align)};
+
+  // IE11: prevent children from overflowing
+  & > * {
+    max-width: 100%;
+  }
 `
 
 const Box = ({ children, className, align = 'left' }) => (
