@@ -11,6 +11,10 @@ const Container = styled.div`
 
 const Partial = styled.div`
   flex-basis: ${({ width }) => width};
+
+  &:not(:last-child) {
+    margin-right: 1rem;
+  }
 `
 
 const ApplicationOption = ({ organization, applicationStatus, readMoreLink }) => {
