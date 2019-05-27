@@ -9,7 +9,7 @@ import http from 'http/http'
 const QueryDebounceMs = 1000
 const NumRecommendations = 10
 
-const doQueryRecommendations = ({ unverifiedEducations, verifiedEducations, interests }) => {
+const doQueryRecommendations = (endpoint, { unverifiedEducations, verifiedEducations, interests }) => {
   dispatch(RecommendationsStatusEvent.QUERY_PENDING)
 
   if (process.env.API_ENDPOINT === 'mock') {
@@ -21,7 +21,7 @@ const doQueryRecommendations = ({ unverifiedEducations, verifiedEducations, inte
 
   return (
     http.get(
-      process.env.API_ENDPOINT, {
+      endpoint, {
         uris: type === 'unit' ? verifiedEducations : type === 'qualification' ? unverifiedEducations : undefined,
         terms: interests,
         n: NumRecommendations,
@@ -34,7 +34,7 @@ const doQueryRecommendations = ({ unverifiedEducations, verifiedEducations, inte
   )
 }
 
-export default (queryParams$, shouldDoQuery$) => {
+export default (endpoint, queryParams$, shouldDoQuery$) => {
   const [results, setResults] = useState()
 
   useEffect(() => {
@@ -45,7 +45,7 @@ export default (queryParams$, shouldDoQuery$) => {
       .skipDuplicates(R.equals)
       .filter(shouldDoQuery$)
       .debounce(QueryDebounceMs)
-      .flatMapLatest(params => B.fromPromise(doQueryRecommendations(params)))
+      .flatMapLatest(params => B.fromPromise(doQueryRecommendations(endpoint, params)))
 
     const subscriptions = [
       paramChange$

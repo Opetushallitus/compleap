@@ -12,6 +12,10 @@ const GlobalStyle = createGlobalStyle`
     &#Profile {
       background-color: ${({ theme }) => theme.color.background};
     }
+
+    &.has-popup-active {
+      overflow: hidden;
+    }
   }
   
   p {

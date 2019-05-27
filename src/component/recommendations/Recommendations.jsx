@@ -11,8 +11,8 @@ import {
 } from 'util/recommendationsHelper'
 import useObservable from 'component/generic/hook/useObservable'
 import useRecommendationsQuery from 'component/recommendations/useRecommendationsQuery'
-import RecommendationResults from 'component/recommendations/recommendation-results/RecommendationResults'
 import RequireInterestsMessage from 'component/recommendations/require-interests/RequireInterestsMessage'
+import ModelComparison from 'component/recommendations/model-comparison/ModelComparison'
 
 const Recommendations = () => {
   const context$ = useContext(Context)
@@ -30,9 +30,13 @@ const Recommendations = () => {
     verifiedEducations: pickAndFlattenVerifiedEducation(verifiedEducations$),
     interests: pickAndFlattenInterests(interests$)
   })
-  const recommendationsResponse = useRecommendationsQuery(queryParams$, hasRequiredInterests$)
+  // TODO update recommendations query for multiple altenative models
+  const recommendationsResponse1 = useRecommendationsQuery(process.env.API_ENDPOINT, queryParams$, hasRequiredInterests$)
+  const recommendationsResponse2 = useRecommendationsQuery(process.env.ALTERNATIVE_API_ENDPOINT, queryParams$, hasRequiredInterests$)
 
-  const recommendations = recommendationsResponse || []
+  const recommendations1 = recommendationsResponse1 || []
+  const recommendations2 = recommendationsResponse2 || []
+
   const hasRequiredInterests = useObservable(hasRequiredInterests$, { skipDuplicates: true })
 
   return (
@@ -43,7 +47,7 @@ const Recommendations = () => {
       </p>
       {
         hasRequiredInterests
-          ? <RecommendationResults recommendations={recommendations} status={status}/>
+          ? <ModelComparison recommendations={[recommendations1, recommendations2]} status={status}/>
           : <RequireInterestsMessage/>
       }
     </React.Fragment>

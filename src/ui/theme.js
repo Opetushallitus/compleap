@@ -66,6 +66,7 @@ export default {
   },
   z: {
     base: 0,
-    popup: 1
+    popup: 1,
+    overlay: 2
   }
 }
