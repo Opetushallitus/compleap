@@ -22,7 +22,7 @@ const Interests = () => {
     <div ref={container}>
       <H1>{t`Kiinnostukset`}</H1>
       <TopicList/>
-      <Notification container={container} offsetTop={250} offsetBottom={100}>
+      <Notification container={container} offsetTop={250} offsetBottom={500}>
         <InterestCountNotification numSelectedInterests={numSelectedInterests} container={container}/>
       </Notification>
     </div>
