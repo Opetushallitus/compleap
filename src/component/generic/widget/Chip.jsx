@@ -13,14 +13,7 @@ const ChipButton = styled.button`
 
   position: relative;
   display: inline-block;
-  text-transform: ${({ primary }) => primary ? 'uppercase' : 'none'};
-  background: ${({ theme, primary }) => primary ? theme.color.white : theme.color.accentLightest};
   border-style: solid;
-  border-width: ${({ theme, primary }) => primary ? '3px' : '2px'};
-  border-color: ${({ theme, primary, selected }) =>
-    selected
-      ? theme.color.accent
-      : primary ? theme.color.grayLighter : 'transparent'};
   cursor: pointer;
   font-size: ${({ theme }) => theme.font.size.base};
   padding: 0.5rem 2.95rem 0.5rem 1rem;
@@ -37,6 +30,18 @@ const ChipButton = styled.button`
   }
 `
 
+const ChipButtonPrimary = styled(ChipButton)`
+  text-transform: uppercase;
+  background: ${({ theme }) => theme.color.white};
+  border: solid 3px ${({ theme, selected }) => selected ? theme.color.accent : theme.color.grayLighter};
+`
+
+const ChipButtonSecondary = styled(ChipButton)`
+  text-transform: none;
+  background: ${({ theme }) => theme.color.accentLightest};
+  border: solid 2px ${({ theme, selected }) => selected ? theme.color.accent : 'transparent'};
+`
+
 const ChipIconContainer = styled.div`
   position: absolute;
   border-radius: 50%;
@@ -49,9 +54,10 @@ const ChipIconContainer = styled.div`
 
 const Chip = ({ type = 'primary', selected = false, value, onClick, children }) => {
   const isPrimary = type === 'primary'
+  const ChipComponent = isPrimary ? ChipButtonPrimary : ChipButtonSecondary
   return (
     <div style={{ display: 'contents' }}>
-      <ChipButton value={value} selected={selected} primary={isPrimary} onClick={onClick}>
+      <ChipComponent value={value} selected={selected} primary={isPrimary} onClick={onClick}>
         {children}
         <ChipIconContainer selected={selected} primary={isPrimary}>
           <Checkmark style={{
@@ -62,7 +68,7 @@ const Chip = ({ type = 'primary', selected = false, value, onClick, children }) 
             strokeWidth: 2
           }}/>
         </ChipIconContainer>
-      </ChipButton>
+      </ChipComponent>
     </div>
   )
 }
