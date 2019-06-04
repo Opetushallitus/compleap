@@ -16,11 +16,8 @@ const ChipButton = styled.button`
   border-style: solid;
   cursor: pointer;
   font-size: ${({ theme }) => theme.font.size.base};
-  padding: 0.5rem 2.95rem 0.5rem 1rem;
-  margin: 0.5rem 0.25rem;
-  height: 2.45rem;
-  box-shadow: ${({ theme, selected }) => selected ? `0 5px 10px 2px ${theme.color.gray}` : 'unset'};
-  
+  box-sizing: content-box;
+
   &:active {
     color: ${({ theme }) => theme.color.black};
   }
@@ -28,46 +25,85 @@ const ChipButton = styled.button`
   &:focus {
     outline: 0;
   }
+
+  transition: all 200ms;
 `
 
 const ChipButtonPrimary = styled(ChipButton)`
   text-transform: uppercase;
-  background: ${({ theme }) => theme.color.white};
-  border: solid 3px ${({ theme, selected }) => selected ? theme.color.accent : theme.color.grayLighter};
+  border: solid 3px ${({ theme, selected }) => selected ? theme.color.accentDarker : theme.color.grayLighter};
+  background-color: ${({ theme, selected }) => selected ? theme.color.accentLightest : theme.color.white};
+  height: 1.5rem;
+  line-height: 1.6rem;
+  font-size: ${({ theme }) => theme.font.size.m};
+  padding: 0.3rem 2.8rem 0.3rem 1rem;
+  margin: 0.5rem;
+  box-shadow: ${({ theme, selected }) => selected ? `0 5px 10px 3px ${theme.color.gray}` : 'unset'};
+
+  &:hover {
+    border-color: ${({ theme }) => theme.color.accentDarker};
+  }
 `
 
 const ChipButtonSecondary = styled(ChipButton)`
   text-transform: none;
-  background: ${({ theme }) => theme.color.accentLightest};
-  border: solid 2px ${({ theme, selected }) => selected ? theme.color.accent : 'transparent'};
+  border-style: ${({ theme, selected }) => selected ? 'solid' : 'dashed'};
+  border-width: 2px;
+  border-color: ${({ theme, selected }) => selected ? theme.color.accent : theme.color.accentLighter};
+  background: ${({ theme, selected }) => selected ? theme.color.accentLightest : theme.color.white};
+  height: 1rem;
+  line-height: 1.1rem;
+  padding: 0.3rem 2rem 0.3rem 1rem;
+  margin: 0.75rem 0.25rem;
+  box-shadow: ${({ theme, selected }) => selected ? `0 3px 8px 1px ${theme.color.gray}` : 'unset'};
+
+  &:hover {
+    border-color: ${({ theme }) => theme.color.accent};
+  }
 `
 
 const ChipIconContainer = styled.div`
   position: absolute;
+  box-sizing: content-box;
   border-radius: 50%;
-  width: 2.45rem;
-  height: 2.45rem;
-  top: ${({ primary }) => primary ? '-3px' : '-2px'};
-  right: ${({ primary }) => primary ? '-3px' : '-2px'};
-  background-color: ${({ theme, selected }) => selected ? theme.color.accent : 'transparent'};
+  padding: 2px;
+  top: -2px;
+  right: -2px;
+`
+
+const ChipIconContainerPrimary = styled(ChipIconContainer)`
+  top: -3px;
+  right: -3px;
+  background-color: ${({ theme, selected }) => selected ? theme.color.accentDarker : 'transparent'};
+  stroke: ${({ selected }) => selected ? theme.color.white : theme.color.grayLighter};
+  width: 2.1rem;
+  height: 2.1rem;
+`
+
+const ChipIconContainerSecondary = styled(ChipIconContainer)`
+  top: -2px;
+  right: -2px;
+  stroke: ${({ selected }) => selected ? theme.color.accentDarker : theme.color.grayLighter};
+  width: 1.6rem;
+  height: 1.6rem;
+  padding-right: 0.25rem;
 `
 
 const Chip = ({ type = 'primary', selected = false, value, onClick, children }) => {
   const isPrimary = type === 'primary'
   const ChipComponent = isPrimary ? ChipButtonPrimary : ChipButtonSecondary
+  const ChipIconComponent = isPrimary ? ChipIconContainerPrimary : ChipIconContainerSecondary
+  const CheckmarkStyle = isPrimary
+    ? { height: '2.1rem', strokeWidth: 2, paddingRight: '0.15rem' }
+    : { height: '1rem', strokeWidth: 2, paddingTop: '0.3rem' }
+
   return (
     <div style={{ display: 'contents' }}>
       <ChipComponent value={value} selected={selected} primary={isPrimary} onClick={onClick}>
         {children}
-        <ChipIconContainer selected={selected} primary={isPrimary}>
-          <Checkmark style={{
-            width: '1rem',
-            height: '1rem',
-            marginTop: '0.7rem',
-            stroke: selected ? theme.color.white : isPrimary ? theme.color.grayLighter : theme.color.grayLighter,
-            strokeWidth: 2
-          }}/>
-        </ChipIconContainer>
+        <ChipIconComponent selected={selected} primary={isPrimary}>
+          <Checkmark style={CheckmarkStyle}/>
+        </ChipIconComponent>
       </ChipComponent>
     </div>
   )
