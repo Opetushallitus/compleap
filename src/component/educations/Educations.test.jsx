@@ -44,6 +44,10 @@ const mockState = formState => jest.doMock('state/state', () => {
 })
 
 describe('Education', () => {
+  beforeAll(() => {
+    global.console = Object.assign({}, global.console, { warn: jest.fn() }) // Suppress logging
+  })
+
   beforeEach(() => {
     jest.clearAllMocks()
   })

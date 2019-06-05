@@ -48,6 +48,7 @@ describe('Interests', () => {
   beforeAll(() => {
     process.env.MIN_INTERESTS = 3
     process.env.MAX_INTERESTS = 8
+    global.console = Object.assign({}, global.console, { warn: jest.fn() }) // Suppress logging
   })
 
   beforeEach(() => {

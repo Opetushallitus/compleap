@@ -1,6 +1,14 @@
 import { resolveApplicationStatus } from './recommendationsHelper'
 
 describe('Resolving application status', () => {
+  beforeAll(() => {
+    // Suppress logging
+    global.console = Object.assign({}, global.console, {
+      error: jest.fn(),
+      warn: jest.fn()
+    })
+  })
+
   it('succeeds for valid ongoing application', () => {
     const data = {
       'id': 'test',
