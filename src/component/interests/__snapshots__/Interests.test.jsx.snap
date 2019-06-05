@@ -3,7 +3,7 @@
 exports[`Interests should show error when fetching interest suggestions failed 1`] = `
 <div>
   <h1
-    className="sc-dVhcbM gPsyUa"
+    className="sc-kgAjT fdvWRQ"
   >
     Kiinnostukset
   </h1>
@@ -21,133 +21,133 @@ exports[`Interests should show loading indicator (placeholder tags) when fetchin
     Kiinnostukset
   </h1>
   <div
-    className="sc-iwsKbI laYIiJ"
+    className="sc-jTzLTM hKvEFR"
   >
     <div
-      className="sc-VigVT TyGGh"
+      className="sc-cSHVUG hdElqZ"
     >
       <div
-        className="sc-htoDjs cKmTuq"
+        className="sc-gqjmRU fHfsQS"
       >
         <div
-          className="sc-dnqmqq jcnWGu"
+          className="sc-VigVT iouIt"
         />
         <div
-          className="sc-dnqmqq jcnWGu"
+          className="sc-VigVT iouIt"
         />
         <div
-          className="sc-dnqmqq jcnWGu"
+          className="sc-VigVT iouIt"
         />
         <div
-          className="sc-dnqmqq jcnWGu"
+          className="sc-VigVT iouIt"
         />
       </div>
     </div>
     <div
-      className="sc-gZMcBi bIDViS"
+      className="sc-fjdhpX cumejn"
     >
       <div
-        className="sc-fjdhpX khYAnD"
+        className="sc-chPdSV hJWNFA"
         width="55%"
       />
       <div
-        className="sc-fjdhpX hABshK"
+        className="sc-chPdSV bpmcQL"
         width="77%"
       />
       <div
-        className="sc-fjdhpX ezCgPo"
+        className="sc-chPdSV fBVnUe"
         width="65%"
       />
     </div>
     <div
-      className="sc-gqjmRU ksnVNk"
+      className="sc-jzJRlG eAHvmF"
     >
       <div
-        className="sc-jTzLTM hDugnc"
+        className="sc-kAzzGY cedijR"
         width="2rem"
       />
       <div
-        className="sc-jTzLTM eRznqm"
+        className="sc-kAzzGY cSSqcB"
         width="3rem"
       />
       <div
-        className="sc-jTzLTM jtDwYV"
+        className="sc-kAzzGY crbNhn"
         width="5rem"
       />
       <div
-        className="sc-jTzLTM bYVLcY"
+        className="sc-kAzzGY eYLYhA"
         width="4rem"
       />
       <div
-        className="sc-jTzLTM iIkCPF"
+        className="sc-kAzzGY hoUyXS"
         width="3rem"
       />
       <div
-        className="sc-jTzLTM UOrTg"
+        className="sc-kAzzGY bFDve"
         width="2rem"
       />
       <div
-        className="sc-jTzLTM bYVLcY"
+        className="sc-kAzzGY eYLYhA"
         width="4rem"
       />
       <div
-        className="sc-jTzLTM eRznqm"
+        className="sc-kAzzGY cSSqcB"
         width="3rem"
       />
       <div
-        className="sc-jTzLTM jtDwYV"
+        className="sc-kAzzGY crbNhn"
         width="5rem"
       />
       <div
-        className="sc-jTzLTM kfvbdv"
+        className="sc-kAzzGY eDYTqb"
         width="4rem"
       />
       <div
-        className="sc-jTzLTM UOrTg"
+        className="sc-kAzzGY bFDve"
         width="2rem"
       />
       <div
-        className="sc-jTzLTM eRznqm"
+        className="sc-kAzzGY cSSqcB"
         width="3rem"
       />
       <div
-        className="sc-jTzLTM jtDwYV"
+        className="sc-kAzzGY crbNhn"
         width="5rem"
       />
       <div
-        className="sc-jTzLTM bYVLcY"
+        className="sc-kAzzGY eYLYhA"
         width="4rem"
       />
       <div
-        className="sc-jTzLTM eRznqm"
+        className="sc-kAzzGY cSSqcB"
         width="3rem"
       />
       <div
-        className="sc-jTzLTM bYVLcY"
+        className="sc-kAzzGY eYLYhA"
         width="4rem"
       />
       <div
-        className="sc-jTzLTM iIkCPF"
+        className="sc-kAzzGY hoUyXS"
         width="3rem"
       />
       <div
-        className="sc-jTzLTM bYVLcY"
+        className="sc-kAzzGY eYLYhA"
         width="4rem"
       />
       <div
-        className="sc-jTzLTM eRznqm"
+        className="sc-kAzzGY cSSqcB"
         width="3rem"
       />
       <div
-        className="sc-jTzLTM UOrTg"
+        className="sc-kAzzGY bFDve"
         width="2rem"
       />
       <div
-        className="sc-jTzLTM jtDwYV"
+        className="sc-kAzzGY crbNhn"
         width="5rem"
       />
       <div
-        className="sc-jTzLTM bYVLcY"
+        className="sc-kAzzGY eYLYhA"
         width="4rem"
       />
     </div>
@@ -158,7 +158,7 @@ exports[`Interests should show loading indicator (placeholder tags) when fetchin
 exports[`Interests should show subtopics for selected topic 1`] = `
 <div>
   <h1
-    className="sc-ktHwxA fqWARb"
+    className="sc-kTUwUJ kGELxe"
   >
     Kiinnostukset
   </h1>
@@ -166,15 +166,15 @@ exports[`Interests should show subtopics for selected topic 1`] = `
     Seuraavaksi kartoitamme sinua kiinnostavia aiheita.
   </p>
   <h2
-    className="sc-cIShpX uxCpR"
+    className="sc-dqBHgY ksSQPK"
   >
     Valitse 3 – 8 aihetta, joiden parissa sinua kiinnostaisi työskennellä.
   </h2>
   <ul
-    className="sc-gzOgki hbJuDZ"
+    className="sc-epnACN llTMFf"
   >
     <li
-      className="sc-iyvyFf mNlOA"
+      className="sc-iQNlJl fMIeVh"
     >
       <div
         style={
@@ -184,25 +184,23 @@ exports[`Interests should show subtopics for selected topic 1`] = `
         }
       >
         <button
-          className="sc-iELTvK fLYLHq"
+          className="sc-gzOgki sc-iyvyFf gjkTFx"
           onClick={[Function]}
           selected={false}
           value="Taide ja kulttuuri"
         >
           Taide ja kulttuuri
           <div
-            className="sc-cmTdod idZNkE"
+            className="sc-kPVwWT sc-kfGgVZ lmixiw"
             selected={false}
           >
             <svg
               data-file-name="SvgCheckmark"
               style={
                 Object {
-                  "height": "1rem",
-                  "marginTop": "0.7rem",
-                  "stroke": "#e2e2e2",
+                  "height": "2.1rem",
+                  "paddingRight": "0.15rem",
                   "strokeWidth": 2,
-                  "width": "1rem",
                 }
               }
             />
@@ -211,7 +209,7 @@ exports[`Interests should show subtopics for selected topic 1`] = `
       </div>
     </li>
     <li
-      className="sc-iyvyFf mNlOA"
+      className="sc-iQNlJl fMIeVh"
     >
       <div
         style={
@@ -221,25 +219,23 @@ exports[`Interests should show subtopics for selected topic 1`] = `
         }
       >
         <button
-          className="sc-iELTvK kzASCa"
+          className="sc-gzOgki sc-iyvyFf ckDWcE"
           onClick={[Function]}
           selected={true}
           value="Luonto ja ympäristö"
         >
           Luonto ja ympäristö
           <div
-            className="sc-cmTdod eRUlwx"
+            className="sc-kPVwWT sc-kfGgVZ nhvVl"
             selected={true}
           >
             <svg
               data-file-name="SvgCheckmark"
               style={
                 Object {
-                  "height": "1rem",
-                  "marginTop": "0.7rem",
-                  "stroke": "#ffffff",
+                  "height": "2.1rem",
+                  "paddingRight": "0.15rem",
                   "strokeWidth": 2,
-                  "width": "1rem",
                 }
               }
             />
@@ -247,10 +243,10 @@ exports[`Interests should show subtopics for selected topic 1`] = `
         </button>
       </div>
       <ul
-        className="sc-jwKygS kVErd"
+        className="sc-kIPQKe imVQqD"
       >
         <li
-          className="sc-btzYZH bstvwU"
+          className="sc-eXEjpC fGnlMS"
         >
           <div
             style={
@@ -260,14 +256,14 @@ exports[`Interests should show subtopics for selected topic 1`] = `
             }
           >
             <button
-              className="sc-iELTvK dWLOio"
+              className="sc-gzOgki sc-hwwEjo ipYVqQ"
               onClick={[Function]}
               selected={false}
               value="Kasvitiede"
             >
               Kasvitiede
               <div
-                className="sc-cmTdod iAjVvk"
+                className="sc-kPVwWT sc-esjQYD houmpw"
                 selected={false}
               >
                 <svg
@@ -275,10 +271,8 @@ exports[`Interests should show subtopics for selected topic 1`] = `
                   style={
                     Object {
                       "height": "1rem",
-                      "marginTop": "0.7rem",
-                      "stroke": "#e2e2e2",
+                      "paddingTop": "0.3rem",
                       "strokeWidth": 2,
-                      "width": "1rem",
                     }
                   }
                 />
@@ -287,7 +281,7 @@ exports[`Interests should show subtopics for selected topic 1`] = `
           </div>
         </li>
         <li
-          className="sc-btzYZH bstvwU"
+          className="sc-eXEjpC fGnlMS"
         >
           <div
             style={
@@ -297,14 +291,14 @@ exports[`Interests should show subtopics for selected topic 1`] = `
             }
           >
             <button
-              className="sc-iELTvK dWLOio"
+              className="sc-gzOgki sc-hwwEjo ipYVqQ"
               onClick={[Function]}
               selected={false}
               value="Eläintiede"
             >
               Eläintiede
               <div
-                className="sc-cmTdod iAjVvk"
+                className="sc-kPVwWT sc-esjQYD houmpw"
                 selected={false}
               >
                 <svg
@@ -312,10 +306,8 @@ exports[`Interests should show subtopics for selected topic 1`] = `
                   style={
                     Object {
                       "height": "1rem",
-                      "marginTop": "0.7rem",
-                      "stroke": "#e2e2e2",
+                      "paddingTop": "0.3rem",
                       "strokeWidth": 2,
-                      "width": "1rem",
                     }
                   }
                 />
@@ -324,7 +316,7 @@ exports[`Interests should show subtopics for selected topic 1`] = `
           </div>
         </li>
         <li
-          className="sc-btzYZH bstvwU"
+          className="sc-eXEjpC fGnlMS"
         >
           <div
             style={
@@ -334,14 +326,14 @@ exports[`Interests should show subtopics for selected topic 1`] = `
             }
           >
             <button
-              className="sc-iELTvK dWLOio"
+              className="sc-gzOgki sc-hwwEjo ipYVqQ"
               onClick={[Function]}
               selected={false}
               value="Luonnonsuojelu"
             >
               Luonnonsuojelu
               <div
-                className="sc-cmTdod iAjVvk"
+                className="sc-kPVwWT sc-esjQYD houmpw"
                 selected={false}
               >
                 <svg
@@ -349,10 +341,8 @@ exports[`Interests should show subtopics for selected topic 1`] = `
                   style={
                     Object {
                       "height": "1rem",
-                      "marginTop": "0.7rem",
-                      "stroke": "#e2e2e2",
+                      "paddingTop": "0.3rem",
                       "strokeWidth": 2,
-                      "width": "1rem",
                     }
                   }
                 />
@@ -361,7 +351,7 @@ exports[`Interests should show subtopics for selected topic 1`] = `
           </div>
         </li>
         <li
-          className="sc-btzYZH bstvwU"
+          className="sc-eXEjpC fGnlMS"
         >
           <div
             style={
@@ -371,14 +361,14 @@ exports[`Interests should show subtopics for selected topic 1`] = `
             }
           >
             <button
-              className="sc-iELTvK dWLOio"
+              className="sc-gzOgki sc-hwwEjo ipYVqQ"
               onClick={[Function]}
               selected={false}
               value="Ympäristönsuojelu"
             >
               Ympäristönsuojelu
               <div
-                className="sc-cmTdod iAjVvk"
+                className="sc-kPVwWT sc-esjQYD houmpw"
                 selected={false}
               >
                 <svg
@@ -386,10 +376,8 @@ exports[`Interests should show subtopics for selected topic 1`] = `
                   style={
                     Object {
                       "height": "1rem",
-                      "marginTop": "0.7rem",
-                      "stroke": "#e2e2e2",
+                      "paddingTop": "0.3rem",
                       "strokeWidth": 2,
-                      "width": "1rem",
                     }
                   }
                 />
@@ -398,7 +386,7 @@ exports[`Interests should show subtopics for selected topic 1`] = `
           </div>
         </li>
         <li
-          className="sc-btzYZH bstvwU"
+          className="sc-eXEjpC fGnlMS"
         >
           <div
             style={
@@ -408,14 +396,14 @@ exports[`Interests should show subtopics for selected topic 1`] = `
             }
           >
             <button
-              className="sc-iELTvK dWLOio"
+              className="sc-gzOgki sc-hwwEjo ipYVqQ"
               onClick={[Function]}
               selected={false}
               value="Ympäristö"
             >
               Ympäristö
               <div
-                className="sc-cmTdod iAjVvk"
+                className="sc-kPVwWT sc-esjQYD houmpw"
                 selected={false}
               >
                 <svg
@@ -423,10 +411,8 @@ exports[`Interests should show subtopics for selected topic 1`] = `
                   style={
                     Object {
                       "height": "1rem",
-                      "marginTop": "0.7rem",
-                      "stroke": "#e2e2e2",
+                      "paddingTop": "0.3rem",
                       "strokeWidth": 2,
-                      "width": "1rem",
                     }
                   }
                 />
@@ -435,7 +421,7 @@ exports[`Interests should show subtopics for selected topic 1`] = `
           </div>
         </li>
         <li
-          className="sc-btzYZH bstvwU"
+          className="sc-eXEjpC fGnlMS"
         >
           <div
             style={
@@ -445,14 +431,14 @@ exports[`Interests should show subtopics for selected topic 1`] = `
             }
           >
             <button
-              className="sc-iELTvK dWLOio"
+              className="sc-gzOgki sc-hwwEjo ipYVqQ"
               onClick={[Function]}
               selected={false}
               value="Metsätalous"
             >
               Metsätalous
               <div
-                className="sc-cmTdod iAjVvk"
+                className="sc-kPVwWT sc-esjQYD houmpw"
                 selected={false}
               >
                 <svg
@@ -460,10 +446,8 @@ exports[`Interests should show subtopics for selected topic 1`] = `
                   style={
                     Object {
                       "height": "1rem",
-                      "marginTop": "0.7rem",
-                      "stroke": "#e2e2e2",
+                      "paddingTop": "0.3rem",
                       "strokeWidth": 2,
-                      "width": "1rem",
                     }
                   }
                 />
@@ -472,7 +456,7 @@ exports[`Interests should show subtopics for selected topic 1`] = `
           </div>
         </li>
         <li
-          className="sc-btzYZH bstvwU"
+          className="sc-eXEjpC fGnlMS"
         >
           <div
             style={
@@ -482,14 +466,14 @@ exports[`Interests should show subtopics for selected topic 1`] = `
             }
           >
             <button
-              className="sc-iELTvK dWLOio"
+              className="sc-gzOgki sc-hwwEjo ipYVqQ"
               onClick={[Function]}
               selected={false}
               value="Metsänhoito"
             >
               Metsänhoito
               <div
-                className="sc-cmTdod iAjVvk"
+                className="sc-kPVwWT sc-esjQYD houmpw"
                 selected={false}
               >
                 <svg
@@ -497,10 +481,8 @@ exports[`Interests should show subtopics for selected topic 1`] = `
                   style={
                     Object {
                       "height": "1rem",
-                      "marginTop": "0.7rem",
-                      "stroke": "#e2e2e2",
+                      "paddingTop": "0.3rem",
                       "strokeWidth": 2,
-                      "width": "1rem",
                     }
                   }
                 />
@@ -509,7 +491,7 @@ exports[`Interests should show subtopics for selected topic 1`] = `
           </div>
         </li>
         <li
-          className="sc-btzYZH bstvwU"
+          className="sc-eXEjpC fGnlMS"
         >
           <div
             style={
@@ -519,14 +501,14 @@ exports[`Interests should show subtopics for selected topic 1`] = `
             }
           >
             <button
-              className="sc-iELTvK dWLOio"
+              className="sc-gzOgki sc-hwwEjo ipYVqQ"
               onClick={[Function]}
               selected={false}
               value="Maatalous"
             >
               Maatalous
               <div
-                className="sc-cmTdod iAjVvk"
+                className="sc-kPVwWT sc-esjQYD houmpw"
                 selected={false}
               >
                 <svg
@@ -534,10 +516,8 @@ exports[`Interests should show subtopics for selected topic 1`] = `
                   style={
                     Object {
                       "height": "1rem",
-                      "marginTop": "0.7rem",
-                      "stroke": "#e2e2e2",
+                      "paddingTop": "0.3rem",
                       "strokeWidth": 2,
-                      "width": "1rem",
                     }
                   }
                 />
@@ -546,7 +526,7 @@ exports[`Interests should show subtopics for selected topic 1`] = `
           </div>
         </li>
         <li
-          className="sc-btzYZH bstvwU"
+          className="sc-eXEjpC fGnlMS"
         >
           <div
             style={
@@ -556,14 +536,14 @@ exports[`Interests should show subtopics for selected topic 1`] = `
             }
           >
             <button
-              className="sc-iELTvK dWLOio"
+              className="sc-gzOgki sc-hwwEjo ipYVqQ"
               onClick={[Function]}
               selected={false}
               value="Maanviljely"
             >
               Maanviljely
               <div
-                className="sc-cmTdod iAjVvk"
+                className="sc-kPVwWT sc-esjQYD houmpw"
                 selected={false}
               >
                 <svg
@@ -571,10 +551,8 @@ exports[`Interests should show subtopics for selected topic 1`] = `
                   style={
                     Object {
                       "height": "1rem",
-                      "marginTop": "0.7rem",
-                      "stroke": "#e2e2e2",
+                      "paddingTop": "0.3rem",
                       "strokeWidth": 2,
-                      "width": "1rem",
                     }
                   }
                 />
@@ -583,7 +561,7 @@ exports[`Interests should show subtopics for selected topic 1`] = `
           </div>
         </li>
         <li
-          className="sc-btzYZH bstvwU"
+          className="sc-eXEjpC fGnlMS"
         >
           <div
             style={
@@ -593,14 +571,14 @@ exports[`Interests should show subtopics for selected topic 1`] = `
             }
           >
             <button
-              className="sc-iELTvK dWLOio"
+              className="sc-gzOgki sc-hwwEjo ipYVqQ"
               onClick={[Function]}
               selected={false}
               value="Puutarhanhoito"
             >
               Puutarhanhoito
               <div
-                className="sc-cmTdod iAjVvk"
+                className="sc-kPVwWT sc-esjQYD houmpw"
                 selected={false}
               >
                 <svg
@@ -608,10 +586,8 @@ exports[`Interests should show subtopics for selected topic 1`] = `
                   style={
                     Object {
                       "height": "1rem",
-                      "marginTop": "0.7rem",
-                      "stroke": "#e2e2e2",
+                      "paddingTop": "0.3rem",
                       "strokeWidth": 2,
-                      "width": "1rem",
                     }
                   }
                 />
@@ -620,7 +596,7 @@ exports[`Interests should show subtopics for selected topic 1`] = `
           </div>
         </li>
         <li
-          className="sc-btzYZH bstvwU"
+          className="sc-eXEjpC fGnlMS"
         >
           <div
             style={
@@ -630,14 +606,14 @@ exports[`Interests should show subtopics for selected topic 1`] = `
             }
           >
             <button
-              className="sc-iELTvK dWLOio"
+              className="sc-gzOgki sc-hwwEjo ipYVqQ"
               onClick={[Function]}
               selected={false}
               value="Kotieläintalous"
             >
               Kotieläintalous
               <div
-                className="sc-cmTdod iAjVvk"
+                className="sc-kPVwWT sc-esjQYD houmpw"
                 selected={false}
               >
                 <svg
@@ -645,10 +621,8 @@ exports[`Interests should show subtopics for selected topic 1`] = `
                   style={
                     Object {
                       "height": "1rem",
-                      "marginTop": "0.7rem",
-                      "stroke": "#e2e2e2",
+                      "paddingTop": "0.3rem",
                       "strokeWidth": 2,
-                      "width": "1rem",
                     }
                   }
                 />
@@ -657,7 +631,7 @@ exports[`Interests should show subtopics for selected topic 1`] = `
           </div>
         </li>
         <li
-          className="sc-btzYZH bstvwU"
+          className="sc-eXEjpC fGnlMS"
         >
           <div
             style={
@@ -667,14 +641,14 @@ exports[`Interests should show subtopics for selected topic 1`] = `
             }
           >
             <button
-              className="sc-iELTvK dWLOio"
+              className="sc-gzOgki sc-hwwEjo ipYVqQ"
               onClick={[Function]}
               selected={false}
               value="Turkisteollisuus"
             >
               Turkisteollisuus
               <div
-                className="sc-cmTdod iAjVvk"
+                className="sc-kPVwWT sc-esjQYD houmpw"
                 selected={false}
               >
                 <svg
@@ -682,10 +656,8 @@ exports[`Interests should show subtopics for selected topic 1`] = `
                   style={
                     Object {
                       "height": "1rem",
-                      "marginTop": "0.7rem",
-                      "stroke": "#e2e2e2",
+                      "paddingTop": "0.3rem",
                       "strokeWidth": 2,
-                      "width": "1rem",
                     }
                   }
                 />
@@ -694,7 +666,7 @@ exports[`Interests should show subtopics for selected topic 1`] = `
           </div>
         </li>
         <li
-          className="sc-btzYZH bstvwU"
+          className="sc-eXEjpC fGnlMS"
         >
           <div
             style={
@@ -704,14 +676,14 @@ exports[`Interests should show subtopics for selected topic 1`] = `
             }
           >
             <button
-              className="sc-iELTvK dWLOio"
+              className="sc-gzOgki sc-hwwEjo ipYVqQ"
               onClick={[Function]}
               selected={false}
               value="Metsäteollisuus"
             >
               Metsäteollisuus
               <div
-                className="sc-cmTdod iAjVvk"
+                className="sc-kPVwWT sc-esjQYD houmpw"
                 selected={false}
               >
                 <svg
@@ -719,10 +691,8 @@ exports[`Interests should show subtopics for selected topic 1`] = `
                   style={
                     Object {
                       "height": "1rem",
-                      "marginTop": "0.7rem",
-                      "stroke": "#e2e2e2",
+                      "paddingTop": "0.3rem",
                       "strokeWidth": 2,
-                      "width": "1rem",
                     }
                   }
                 />
@@ -731,7 +701,7 @@ exports[`Interests should show subtopics for selected topic 1`] = `
           </div>
         </li>
         <li
-          className="sc-btzYZH bstvwU"
+          className="sc-eXEjpC fGnlMS"
         >
           <div
             style={
@@ -741,14 +711,14 @@ exports[`Interests should show subtopics for selected topic 1`] = `
             }
           >
             <button
-              className="sc-iELTvK dWLOio"
+              className="sc-gzOgki sc-hwwEjo ipYVqQ"
               onClick={[Function]}
               selected={false}
               value="Kalastus"
             >
               Kalastus
               <div
-                className="sc-cmTdod iAjVvk"
+                className="sc-kPVwWT sc-esjQYD houmpw"
                 selected={false}
               >
                 <svg
@@ -756,10 +726,8 @@ exports[`Interests should show subtopics for selected topic 1`] = `
                   style={
                     Object {
                       "height": "1rem",
-                      "marginTop": "0.7rem",
-                      "stroke": "#e2e2e2",
+                      "paddingTop": "0.3rem",
                       "strokeWidth": 2,
-                      "width": "1rem",
                     }
                   }
                 />
@@ -768,7 +736,7 @@ exports[`Interests should show subtopics for selected topic 1`] = `
           </div>
         </li>
         <li
-          className="sc-btzYZH bstvwU"
+          className="sc-eXEjpC fGnlMS"
         >
           <div
             style={
@@ -778,14 +746,14 @@ exports[`Interests should show subtopics for selected topic 1`] = `
             }
           >
             <button
-              className="sc-iELTvK dWLOio"
+              className="sc-gzOgki sc-hwwEjo ipYVqQ"
               onClick={[Function]}
               selected={false}
               value="Metsästys"
             >
               Metsästys
               <div
-                className="sc-cmTdod iAjVvk"
+                className="sc-kPVwWT sc-esjQYD houmpw"
                 selected={false}
               >
                 <svg
@@ -793,10 +761,8 @@ exports[`Interests should show subtopics for selected topic 1`] = `
                   style={
                     Object {
                       "height": "1rem",
-                      "marginTop": "0.7rem",
-                      "stroke": "#e2e2e2",
+                      "paddingTop": "0.3rem",
                       "strokeWidth": 2,
-                      "width": "1rem",
                     }
                   }
                 />
@@ -805,7 +771,7 @@ exports[`Interests should show subtopics for selected topic 1`] = `
           </div>
         </li>
         <li
-          className="sc-btzYZH bstvwU"
+          className="sc-eXEjpC fGnlMS"
         >
           <div
             style={
@@ -815,14 +781,14 @@ exports[`Interests should show subtopics for selected topic 1`] = `
             }
           >
             <button
-              className="sc-iELTvK dWLOio"
+              className="sc-gzOgki sc-hwwEjo ipYVqQ"
               onClick={[Function]}
               selected={false}
               value="Biologia"
             >
               Biologia
               <div
-                className="sc-cmTdod iAjVvk"
+                className="sc-kPVwWT sc-esjQYD houmpw"
                 selected={false}
               >
                 <svg
@@ -830,10 +796,8 @@ exports[`Interests should show subtopics for selected topic 1`] = `
                   style={
                     Object {
                       "height": "1rem",
-                      "marginTop": "0.7rem",
-                      "stroke": "#e2e2e2",
+                      "paddingTop": "0.3rem",
                       "strokeWidth": 2,
-                      "width": "1rem",
                     }
                   }
                 />
@@ -844,7 +808,7 @@ exports[`Interests should show subtopics for selected topic 1`] = `
       </ul>
     </li>
     <li
-      className="sc-iyvyFf mNlOA"
+      className="sc-iQNlJl fMIeVh"
     >
       <div
         style={
@@ -854,25 +818,23 @@ exports[`Interests should show subtopics for selected topic 1`] = `
         }
       >
         <button
-          className="sc-iELTvK fLYLHq"
+          className="sc-gzOgki sc-iyvyFf gjkTFx"
           onClick={[Function]}
           selected={false}
           value="Maantiede ja yhteiskuntasuunnittelu"
         >
           Maantiede ja yhteiskuntasuunnittelu
           <div
-            className="sc-cmTdod idZNkE"
+            className="sc-kPVwWT sc-kfGgVZ lmixiw"
             selected={false}
           >
             <svg
               data-file-name="SvgCheckmark"
               style={
                 Object {
-                  "height": "1rem",
-                  "marginTop": "0.7rem",
-                  "stroke": "#e2e2e2",
+                  "height": "2.1rem",
+                  "paddingRight": "0.15rem",
                   "strokeWidth": 2,
-                  "width": "1rem",
                 }
               }
             />
@@ -881,7 +843,7 @@ exports[`Interests should show subtopics for selected topic 1`] = `
       </div>
     </li>
     <li
-      className="sc-iyvyFf mNlOA"
+      className="sc-iQNlJl fMIeVh"
     >
       <div
         style={
@@ -891,25 +853,23 @@ exports[`Interests should show subtopics for selected topic 1`] = `
         }
       >
         <button
-          className="sc-iELTvK fLYLHq"
+          className="sc-gzOgki sc-iyvyFf gjkTFx"
           onClick={[Function]}
           selected={false}
           value="Yhteiskunta ja talous"
         >
           Yhteiskunta ja talous
           <div
-            className="sc-cmTdod idZNkE"
+            className="sc-kPVwWT sc-kfGgVZ lmixiw"
             selected={false}
           >
             <svg
               data-file-name="SvgCheckmark"
               style={
                 Object {
-                  "height": "1rem",
-                  "marginTop": "0.7rem",
-                  "stroke": "#e2e2e2",
+                  "height": "2.1rem",
+                  "paddingRight": "0.15rem",
                   "strokeWidth": 2,
-                  "width": "1rem",
                 }
               }
             />
@@ -918,7 +878,7 @@ exports[`Interests should show subtopics for selected topic 1`] = `
       </div>
     </li>
     <li
-      className="sc-iyvyFf mNlOA"
+      className="sc-iQNlJl fMIeVh"
     >
       <div
         style={
@@ -928,25 +888,23 @@ exports[`Interests should show subtopics for selected topic 1`] = `
         }
       >
         <button
-          className="sc-iELTvK fLYLHq"
+          className="sc-gzOgki sc-iyvyFf gjkTFx"
           onClick={[Function]}
           selected={false}
           value="Turvallisuus "
         >
           Turvallisuus 
           <div
-            className="sc-cmTdod idZNkE"
+            className="sc-kPVwWT sc-kfGgVZ lmixiw"
             selected={false}
           >
             <svg
               data-file-name="SvgCheckmark"
               style={
                 Object {
-                  "height": "1rem",
-                  "marginTop": "0.7rem",
-                  "stroke": "#e2e2e2",
+                  "height": "2.1rem",
+                  "paddingRight": "0.15rem",
                   "strokeWidth": 2,
-                  "width": "1rem",
                 }
               }
             />
@@ -955,7 +913,7 @@ exports[`Interests should show subtopics for selected topic 1`] = `
       </div>
     </li>
     <li
-      className="sc-iyvyFf mNlOA"
+      className="sc-iQNlJl fMIeVh"
     >
       <div
         style={
@@ -965,25 +923,23 @@ exports[`Interests should show subtopics for selected topic 1`] = `
         }
       >
         <button
-          className="sc-iELTvK fLYLHq"
+          className="sc-gzOgki sc-iyvyFf gjkTFx"
           onClick={[Function]}
           selected={false}
           value="Koulutus"
         >
           Koulutus
           <div
-            className="sc-cmTdod idZNkE"
+            className="sc-kPVwWT sc-kfGgVZ lmixiw"
             selected={false}
           >
             <svg
               data-file-name="SvgCheckmark"
               style={
                 Object {
-                  "height": "1rem",
-                  "marginTop": "0.7rem",
-                  "stroke": "#e2e2e2",
+                  "height": "2.1rem",
+                  "paddingRight": "0.15rem",
                   "strokeWidth": 2,
-                  "width": "1rem",
                 }
               }
             />
@@ -992,7 +948,7 @@ exports[`Interests should show subtopics for selected topic 1`] = `
       </div>
     </li>
     <li
-      className="sc-iyvyFf mNlOA"
+      className="sc-iQNlJl fMIeVh"
     >
       <div
         style={
@@ -1002,25 +958,23 @@ exports[`Interests should show subtopics for selected topic 1`] = `
         }
       >
         <button
-          className="sc-iELTvK fLYLHq"
+          className="sc-gzOgki sc-iyvyFf gjkTFx"
           onClick={[Function]}
           selected={false}
           value="Terveys ja hyvinvointi"
         >
           Terveys ja hyvinvointi
           <div
-            className="sc-cmTdod idZNkE"
+            className="sc-kPVwWT sc-kfGgVZ lmixiw"
             selected={false}
           >
             <svg
               data-file-name="SvgCheckmark"
               style={
                 Object {
-                  "height": "1rem",
-                  "marginTop": "0.7rem",
-                  "stroke": "#e2e2e2",
+                  "height": "2.1rem",
+                  "paddingRight": "0.15rem",
                   "strokeWidth": 2,
-                  "width": "1rem",
                 }
               }
             />
@@ -1029,7 +983,7 @@ exports[`Interests should show subtopics for selected topic 1`] = `
       </div>
     </li>
     <li
-      className="sc-iyvyFf mNlOA"
+      className="sc-iQNlJl fMIeVh"
     >
       <div
         style={
@@ -1039,25 +993,23 @@ exports[`Interests should show subtopics for selected topic 1`] = `
         }
       >
         <button
-          className="sc-iELTvK fLYLHq"
+          className="sc-gzOgki sc-iyvyFf gjkTFx"
           onClick={[Function]}
           selected={false}
           value="Viestintä"
         >
           Viestintä
           <div
-            className="sc-cmTdod idZNkE"
+            className="sc-kPVwWT sc-kfGgVZ lmixiw"
             selected={false}
           >
             <svg
               data-file-name="SvgCheckmark"
               style={
                 Object {
-                  "height": "1rem",
-                  "marginTop": "0.7rem",
-                  "stroke": "#e2e2e2",
+                  "height": "2.1rem",
+                  "paddingRight": "0.15rem",
                   "strokeWidth": 2,
-                  "width": "1rem",
                 }
               }
             />
@@ -1066,7 +1018,7 @@ exports[`Interests should show subtopics for selected topic 1`] = `
       </div>
     </li>
     <li
-      className="sc-iyvyFf mNlOA"
+      className="sc-iQNlJl fMIeVh"
     >
       <div
         style={
@@ -1076,25 +1028,23 @@ exports[`Interests should show subtopics for selected topic 1`] = `
         }
       >
         <button
-          className="sc-iELTvK fLYLHq"
+          className="sc-gzOgki sc-iyvyFf gjkTFx"
           onClick={[Function]}
           selected={false}
           value="Informaatiotekniikka"
         >
           Informaatiotekniikka
           <div
-            className="sc-cmTdod idZNkE"
+            className="sc-kPVwWT sc-kfGgVZ lmixiw"
             selected={false}
           >
             <svg
               data-file-name="SvgCheckmark"
               style={
                 Object {
-                  "height": "1rem",
-                  "marginTop": "0.7rem",
-                  "stroke": "#e2e2e2",
+                  "height": "2.1rem",
+                  "paddingRight": "0.15rem",
                   "strokeWidth": 2,
-                  "width": "1rem",
                 }
               }
             />
@@ -1103,7 +1053,7 @@ exports[`Interests should show subtopics for selected topic 1`] = `
       </div>
     </li>
     <li
-      className="sc-iyvyFf mNlOA"
+      className="sc-iQNlJl fMIeVh"
     >
       <div
         style={
@@ -1113,25 +1063,23 @@ exports[`Interests should show subtopics for selected topic 1`] = `
         }
       >
         <button
-          className="sc-iELTvK fLYLHq"
+          className="sc-gzOgki sc-iyvyFf gjkTFx"
           onClick={[Function]}
           selected={false}
           value="Rakennusala"
         >
           Rakennusala
           <div
-            className="sc-cmTdod idZNkE"
+            className="sc-kPVwWT sc-kfGgVZ lmixiw"
             selected={false}
           >
             <svg
               data-file-name="SvgCheckmark"
               style={
                 Object {
-                  "height": "1rem",
-                  "marginTop": "0.7rem",
-                  "stroke": "#e2e2e2",
+                  "height": "2.1rem",
+                  "paddingRight": "0.15rem",
                   "strokeWidth": 2,
-                  "width": "1rem",
                 }
               }
             />
@@ -1140,7 +1088,7 @@ exports[`Interests should show subtopics for selected topic 1`] = `
       </div>
     </li>
     <li
-      className="sc-iyvyFf mNlOA"
+      className="sc-iQNlJl fMIeVh"
     >
       <div
         style={
@@ -1150,25 +1098,23 @@ exports[`Interests should show subtopics for selected topic 1`] = `
         }
       >
         <button
-          className="sc-iELTvK fLYLHq"
+          className="sc-gzOgki sc-iyvyFf gjkTFx"
           onClick={[Function]}
           selected={false}
           value="Matkailu- ja ravintola-ala"
         >
           Matkailu- ja ravintola-ala
           <div
-            className="sc-cmTdod idZNkE"
+            className="sc-kPVwWT sc-kfGgVZ lmixiw"
             selected={false}
           >
             <svg
               data-file-name="SvgCheckmark"
               style={
                 Object {
-                  "height": "1rem",
-                  "marginTop": "0.7rem",
-                  "stroke": "#e2e2e2",
+                  "height": "2.1rem",
+                  "paddingRight": "0.15rem",
                   "strokeWidth": 2,
-                  "width": "1rem",
                 }
               }
             />
@@ -1177,7 +1123,7 @@ exports[`Interests should show subtopics for selected topic 1`] = `
       </div>
     </li>
     <li
-      className="sc-iyvyFf mNlOA"
+      className="sc-iQNlJl fMIeVh"
     >
       <div
         style={
@@ -1187,25 +1133,23 @@ exports[`Interests should show subtopics for selected topic 1`] = `
         }
       >
         <button
-          className="sc-iELTvK fLYLHq"
+          className="sc-gzOgki sc-iyvyFf gjkTFx"
           onClick={[Function]}
           selected={false}
           value="Liikenne ja logistiikka"
         >
           Liikenne ja logistiikka
           <div
-            className="sc-cmTdod idZNkE"
+            className="sc-kPVwWT sc-kfGgVZ lmixiw"
             selected={false}
           >
             <svg
               data-file-name="SvgCheckmark"
               style={
                 Object {
-                  "height": "1rem",
-                  "marginTop": "0.7rem",
-                  "stroke": "#e2e2e2",
+                  "height": "2.1rem",
+                  "paddingRight": "0.15rem",
                   "strokeWidth": 2,
-                  "width": "1rem",
                 }
               }
             />
@@ -1214,7 +1158,7 @@ exports[`Interests should show subtopics for selected topic 1`] = `
       </div>
     </li>
     <li
-      className="sc-iyvyFf mNlOA"
+      className="sc-iQNlJl fMIeVh"
     >
       <div
         style={
@@ -1224,25 +1168,23 @@ exports[`Interests should show subtopics for selected topic 1`] = `
         }
       >
         <button
-          className="sc-iELTvK fLYLHq"
+          className="sc-gzOgki sc-iyvyFf gjkTFx"
           onClick={[Function]}
           selected={false}
           value="Historia ja uskonto"
         >
           Historia ja uskonto
           <div
-            className="sc-cmTdod idZNkE"
+            className="sc-kPVwWT sc-kfGgVZ lmixiw"
             selected={false}
           >
             <svg
               data-file-name="SvgCheckmark"
               style={
                 Object {
-                  "height": "1rem",
-                  "marginTop": "0.7rem",
-                  "stroke": "#e2e2e2",
+                  "height": "2.1rem",
+                  "paddingRight": "0.15rem",
                   "strokeWidth": 2,
-                  "width": "1rem",
                 }
               }
             />
@@ -1251,7 +1193,7 @@ exports[`Interests should show subtopics for selected topic 1`] = `
       </div>
     </li>
     <li
-      className="sc-iyvyFf mNlOA"
+      className="sc-iQNlJl fMIeVh"
     >
       <div
         style={
@@ -1261,25 +1203,23 @@ exports[`Interests should show subtopics for selected topic 1`] = `
         }
       >
         <button
-          className="sc-iELTvK fLYLHq"
+          className="sc-gzOgki sc-iyvyFf gjkTFx"
           onClick={[Function]}
           selected={false}
           value="Matematiikka ja fysiikka"
         >
           Matematiikka ja fysiikka
           <div
-            className="sc-cmTdod idZNkE"
+            className="sc-kPVwWT sc-kfGgVZ lmixiw"
             selected={false}
           >
             <svg
               data-file-name="SvgCheckmark"
               style={
                 Object {
-                  "height": "1rem",
-                  "marginTop": "0.7rem",
-                  "stroke": "#e2e2e2",
+                  "height": "2.1rem",
+                  "paddingRight": "0.15rem",
                   "strokeWidth": 2,
-                  "width": "1rem",
                 }
               }
             />
@@ -1294,7 +1234,7 @@ exports[`Interests should show subtopics for selected topic 1`] = `
 exports[`Interests should show top level interest suggestions when fetched successfully 1`] = `
 <div>
   <h1
-    className="sc-jKJlTe hLLFbS"
+    className="sc-kkGfuU bpFXsv"
   >
     Kiinnostukset
   </h1>
@@ -1302,15 +1242,15 @@ exports[`Interests should show top level interest suggestions when fetched succe
     Seuraavaksi kartoitamme sinua kiinnostavia aiheita.
   </p>
   <h2
-    className="sc-eNQAEJ jNgNok"
+    className="sc-iAyFgw jEYeRD"
   >
     Valitse 3 – 8 aihetta, joiden parissa sinua kiinnostaisi työskennellä.
   </h2>
   <ul
-    className="sc-jlyJG psyvI"
+    className="sc-fMiknA gQyJiM"
   >
     <li
-      className="sc-gipzik iOyWbu"
+      className="sc-dVhcbM hxYutr"
     >
       <div
         style={
@@ -1320,25 +1260,23 @@ exports[`Interests should show top level interest suggestions when fetched succe
         }
       >
         <button
-          className="sc-kkGfuU ksYOEb"
+          className="sc-cvbbAY sc-jWBwVP giLHpO"
           onClick={[Function]}
           selected={false}
           value="Taide ja kulttuuri"
         >
           Taide ja kulttuuri
           <div
-            className="sc-iAyFgw eGBEg"
+            className="sc-cMljjf sc-jAaTju drqpjE"
             selected={false}
           >
             <svg
               data-file-name="SvgCheckmark"
               style={
                 Object {
-                  "height": "1rem",
-                  "marginTop": "0.7rem",
-                  "stroke": "#e2e2e2",
+                  "height": "2.1rem",
+                  "paddingRight": "0.15rem",
                   "strokeWidth": 2,
-                  "width": "1rem",
                 }
               }
             />
@@ -1347,7 +1285,7 @@ exports[`Interests should show top level interest suggestions when fetched succe
       </div>
     </li>
     <li
-      className="sc-gipzik iOyWbu"
+      className="sc-dVhcbM hxYutr"
     >
       <div
         style={
@@ -1357,25 +1295,23 @@ exports[`Interests should show top level interest suggestions when fetched succe
         }
       >
         <button
-          className="sc-kkGfuU ksYOEb"
+          className="sc-cvbbAY sc-jWBwVP giLHpO"
           onClick={[Function]}
           selected={false}
           value="Luonto ja ympäristö"
         >
           Luonto ja ympäristö
           <div
-            className="sc-iAyFgw eGBEg"
+            className="sc-cMljjf sc-jAaTju drqpjE"
             selected={false}
           >
             <svg
               data-file-name="SvgCheckmark"
               style={
                 Object {
-                  "height": "1rem",
-                  "marginTop": "0.7rem",
-                  "stroke": "#e2e2e2",
+                  "height": "2.1rem",
+                  "paddingRight": "0.15rem",
                   "strokeWidth": 2,
-                  "width": "1rem",
                 }
               }
             />
@@ -1384,7 +1320,7 @@ exports[`Interests should show top level interest suggestions when fetched succe
       </div>
     </li>
     <li
-      className="sc-gipzik iOyWbu"
+      className="sc-dVhcbM hxYutr"
     >
       <div
         style={
@@ -1394,25 +1330,23 @@ exports[`Interests should show top level interest suggestions when fetched succe
         }
       >
         <button
-          className="sc-kkGfuU ksYOEb"
+          className="sc-cvbbAY sc-jWBwVP giLHpO"
           onClick={[Function]}
           selected={false}
           value="Maantiede ja yhteiskuntasuunnittelu"
         >
           Maantiede ja yhteiskuntasuunnittelu
           <div
-            className="sc-iAyFgw eGBEg"
+            className="sc-cMljjf sc-jAaTju drqpjE"
             selected={false}
           >
             <svg
               data-file-name="SvgCheckmark"
               style={
                 Object {
-                  "height": "1rem",
-                  "marginTop": "0.7rem",
-                  "stroke": "#e2e2e2",
+                  "height": "2.1rem",
+                  "paddingRight": "0.15rem",
                   "strokeWidth": 2,
-                  "width": "1rem",
                 }
               }
             />
@@ -1421,7 +1355,7 @@ exports[`Interests should show top level interest suggestions when fetched succe
       </div>
     </li>
     <li
-      className="sc-gipzik iOyWbu"
+      className="sc-dVhcbM hxYutr"
     >
       <div
         style={
@@ -1431,25 +1365,23 @@ exports[`Interests should show top level interest suggestions when fetched succe
         }
       >
         <button
-          className="sc-kkGfuU ksYOEb"
+          className="sc-cvbbAY sc-jWBwVP giLHpO"
           onClick={[Function]}
           selected={false}
           value="Yhteiskunta ja talous"
         >
           Yhteiskunta ja talous
           <div
-            className="sc-iAyFgw eGBEg"
+            className="sc-cMljjf sc-jAaTju drqpjE"
             selected={false}
           >
             <svg
               data-file-name="SvgCheckmark"
               style={
                 Object {
-                  "height": "1rem",
-                  "marginTop": "0.7rem",
-                  "stroke": "#e2e2e2",
+                  "height": "2.1rem",
+                  "paddingRight": "0.15rem",
                   "strokeWidth": 2,
-                  "width": "1rem",
                 }
               }
             />
@@ -1458,7 +1390,7 @@ exports[`Interests should show top level interest suggestions when fetched succe
       </div>
     </li>
     <li
-      className="sc-gipzik iOyWbu"
+      className="sc-dVhcbM hxYutr"
     >
       <div
         style={
@@ -1468,25 +1400,23 @@ exports[`Interests should show top level interest suggestions when fetched succe
         }
       >
         <button
-          className="sc-kkGfuU ksYOEb"
+          className="sc-cvbbAY sc-jWBwVP giLHpO"
           onClick={[Function]}
           selected={false}
           value="Turvallisuus "
         >
           Turvallisuus 
           <div
-            className="sc-iAyFgw eGBEg"
+            className="sc-cMljjf sc-jAaTju drqpjE"
             selected={false}
           >
             <svg
               data-file-name="SvgCheckmark"
               style={
                 Object {
-                  "height": "1rem",
-                  "marginTop": "0.7rem",
-                  "stroke": "#e2e2e2",
+                  "height": "2.1rem",
+                  "paddingRight": "0.15rem",
                   "strokeWidth": 2,
-                  "width": "1rem",
                 }
               }
             />
@@ -1495,7 +1425,7 @@ exports[`Interests should show top level interest suggestions when fetched succe
       </div>
     </li>
     <li
-      className="sc-gipzik iOyWbu"
+      className="sc-dVhcbM hxYutr"
     >
       <div
         style={
@@ -1505,25 +1435,23 @@ exports[`Interests should show top level interest suggestions when fetched succe
         }
       >
         <button
-          className="sc-kkGfuU ksYOEb"
+          className="sc-cvbbAY sc-jWBwVP giLHpO"
           onClick={[Function]}
           selected={false}
           value="Koulutus"
         >
           Koulutus
           <div
-            className="sc-iAyFgw eGBEg"
+            className="sc-cMljjf sc-jAaTju drqpjE"
             selected={false}
           >
             <svg
               data-file-name="SvgCheckmark"
               style={
                 Object {
-                  "height": "1rem",
-                  "marginTop": "0.7rem",
-                  "stroke": "#e2e2e2",
+                  "height": "2.1rem",
+                  "paddingRight": "0.15rem",
                   "strokeWidth": 2,
-                  "width": "1rem",
                 }
               }
             />
@@ -1532,7 +1460,7 @@ exports[`Interests should show top level interest suggestions when fetched succe
       </div>
     </li>
     <li
-      className="sc-gipzik iOyWbu"
+      className="sc-dVhcbM hxYutr"
     >
       <div
         style={
@@ -1542,25 +1470,23 @@ exports[`Interests should show top level interest suggestions when fetched succe
         }
       >
         <button
-          className="sc-kkGfuU ksYOEb"
+          className="sc-cvbbAY sc-jWBwVP giLHpO"
           onClick={[Function]}
           selected={false}
           value="Terveys ja hyvinvointi"
         >
           Terveys ja hyvinvointi
           <div
-            className="sc-iAyFgw eGBEg"
+            className="sc-cMljjf sc-jAaTju drqpjE"
             selected={false}
           >
             <svg
               data-file-name="SvgCheckmark"
               style={
                 Object {
-                  "height": "1rem",
-                  "marginTop": "0.7rem",
-                  "stroke": "#e2e2e2",
+                  "height": "2.1rem",
+                  "paddingRight": "0.15rem",
                   "strokeWidth": 2,
-                  "width": "1rem",
                 }
               }
             />
@@ -1569,7 +1495,7 @@ exports[`Interests should show top level interest suggestions when fetched succe
       </div>
     </li>
     <li
-      className="sc-gipzik iOyWbu"
+      className="sc-dVhcbM hxYutr"
     >
       <div
         style={
@@ -1579,25 +1505,23 @@ exports[`Interests should show top level interest suggestions when fetched succe
         }
       >
         <button
-          className="sc-kkGfuU ksYOEb"
+          className="sc-cvbbAY sc-jWBwVP giLHpO"
           onClick={[Function]}
           selected={false}
           value="Viestintä"
         >
           Viestintä
           <div
-            className="sc-iAyFgw eGBEg"
+            className="sc-cMljjf sc-jAaTju drqpjE"
             selected={false}
           >
             <svg
               data-file-name="SvgCheckmark"
               style={
                 Object {
-                  "height": "1rem",
-                  "marginTop": "0.7rem",
-                  "stroke": "#e2e2e2",
+                  "height": "2.1rem",
+                  "paddingRight": "0.15rem",
                   "strokeWidth": 2,
-                  "width": "1rem",
                 }
               }
             />
@@ -1606,7 +1530,7 @@ exports[`Interests should show top level interest suggestions when fetched succe
       </div>
     </li>
     <li
-      className="sc-gipzik iOyWbu"
+      className="sc-dVhcbM hxYutr"
     >
       <div
         style={
@@ -1616,25 +1540,23 @@ exports[`Interests should show top level interest suggestions when fetched succe
         }
       >
         <button
-          className="sc-kkGfuU ksYOEb"
+          className="sc-cvbbAY sc-jWBwVP giLHpO"
           onClick={[Function]}
           selected={false}
           value="Informaatiotekniikka"
         >
           Informaatiotekniikka
           <div
-            className="sc-iAyFgw eGBEg"
+            className="sc-cMljjf sc-jAaTju drqpjE"
             selected={false}
           >
             <svg
               data-file-name="SvgCheckmark"
               style={
                 Object {
-                  "height": "1rem",
-                  "marginTop": "0.7rem",
-                  "stroke": "#e2e2e2",
+                  "height": "2.1rem",
+                  "paddingRight": "0.15rem",
                   "strokeWidth": 2,
-                  "width": "1rem",
                 }
               }
             />
@@ -1643,7 +1565,7 @@ exports[`Interests should show top level interest suggestions when fetched succe
       </div>
     </li>
     <li
-      className="sc-gipzik iOyWbu"
+      className="sc-dVhcbM hxYutr"
     >
       <div
         style={
@@ -1653,25 +1575,23 @@ exports[`Interests should show top level interest suggestions when fetched succe
         }
       >
         <button
-          className="sc-kkGfuU ksYOEb"
+          className="sc-cvbbAY sc-jWBwVP giLHpO"
           onClick={[Function]}
           selected={false}
           value="Rakennusala"
         >
           Rakennusala
           <div
-            className="sc-iAyFgw eGBEg"
+            className="sc-cMljjf sc-jAaTju drqpjE"
             selected={false}
           >
             <svg
               data-file-name="SvgCheckmark"
               style={
                 Object {
-                  "height": "1rem",
-                  "marginTop": "0.7rem",
-                  "stroke": "#e2e2e2",
+                  "height": "2.1rem",
+                  "paddingRight": "0.15rem",
                   "strokeWidth": 2,
-                  "width": "1rem",
                 }
               }
             />
@@ -1680,7 +1600,7 @@ exports[`Interests should show top level interest suggestions when fetched succe
       </div>
     </li>
     <li
-      className="sc-gipzik iOyWbu"
+      className="sc-dVhcbM hxYutr"
     >
       <div
         style={
@@ -1690,25 +1610,23 @@ exports[`Interests should show top level interest suggestions when fetched succe
         }
       >
         <button
-          className="sc-kkGfuU ksYOEb"
+          className="sc-cvbbAY sc-jWBwVP giLHpO"
           onClick={[Function]}
           selected={false}
           value="Matkailu- ja ravintola-ala"
         >
           Matkailu- ja ravintola-ala
           <div
-            className="sc-iAyFgw eGBEg"
+            className="sc-cMljjf sc-jAaTju drqpjE"
             selected={false}
           >
             <svg
               data-file-name="SvgCheckmark"
               style={
                 Object {
-                  "height": "1rem",
-                  "marginTop": "0.7rem",
-                  "stroke": "#e2e2e2",
+                  "height": "2.1rem",
+                  "paddingRight": "0.15rem",
                   "strokeWidth": 2,
-                  "width": "1rem",
                 }
               }
             />
@@ -1717,7 +1635,7 @@ exports[`Interests should show top level interest suggestions when fetched succe
       </div>
     </li>
     <li
-      className="sc-gipzik iOyWbu"
+      className="sc-dVhcbM hxYutr"
     >
       <div
         style={
@@ -1727,25 +1645,23 @@ exports[`Interests should show top level interest suggestions when fetched succe
         }
       >
         <button
-          className="sc-kkGfuU ksYOEb"
+          className="sc-cvbbAY sc-jWBwVP giLHpO"
           onClick={[Function]}
           selected={false}
           value="Liikenne ja logistiikka"
         >
           Liikenne ja logistiikka
           <div
-            className="sc-iAyFgw eGBEg"
+            className="sc-cMljjf sc-jAaTju drqpjE"
             selected={false}
           >
             <svg
               data-file-name="SvgCheckmark"
               style={
                 Object {
-                  "height": "1rem",
-                  "marginTop": "0.7rem",
-                  "stroke": "#e2e2e2",
+                  "height": "2.1rem",
+                  "paddingRight": "0.15rem",
                   "strokeWidth": 2,
-                  "width": "1rem",
                 }
               }
             />
@@ -1754,7 +1670,7 @@ exports[`Interests should show top level interest suggestions when fetched succe
       </div>
     </li>
     <li
-      className="sc-gipzik iOyWbu"
+      className="sc-dVhcbM hxYutr"
     >
       <div
         style={
@@ -1764,25 +1680,23 @@ exports[`Interests should show top level interest suggestions when fetched succe
         }
       >
         <button
-          className="sc-kkGfuU ksYOEb"
+          className="sc-cvbbAY sc-jWBwVP giLHpO"
           onClick={[Function]}
           selected={false}
           value="Historia ja uskonto"
         >
           Historia ja uskonto
           <div
-            className="sc-iAyFgw eGBEg"
+            className="sc-cMljjf sc-jAaTju drqpjE"
             selected={false}
           >
             <svg
               data-file-name="SvgCheckmark"
               style={
                 Object {
-                  "height": "1rem",
-                  "marginTop": "0.7rem",
-                  "stroke": "#e2e2e2",
+                  "height": "2.1rem",
+                  "paddingRight": "0.15rem",
                   "strokeWidth": 2,
-                  "width": "1rem",
                 }
               }
             />
@@ -1791,7 +1705,7 @@ exports[`Interests should show top level interest suggestions when fetched succe
       </div>
     </li>
     <li
-      className="sc-gipzik iOyWbu"
+      className="sc-dVhcbM hxYutr"
     >
       <div
         style={
@@ -1801,25 +1715,23 @@ exports[`Interests should show top level interest suggestions when fetched succe
         }
       >
         <button
-          className="sc-kkGfuU ksYOEb"
+          className="sc-cvbbAY sc-jWBwVP giLHpO"
           onClick={[Function]}
           selected={false}
           value="Matematiikka ja fysiikka"
         >
           Matematiikka ja fysiikka
           <div
-            className="sc-iAyFgw eGBEg"
+            className="sc-cMljjf sc-jAaTju drqpjE"
             selected={false}
           >
             <svg
               data-file-name="SvgCheckmark"
               style={
                 Object {
-                  "height": "1rem",
-                  "marginTop": "0.7rem",
-                  "stroke": "#e2e2e2",
+                  "height": "2.1rem",
+                  "paddingRight": "0.15rem",
                   "strokeWidth": 2,
-                  "width": "1rem",
                 }
               }
             />
