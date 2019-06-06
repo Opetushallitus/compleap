@@ -98,12 +98,14 @@ function(uris = "", terms = "", n = 10, type = "unit") {
 
 # uris <- c("tutkinnonosat_100129", "tutkinnonosat_100131", "tutkinnonosat_100130")
 # uris2 <- c("tutkinnonosat_100125", "tutkinnonosat_100126", "tutkinnonosat_100122")
+# uris2 <- ""
 # #uris <- c("koulutus_487141", "koulutus_381141")
 # terms <- c("1,20,34,45,58")
 # uris <- c("tutkinnonosat_100439")
 # terms <- c("149,85,86,87,88")
 # terms <- c("154,125,126,127,128")
 # type <- "unit"
+# type <- "qualification"
 # n <- 10
 
 #* @apiTitle CompLeap recommendation API v1
@@ -152,7 +154,7 @@ function(uris = "", uris2 = "", terms = "", n = 10, type = "unit") {
     # add liked units and terms and substract dislike
     liked <- colSums(input_vecs[rownames(input_vecs) %in% c(uris,terms),])
     disliked <- input_vecs[rownames(input_vecs) %in% uris2,]  
-    if(!is.null(disliked)) {
+    if(!is.null(disliked) & nrow(disliked) > 0) {
       for(i in 1:nrow(disliked)) {
         liked <- liked - disliked[i,]
       }
