@@ -1,13 +1,13 @@
 import React, { useContext } from 'react'
-import * as R from 'ramda'
 import styled from 'styled-components'
-import regions from 'resources/regions'
+import * as R from 'ramda'
+import levels from 'resources/levels'
 import { Context, dispatch } from 'state/state'
-import Select from 'component/generic/widget/dropdown/Select'
-import Tag from 'component/generic/widget/Tag'
-import useTranslation from 'component/generic/hook/useTranslation'
 import { InteractionEvent } from 'state/events'
+import Select from 'component/generic/widget/dropdown/Select'
+import useTranslation from 'component/generic/hook/useTranslation'
 import useObservable from 'component/generic/hook/useObservable'
+import Tag from 'component/generic/widget/Tag'
 
 const Container = styled.div`
   display: flex;
@@ -35,35 +35,35 @@ const LocationTagListItem = styled.li`
   display: inline-block;
 `
 
-const LocationFilter = () => {
+const LevelFilter = () => {
   const t = useTranslation()
   const context$ = useContext(Context)
-  const selectedLocationIds = useObservable(context$, { path: ['context', 'recommendations', 'options', 'locations'] })
+  const selectedLevelIds = useObservable(context$, { path: ['context', 'recommendations', 'options', 'levels'] })
 
-  const regionOptions = Object.entries(regions)
+  const levelOptions = Object.entries(levels)
     .map(([id, name]) => ({ id, label: name }))
     .map(R.over(R.lensProp('label'), t))
 
-  const availableOptions = regionOptions.filter(option => !selectedLocationIds.includes(option.id))
+  const availableOptions = levelOptions.filter(option => !selectedLevelIds.includes(option.id))
 
   return (
     <Container>
-      <Label>{t`Sijainti` + ':'}</Label>
+      <Label>{t`Taso` + ':'}</Label>
       <InputContainer>
         <Select
           placeholder={t`Lisää rajaus`}
           options={availableOptions}
-          onSelect={id => dispatch({ type: InteractionEvent.ADD_RECOMMENDATION_LOCATION_FILTER, data: { id } })}
+          onSelect={id => dispatch({ type: InteractionEvent.ADD_RECOMMENDATION_LEVEL_FILTER, data: { id } })}
           selectedId={''}
         />
       </InputContainer>
       <LocationTagList>
-        {selectedLocationIds.map(id => (
+        {selectedLevelIds.map(id => (
           <LocationTagListItem key={id}>
             <Tag
               id={id}
-              name={t(regions[id])}
-              onRemove={() => dispatch({ type: InteractionEvent.REMOVE_RECOMMENDATION_LOCATION_FILTER, data: { id } })}
+              name={t(levels[id])}
+              onRemove={() => dispatch({ type: InteractionEvent.REMOVE_RECOMMENDATION_LEVEL_FILTER, data: { id } })}
             />
           </LocationTagListItem>
         ))}
@@ -72,4 +72,4 @@ const LocationFilter = () => {
   )
 }
 
-export default LocationFilter
+export default LevelFilter

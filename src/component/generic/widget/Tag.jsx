@@ -1,8 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import styled from 'styled-components'
-import { dispatch } from 'state/state'
-import { InteractionEvent } from 'state/events'
 import { rounded } from 'ui/properties'
 import Remove from 'resources/asset/remove.svg'
 import theme from 'ui/theme'
@@ -48,12 +46,10 @@ const ChipRemoveButton = styled.button`
   }
 `
 
-const Tag = ({ id, name }) => (
+const Tag = ({ id, name, onRemove }) => (
   <ChipTag>
     {name}
-    <ChipRemoveButton
-      onClick={() => dispatch({ type: InteractionEvent.REMOVE_RECOMMENDATION_LOCATION_FILTER, data: { id } })}
-    >
+    <ChipRemoveButton onClick={onRemove}>
       <Remove style={{
         height: '1.6rem',
         stroke: theme.color.white,
@@ -65,7 +61,8 @@ const Tag = ({ id, name }) => (
 
 Tag.propTypes = {
   id: PropTypes.string.isRequired,
-  name: PropTypes.string.isRequired
+  name: PropTypes.string.isRequired,
+  onRemove: PropTypes.func.isRequired
 }
 
 export default Tag

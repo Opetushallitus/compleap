@@ -622,6 +622,18 @@
     "fi": "Sijainti",
     "en": "Location"
   },
+  "Taso": {
+    "fi": "Taso",
+    "en": "Level"
+  },
+  "Ammatillinen koulutus": {
+    "fi": "Ammatillinen koulutus",
+    "en": "Vocational education"
+  },
+  "Korkeakoulutus": {
+    "fi": "Korkeakoulutus",
+    "en": "Higher education"
+  },
   "Lisää rajaus": {
     "fi": "Lisää rajaus",
     "en": "Add limit"

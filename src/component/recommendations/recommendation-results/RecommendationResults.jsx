@@ -1,6 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import LocationFilter from './location-filter/LocationFilter'
+import LevelFilter from 'component/recommendations/recommendation-results/level-filter/LevelFilter'
 import RecommendationList from './recommendation-list/RecommendationList'
 import { RecommendationsState } from 'state/recommendationStates'
 import Alert from 'component/generic/widget/Alert'
@@ -14,6 +15,7 @@ const RecommendationResults = ({ recommendations, status }) => {
 
   return (
     <React.Fragment>
+      <LevelFilter/>
       <LocationFilter/>
       <RecommendationList recommendations={recommendations} status={status}/>
     </React.Fragment>

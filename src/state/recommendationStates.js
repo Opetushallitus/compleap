@@ -35,12 +35,10 @@ const recommendationStates = {
     }
   },
   on: {
-    [InteractionEvent.ADD_RECOMMENDATION_LOCATION_FILTER]: {
-      actions: Action.addRecommendationLocationFilter
-    },
-    [InteractionEvent.REMOVE_RECOMMENDATION_LOCATION_FILTER]: {
-      actions: Action.removeRecommendationLocationFilter
-    }
+    [InteractionEvent.ADD_RECOMMENDATION_LOCATION_FILTER]: { actions: Action.addRecommendationLocationFilter },
+    [InteractionEvent.REMOVE_RECOMMENDATION_LOCATION_FILTER]: { actions: Action.removeRecommendationLocationFilter },
+    [InteractionEvent.ADD_RECOMMENDATION_LEVEL_FILTER]: { actions: Action.addRecommendationLevelFilter },
+    [InteractionEvent.REMOVE_RECOMMENDATION_LEVEL_FILTER]: { actions: Action.removeRecommendationLevelFilter }
   }
 }
 

@@ -50,7 +50,8 @@ export const context = {
   },
   recommendations: {
     options: {
-      locations: []
+      locations: [],
+      levels: []
     }
   }
 }
@@ -74,7 +75,9 @@ export const Action = Object.freeze({
   likeEducationUnit: 'likeEducationUnit',
   dislikeEducationUnit: 'dislikeEducationUnit',
   addRecommendationLocationFilter: 'addRecommendationLocationFilter',
-  removeRecommendationLocationFilter: 'removeRecommendationLocationFilter'
+  removeRecommendationLocationFilter: 'removeRecommendationLocationFilter',
+  addRecommendationLevelFilter: 'addRecommendationLevelFilter',
+  removeRecommendationLevelFilter: 'removeRecommendationLevelFilter'
 })
 
 export const actions = {
@@ -162,5 +165,11 @@ export const actions = {
   }),
   [Action.removeRecommendationLocationFilter]: assign({
     recommendations: (ctx, event) => R.over(R.lensPath(['options', 'locations']), R.reject(R.equals(event.data.id)), ctx.recommendations)
+  }),
+  [Action.addRecommendationLevelFilter]: assign({
+    recommendations: (ctx, event) => R.over(R.lensPath(['options', 'levels']), R.append(event.data.id), ctx.recommendations)
+  }),
+  [Action.removeRecommendationLevelFilter]: assign({
+    recommendations: (ctx, event) => R.over(R.lensPath(['options', 'levels']), R.reject(R.equals(event.data.id)), ctx.recommendations)
   })
 }
