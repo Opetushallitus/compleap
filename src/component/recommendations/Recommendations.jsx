@@ -4,7 +4,7 @@ import useTranslation from 'component/generic/hook/useTranslation'
 import { H1 } from 'ui/typography'
 import { Context } from 'state/state'
 import {
-  countSelectedInterests,
+  countSelectedInterests, pickAndFlattenDownvotedVerifiedEducation,
   pickAndFlattenInterests,
   pickAndFlattenUnverifiedEducation,
   pickAndFlattenVerifiedEducation
@@ -25,17 +25,24 @@ const Recommendations = () => {
 
   const hasRequiredInterests$ = countSelectedInterests(interests$).map(v => v >= process.env.MIN_INTERESTS).toProperty()
 
-  const queryParams$ = B.combineTemplate({
+  const queryParamsA$ = B.combineTemplate({
     unverifiedEducations: pickAndFlattenUnverifiedEducation(unverifiedEducations$),
     verifiedEducations: pickAndFlattenVerifiedEducation(verifiedEducations$),
     interests: pickAndFlattenInterests(interests$)
   })
-  // TODO update recommendations query for multiple altenative models
-  const recommendationsResponse1 = useRecommendationsQuery(process.env.API_ENDPOINT, queryParams$, hasRequiredInterests$)
-  const recommendationsResponse2 = useRecommendationsQuery(process.env.ALTERNATIVE_API_ENDPOINT, queryParams$, hasRequiredInterests$)
 
-  const recommendations1 = recommendationsResponse1 || []
-  const recommendations2 = recommendationsResponse2 || []
+  const queryParamsB$ = B.combineTemplate({
+    unverifiedEducations: pickAndFlattenUnverifiedEducation(unverifiedEducations$),
+    verifiedEducations: pickAndFlattenVerifiedEducation(verifiedEducations$),
+    verifiedDownvotedEducations: pickAndFlattenDownvotedVerifiedEducation(verifiedEducations$),
+    interests: pickAndFlattenInterests(interests$)
+  })
+
+  const recommendationsResponseA = useRecommendationsQuery(process.env.API_ENDPOINT, queryParamsA$, hasRequiredInterests$)
+  const recommendationsResponseB = useRecommendationsQuery(process.env.ALTERNATIVE_API_ENDPOINT, queryParamsB$, hasRequiredInterests$)
+
+  const recommendationsA = recommendationsResponseA || []
+  const recommendationsB = recommendationsResponseB || []
 
   const hasRequiredInterests = useObservable(hasRequiredInterests$, { skipDuplicates: true })
 
@@ -47,7 +54,7 @@ const Recommendations = () => {
       </p>
       {
         hasRequiredInterests
-          ? <ModelComparison recommendations={[recommendations1, recommendations2]} status={status}/>
+          ? <ModelComparison recommendations={[recommendationsA, recommendationsB]} status={status}/>
           : <RequireInterestsMessage/>
       }
     </React.Fragment>

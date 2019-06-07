@@ -18,6 +18,10 @@ export const pickAndFlattenVerifiedEducation = verifiedEducations$ => verifiedEd
   educations.flatMap(education => pickVerifiedEducation(education.children).map(v => v.uri))
 )
 
+export const pickAndFlattenDownvotedVerifiedEducation = verifiedEducations$ => verifiedEducations$.map(educations =>
+  educations.flatMap(education => education.children.filter(ed => ed.rating === 'DISLIKE').map(v => v.uri))
+)
+
 export const pickAndFlattenInterests = interests$ => interests$.map(interests =>
   interests.filter(interest => interest.selected).map(interest => [
     interest.id,
