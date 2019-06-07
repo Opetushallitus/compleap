@@ -3,6 +3,8 @@ import PropTypes from 'prop-types'
 import styled from 'styled-components'
 import * as R from 'ramda'
 import regions from 'resources/regions'
+import levels from 'resources/levels'
+import typeToLevel from 'resources/mock/educationTypeToLevel'
 import { Context } from 'state/state'
 import { RecommendationsState } from 'state/recommendationStates'
 import useObservable from 'component/generic/hook/useObservable'
@@ -17,6 +19,13 @@ const findRegionId = regionName => {
     return -1
   }
   return id
+}
+
+const levelsByName = R.invertObj(levels)
+const typeToLevelId = type => {
+  const levelName = typeToLevel[type]
+  if (!levelName) console.error(`Could not resolve recommendation level for type ${type}`)
+  return levelsByName[levelName]
 }
 
 const Table = styled.table`
@@ -83,16 +92,22 @@ const ComparisonTable = ({ results }) => {
   const context$ = useContext(Context)
   const [activeDetails, setActiveDetails] = useState(null)
 
-  const validatedRecommendations = results.map(alternatives => alternatives.map(recommendation => Recommendation(recommendation)))
+  const alternativeModels = results.map(alternatives => alternatives.map(recommendation => Recommendation(recommendation)))
 
   const locationIdWhitelist = useObservable(context$, { path: ['context', 'recommendations', 'options', 'locations'] })
+  const levelIdWhitelist = useObservable(context$, { path: ['context', 'recommendations', 'options', 'levels'] })
   const existingVerifiedEducation = useObservable(context$, { path: ['context', 'education', 'data', 'verifiedEducations'] }).map(v => v.uri)
 
-  const optionsWithoutExistingVerified = validatedRecommendations.map(v => v.filter(({ koulutuskoodi }) => !existingVerifiedEducation.includes(koulutuskoodi)))
-  const optionsWithRegionIds = optionsWithoutExistingVerified.map(v => v.map(option => R.assoc('regionId', findRegionId(option.providerProvince), option)))
-  const currentMatchingOptions = locationIdWhitelist.length > 0 ? optionsWithRegionIds.map(v => v.filter(option => locationIdWhitelist.includes(option.regionId))) : optionsWithRegionIds
+  const modelOptionsWithoutExistingVerified = alternativeModels.map(model => model.filter(({ koulutuskoodi }) => !existingVerifiedEducation.includes(koulutuskoodi)))
+  const assocRegionIds = option => R.assoc('regionId', findRegionId(option.providerProvince), option)
+  const assocLevelIds = option => R.assoc('levelId', typeToLevelId(option.type), option)
+  const modelOptionsWithMetadata = R.map(R.compose(R.map(assocLevelIds), R.map(assocRegionIds)))(modelOptionsWithoutExistingVerified)
 
-  const groupedBySpecialisation = currentMatchingOptions.map(R.compose(Object.entries, R.groupBy(v => v.name)))
+  const matchRegions = option => locationIdWhitelist.length === 0 || locationIdWhitelist.includes(option.regionId)
+  const matchLevels = option => levelIdWhitelist.length === 0 || levelIdWhitelist.includes(option.levelId)
+  const modelsCurrentMatchingOptions = modelOptionsWithMetadata.map(model => model.filter(R.both(matchRegions, matchLevels)))
+
+  const groupedBySpecialisation = modelsCurrentMatchingOptions.map(R.compose(Object.entries, R.groupBy(v => v.name)))
 
   const zipped = R.zip(...groupedBySpecialisation)
 
