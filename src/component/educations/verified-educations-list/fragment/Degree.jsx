@@ -2,9 +2,10 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import styled from 'styled-components'
 import useTranslation from 'component/generic/hook/useTranslation'
-import Card from 'component/generic/widget/Card'
 import { H4 } from 'ui/typography'
-import Unit from 'component/educations/verified-educations-list/fragment/Unit'
+import Card from 'component/generic/widget/Card'
+import Unit from './Unit'
+import Competences from './Competences'
 
 const DegreeHeaderContainer = styled.section`
   border-bottom: solid 3px ${({ theme }) => theme.color.grayLightest};
@@ -43,6 +44,7 @@ const Degree = ({ name, qualificationTitles, status, units }) => {
           />
         ))}
       </div>
+      <Competences unitUris={units.map(unit => unit.uri)}/>
     </Card>
   )
 }
