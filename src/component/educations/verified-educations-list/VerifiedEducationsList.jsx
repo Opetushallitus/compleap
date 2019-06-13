@@ -29,7 +29,7 @@ const VerifiedEducationsList = () => {
         <React.Fragment key={place}>
           <PlaceOfStudyHeader place={place}/>
           {educations.map(({ placeOfStudy, uri, children, ...rest }) =>
-            <Degree key={uri} units={children} {...rest}/>
+            <Degree key={uri} uri={uri} units={children} {...rest}/>
           )}
         </React.Fragment>
       ))}

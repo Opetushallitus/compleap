@@ -37,6 +37,12 @@ const verifiedEducationStates = {
       }
     },
     [State.success]: {
+      invoke: {
+        src: Service.getCompetencesForVerifiedEducation,
+        onDone: {
+          actions: Action.setCompetenceDataForVerifiedEducation
+        }
+      },
       on: {
         [InteractionEvent.LIKE_EDUCATION_UNIT]: { actions: Action.likeEducationUnit },
         [InteractionEvent.DISLIKE_EDUCATION_UNIT]: { actions: Action.dislikeEducationUnit }

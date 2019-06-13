@@ -25,7 +25,7 @@ Status.propTypes = {
   status: PropTypes.object
 }
 
-const Degree = ({ name, qualificationTitles, status, units }) => {
+const Degree = ({ uri, name, qualificationTitles, status, units }) => {
   const t = useTranslation()
   return (
     <Card layout='column'>
@@ -44,12 +44,13 @@ const Degree = ({ name, qualificationTitles, status, units }) => {
           />
         ))}
       </div>
-      <Competences unitUris={units.map(unit => unit.uri)}/>
+      <Competences educationUri={uri}/>
     </Card>
   )
 }
 
 Degree.propTypes = {
+  uri: PropTypes.string.isRequired,
   name: PropTypes.object,
   qualificationTitles: PropTypes.array,
   status: PropTypes.object,

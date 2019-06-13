@@ -9,11 +9,13 @@ import { stopPersisting } from 'state/state'
 import VerifiedEducation from 'model/VerifiedEducation'
 import Rating from 'model/enum/Rating'
 import { koulutusmoduuliTunnisteToCodeUri, tutkinnonosaTunnisteToCodeUri } from 'util/koski'
+import http from 'http/http'
 
 export const Service = Object.freeze({
   getInterestSuggestions: 'getInterestSuggestions',
   mapEducationClassToLearningOpportunityCode: 'mapEducationClassToLearningOpportunityCode',
   getVerifiedEducations: 'getVerifiedEducations',
+  getCompetencesForVerifiedEducation: 'getCompetencesForVerifiedEducation',
   clearSession: 'clearSession'
 })
 
@@ -123,6 +125,31 @@ const services = {
     }
 
     return wrapAsMock(Service.getVerifiedEducations, Promise.resolve(parseKoskiData(getProfile(ctx.user.profileId))))
+  },
+
+  [Service.getCompetencesForVerifiedEducation]: async (ctx, event) => {
+    const educations = event.data.map(education => ({
+      uri: education.uri,
+      units: education.children.map(unit => unit.uri)
+    }))
+
+    const requests = educations.map(async education => {
+      const res = await http.get('/escos', {
+        uris: education.units,
+        type: 'unit'
+      }, {
+        encode: false,
+        arrayFormat: 'comma'
+      })
+
+      return {
+        uri: education.uri,
+        competences: res[0]
+      }
+    })
+
+    const results = await Promise.all(requests)
+    return R.reduce((o, { uri, competences }) => R.assoc(uri, competences, o), {}, results)
   },
 
   [Service.clearSession]: () => {
