@@ -33,6 +33,9 @@ qualifications_model <- read.binary.vectors("./models/qualifications_doc2vec_mod
 # load offering metadata
 offering <- readRDS("./data/application_info.rds")
 
+# load unit-esco mappings 
+escos <- readRDS("./data/escos.rds")
+
 
 ############################################################################################################
 ## API function that takes in list of study program units (or qualifications) and terms
@@ -115,7 +118,7 @@ function(uris = "", terms = "", n = 10, type = "unit") {
 #* @param uris2 The study unit uris that are not liked
 #* @param terms:int The interest terms ids to be matched with openings
 #* @param n:int The number of recommendations to return
-#* @param type: The type of uris in input (valid values "unit" or "qualification")
+#* @param type The type of uris in input (valid values "unit" or "qualification")
 #* @get /v1/match
 function(uris = "", uris2 = "", terms = "", n = 10, type = "unit") {
   
@@ -172,3 +175,24 @@ function(uris = "", uris2 = "", terms = "", n = 10, type = "unit") {
   return(list(matches))
   
 }
+
+#* @apiTitle CompLeap ESCO api
+
+#* Get ESCO skill tags for given unit uris or qualifications
+#* Returns skills in Finnish and English. Additionally an url link to skill page. 
+#* @param uris The study unit (or qualification) uris to be matched with esco skills
+#* @param type The type of uris in input (valid values "unit" or "qualification")
+#* @get /escos
+function(uris = "", type = "unit") {
+  
+  uris <- unlist(strsplit(uris, ","))
+  
+  matches <- escos[escos$unit_uri %in% uris,]
+  matches <- select(matches, unit_uri, conceptUri, preferredLabelFi, preferredLabelEn)
+  
+  # return matches (which is serialized as JSON)
+  return(list(matches))
+  
+}
+
+
