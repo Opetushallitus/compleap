@@ -701,5 +701,9 @@
   "Tapahtui odottamaton virhe eikä tietoja pystytä juuri nyt näyttämään.": {
     "fi": "Tapahtui odottamaton virhe eikä tietoja pystytä juuri nyt näyttämään.",
     "en": "An unexpected error occurred and the information cannot be shown."
+  },
+  "Tapahtui odottamaton virhe eikä kompetensseja pystytä juuri nyt näyttämään.": {
+    "fi": "Tapahtui odottamaton virhe eikä kompetensseja pystytä juuri nyt näyttämään.",
+    "en": "An unexpected error occurred and the competences cannot be shown."
   }
 }

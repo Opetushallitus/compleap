@@ -7,6 +7,7 @@ import { subtopicsLens } from 'state/helper'
 import { isVocational } from 'util/educationHelper'
 import { stopPersisting } from 'state/state'
 import VerifiedEducation from 'model/VerifiedEducation'
+import Competence from 'model/Competence'
 import Rating from 'model/enum/Rating'
 import { koulutusmoduuliTunnisteToCodeUri, tutkinnonosaTunnisteToCodeUri } from 'util/koski'
 import http from 'http/http'
@@ -127,8 +128,8 @@ const services = {
     return wrapAsMock(Service.getVerifiedEducations, Promise.resolve(parseKoskiData(getProfile(ctx.user.profileId))))
   },
 
-  [Service.getCompetencesForVerifiedEducation]: async (ctx, event) => {
-    const educations = event.data.map(education => ({
+  [Service.getCompetencesForVerifiedEducation]: async (ctx, _) => {
+    const educations = ctx.education.data.verifiedEducations.map(education => ({
       uri: education.uri,
       units: education.children.map(unit => unit.uri)
     }))
@@ -142,9 +143,11 @@ const services = {
         arrayFormat: 'comma'
       })
 
+      const competences = res[0].map(Competence)
+
       return {
         uri: education.uri,
-        competences: res[0]
+        competences
       }
     })
 

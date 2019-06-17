@@ -80,7 +80,8 @@ export const Action = Object.freeze({
   removeUnverifiedEducation: 'removeUnverifiedEducation',
   setEducationError: 'setEducationError',
   setVerifiedEducationData: 'setVerifiedEducationData',
-  setCompetenceDataForVerifiedEducation: 'setCompetenceDataForVerifiedEducation',
+  setVerifiedEducationCompetenceData: 'setVerifiedEducationCompetenceData',
+  setVerifiedEducationCompetenceError: 'setVerifiedEducationCompetenceError',
   likeEducationUnit: 'likeEducationUnit',
   dislikeEducationUnit: 'dislikeEducationUnit',
   addRecommendationLocationFilter: 'addRecommendationLocationFilter',
@@ -169,8 +170,11 @@ export const actions = {
   [Action.setVerifiedEducationData]: assign({
     education: (ctx, event) => R.assocPath(['data', 'verifiedEducations'], event.data, ctx.education)
   }),
-  [Action.setCompetenceDataForVerifiedEducation]: assign({
+  [Action.setVerifiedEducationCompetenceData]: assign({
     competences: (ctx, event) => R.assoc('data', event.data, ctx.competences)
+  }),
+  [Action.setVerifiedEducationCompetenceError]: assign({
+    competences: (ctx, event) => R.assoc('error', event.data, ctx.competences)
   }),
   [Action.likeEducationUnit]: assign({
     education: (ctx, event) => updateVerifiedEducationUnitRating(event.data.id, Rating.LIKE, ctx)

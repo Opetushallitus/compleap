@@ -8,6 +8,7 @@ import verifiedEducationStates from 'state/verifiedEducationStates'
 import unverifiedEducationStates from 'state/unverifiedEducationStates'
 import recommendationStates from 'state/recommendationStates'
 import userStates from 'state/userStates'
+import verifiedEducationCompetenceStates from 'state/verifiedEducationCompetenceStates'
 
 export const PageState = Object.freeze({
   lander: 'lander',
@@ -25,7 +26,8 @@ const SectionState = Object.freeze({
 
 const EducationSubsectionState = Object.freeze({
   verifiedEducation: 'verifiedEducation',
-  unverifiedEducation: 'unverifiedEducation'
+  unverifiedEducation: 'unverifiedEducation',
+  verifiedEducationCompetences: 'verifiedEducationCompetences'
 })
 
 export const machine = Machine({
@@ -52,7 +54,8 @@ export const machine = Machine({
           type: 'parallel',
           states: {
             [EducationSubsectionState.verifiedEducation]: { ...verifiedEducationStates },
-            [EducationSubsectionState.unverifiedEducation]: { ...unverifiedEducationStates }
+            [EducationSubsectionState.unverifiedEducation]: { ...unverifiedEducationStates },
+            [EducationSubsectionState.verifiedEducationCompetences]: { ...verifiedEducationCompetenceStates }
           }
         },
         [SectionState.interests]: { ...interestsStates },

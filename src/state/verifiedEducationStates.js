@@ -1,6 +1,7 @@
+import { send } from 'xstate'
 import { Service } from 'state/services'
 import { Action } from 'state/context'
-import { InteractionEvent } from 'state/events'
+import { InteractionEvent, InternalEvent } from 'state/events'
 
 const State = Object.freeze({
   idle: 'idle',
@@ -37,12 +38,7 @@ const verifiedEducationStates = {
       }
     },
     [State.success]: {
-      invoke: {
-        src: Service.getCompetencesForVerifiedEducation,
-        onDone: {
-          actions: Action.setCompetenceDataForVerifiedEducation
-        }
-      },
+      entry: send(InternalEvent.GET_COMPETENCES_FOR_VERIFIED_EDUCATION),
       on: {
         [InteractionEvent.LIKE_EDUCATION_UNIT]: { actions: Action.likeEducationUnit },
         [InteractionEvent.DISLIKE_EDUCATION_UNIT]: { actions: Action.dislikeEducationUnit }

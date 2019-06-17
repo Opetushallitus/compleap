@@ -30,6 +30,10 @@ export const InteractionEvent = Object.freeze({
   REMOVE_RECOMMENDATION_LEVEL_FILTER: 'REMOVE_RECOMMENDATION_LEVEL_FILTER'
 })
 
+export const InternalEvent = Object.freeze({
+  GET_COMPETENCES_FOR_VERIFIED_EDUCATION: 'GET_COMPETENCES_FOR_VERIFIED_EDUCATION'
+})
+
 export const RecommendationsStatusEvent = Object.freeze({
   QUERY_PARAM_CHANGE: 'QUERY_PARAM_CHANGE',
   QUERY_PENDING: 'QUERY_PENDING',
