@@ -161,8 +161,12 @@ function(uris = "", uris2 = "", terms = "", n = 10, type = "unit", modeltype = "
     interest_vecs <- interest_vecs[!is.na(interest_vecs[,1]),]
   } else interest_vecs <- c()
   
-  # combine input vectors 
-  input_vecs <- rbind(vecs, interest_vecs, vecs2)
+  # combine input vectors (take disliked depending on model type)
+  if(modeltype %in% c("1","3")) {
+    input_vecs <- rbind(vecs, interest_vecs)
+  } else if(modeltype %in% c("2","4")) {
+      input_vecs <- rbind(vecs, interest_vecs, vecs2)
+  }
   
   # find matching education offers
   if(!is.null(input_vecs)) {
