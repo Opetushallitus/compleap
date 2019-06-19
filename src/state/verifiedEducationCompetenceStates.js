@@ -17,7 +17,7 @@ const verifiedEducationCompetenceStates = {
       on: {
         '': [
           { target: State.nop, cond: (ctx, _) => !ctx.user.isLoggedIn || !ctx.user.id },
-          { target: State.success, cond: (ctx, _) => Object.keys(ctx.competences.data).length > 0 }
+          { target: State.success, cond: (ctx, _) => Object.keys(ctx.competences.data.fromVerifiedEducation).length > 0 }
         ],
         [InternalEvent.GET_COMPETENCES_FOR_VERIFIED_EDUCATION]: {
           target: State.pending

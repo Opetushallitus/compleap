@@ -17,6 +17,7 @@ export const Service = Object.freeze({
   mapEducationClassToLearningOpportunityCode: 'mapEducationClassToLearningOpportunityCode',
   getVerifiedEducations: 'getVerifiedEducations',
   getCompetencesForVerifiedEducation: 'getCompetencesForVerifiedEducation',
+  getCompetencesForUnverifiedEducation: 'getCompetencesForUnverifiedEducation',
   clearSession: 'clearSession'
 })
 
@@ -153,6 +154,20 @@ const services = {
 
     const results = await Promise.all(requests)
     return R.reduce((o, { uri, competences }) => R.assoc(uri, competences, o), {}, results)
+  },
+
+  [Service.getCompetencesForUnverifiedEducation]: async (ctx, event) => {
+    const uri = event.data
+
+    const res = await http.get('/escos', {
+      uris: [uri],
+      type: 'qualification'
+    }, {
+      encode: false,
+      arrayFormat: 'comma'
+    })
+
+    return res[0].map(Competence)
   },
 
   [Service.clearSession]: () => {

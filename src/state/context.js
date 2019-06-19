@@ -51,8 +51,14 @@ export const context = {
     }
   },
   competences: {
-    data: {},
-    error: undefined
+    data: {
+      fromVerifiedEducation: [],
+      fromUnverifiedEducation: []
+    },
+    error: {
+      fromVerifiedEducation: undefined,
+      fromUnverifiedEducation: undefined
+    }
   },
   recommendations: {
     options: {
@@ -78,6 +84,9 @@ export const Action = Object.freeze({
   clearUnverifiedEducationSpecifier: 'clearUnverifiedEducationSpecifier',
   addUnverifiedEducation: 'addUnverifiedEducation',
   removeUnverifiedEducation: 'removeUnverifiedEducation',
+  addUnverifiedEducationCompetenceData: 'addUnverifiedEducationCompetenceData',
+  removeUnverifiedEducationCompetenceData: 'removeUnverifiedEducationCompetenceData',
+  setUnverifiedEducationCompetenceError: 'setUnverifiedEducationCompetenceError',
   setEducationError: 'setEducationError',
   setVerifiedEducationData: 'setVerifiedEducationData',
   setVerifiedEducationCompetenceData: 'setVerifiedEducationCompetenceData',
@@ -164,6 +173,12 @@ export const actions = {
       return R.dissocPath(['data', 'unverifiedEducations', i], ctx.education)
     }
   }),
+  [Action.addUnverifiedEducationCompetenceData]: assign({
+    competences: (ctx, event) => R.assocPath(['data', 'fromUnverifiedEducation'], event.data, ctx.competences)
+  }),
+  [Action.setUnverifiedEducationCompetenceError]: assign({
+    competences: (ctx, event) => R.assocPath(['error', 'fromUnverifiedEducation'], event.data, ctx.competences)
+  }),
   [Action.setEducationError]: assign({
     education: (ctx, event) => R.assoc('error', event.data, ctx.education)
   }),
@@ -171,10 +186,10 @@ export const actions = {
     education: (ctx, event) => R.assocPath(['data', 'verifiedEducations'], event.data, ctx.education)
   }),
   [Action.setVerifiedEducationCompetenceData]: assign({
-    competences: (ctx, event) => R.assoc('data', event.data, ctx.competences)
+    competences: (ctx, event) => R.assocPath(['data', 'fromVerifiedEducation'], event.data, ctx.competences)
   }),
   [Action.setVerifiedEducationCompetenceError]: assign({
-    competences: (ctx, event) => R.assoc('error', event.data, ctx.competences)
+    competences: (ctx, event) => R.assoc(['error', 'fromVerifiedEducation'], event.data, ctx.competences)
   }),
   [Action.likeEducationUnit]: assign({
     education: (ctx, event) => updateVerifiedEducationUnitRating(event.data.id, Rating.LIKE, ctx)

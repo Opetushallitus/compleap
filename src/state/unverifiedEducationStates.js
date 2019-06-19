@@ -17,7 +17,7 @@ export const EducationPickerState = Object.freeze({
   specifierRequired: 'specifierRequired',
   selectionReady: 'selectionReady',
   done: 'done',
-  mapToEducationCode: 'mapToEducationCode',
+  getCompetences: 'getCompetences',
   failure: 'failure'
 })
 
@@ -109,12 +109,25 @@ const unverifiedEducationStates = {
       invoke: {
         src: Service.mapEducationClassToLearningOpportunityCode,
         onDone: {
-          target: EducationPickerState.formCollapsed,
+          target: EducationPickerState.getCompetences,
           actions: Action.addUnverifiedEducation
         },
         onError: {
           target: EducationPickerState.failure,
           actions: Action.setEducationError
+        }
+      }
+    },
+    [EducationPickerState.getCompetences]: {
+      invoke: {
+        src: Service.getCompetencesForUnverifiedEducation,
+        onDone: {
+          target: EducationPickerState.formCollapsed,
+          actions: Action.addUnverifiedEducationCompetenceData
+        },
+        onError: {
+          target: EducationPickerState.failure,
+          actions: Action.setUnverifiedEducationCompetenceError
         }
       }
     },
@@ -125,7 +138,10 @@ const unverifiedEducationStates = {
   },
   on: {
     [InteractionEvent.REMOVE_EDUCATION]: {
-      actions: Action.removeUnverifiedEducation
+      actions: [
+        Action.removeUnverifiedEducation,
+        Action.removeUnverifiedEducationCompetenceData
+      ]
     }
   }
 }
