@@ -108,8 +108,7 @@ const ComparisonTable = ({ results }) => {
   const modelsCurrentMatchingOptions = modelOptionsWithMetadata.map(model => model.filter(R.both(matchRegions, matchLevels)))
 
   const groupedBySpecialisation = modelsCurrentMatchingOptions.map(R.compose(Object.entries, R.groupBy(v => v.name)))
-
-  const zipped = R.zip(...groupedBySpecialisation)
+  const maxRecommendationListLength = Math.max(...groupedBySpecialisation.map(list => list.length))
 
   return (
     <React.Fragment>
@@ -118,18 +117,28 @@ const ComparisonTable = ({ results }) => {
           <tr>{R.prepend(null, groupedBySpecialisation).map((_, i) => <TH key={i}>{i > 0 ? i : ''}</TH>)}</tr>
         </thead>
         <tbody>
-          {zipped.map((alternatives, i) => (
-            <Row key={i}>
-              <RowLabel>{i + 1}</RowLabel>
-              {alternatives.map(([title, applicationOptions], i) => (
-                <ResultSummary
-                  key={`${i}_${title}`}
-                  recommendations={applicationOptions}
-                  onClick={() => setActiveDetails(applicationOptions)}
-                />
-              ))}
-            </Row>
-          ))}
+          {
+            R.range(0, maxRecommendationListLength).map(i => (
+              <Row key={i}>
+                <RowLabel>{i + 1}</RowLabel>
+                {
+                  R.range(0, groupedBySpecialisation.length).map(j => {
+                    const recommendation = groupedBySpecialisation[j][i]
+                    if (!recommendation) return <Data/>
+
+                    const [title, applicationOptions] = recommendation
+                    return (
+                      <ResultSummary
+                        key={`${j}_${title}`}
+                        recommendations={applicationOptions}
+                        onClick={() => setActiveDetails(applicationOptions)}
+                      />
+                    )
+                  })
+                }
+              </Row>
+            ))
+          }
         </tbody>
       </Table>
       {activeDetails && <RecommendationDetails applicationOptions={activeDetails} onClose={() => setActiveDetails(null)}/>}

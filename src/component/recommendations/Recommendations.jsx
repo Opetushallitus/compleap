@@ -25,24 +25,18 @@ const Recommendations = () => {
 
   const hasRequiredInterests$ = countSelectedInterests(interests$).map(v => v >= process.env.MIN_INTERESTS).toProperty()
 
-  const queryParamsA$ = B.combineTemplate({
-    unverifiedEducations: pickAndFlattenUnverifiedEducation(unverifiedEducations$),
-    verifiedEducations: pickAndFlattenVerifiedEducation(verifiedEducations$),
-    interests: pickAndFlattenInterests(interests$)
-  })
-
-  const queryParamsB$ = B.combineTemplate({
+  const commonParams = {
     unverifiedEducations: pickAndFlattenUnverifiedEducation(unverifiedEducations$),
     verifiedEducations: pickAndFlattenVerifiedEducation(verifiedEducations$),
     verifiedDownvotedEducations: pickAndFlattenDownvotedVerifiedEducation(verifiedEducations$),
     interests: pickAndFlattenInterests(interests$)
-  })
+  }
 
-  const recommendationsResponseA = useRecommendationsQuery(process.env.API_ENDPOINT, queryParamsA$, hasRequiredInterests$)
-  const recommendationsResponseB = useRecommendationsQuery(process.env.ALTERNATIVE_API_ENDPOINT, queryParamsB$, hasRequiredInterests$)
-
-  const recommendationsA = recommendationsResponseA || []
-  const recommendationsB = recommendationsResponseB || []
+  const i = [1, 2, 3, 4]
+  const modelParams = i.map(i => Object.assign({}, commonParams, { modelType: i }))
+  const recommendationResponses = modelParams
+    .map(B.combineTemplate)
+    .map(params$ => useRecommendationsQuery(process.env.ALTERNATIVE_API_ENDPOINT, params$, hasRequiredInterests$) || [])
 
   const hasRequiredInterests = useObservable(hasRequiredInterests$, { skipDuplicates: true })
 
@@ -54,7 +48,7 @@ const Recommendations = () => {
       </p>
       {
         hasRequiredInterests
-          ? <ModelComparison recommendations={[recommendationsA, recommendationsB]} status={status}/>
+          ? <ModelComparison recommendations={recommendationResponses} status={status}/>
           : <RequireInterestsMessage/>
       }
     </React.Fragment>

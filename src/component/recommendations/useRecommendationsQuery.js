@@ -9,7 +9,7 @@ import http from 'http/http'
 const QueryDebounceMs = 1000
 const NumRecommendations = 10
 
-const doQueryRecommendations = (endpoint, { unverifiedEducations, verifiedEducations, verifiedDownvotedEducations, interests }) => {
+const doQueryRecommendations = (endpoint, { unverifiedEducations, verifiedEducations, verifiedDownvotedEducations, interests, modelType }) => {
   dispatch(RecommendationsStatusEvent.QUERY_PENDING)
 
   if (process.env.API_ENDPOINT === 'mock') {
@@ -26,7 +26,8 @@ const doQueryRecommendations = (endpoint, { unverifiedEducations, verifiedEducat
         uris2: type === 'unit' ? verifiedDownvotedEducations : undefined,
         terms: interests,
         n: NumRecommendations,
-        type
+        type,
+        modeltype: modelType
       }, {
         encode: false,
         arrayFormat: 'comma'
