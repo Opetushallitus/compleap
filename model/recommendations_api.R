@@ -20,15 +20,20 @@ library(wordVectors)
 
 # read doc2vec model - vectorized presentation of vocational education offering descriptions (tarjonta)
 offering_model <- read.binary.vectors("./models/offering_doc2vec_model.bin")
+offering_model2 <- read.binary.vectors("./models/offering_doc2vec_model_turku_nlp.bin")
 
 # read doc2vec model - vectorized presentation of interests terms
 interests_model <- read.binary.vectors("./models/interests_doc2vec_model.bin")
+interests_model2 <- read.binary.vectors("./models/interests_doc2vec_model_turku_nlp.bin")
 
 # read doc2vec model - vectorized presentation of unit descriptions (tutkinnon osat)
 units_model <- read.binary.vectors("./models/units_doc2vec_model.bin")
+units_model2 <- read.binary.vectors("./models/units_doc2vec_model_turku_nlp.bin")
 
 # read doc2vec model - vectorized presentation of qualifications
 qualifications_model <- read.binary.vectors("./models/qualifications_doc2vec_model.bin")
+qualifications_model2 <- read.binary.vectors("./models/qualifications_doc2vec_model_turku_nlp.bin")
+
 
 # load offering metadata
 offering <- readRDS("./data/application_info.rds")
@@ -119,14 +124,22 @@ function(uris = "", terms = "", n = 10, type = "unit") {
 #* @param terms:int The interest terms ids to be matched with openings
 #* @param n:int The number of recommendations to return
 #* @param type The type of uris in input (valid values "unit" or "qualification")
+#* @param modeltype The model type to be used in recommendations
 #* @get /v1/match
-function(uris = "", uris2 = "", terms = "", n = 10, type = "unit") {
+function(uris = "", uris2 = "", terms = "", n = 10, type = "unit", modeltype = "1") {
   
   n <- as.numeric(n) + 1
   uris <- unlist(strsplit(uris, ","))
   uris2 <- unlist(strsplit(uris2, ","))
   terms <- as.integer(unlist(strsplit(terms, ",")))
-  
+ 
+  if(modeltype %in% c("3","4")){
+    units_model <- units_model2
+    interests_model <- interests_model2
+    qualifications_model <- qualifications_model2
+    offering_model <- offering_model2
+  }
+   
   if(type == "unit") {
     model <- units_model
   } else if (type == "qualification") {
@@ -154,18 +167,28 @@ function(uris = "", uris2 = "", terms = "", n = 10, type = "unit") {
   # find matching education offers
   if(!is.null(input_vecs)) {
     
-    # add liked units and terms and substract dislike
-    liked <- colSums(input_vecs[rownames(input_vecs) %in% c(uris,terms),])
-    disliked <- input_vecs[rownames(input_vecs) %in% uris2,]  
-    if(!is.null(disliked) & nrow(disliked) > 0) {
-      for(i in 1:nrow(disliked)) {
-        liked <- liked - disliked[i,]
+    if(modeltype %in% c("1","3")) {
+      #calculate similarities to offering document vectors and average
+      matches <- cosineSimilarity(offering_model, input_vecs)
+      matches <- as.data.frame(cbind(rownames(matches),rowMeans(matches)))
+      names(matches) <- c("offer_id","similarity")
+      matches <- matches[order(matches$similarity, decreasing = TRUE),]
+      matches <- matches[1:(n-1),]
+      
+    } else if(modeltype %in% c("2","4")) {
+      # add liked units and terms and substract dislike
+      liked <- colSums(input_vecs[rownames(input_vecs) %in% c(uris,terms),])
+      disliked <- input_vecs[rownames(input_vecs) %in% uris2,]  
+      if(!is.null(disliked) & nrow(disliked) > 0) {
+        for(i in 1:nrow(disliked)) {
+          liked <- liked - disliked[i,]
+        }
       }
+      # find matching offering
+      matches <- closest_to(offering_model, t(liked), n-1)
+      names(matches) <- c("offer_id","similarity")
     }
     
-    # find matching offering
-    matches <- closest_to(offering_model, t(liked), n-1)
-    names(matches) <- c("offer_id","similarity")
     
     # match offering with metadata
     matches <- left_join(matches, offering, by = "offer_id")
