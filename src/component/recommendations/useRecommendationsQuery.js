@@ -51,7 +51,10 @@ export default (endpoint, queryParams$, shouldDoQuery$) => {
 
     const subscriptions = [
       paramChange$
-        .onValue(() => dispatch(RecommendationsStatusEvent.QUERY_PARAM_CHANGE)),
+        .onValue(() => {
+          setResults([])
+          dispatch(RecommendationsStatusEvent.QUERY_PARAM_CHANGE)
+        }),
 
       query$
         .onValue(results => {

@@ -30,6 +30,8 @@ const typeToLevelId = type => {
 
 const Table = styled.table`
   border-collapse: collapse;
+  width: 100%;
+  opacity: ${({ hasData }) => hasData ? 1.0 : 0.35}
 `
 
 const Row = styled.tr`
@@ -56,6 +58,7 @@ const RowLabel = styled.td`
 const Data = styled.td`
   padding: 1rem 0.5rem;
   border: solid 1px ${({ theme }) => theme.color.grayLighter};
+  width: ${({ width }) => width};
   
   &:hover {
     background-color: ${({ theme }) => theme.color.primaryLightest};
@@ -63,13 +66,13 @@ const Data = styled.td`
   }
 `
 
-const ResultSummary = ({ recommendations, onClick }) => {
+const ResultSummary = ({ recommendations, onClick, width = '50%' }) => {
   const degreeTitles = R.compose(str => str.join(', '), R.sort((a, b) => a.localeCompare(b)), R.uniq, R.map(({ degreeTitle }) => degreeTitle))(recommendations)
   const head = recommendations[0]
   const { name, educationCode } = head
 
   return (
-    <Data onClick={onClick}>
+    <Data onClick={onClick} width={width}>
       <div>
         <b>{degreeTitles}</b>
       </div>
@@ -85,7 +88,8 @@ const ResultSummary = ({ recommendations, onClick }) => {
 
 ResultSummary.propTypes = {
   recommendations: PropTypes.array,
-  onClick: PropTypes.func
+  onClick: PropTypes.func,
+  width: PropTypes.string
 }
 
 const ComparisonTable = ({ results }) => {
@@ -110,15 +114,24 @@ const ComparisonTable = ({ results }) => {
   const groupedBySpecialisation = modelsCurrentMatchingOptions.map(R.compose(Object.entries, R.groupBy(v => v.name)))
   const maxRecommendationListLength = Math.max(...groupedBySpecialisation.map(list => list.length))
 
+  const columnWidth = `${90 / groupedBySpecialisation.length}%`
+  const hasData = maxRecommendationListLength > 0
+
   return (
     <React.Fragment>
-      <Table>
+      <Table hasData={hasData}>
         <thead>
-          <tr>{R.prepend(null, groupedBySpecialisation).map((_, i) => <TH key={i}>{i > 0 ? i : ''}</TH>)}</tr>
+          <tr>
+            {R.prepend(null, groupedBySpecialisation).map((_, i) => (
+              <TH key={i} width={i > 0 ? columnWidth : '10%'}>
+                {i > 0 ? i : ''}
+              </TH>
+            ))}
+          </tr>
         </thead>
         <tbody>
           {
-            R.range(0, maxRecommendationListLength).map(i => (
+            R.range(0, Math.max(maxRecommendationListLength, 10)).map(i => (
               <Row key={i}>
                 <RowLabel>{i + 1}</RowLabel>
                 {
@@ -132,6 +145,7 @@ const ComparisonTable = ({ results }) => {
                         key={`${j}_${title}`}
                         recommendations={applicationOptions}
                         onClick={() => setActiveDetails(applicationOptions)}
+                        width={columnWidth}
                       />
                     )
                   })
