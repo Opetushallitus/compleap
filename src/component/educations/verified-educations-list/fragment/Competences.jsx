@@ -42,7 +42,7 @@ const Competences = ({ educationUri }) => {
           return (
             <li key={c.conceptUri}>
               <a href={escoLink} target='_blank' rel='noopener noreferrer'>
-                {getLabelMatchingLanguage(c,lang)}
+                {getLabelMatchingLanguage(c, lang)}
               </a>
             </li>
           )
