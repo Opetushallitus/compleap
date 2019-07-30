@@ -73,27 +73,30 @@ const Competences = ({ educationUri }) => {
   if (status === 'failure') return <Alert level='error'><p>{t`Tapahtui odottamaton virhe eikä kompetensseja pystytä juuri nyt näyttämään.`}</p></Alert>
 
   return (
-    <CompetenceList>
-      {
-        uniqs.map(c => {
-          const escoBaseUrl = `https://ec.europa.eu/esco/portal/skill`
-          const escoParameters = qs.stringify({
-            uri: c.conceptUri,
-            conceptLanguage: lang
+    <>
+      <p>{t`Tämän tutkinnon opinnoista sinulle on kertynyt seuraavanlaista osaamista`}</p>
+      <CompetenceList>
+        {
+          uniqs.map(c => {
+            const escoBaseUrl = `https://ec.europa.eu/esco/portal/skill`
+            const escoParameters = qs.stringify({
+              uri: c.conceptUri,
+              conceptLanguage: lang
+            })
+            const escoLink = `${escoBaseUrl}?${escoParameters}`
+            return (
+              <CompetenceListItem key={c.conceptUri}>
+                <CompetenceTag>
+                  <EscoLink href={escoLink} target='_blank' rel='noopener noreferrer'>
+                    {getLabelMatchingLanguage(c, lang)}
+                  </EscoLink>
+                </CompetenceTag>
+              </CompetenceListItem>
+            )
           })
-          const escoLink = `${escoBaseUrl}?${escoParameters}`
-          return (
-            <CompetenceListItem key={c.conceptUri}>
-              <CompetenceTag>
-                <EscoLink href={escoLink} target='_blank' rel='noopener noreferrer'>
-                  {getLabelMatchingLanguage(c, lang)}
-                </EscoLink>
-              </CompetenceTag>
-            </CompetenceListItem>
-          )
-        })
-      }
-    </CompetenceList>
+        }
+      </CompetenceList>
+    </>
   )
 }
 

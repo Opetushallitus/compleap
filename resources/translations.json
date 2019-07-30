@@ -166,6 +166,10 @@
     "fi": "Tutkintoon liittyvä osaaminen",
     "en": "Competences related to the education"
   },
+  "Tämän tutkinnon opinnoista sinulle on kertynyt seuraavanlaista osaamista": {
+    "fi": "Tämän tutkinnon opinnoista sinulle on kertynyt seuraavanlaista osaamista",
+    "en": "You have gained following competences from the studies in this education"
+  },
   "Kiinnostukset": {
     "fi": "Kiinnostukset",
     "en": "Fields of interest"
