@@ -158,6 +158,14 @@
     "fi": "Valmis",
     "en": "Ready"
   },
+  "Tutkintoon liittyvät opinnot": {
+    "fi": "Tutkintoon liittyvät opinnot",
+    "en": "Studies related to the education"
+  },
+  "Tutkintoon liittyvä osaaminen": {
+    "fi": "Tutkintoon liittyvä osaaminen",
+    "en": "Competences related to the education"
+  },
   "Kiinnostukset": {
     "fi": "Kiinnostukset",
     "en": "Fields of interest"
