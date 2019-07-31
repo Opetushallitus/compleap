@@ -6,6 +6,7 @@ import Interests from 'component/interests/Interests'
 import Box from 'component/generic/widget/Box'
 import theme from 'ui/theme'
 import Recommendations from 'component/recommendations/Recommendations'
+import useTranslation from 'component/generic/hook/useTranslation'
 import { children } from 'util/proptype'
 
 const StyledSection = styled.section`
@@ -51,8 +52,19 @@ SectionContainer.propTypes = {
   children
 }
 
+const StyledIntroductionText = styled.div`
+  background-color: ${({ theme }) => theme.color.white};
+`
+
+const IntroductionText = () => {
+  const t = useTranslation()
+  const text = t`Tervetuloa-teksti ja ohjeistus`
+  return text.length > 0 ? <StyledIntroductionText><Box>{text}</Box></StyledIntroductionText> : null
+}
+
 const Profile = () => (
   <React.Fragment>
+    <IntroductionText/>
     <SectionContainer even={true} first={true}>
       <Box>
         <Educations/>
