@@ -154,13 +154,13 @@
     "fi": "Kiinnostuksia valittu",
     "en": "Selected interests"
   },
-  "– voit jatkaa kiinnostusten lisäämistä, tämä tarkentaa suosituksia": {
-    "fi": "– voit jatkaa kiinnostusten lisäämistä, tämä tarkentaa suosituksia",
-    "en": "– you can continue adding fields of interest, this makes recommendations more accurate"
+  "Voit jatkaa kiinnostusten lisäämistä, tämä tarkentaa suosituksia": {
+    "fi": "Voit jatkaa kiinnostusten lisäämistä, tämä tarkentaa suosituksia",
+    "en": "You can continue adding fields of interest, this makes recommendations more accurate"
   },
-  "– suositukset ovat epätarkkoja, jos yli": {
-    "fi": "– suositukset ovat epätarkkoja, jos yli",
-    "en": "– recommendations are inaccurate if over"
+  "Suositukset ovat epätarkkoja, jos yli": {
+    "fi": "Suositukset ovat epätarkkoja, jos yli",
+    "en": "Recommendations are inaccurate if over"
   },
   "kiinnostusta on valittu": {
     "fi": "kiinnostusta on valittu",

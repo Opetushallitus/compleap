@@ -6,6 +6,17 @@ import useTranslation from 'component/generic/hook/useTranslation'
 
 const AnimationDuration = 200
 
+const CountText = styled.p`
+  font-size: ${({ theme, hasRequiredInterests }) => hasRequiredInterests ? theme.font.size.m : theme.font.size.l};
+  font-weight: 300;
+  margin: 0;
+`
+
+const ExplanationText = styled.p`
+  font-weight: 300;
+  margin: 0;
+`
+
 const Count = styled.div`
   display: inline-block;
 `
@@ -26,7 +37,7 @@ const PosedCount = posed(Count)({
 })
 
 // eslint-disable-next-line react/display-name
-const Message = forwardRef(function message ({ numSelectedInterests, hasRequiredInterests, hasTooManyInterests }, ref) {
+const Message = forwardRef(function message ({ numSelectedInterests, hasRequiredInterests, hasMaximumInterests, hasTooManyInterests }, ref) {
   const t = useTranslation()
   const [counterState, setCounterState] = useState('idle')
   const [animationTimer, setAnimationTimer] = useState(null)
@@ -39,15 +50,21 @@ const Message = forwardRef(function message ({ numSelectedInterests, hasRequired
 
   return (
     <div ref={ref}>
-      {t`Kiinnostuksia valittu`}
-      {' '}
-      <PosedCount key={numSelectedInterests} pose={counterState}>{numSelectedInterests}</PosedCount>
-      {` / ${process.env.MIN_INTERESTS} `}
-      {
-        hasTooManyInterests
-          ? t`– suositukset ovat epätarkkoja, jos yli` + ' ' + process.env.MAX_INTERESTS + ' ' + t`kiinnostusta on valittu`
-          : hasRequiredInterests && (' ' + t`– voit jatkaa kiinnostusten lisäämistä, tämä tarkentaa suosituksia`)
-      }
+      <CountText hasRequiredInterests={hasRequiredInterests}>
+        {t`Kiinnostuksia valittu`}
+        {' '}
+        <PosedCount key={numSelectedInterests} pose={counterState}>{numSelectedInterests}</PosedCount>
+        {` / ${process.env.MIN_INTERESTS} `}
+      </CountText>
+      <ExplanationText>
+        {
+          hasMaximumInterests
+            ? null
+            : hasTooManyInterests
+              ? t`Suositukset ovat epätarkkoja, jos yli` + ' ' + process.env.MAX_INTERESTS + ' ' + t`kiinnostusta on valittu`
+              : hasRequiredInterests && (' ' + t`Voit jatkaa kiinnostusten lisäämistä, tämä tarkentaa suosituksia`)
+        }
+      </ExplanationText>
     </div>
   )
 })
@@ -55,6 +72,7 @@ const Message = forwardRef(function message ({ numSelectedInterests, hasRequired
 Message.propTypes = {
   numSelectedInterests: PropTypes.number.isRequired,
   hasRequiredInterests: PropTypes.bool.isRequired,
+  hasMaximumInterests: PropTypes.bool.isRequired,
   hasTooManyInterests: PropTypes.bool.isRequired
 }
 

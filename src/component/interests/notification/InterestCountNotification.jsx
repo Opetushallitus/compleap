@@ -30,6 +30,7 @@ const InterestCountNotification = ({ numSelectedInterests, container }) => {
   if (numSelectedInterests === undefined) return null
 
   const hasRequiredInterests = numSelectedInterests >= process.env.MIN_INTERESTS
+  const hasMaximumInterests = numSelectedInterests === process.env.MAX_INTERESTS
   const hasTooManyInterests = numSelectedInterests > process.env.MAX_INTERESTS
   const containerRect = container.current.getBoundingClientRect()
   const nextSectionY = containerRect.y + window.scrollY + containerRect.height + 50
@@ -41,6 +42,7 @@ const InterestCountNotification = ({ numSelectedInterests, container }) => {
           key='message'
           numSelectedInterests={numSelectedInterests}
           hasRequiredInterests={hasRequiredInterests}
+          hasMaximumInterests={hasMaximumInterests}
           hasTooManyInterests={hasTooManyInterests}
         />
         {hasRequiredInterests && (
