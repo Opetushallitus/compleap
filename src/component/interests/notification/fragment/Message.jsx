@@ -17,7 +17,7 @@ const ExplanationText = styled.p`
   margin: 0;
 `
 
-const Count = styled.div`
+const Count = styled.span`
   display: inline-block;
 `
 
