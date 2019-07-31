@@ -86,11 +86,11 @@ const Competences = ({ educationUri }) => {
             const escoLink = `${escoBaseUrl}?${escoParameters}`
             return (
               <CompetenceListItem key={c.conceptUri}>
-                <CompetenceTag>
-                  <EscoLink href={escoLink} target='_blank' rel='noopener noreferrer'>
+                <EscoLink href={escoLink} target='_blank' rel='noopener noreferrer'>
+                  <CompetenceTag>
                     {getLabelMatchingLanguage(c, lang)}
-                  </EscoLink>
-                </CompetenceTag>
+                  </CompetenceTag>
+                </EscoLink>
               </CompetenceListItem>
             )
           })
