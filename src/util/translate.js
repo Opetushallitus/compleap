@@ -8,7 +8,7 @@ const translateKey = (key, language) => {
   const versions = translations[key] || {}
   const translated = versions[language]
 
-  if (!translated) {
+  if (translated === undefined) {
     console.error(`Translation missing for language ${language}: ${key}`)
     return key
   }
