@@ -207,19 +207,26 @@ function(uris = "", uris2 = "", terms = "", n = 10, type = "unit", modeltype = "
 
 #* Get ESCO skill tags for given unit uris or qualifications
 #* Returns skills in Finnish and English. Additionally an url link to skill page. 
-#* @param uris The study unit (or qualification) uris to be matched with esco skills
-#* @param type The type of uris in input (valid values "unit" or "qualification")
+#* @param qualification The qualification uri to be matched with esco skills
+#* @param uris The study unit uris to be matched with esco skills
 #* @get /escos
-function(uris = "", type = "unit") {
-  
+function(qualification = "", uris = "") {
+
   uris <- unlist(strsplit(uris, ","))
-  
-  matches <- escos[escos$unit_uri %in% uris,]
-  matches <- select(matches, unit_uri, conceptUri, preferredLabelFi, preferredLabelEn)
+
+  if(qualification == "") {
+    return(list(error="400 - Qualification required."))
+  }
+
+  if(length(uris) > 0 & !is.null(uris)) {
+    matches <- escos[(escos$unit_uri %in% uris) & (escos$qualification_uri == qualification),]
+  } else {
+    matches <- escos[escos$qualification_uri == qualification,]
+  }
+
+  matches <- select(matches, qualification_uri, unit_uri, conceptUri, preferredLabelFi, preferredLabelEn)
   
   # return matches (which is serialized as JSON)
   return(list(matches))
   
 }
-
-
