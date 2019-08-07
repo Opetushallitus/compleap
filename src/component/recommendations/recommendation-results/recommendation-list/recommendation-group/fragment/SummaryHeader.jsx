@@ -9,12 +9,16 @@ const SummaryRow = styled.div`
   }
 `
 
-const SummaryHeader = ({ name, degreeTitles, educationCode, numApplicationOptions }) => {
+const SummaryHeader = ({ name, degreeTitles, educationCode, numApplicationOptions, type }) => {
   const t = useTranslation()
+
+  const title = type === 'KORKEAKOULU' ? name : degreeTitles.join(', ')
+  const description = type === 'KORKEAKOULU' ? degreeTitles.join(', ') : `${name}: ${educationCode}`
+
   return (
     <summary>
-      <SummaryRow><b>{degreeTitles.join(', ')}</b></SummaryRow>
-      <SummaryRow><i>{`${name}: ${educationCode}`}</i></SummaryRow>
+      <SummaryRow><b>{title}</b></SummaryRow>
+      <SummaryRow><i>{description}</i></SummaryRow>
       <SummaryRow>{`${numApplicationOptions} ${t`hakukohdetta`}`}</SummaryRow>
     </summary>
   )
@@ -24,7 +28,8 @@ SummaryHeader.propTypes = {
   name: PropTypes.string.isRequired,
   degreeTitles: PropTypes.array.isRequired,
   educationCode: PropTypes.string.isRequired,
-  numApplicationOptions: PropTypes.number.isRequired
+  numApplicationOptions: PropTypes.number.isRequired,
+  type: PropTypes.string.isRequired
 }
 
 export default SummaryHeader

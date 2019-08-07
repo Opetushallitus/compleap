@@ -10,7 +10,7 @@ import ApplicationOptionList from './application-option-list/ApplicationOptionLi
 const RecommendationGroup = ({ recommendations }) => {
   const degreeTitles = R.compose(R.sort((a, b) => a.localeCompare(b)), R.uniq, R.map(({ degreeTitle }) => degreeTitle))(recommendations)
   const head = recommendations[0]
-  const { name, educationCode, goals } = head
+  const { name, educationCode, goals, type } = head
 
   const Header = (
     <SummaryHeader
@@ -18,6 +18,7 @@ const RecommendationGroup = ({ recommendations }) => {
       degreeTitles={degreeTitles}
       educationCode={educationCode}
       numApplicationOptions={recommendations.length}
+      type={type}
     />
   )
 
