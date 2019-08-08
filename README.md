@@ -101,3 +101,12 @@ Component tests:
 npm run test:component
 ```
 
+## License
+
+
+Copyright (c) 2019 The Finnish National Board of Education - Opetushallitus
+
+This program is free software: Licensed under the EUPL, Version 1.2 (the "Licence").
+
+You may not use this work except in compliance with the Licence.
+You may obtain a copy of the Licence at https://joinup.ec.europa.eu/software/page/eupl or from the [LICENSE.txt](https://github.com/Opetushallitus/compleap/blob/master/LICENSE.txt) file contained within this repository.
