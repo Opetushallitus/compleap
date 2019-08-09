@@ -13,7 +13,7 @@ The release notes of the application can be viewed at the [GitHub Releases](http
 
 ## Bug reports
 
-The existing bug reports can be viewed and new bug reports can be filed at the [GitHub Issues](https://github.com/Opetushallitus/compleap/issues).
+The existing bug reports (if any) can be viewed and new bug reports can be filed at the [GitHub Issues](https://github.com/Opetushallitus/compleap/issues).
 
 ## Technologies and development tools
 
