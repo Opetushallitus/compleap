@@ -7,6 +7,10 @@ In terms of source code, the prototype application is divided into two main comp
 - Client-side application (`model` directory)
 - Recommendations application (`src` directory)
 
+## Release notes
+
+The release notes of the application can be viewed at the [GitHub Releases](https://github.com/Opetushallitus/compleap/releases).
+
 ## Technologies and development tools
 
 - JavaScript with ECMAScript 2015 features (programming language for the client app)
