@@ -11,6 +11,10 @@ In terms of source code, the prototype application is divided into two main comp
 
 The release notes of the application can be viewed at the [GitHub Releases](https://github.com/Opetushallitus/compleap/releases).
 
+## Bug reports
+
+The existing bug reports can be viewed and new bug reports can be filed at the [GitHub Issues](https://github.com/Opetushallitus/compleap/issues).
+
 ## Technologies and development tools
 
 - JavaScript with ECMAScript 2015 features (programming language for the client app)
