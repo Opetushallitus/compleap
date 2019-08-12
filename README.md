@@ -34,14 +34,14 @@ In addition, following tools are used to ease the development:
 
 ## Installing dependencies
 
-Ensure that you are using a correct version of Node.js and NPM:
+Ensure that you are using the correct version of Node.js (LTS) and NPM (included with the LTS Node.js):
 
 ```shell
 node --version
-# v10.15.3
+# v10.16.2
 
 npm --version
-# 6.4.1
+# 6.9.0
 ```
 
 Install dependencies:
