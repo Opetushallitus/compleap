@@ -83,8 +83,8 @@
     "en": "We have identified your following education:"
   },
   "Merkitse mitä pidit opintojesi aiheista, niin voimme antaa parempia suosituksia koulutuksista. Voit myös jättää valinnan tyhjäksi.": {
-    "fi": "Merkitse mitä pidit opintojesi aiheista, niin voimme antaa parempia suosituksia koulutuksista. Voit myös jättää valinnan tyhjäksi.",
-    "en": "Tell us how you liked the topics of your education, and we can give you better recommendations for learning opportunities. You can also leave the selection empty."
+    "fi": "Merkitse mitä pidit opintojesi aiheista, niin voimme antaa parempia ehdotuksia koulutuksista. Voit myös jättää valinnan tyhjäksi.",
+    "en": "Tell us how you liked the topics of your education, and we can give you better suggestions for learning opportunities. You can also leave the selection empty."
   },
   "Valmistunut": {
     "fi": "Valmistunut",
@@ -175,20 +175,20 @@
     "en": "Selected interests"
   },
   "Voit jatkaa kiinnostusten lisäämistä, tämä tarkentaa suosituksia": {
-    "fi": "Voit jatkaa kiinnostusten lisäämistä, tämä tarkentaa suosituksia",
-    "en": "You can continue adding fields of interest, this makes recommendations more accurate"
+    "fi": "Voit jatkaa kiinnostusten lisäämistä, tämä tarkentaa ehdotuksia",
+    "en": "You can continue adding fields of interest, this makes suggestions more accurate"
   },
   "Suositukset ovat epätarkkoja, jos yli": {
-    "fi": "Suositukset ovat epätarkkoja, jos yli",
-    "en": "Recommendations are inaccurate if over"
+    "fi": "Ehdotukset ovat epätarkkoja, jos yli",
+    "en": "Suggestions are inaccurate if over"
   },
   "kiinnostusta on valittu": {
     "fi": "kiinnostusta on valittu",
     "en": "interests are selected"
   },
   "Näytä suositukset": {
-    "fi": "Näytä suositukset",
-    "en": "Show recommendations"
+    "fi": "Näytä ehdotukset",
+    "en": "Show suggestions"
   },
   "Sosiaalitieteet": {
     "fi": "Sosiaalitieteet",
@@ -595,8 +595,8 @@
     "en": "Horticulture"
   },
   "Suositellut opiskelupaikat": {
-    "fi": "Suositellut opiskelupaikat",
-    "en": "Recommended study places"
+    "fi": "Ehdotetut opiskelupaikat",
+    "en": "Suggested study places"
   },
   "Näytetään opintojesi ja valitsemiesi kiinnostusten perusteella sinulle sopivimpia opiskelupaikkoja hakualueeltasi. Voit halutessasi rajata aluetta tarkemmin.": {
     "fi": "Näytetään opintojesi ja valitsemiesi kiinnostusten perusteella sinulle sopivimpia opiskelupaikkoja hakualueeltasi. Voit halutessasi rajata aluetta tarkemmin.",
