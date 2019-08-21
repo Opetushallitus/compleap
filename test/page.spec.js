@@ -10,8 +10,8 @@ describe('Lander', () => {
     expect(pageTitle).toMatch('CompLeap')
   })
 
-  it('should show login buttons', async () => {
-    await expect(page).toMatchElement('a', { text: 'I have studied for a degree in Finland' })
-    await expect(page).toMatchElement('a', { text: 'I haven\'t studied for a degree in Finland' })
+  it('should show name input field', async () => {
+    await expect(page).toMatchElement('label', { text: 'Start by entering your name' })
+    await expect(page).toMatchElement('input', { placeholder: 'Name' })
   })
 })
