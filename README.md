@@ -19,6 +19,7 @@ The existing bug reports (if any) can be viewed and new bug reports can be filed
 
 - JavaScript with ECMAScript 2015 features (programming language for the client app)
 - R (programming language for the recommendations app)
+- Python (programming language for the ESCO competence matching)
 
 The client app also makes use of the following core technologies and development tools:
 
