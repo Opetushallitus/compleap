@@ -22,7 +22,7 @@ const NameInput = () => {
         <TextInput
           id='name'
           type='text'
-          placeholder='Nimi'
+          placeholder={t`Nimi`}
           onChange={event => setName(event.target.value)}
         />
       </InputContainer>

@@ -18,6 +18,10 @@
     "fi": "Aloita syöttämällä nimesi",
     "en": "Start by entering your name"
   },
+  "Nimi": {
+    "fi": "Nimi",
+    "en": "Name"
+  },
   "Jatka": {
     "fi": "Jatka",
     "en": "Continue"
