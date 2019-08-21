@@ -3,10 +3,9 @@ import styled from 'styled-components'
 import useTranslation from 'component/generic/hook/useTranslation'
 import Box from 'component/generic/widget/Box'
 import LinkButton from 'component/generic/widget/LinkButton'
-import { Context, dispatch } from 'state/state'
+import { Context } from 'state/state'
 import useObservable from 'component/generic/hook/useObservable'
-import { UserEvent } from 'state/events'
-import { transition } from 'router/router'
+import NameInput from 'component/login/NameInput'
 
 const BriefContainer = styled.section`
   max-width: 600px;
@@ -67,25 +66,8 @@ const LoginPrompt = () => {
 
   return (
     <LoginContainer>
-      {!isLoggedIn && <h2>{t`Oletko valmis? Aloita valitsemalla toinen seuraavista vaihtoehdoista!`}</h2>}
-      <div>
-        <LanderButton href='#profile'>{loginButtonText}</LanderButton>
-      </div>
-      {!isLoggedIn && (
-        <React.Fragment>
-          <div>
-            <LanderButton
-              href='#profile'
-              onClick={event => {
-                dispatch({ type: UserEvent.LOGIN, data: { id: null } })
-                transition(event)
-              }}
-            >
-              {t`En ole opiskellut tutkintoa Suomessa`}
-            </LanderButton>
-          </div>
-        </React.Fragment>
-      )}
+      {isLoggedIn && <LanderButton href='#profile'>{loginButtonText}</LanderButton>}
+      {!isLoggedIn && <NameInput/>}
     </LoginContainer>
   )
 }

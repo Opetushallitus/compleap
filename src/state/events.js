@@ -6,6 +6,8 @@ export const NavigationEvent = Object.freeze({
 
 export const UserEvent = Object.freeze({
   SELECT_LANGUAGE: 'SELECT_LANGUAGE',
+  ENTER_NAME: 'ENTER_NAME',
+  SELECT_BACKGROUND: 'SELECT_BACKGROUND',
   SELECT_PROFILE: 'SELECT_PROFILE',
   LOGIN: 'LOGIN',
   LOGOUT: 'LOGOUT'

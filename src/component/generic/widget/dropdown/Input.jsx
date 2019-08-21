@@ -1,26 +1,11 @@
 import React, { useState } from 'react'
 import PropTypes from 'prop-types'
 import styled from 'styled-components'
-import { bordered, roundedRectangle } from 'ui/properties'
+import { bordered } from 'ui/properties'
+import TextInput from 'component/generic/widget/TextInput'
 
 const InputContainer = styled.div`
   position: relative;
-`
-
-const InputField = styled.input`
-  ${roundedRectangle};
-  ${bordered};
-  font-size: ${({ theme }) => theme.font.size.base};
-  
-  width: 100%;
-  box-sizing: border-box;
-  padding: 0.5rem 0.75rem;
-  margin: 0;
-  -webkit-appearance: none;
-  
-  &:focus {
-    outline: none;
-  }
 `
 
 const IconContainer = styled.div`
@@ -56,7 +41,7 @@ const Input = React.forwardRef(({ placeholder, value, onChange, onFocus, onBlur 
 
   return (
     <InputContainer>
-      <InputField
+      <TextInput
         type='text'
         placeholder={placeholder}
         ref={ref}

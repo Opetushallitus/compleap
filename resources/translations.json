@@ -14,13 +14,21 @@
     "fi": "CompLeap pystyy käyttämään aiemmin tehtyjä opintojasi apuna sopivan opiskelupaikan etsimisessä.",
     "en": "CompLeap can use your prior studies in recommendations for suitable places of study."
   },
-  "Oletko valmis? Aloita valitsemalla toinen seuraavista vaihtoehdoista!": {
-    "fi": "Oletko valmis? Aloita valitsemalla toinen seuraavista vaihtoehdoista!",
-    "en": "Are you ready? Start by selecting one of the following options!"
+  "Aloita syöttämällä nimesi": {
+    "fi": "Aloita syöttämällä nimesi",
+    "en": "Start by entering your name"
   },
-  "Tervetuloa-teksti ja ohjeistus": {
-    "fi": "",
-    "en": ""
+  "Jatka": {
+    "fi": "Jatka",
+    "en": "Continue"
+  },
+  "Moikka": {
+    "fi": "Moikka",
+    "en": "Hi"
+  },
+  "Valitse seuraavaksi taustasi": {
+    "fi": "Valitse seuraavaksi taustasi",
+    "en": "Next, choose your background"
   },
   "Olen opiskellut tutkintoa Suomessa": {
     "fi": "Olen opiskellut tutkintoa Suomessa",
@@ -30,9 +38,17 @@
     "fi": "En ole opiskellut tutkintoa Suomessa",
     "en": "I haven't studied for a degree in Finland"
   },
-  "Valitse profiili": {
-    "fi": "Valitse profiili",
-    "en": "Choose profile"
+  "Valitse pohjakoulutuksesi": {
+    "fi": "Valitse pohjakoulutuksesi",
+    "en": "Select your prior education"
+  },
+  "Valitse pohjakoulutus": {
+    "fi": "Valitse pohjakoulutus",
+    "en": "Select prior education"
+  },
+  "Tervetuloa-teksti ja ohjeistus": {
+    "fi": "",
+    "en": ""
   },
   "Valmistunut ammatillisesta – luonto- ja ympäristöalan perustutkinto": {
     "fi": "Valmistunut ammatillisesta – luonto- ja ympäristöalan perustutkinto",

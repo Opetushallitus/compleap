@@ -2,33 +2,25 @@ import { Action } from 'state/context'
 import { UserEvent } from 'state/events'
 
 const State = Object.freeze({
-  idle: 'idle',
-  loggedOut: 'loggedOut',
-  loggedIn: 'loggedIn'
+  chooseBackground: 'chooseBackground',
+  chooseProfile: 'chooseProfile'
 })
 
 const loginStates = {
-  initial: State.loggedOut,
+  initial: State.chooseBackground,
   states: {
-    [State.idle]: {
+    [State.chooseBackground]: {
       on: {
-        '': [
-          { target: State.loggedIn, cond: (ctx, _) => ctx.user.isLoggedIn },
-          { target: State.loggedOut }
-        ]
+        [UserEvent.SELECT_BACKGROUND]: { target: State.chooseProfile },
+        [UserEvent.LOGIN]: { actions: Action.logIn }
       }
     },
-    [State.loggedOut]: {
+    [State.chooseProfile]: {
       on: {
-        [UserEvent.SELECT_PROFILE]: {
-          actions: Action.selectProfile
-        },
-        [UserEvent.LOGIN]: [
-          { actions: Action.logIn, cond: (ctx, _) => ctx.user.profileId }
-        ]
+        [UserEvent.SELECT_PROFILE]: { actions: Action.selectProfile },
+        [UserEvent.LOGIN]: { actions: Action.logIn, cond: (ctx, _) => ctx.user.profileId }
       }
-    },
-    [State.loggedIn]: { }
+    }
   }
 }
 

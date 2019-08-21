@@ -34,7 +34,11 @@ export const machine = Machine({
   states: {
     [PageState.lander]: {
       on: {
-        [UserEvent.LOGIN]: { actions: Action.logIn }
+        [UserEvent.ENTER_NAME]: {
+          target: PageState.login,
+          actions: Action.enterName,
+          cond: (_, event) => event.data.name && event.data.name.length > 0 && event.data.name.length < 25
+        }
       }
     },
     [PageState.login]: { ...loginStates },

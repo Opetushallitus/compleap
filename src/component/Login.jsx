@@ -1,17 +1,10 @@
 import React, { useContext } from 'react'
-import * as R from 'ramda'
-import uuid from 'uuid/v4'
 import styled from 'styled-components'
-import { Context, dispatch } from 'state/state'
-import { UserEvent } from 'state/events'
-import { transition } from 'router/router'
-import useTranslation from 'component/generic/hook/useTranslation'
-import LinkButton from 'component/generic/widget/LinkButton'
+import { Context } from 'state/state'
 import Box from 'component/generic/widget/Box'
-import AuthIcon from 'resources/asset/auth.svg'
-import Select from 'component/generic/widget/dropdown/Select'
 import useObservable from 'component/generic/hook/useObservable'
-import { profileMapping } from 'resources/mock/koski/profiles'
+import EducationInput from 'component/login/EducationInput'
+import BackgroundSelection from 'component/login/BackgroundSelection'
 
 const Contents = styled(Box)`
   & > * {
@@ -23,43 +16,26 @@ const Contents = styled(Box)`
   }
 `
 
-const SelectContainer = styled.div`
-  width: 20rem;
-  text-align: left;
-`
+const getStepComponent = (step) => {
+  switch (step) {
+    case 'chooseBackground':
+      return BackgroundSelection
+    case 'chooseProfile':
+      return EducationInput
+    default:
+      console.warn(`Invalid login step: ${step}`)
+      return () => null
+  }
+}
 
 const Login = () => {
   const context$ = useContext(Context)
-  const t = useTranslation()
-  const profileOptions = Object.entries(profileMapping)
-    .map(([id, { description }]) => ({ id, label: description }))
-    .map(R.over(R.lensProp('label'), t))
-  const selectedProfileId = useObservable(context$, { path: ['context', 'user', 'profileId'] })
+  const step = useObservable(context$, { path: ['value', 'login'] })
+  const Step = getStepComponent(step)
 
   return (
     <Contents align='center'>
-      <AuthIcon style={{
-        width: '6rem',
-        height: '6rem'
-      }}/>
-      <SelectContainer>
-        <Select
-          placeholder={t`Valitse profiili`}
-          options={profileOptions}
-          onSelect={id => dispatch({ type: UserEvent.SELECT_PROFILE, data: { id } })}
-          selectedId={selectedProfileId || ''}
-        />
-      </SelectContainer>
-      <LinkButton
-        href='#profile'
-        disabled={!selectedProfileId}
-        onClick={event => {
-          dispatch({ type: UserEvent.LOGIN, data: { id: uuid() } })
-          transition(event)
-        }}
-      >
-        {t`Jatka profiiliisi`}
-      </LinkButton>
+      <Step/>
     </Contents>
   )
 }
