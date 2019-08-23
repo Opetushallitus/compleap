@@ -19,6 +19,7 @@ const Image = styled.div`
   width: 100%;
   height: 100%;
   background-image: ${({ url }) => `url(${url})`};
+  background-position: 50% 50%;
 `
 
 const ImagePlaceholder = styled(ProfileIcon)`
