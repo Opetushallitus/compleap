@@ -8,7 +8,11 @@ import * as R from 'ramda'
 import { machine, PageState } from 'state/machine'
 import { context } from 'state/context'
 
+const shouldPersist = process.env.USE_PERSISTENCE === 'mock'
+
 export const persist = state => {
+  if (!shouldPersist) return
+
   const jsonState = JSON.stringify(state)
 
   try {
@@ -20,6 +24,11 @@ export const persist = state => {
 
 // TODO De-serialize validatable types, e.g. VerifiedEducations
 export const restore = () => {
+  if (!shouldPersist) {
+    console.debug('Persistence disabled: will not restore state')
+    return State.from(machine.initialState, context)
+  }
+
   const restoredStateDef = JSON.parse(window.localStorage.getItem('app-state'))
   if (!restoredStateDef) return undefined
 

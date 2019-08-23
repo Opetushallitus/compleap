@@ -62,7 +62,8 @@ module.exports = {
       'process.env.DEFAULT_LANGUAGE': JSON.stringify('en'),
       'process.env.MIN_INTERESTS': JSON.stringify(3),
       'process.env.MAX_INTERESTS': JSON.stringify(10),
-      'process.env.RECOMMENDATION_CTA_BASE_URL': JSON.stringify(process.env.RECOMMENDATION_CTA_BASE_URL)
+      'process.env.RECOMMENDATION_CTA_BASE_URL': JSON.stringify(process.env.RECOMMENDATION_CTA_BASE_URL),
+      'process.env.USE_PERSISTENCE': JSON.stringify(process.env.USE_PERSISTENCE)
     })
   ]
 }
