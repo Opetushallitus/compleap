@@ -7,13 +7,15 @@
     "conceptUri": { "type": "string" },
     "preferredLabelEn": { "type": "string" },
     "preferredLabelFi": { "type": "string" },
-    "unitUri": { "type": "string" }
+    "unitUri": { "type": "string" },
+    "qualificationUri": { "type": "string" }
   },
   "required": [
     "conceptUri",
     "preferredLabelEn",
     "preferredLabelFi",
-    "unitUri"
+    "unitUri",
+    "qualificationUri"
   ],
   "additionalProperties": false
 }
