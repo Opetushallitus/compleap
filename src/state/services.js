@@ -137,6 +137,7 @@ const services = {
 
     const requests = educations.map(async education => {
       const res = await http.get('/escos', {
+        qualification: education.uri,
         uris: education.units,
         type: 'unit'
       }, {
