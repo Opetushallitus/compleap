@@ -19,7 +19,8 @@ export const context = {
     isLoggedIn: false,
     name: undefined,
     profileId: undefined,
-    id: null
+    id: null,
+    profileImageURL: undefined
   },
   interests: {
     data: [],
@@ -61,6 +62,7 @@ export const Action = Object.freeze({
   selectLanguage: 'selectLanguage',
   enterName: 'enterName',
   selectProfile: 'selectProfile',
+  setProfileImageURL: 'setProfileImageURL',
   logIn: 'logIn',
   reload: 'reload',
   setInterestsData: 'setInterestsData',
@@ -91,6 +93,9 @@ export const actions = {
   }),
   [Action.selectProfile]: assign({
     user: (ctx, event) => R.assoc('profileId', event.data.id, ctx.user)
+  }),
+  [Action.setProfileImageURL]: assign({
+    user: (ctx, event) => R.assoc('profileImageURL', event.data.url, ctx.user)
   }),
   [Action.logIn]: assign({
     user: (ctx, event) => R.merge(ctx.user, { isLoggedIn: true, id: event.data.id })

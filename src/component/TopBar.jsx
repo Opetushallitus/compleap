@@ -2,13 +2,12 @@ import React, { useContext } from 'react'
 import styled from 'styled-components'
 import { Context, dispatch } from 'state/state'
 import useObservable from 'component/generic/hook/useObservable'
-import useTranslation from 'component/generic/hook/useTranslation'
 import logo from 'resources/asset/compleap-logo.png'
 import LinkButton from 'component/generic/widget/LinkButton'
 import Button from 'component/generic/widget/Button'
-import { fadeColor, padded, roundedRectangle } from 'ui/properties'
+import { fadeColor } from 'ui/properties'
 import { UserEvent } from 'state/events'
-import { PageState } from 'state/machine'
+import ProfilePopup from 'component/profile/ProfilePopup'
 
 const TopBarContainer = styled.div`
   background-color: ${({ theme }) => theme.color.black};
@@ -58,29 +57,10 @@ const Image = styled.img`
   margin: 1.25rem 0;
 `
 
-const LogoutButton = styled(Button)`
-  ${roundedRectangle};
-  ${padded};
-
-  color: ${({ theme }) => theme.color.white};
-
-  &:hover:enabled {
-    color: ${({ theme }) => theme.color.grayLighter};
-    background-color: ${({ theme }) => theme.color.secondary};
-  }
-
-  &:disabled {
-    color: ${({ theme }) => theme.color.disabled};
-    background: none;
-  }
-`
-
 const TopBar = () => {
   const context$ = useContext(Context)
-  const t = useTranslation()
   const currentLanguage = useObservable(context$, { path: ['context', 'user', 'language'] })
   const isLoggedIn = useObservable(context$, { path: ['context', 'user', 'isLoggedIn'] })
-  const isLoggingOut = useObservable(context$, { path: ['value'] }) === PageState.logout
 
   return (
     <TopBarContainer>
@@ -110,13 +90,7 @@ const TopBar = () => {
           {isLoggedIn && (
             <React.Fragment>
               <Divider/>
-              <LogoutButton
-                type='empty'
-                onClick={() => dispatch(UserEvent.LOGOUT)}
-                disabled={isLoggingOut}
-              >
-                {t`Kirjaudu ulos`}
-              </LogoutButton>
+              <ProfilePopup/>
             </React.Fragment>
           )}
         </TopBarElementContainer>

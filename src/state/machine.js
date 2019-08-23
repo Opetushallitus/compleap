@@ -7,6 +7,7 @@ import interestsStates from 'state/interestsStates'
 import verifiedEducationStates from 'state/verifiedEducationStates'
 import unverifiedEducationStates from 'state/unverifiedEducationStates'
 import recommendationStates from 'state/recommendationStates'
+import userStates from 'state/userStates'
 
 export const PageState = Object.freeze({
   lander: 'lander',
@@ -16,6 +17,7 @@ export const PageState = Object.freeze({
 })
 
 const SectionState = Object.freeze({
+  user: 'user',
   education: 'education',
   interests: 'interests',
   recommendations: 'recommendations'
@@ -45,6 +47,7 @@ export const machine = Machine({
     [PageState.profile]: {
       type: 'parallel',
       states: {
+        [SectionState.user]: { ...userStates },
         [SectionState.education]: {
           type: 'parallel',
           states: {
