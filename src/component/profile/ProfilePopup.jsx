@@ -27,12 +27,12 @@ const ProfilePopup = () => {
   const [isOpen, setIsOpen] = useState(false)
   const buttonRef = useRef()
   const popupRef = useRef()
-
-  useClickOutside(() => setIsOpen(!isOpen), buttonRef, popupRef)
+  const togglePopup = () => setIsOpen(!isOpen)
+  useClickOutside(togglePopup, buttonRef, popupRef)
 
   return (
     <Container>
-      <ProfileButton onClick={() => setIsOpen(!isOpen)} ref={buttonRef}>
+      <ProfileButton onClick={togglePopup} ref={buttonRef}>
         {'Profile'}
       </ProfileButton>
       {isOpen ? <Popup ref={popupRef}><ProfileContent/></Popup> : null}
