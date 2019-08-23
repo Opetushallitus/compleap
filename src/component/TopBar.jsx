@@ -5,6 +5,7 @@ import useObservable from 'component/generic/hook/useObservable'
 import logo from 'resources/asset/compleap-logo.png'
 import LinkButton from 'component/generic/widget/LinkButton'
 import Button from 'component/generic/widget/Button'
+import media from 'ui/media'
 import { fadeColor } from 'ui/properties'
 import { UserEvent } from 'state/events'
 import ProfilePopup from 'component/profile/ProfilePopup'
@@ -52,9 +53,14 @@ const Divider = styled.div`
 `
 
 const Image = styled.img`
-  height: 3rem;
+  height: 2rem;
   width: auto;
-  margin: 1.25rem 0;
+  margin: 1.25rem 0.5rem;
+
+  ${media.full`
+    height: 3rem;
+    margin: 1.25rem 0;
+  `}
 `
 
 const TopBar = () => {

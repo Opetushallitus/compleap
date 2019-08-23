@@ -1,22 +1,20 @@
 import React, { useRef } from 'react'
 import styled from 'styled-components'
-import { math, transparentize } from 'polished'
+import { transparentize } from 'polished'
 import { dispatch } from 'state/state'
 import { UserEvent } from 'state/events'
 import useTranslation from 'component/generic/hook/useTranslation'
 import { emptyButton } from 'ui/properties'
 import ProfileImage from 'component/profile/fragment/ProfileImage'
 
-const Radius = '30px'
-const Diameter = math(`${Radius} * 2`)
+const Radius = 2
 
 const ChangeImageButton = styled.button`
   ${emptyButton};
 
   position: relative;
-  width: ${Diameter};
-  height: ${Diameter};
-  clip-path: circle(${Radius} at center);
+  width: ${Radius * 2}rem;
+  height: ${Radius * 2}rem;
 `
 
 const ChangeImageTextContainer = styled.div`
@@ -50,17 +48,18 @@ const ChangeableProfileImage = () => {
   const changeButtonRef = useRef()
 
   return (
-    <div>
+    <>
       <ChangeImageButton onClick={() => changeButtonRef.current.click()}>
-        <ProfileImage/>
-        <ChangeImageTextContainer>
-          <ChangeImageText>
-            {t`Vaihda kuva`}
-          </ChangeImageText>
-        </ChangeImageTextContainer>
+        <ProfileImage radius={Radius}>
+          <ChangeImageTextContainer>
+            <ChangeImageText>
+              {t`Vaihda kuva`}
+            </ChangeImageText>
+          </ChangeImageTextContainer>
+        </ProfileImage>
       </ChangeImageButton>
       <FilePickerInput type='file' ref={changeButtonRef} onChange={changeImage}/>
-    </div>
+    </>
   )
 }
 
