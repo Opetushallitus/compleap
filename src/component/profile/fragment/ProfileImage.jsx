@@ -5,6 +5,7 @@ import { Context, dispatch } from 'state/state'
 import { UserEvent } from 'state/events'
 import ProfileIcon from 'resources/asset/profile.svg'
 import useObservable from 'component/generic/hook/useObservable'
+import useTranslation from 'component/generic/hook/useTranslation'
 import { emptyButton } from 'ui/properties'
 
 const Radius = '30px'
@@ -37,7 +38,7 @@ const ChangeImageTextContainer = styled.div`
   bottom: 0;
   width: 100%;
   color: ${({ theme }) => theme.color.white}
-  background-color: ${({ theme }) => theme.color.secondary};
+  background-color: ${({ theme }) => transparentize(0.2, theme.color.secondary)};
 `
 
 const ChangeImageText = styled.div`
@@ -59,6 +60,7 @@ const changeImage = changeEvent => {
 }
 
 const ProfileImage = () => {
+  const t = useTranslation()
   const changeButtonRef = useRef()
   const context$ = useContext(Context)
   const imageURL = useObservable(context$, { path: ['context', 'user', 'profileImageURL'] })
@@ -73,7 +75,7 @@ const ProfileImage = () => {
         }
         <ChangeImageTextContainer>
           <ChangeImageText>
-            {'Vaihda kuva'}
+            {t`Vaihda kuva`}
           </ChangeImageText>
         </ChangeImageTextContainer>
       </ChangeImageButton>
