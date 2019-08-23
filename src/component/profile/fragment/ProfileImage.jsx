@@ -1,6 +1,6 @@
 import React, { useContext, useRef } from 'react'
 import styled from 'styled-components'
-import { math } from 'polished'
+import { math, transparentize } from 'polished'
 import { Context, dispatch } from 'state/state'
 import { UserEvent } from 'state/events'
 import ProfileIcon from 'resources/asset/profile.svg'

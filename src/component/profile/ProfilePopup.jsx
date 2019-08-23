@@ -1,5 +1,6 @@
-import React, { useState } from 'react'
+import React, { useRef, useState } from 'react'
 import styled from 'styled-components'
+import useClickOutside from 'component/generic/hook/useClickOutside'
 import ProfileContent from 'component/profile/fragment/ProfileContent'
 import { roundedRectangle } from 'ui/properties'
 
@@ -24,19 +25,17 @@ const Popup = styled.div`
 
 const ProfilePopup = () => {
   const [isOpen, setIsOpen] = useState(false)
+  const buttonRef = useRef()
+  const popupRef = useRef()
+
+  useClickOutside(() => setIsOpen(!isOpen), buttonRef, popupRef)
 
   return (
     <Container>
-      <ProfileButton onClick={() => setIsOpen(!isOpen)}>{'Profile'}</ProfileButton>
-      {
-        isOpen
-          ? (
-            <Popup>
-              <ProfileContent/>
-            </Popup>
-          )
-          : null
-      }
+      <ProfileButton onClick={() => setIsOpen(!isOpen)} ref={buttonRef}>
+        {'Profile'}
+      </ProfileButton>
+      {isOpen ? <Popup ref={popupRef}><ProfileContent/></Popup> : null}
     </Container>
   )
 }
