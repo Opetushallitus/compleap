@@ -6,7 +6,7 @@ import { PageState } from 'state/machine'
 import Button from 'component/generic/widget/Button'
 import useTranslation from 'component/generic/hook/useTranslation'
 import useObservable from 'component/generic/hook/useObservable'
-import ProfileImage from 'component/profile/fragment/ProfileImage'
+import ChangeableProfileImage from 'component/profile/fragment/ChangeableProfileImage'
 
 const Container = styled.div`
   display: flex;
@@ -35,7 +35,7 @@ const ProfileContent = () => {
   return (
     <Container>
       <UserInfoContainer>
-        <ProfileImage/>
+        <ChangeableProfileImage/>
         {name}
       </UserInfoContainer>
       <Button
