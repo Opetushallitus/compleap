@@ -2,7 +2,7 @@ import { InteractionEvent } from 'state/events'
 import { Action } from 'state/context'
 import { Service } from 'state/services'
 import { namespaceSubstate } from 'util/machineStateHelper'
-import { canHaveSpecifier } from 'util/educationHelper'
+import { canHaveSpecifier, isVocational } from 'util/educationHelper'
 
 const namespaced = namespaceSubstate('EducationPickerState')
 const targetById = id => `#${namespaced(id)}`
@@ -108,10 +108,14 @@ const unverifiedEducationStates = {
       id: namespaced(EducationPickerState.done),
       invoke: {
         src: Service.mapEducationClassToLearningOpportunityCode,
-        onDone: {
+        onDone: [{
           target: EducationPickerState.getCompetences,
+          actions: Action.addUnverifiedEducation,
+          cond: (ctx, _) => isVocational(ctx.education.data.selection.level.id)
+        }, {
+          target: EducationPickerState.formCollapsed,
           actions: Action.addUnverifiedEducation
-        },
+        }],
         onError: {
           target: EducationPickerState.failure,
           actions: Action.setEducationError
