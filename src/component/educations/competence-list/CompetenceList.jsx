@@ -2,9 +2,9 @@ import React, { useContext } from 'react'
 import PropTypes from 'prop-types'
 import styled from 'styled-components'
 import qs from 'qs'
-import { rounded } from 'ui/properties'
-import useObservable from 'component/generic/hook/useObservable'
 import { Context } from 'state/state'
+import useObservable from 'component/generic/hook/useObservable'
+import CompetenceTag from './fragment/CompetenceTag'
 
 const getLabelMatchingLanguage = (concept, language) => {
   switch (language) {
@@ -24,32 +24,6 @@ const List = styled.ul`
 const ListItem = styled.li`
   display: inline-block;
   margin: 0.5rem;
-`
-
-const CompetenceTag = styled.div`
-  ${rounded};
-
-  position: relative;
-  display: inline-block;
-  border-style: solid;
-  border-width: 2px;
-  border-color: ${({ theme }) => theme.color.accentLighter};
-  background-color: ${({ theme }) => theme.color.white};
-  box-shadow: ${({ theme }) => `0 5px 10px 2px ${theme.color.grayLightest}`};
-  height: 1rem;
-  line-height: 1rem;
-  padding: 0.3rem 1rem;
-  vertical-align: bottom;
-  transition: border-color 0.1s, background-color 0.1s;
-
-  &:focus {
-    outline: 0;
-  }
-
-  &:hover {
-    border-color: ${({ theme }) => theme.color.accent};
-    background-color: ${({ theme }) => theme.color.accentLightest};
-  }
 `
 
 const EscoLink = styled.a`
