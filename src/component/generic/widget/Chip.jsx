@@ -1,7 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import styled from 'styled-components'
-import theme from 'ui/theme'
 import { chipButtonBase, chipIconContainerBase } from 'ui/properties'
 import Checkmark from 'resources/asset/checkmark.svg'
 import { children } from 'util/proptype'
@@ -52,7 +51,7 @@ const ChipIconContainerPrimary = styled.div`
   top: -3px;
   right: -3px;
   background-color: ${({ theme, selected }) => selected ? theme.color.accentDarker : 'transparent'};
-  stroke: ${({ selected }) => selected ? theme.color.white : theme.color.grayLighter};
+  stroke: ${({ theme, selected }) => selected ? theme.color.white : theme.color.grayLighter};
   width: 2.1rem;
   height: 2.1rem;
 `
@@ -63,7 +62,7 @@ const ChipIconContainerSecondary = styled.div`
   padding: 2px 0.2rem 2px 2px;
   top: -2px;
   right: -2px;
-  stroke: ${({ selected }) => selected ? theme.color.accentDarker : theme.color.grayLighter};
+  stroke: ${({ theme, selected }) => selected ? theme.color.accentDarker : theme.color.grayLighter};
   width: 1.6rem;
   height: 1.6rem;
 `
