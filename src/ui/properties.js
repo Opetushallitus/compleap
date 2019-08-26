@@ -63,3 +63,33 @@ export const disabled = css`
 export const fadeColor = css`
   transition: background-color 150ms, color 150ms;
 `
+
+export const chipButtonBase = css`
+  ${rounded};
+
+  position: relative;
+  display: inline-block;
+  border-style: solid;
+  cursor: pointer;
+  font-size: ${({ theme }) => theme.font.size.base};
+  box-sizing: content-box;
+
+  &:active {
+    color: ${({ theme }) => theme.color.black};
+  }
+
+  &:focus {
+    outline: 0;
+  }
+
+  transition: all 200ms;
+`
+
+export const chipIconContainerBase = css`
+  position: absolute;
+  box-sizing: content-box;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+`

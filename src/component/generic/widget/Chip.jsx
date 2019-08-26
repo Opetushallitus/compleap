@@ -2,34 +2,15 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import styled from 'styled-components'
 import theme from 'ui/theme'
-import { rounded } from 'ui/properties'
+import { chipButtonBase, chipIconContainerBase } from 'ui/properties'
 import Checkmark from 'resources/asset/checkmark.svg'
 import { children } from 'util/proptype'
 
 const ChipType = ['primary', 'secondary']
 
-const ChipButton = styled.button`
-  ${rounded};
+const ChipButtonPrimary = styled.button`
+  ${chipButtonBase};
 
-  position: relative;
-  display: inline-block;
-  border-style: solid;
-  cursor: pointer;
-  font-size: ${({ theme }) => theme.font.size.base};
-  box-sizing: content-box;
-
-  &:active {
-    color: ${({ theme }) => theme.color.black};
-  }
-
-  &:focus {
-    outline: 0;
-  }
-
-  transition: all 200ms;
-`
-
-const ChipButtonPrimary = styled(ChipButton)`
   text-transform: uppercase;
   border: solid 3px ${({ theme, selected }) => selected ? theme.color.accentDarker : theme.color.grayLighter};
   background-color: ${({ theme, selected }) => selected ? theme.color.accentLightest : theme.color.white};
@@ -45,7 +26,9 @@ const ChipButtonPrimary = styled(ChipButton)`
   }
 `
 
-const ChipButtonSecondary = styled(ChipButton)`
+const ChipButtonSecondary = styled.div`
+  ${chipButtonBase};
+
   text-transform: none;
   border-style: ${({ theme, selected }) => selected ? 'solid' : 'dashed'};
   border-width: 2px;
@@ -62,16 +45,10 @@ const ChipButtonSecondary = styled(ChipButton)`
   }
 `
 
-const ChipIconContainer = styled.div`
-  position: absolute;
-  box-sizing: content-box;
-  border-radius: 50%;
-  padding: 2px;
-  top: -2px;
-  right: -2px;
-`
+const ChipIconContainerPrimary = styled.div`
+  ${chipIconContainerBase};
 
-const ChipIconContainerPrimary = styled(ChipIconContainer)`
+  padding: 2px;
   top: -3px;
   right: -3px;
   background-color: ${({ theme, selected }) => selected ? theme.color.accentDarker : 'transparent'};
@@ -80,13 +57,15 @@ const ChipIconContainerPrimary = styled(ChipIconContainer)`
   height: 2.1rem;
 `
 
-const ChipIconContainerSecondary = styled(ChipIconContainer)`
+const ChipIconContainerSecondary = styled.div`
+  ${chipIconContainerBase};
+
+  padding: 2px 0.2rem 2px 2px;
   top: -2px;
   right: -2px;
   stroke: ${({ selected }) => selected ? theme.color.accentDarker : theme.color.grayLighter};
   width: 1.6rem;
   height: 1.6rem;
-  padding-right: 0.25rem;
 `
 
 const Chip = ({ type = 'primary', selected = false, value, onClick, children }) => {
@@ -94,8 +73,8 @@ const Chip = ({ type = 'primary', selected = false, value, onClick, children }) 
   const ChipComponent = isPrimary ? ChipButtonPrimary : ChipButtonSecondary
   const ChipIconComponent = isPrimary ? ChipIconContainerPrimary : ChipIconContainerSecondary
   const CheckmarkStyle = isPrimary
-    ? { height: '2.1rem', strokeWidth: 2, paddingRight: '0.15rem' }
-    : { height: '1rem', strokeWidth: 2, paddingTop: '0.3rem' }
+    ? { height: '2.1rem', strokeWidth: 2 }
+    : { height: '1rem', strokeWidth: 2 }
 
   return (
     <div style={{ display: 'contents' }}>

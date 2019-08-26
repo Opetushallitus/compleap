@@ -23,7 +23,6 @@ const List = styled.ul`
 
 const ListItem = styled.li`
   display: inline-block;
-  margin: 0.5rem;
 `
 
 const EscoLink = styled.a`
@@ -48,7 +47,11 @@ const CompetenceList = ({ competences }) => {
           return (
             <ListItem key={c.conceptUri}>
               <EscoLink href={escoLink} target='_blank' rel='noopener noreferrer'>
-                <CompetenceTag>
+                <CompetenceTag
+                  value={getLabelMatchingLanguage(c, lang)}
+                  selected={false}
+                  onClick={() => console.log('select')}
+                >
                   {getLabelMatchingLanguage(c, lang)}
                 </CompetenceTag>
               </EscoLink>
