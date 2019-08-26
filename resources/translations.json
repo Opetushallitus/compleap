@@ -170,6 +170,10 @@
     "fi": "Tämän tutkinnon opinnoista sinulle on kertynyt seuraavanlaista osaamista",
     "en": "You have gained following competences from the studies in this education"
   },
+  "Tämän koulutuksesi osaamisia ei saatu haettua": {
+    "fi": "Tämän koulutuksesi osaamisia ei saatu haettua",
+    "en": "Competences for this education could not be fetched"
+  },
   "Kiinnostukset": {
     "fi": "Kiinnostukset",
     "en": "Fields of interest"

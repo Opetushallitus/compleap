@@ -12,8 +12,10 @@ const Competences = ({ educationUri }) => {
   const context$ = useContext(Context)
   const competences = useObservable(context$, { path: ['context', 'competences', 'data', 'fromUnverifiedEducation', educationUri] })
   const isDataPending = competences === undefined
+  const hasCompetences = competences !== undefined && competences.length > 0
 
   if (isDataPending) return <Placeholder/>
+  if (!hasCompetences) return <div>{t`Tämän koulutuksesi osaamisia ei saatu haettua`}</div>
 
   const uniqs = R.uniqBy(R.prop('conceptUri'), competences)
   return (
