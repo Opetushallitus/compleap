@@ -161,7 +161,7 @@ const services = {
     const uri = event.data
 
     const res = await http.get('/escos', {
-      uris: [uri],
+      qualification: uri,
       type: 'qualification'
     }, {
       encode: false,

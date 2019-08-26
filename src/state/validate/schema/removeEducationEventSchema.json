@@ -12,6 +12,9 @@
       "properties": {
         "id": {
           "type":  "string"
+        },
+        "code": {
+          "type":  "string"
         }
       },
       "required": [ "id" ],
