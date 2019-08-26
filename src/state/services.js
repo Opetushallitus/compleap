@@ -21,9 +21,8 @@ export const Service = Object.freeze({
   clearSession: 'clearSession'
 })
 
-const wrapAsMock = (serviceTitle, promise) => {
+const wrapAsMock = (serviceTitle, promise, delay = process.env.MOCK_API_LATENCY_MS || 0) => {
   console.debug(`Using mock service (${serviceTitle})`)
-  const delay = process.env.MOCK_API_LATENCY_MS || 0
 
   return new Promise((resolve, reject) => {
     setTimeout(() => {
@@ -79,7 +78,8 @@ const services = {
       }
 
       return resolve(learningOpportunityCode)
-    })
+    }),
+    0
   ),
 
   [Service.getVerifiedEducations]: (ctx, _) => {
