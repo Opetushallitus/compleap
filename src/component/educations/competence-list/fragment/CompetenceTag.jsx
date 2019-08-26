@@ -77,25 +77,23 @@ const Text = styled.div`
   text-transform: capitalize;
 `
 
-const CompetenceTag = ({ selected = false, value, onClick, children }) => {
-  return (
-    <div style={{ display: 'contents' }}>
-      <ChipButton value={value} selected={selected} onClick={onClick}>
-        <Text>
-          {children}
-        </Text>
-        <ChipIconsContainer>
-          <TooltipIconContainer>
-            <span>{'i'}</span>
-          </TooltipIconContainer>
-          <CheckmarkIconContainer selected={selected}>
-            <Checkmark style={{ strokeWidth: 2, paddingRight: '0.15rem' }}/>
-          </CheckmarkIconContainer>
-        </ChipIconsContainer>
-      </ChipButton>
-    </div>
-  )
-}
+const CompetenceTag = ({ selected = false, value, onClick, children }) => (
+  <div style={{ display: 'contents' }}>
+    <ChipButton value={value} selected={selected} onClick={onClick}>
+      <Text>
+        {children}
+      </Text>
+      <ChipIconsContainer>
+        <TooltipIconContainer>
+          <span>{'i'}</span>
+        </TooltipIconContainer>
+        <CheckmarkIconContainer selected={selected}>
+          <Checkmark style={{ strokeWidth: 2, paddingRight: '0.15rem' }}/>
+        </CheckmarkIconContainer>
+      </ChipIconsContainer>
+    </ChipButton>
+  </div>
+)
 
 CompetenceTag.propTypes = {
   selected: PropTypes.bool,
