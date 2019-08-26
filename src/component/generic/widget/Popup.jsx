@@ -1,9 +1,7 @@
-import React from 'react'
 import styled from 'styled-components'
 import { transparentize } from 'polished'
 import media from 'ui/media'
 import { roundedRectangle } from 'ui/properties'
-import { children } from 'util/proptype'
 
 const UpArrow = styled.div`
   position: absolute;
@@ -16,7 +14,7 @@ const UpArrow = styled.div`
   z-index: ${({ theme }) => theme.z.popup + 1};
 `
 
-const PopupArrow = styled(UpArrow)`
+export const PopupArrow = styled(UpArrow)`
   top: 3.25rem;
   right: 1.25rem;
 
@@ -25,7 +23,7 @@ const PopupArrow = styled(UpArrow)`
   `}
 `
 
-const PopupContainer = styled.div`
+export const PopupContainer = styled.div`
   ${roundedRectangle};
 
   position: absolute;
@@ -39,19 +37,3 @@ const PopupContainer = styled.div`
     right: 1rem;
   `}
 `
-
-// eslint-disable-next-line react/display-name
-const Popup = React.forwardRef(({ children }, ref) => (
-  <div ref={ref}>
-    <PopupArrow/>
-    <PopupContainer>
-      {children}
-    </PopupContainer>
-  </div>
-))
-
-Popup.propTypes = {
-  children
-}
-
-export default Popup

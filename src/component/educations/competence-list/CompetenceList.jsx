@@ -25,11 +25,6 @@ const ListItem = styled.li`
   display: inline-block;
 `
 
-const EscoLink = styled.a`
-  text-decoration: none;
-  color: ${({ theme }) => theme.color.black}
-`
-
 const CompetenceList = ({ competences }) => {
   const context$ = useContext(Context)
   const lang = useObservable(context$, { path: ['context', 'user', 'language'] })
@@ -46,15 +41,14 @@ const CompetenceList = ({ competences }) => {
           const escoLink = `${escoBaseUrl}?${escoParameters}`
           return (
             <ListItem key={c.conceptUri}>
-              <EscoLink href={escoLink} target='_blank' rel='noopener noreferrer'>
-                <CompetenceTag
-                  value={getLabelMatchingLanguage(c, lang)}
-                  selected={false}
-                  onClick={() => console.log('select')}
-                >
-                  {getLabelMatchingLanguage(c, lang)}
-                </CompetenceTag>
-              </EscoLink>
+              <CompetenceTag
+                value={getLabelMatchingLanguage(c, lang)}
+                selected={false}
+                onClick={() => console.log('select')}
+                seeMoreUrl={escoLink}
+              >
+                {getLabelMatchingLanguage(c, lang)}
+              </CompetenceTag>
             </ListItem>
           )
         })

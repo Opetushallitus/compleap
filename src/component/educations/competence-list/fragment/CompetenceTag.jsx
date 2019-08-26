@@ -1,9 +1,12 @@
-import React from 'react'
+import React, { useState } from 'react'
 import PropTypes from 'prop-types'
-import Checkmark from 'resources/asset/checkmark.svg'
 import styled from 'styled-components'
+import Checkmark from 'resources/asset/checkmark.svg'
 import { chipButtonBase } from 'ui/properties'
 import { children } from 'util/proptype'
+import media from 'ui/media'
+import { PopupContainer } from 'component/generic/widget/Popup'
+import useTranslation from 'component/generic/hook/useTranslation'
 
 const ChipButton = styled.button`
   ${chipButtonBase};
@@ -73,32 +76,87 @@ const CheckmarkIconContainer = styled.div`
   }
 `
 
+const TooltipLink = styled.a`
+  position: relative;
+  text-decoration: none;
+  color: ${({ theme }) => theme.color.black}
+`
+
 const Text = styled.div`
   text-transform: capitalize;
 `
 
-const CompetenceTag = ({ selected = false, value, onClick, children }) => (
-  <div style={{ display: 'contents' }}>
-    <ChipButton value={value} selected={selected} onClick={onClick}>
-      <Text>
-        {children}
-      </Text>
-      <ChipIconsContainer>
-        <TooltipIconContainer>
-          <span>{'i'}</span>
-        </TooltipIconContainer>
-        <CheckmarkIconContainer selected={selected}>
-          <Checkmark style={{ strokeWidth: 2, paddingRight: '0.15rem' }}/>
-        </CheckmarkIconContainer>
-      </ChipIconsContainer>
-    </ChipButton>
-  </div>
+const TooltipContent = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 2rem;
+  width: 6rem;
+  padding: 0.1rem 0.25rem;
+  font-size: ${({ theme }) => theme.font.size.xs};
+`
+
+const TooltipContainer = styled(PopupContainer)`
+  top: 1.75rem;
+  right: -4rem;
+  
+  ${media.full`
+    top: 1.75rem;
+    right: -4rem;
+  `}
+`
+
+const Tooltip = ({ children }) => (
+  <TooltipContainer>{children}</TooltipContainer>
 )
+
+Tooltip.propTypes = {
+  children
+}
+
+const CompetenceTag = ({ selected = false, value, onClick, seeMoreUrl, children }) => {
+  const t = useTranslation()
+  const [isOpen, setIsOpen] = useState(false)
+
+  return (
+    <div style={{ display: 'contents' }}>
+      <ChipButton value={value} selected={selected} onClick={onClick}>
+        <Text>
+          {children}
+        </Text>
+        <ChipIconsContainer>
+          <TooltipLink
+            href={seeMoreUrl}
+            target='_blank'
+            rel='noopener noreferrer'
+            onMouseEnter={() => setIsOpen(true)}
+            onMouseLeave={() => setIsOpen(false)}
+          >
+            <TooltipIconContainer>
+              {'i'}
+            </TooltipIconContainer>
+            {isOpen && (
+              <Tooltip>
+                <TooltipContent>
+                  {t`Katso lisätietoja osaamisesta`}
+                </TooltipContent>
+              </Tooltip>
+            )}
+          </TooltipLink>
+          <CheckmarkIconContainer selected={selected}>
+            <Checkmark style={{ strokeWidth: 2, paddingRight: '0.15rem' }}/>
+          </CheckmarkIconContainer>
+        </ChipIconsContainer>
+      </ChipButton>
+    </div>
+  )
+}
 
 CompetenceTag.propTypes = {
   selected: PropTypes.bool,
   value: PropTypes.string.isRequired,
   onClick: PropTypes.func.isRequired,
+  seeMoreUrl: PropTypes.string.isRequired,
   children
 }
 

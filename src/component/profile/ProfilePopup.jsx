@@ -3,7 +3,7 @@ import styled from 'styled-components'
 import useClickOutside from 'component/generic/hook/useClickOutside'
 import media from 'ui/media'
 import { emptyButton } from 'ui/properties'
-import Popup from 'component/generic/widget/Popup'
+import { PopupArrow, PopupContainer } from 'component/generic/widget/Popup'
 import ProfileContent from './fragment/ProfileContent'
 import ProfileImage from './fragment/ProfileImage'
 
@@ -22,6 +22,14 @@ const ProfileButton = styled.button`
   `}
 `
 
+// eslint-disable-next-line react/display-name
+const Popup = React.forwardRef((_, ref) => (
+  <>
+    <PopupArrow/>
+    <PopupContainer ref={ref}><ProfileContent/></PopupContainer>
+  </>
+))
+
 const ProfilePopup = () => {
   const [isOpen, setIsOpen] = useState(false)
   const buttonRef = useRef()
@@ -34,14 +42,7 @@ const ProfilePopup = () => {
       <ProfileButton onClick={togglePopup} ref={buttonRef}>
         <ProfileImage radius={ProfileButtonImageRadius}/>
       </ProfileButton>
-      {isOpen
-        ? (
-          <Popup ref={popupRef}>
-            <ProfileContent/>
-          </Popup>
-        )
-        : null
-      }
+      {isOpen && <Popup ref={popupRef}/>}
     </Container>
   )
 }
