@@ -168,7 +168,10 @@ const services = {
       arrayFormat: 'comma'
     })
 
-    return res[0].map(Competence)
+    return ({
+      qualificationUri: uri,
+      competences: res[0].map(Competence)
+    })
   },
 
   [Service.clearSession]: () => {

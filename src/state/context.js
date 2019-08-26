@@ -53,7 +53,13 @@ export const context = {
   competences: {
     data: {
       fromVerifiedEducation: [],
-      fromUnverifiedEducation: []
+      /**
+       * {
+       *   [code: LearningOpportunityCodeUri]: Competence[]
+       * }
+       * @see {@link CompetenceModelSchema.json}
+       */
+      fromUnverifiedEducation: {}
     },
     error: {
       fromVerifiedEducation: undefined,
@@ -174,7 +180,10 @@ export const actions = {
     }
   }),
   [Action.addUnverifiedEducationCompetenceData]: assign({
-    competences: (ctx, event) => R.assocPath(['data', 'fromUnverifiedEducation'], event.data, ctx.competences)
+    competences: (ctx, event) => R.assocPath(['data', 'fromUnverifiedEducation', event.data.qualificationUri], event.data.competences, ctx.competences)
+  }),
+  [Action.removeUnverifiedEducationCompetenceData]: assign({
+    competences: (ctx, event) => R.dissocPath(['data', 'fromUnverifiedEducation', event.data.code], ctx.competences)
   }),
   [Action.setUnverifiedEducationCompetenceError]: assign({
     competences: (ctx, event) => R.assocPath(['error', 'fromUnverifiedEducation'], event.data, ctx.competences)
