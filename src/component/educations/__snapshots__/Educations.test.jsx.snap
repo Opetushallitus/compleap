@@ -13,50 +13,80 @@ Array [
     Ulkomailla suoritetut tutkinnot
   </h2>,
   <div
-    className="sc-ifAKCX dOlJFM"
+    className="sc-ifAKCX erYjNz"
   >
-    <div>
-      <h3
-        className="sc-htpNat cxoWVD"
-      >
-        Perusopetus
-      </h3>
-    </div>
-    <div>
-      <button
-        className="sc-dxgOiQ sc-eNQAEJ feRaVf"
-        onClick={[Function]}
-      >
-        Poista tutkinto
-      </button>
+    <div
+      className="sc-fAjcbJ jQSDWU"
+    >
+      <div>
+        <h3
+          className="sc-htpNat cxoWVD"
+        >
+          Perusopetus
+        </h3>
+      </div>
+      <div>
+        <button
+          className="sc-hzDkRC sc-fMiknA humKrW"
+          onClick={[Function]}
+        >
+          Poista tutkinto
+        </button>
+      </div>
     </div>
   </div>,
   <div
-    className="sc-ifAKCX dOlJFM"
+    className="sc-ifAKCX erYjNz"
   >
-    <div>
-      <h3
-        className="sc-htpNat cxoWVD"
-      >
-        Ammatillinen tutkinto
-      </h3>
-      <p
-        className="sc-kEYyzF eCZsRO"
-      >
-        Käsityöalat
-      </p>
+    <div
+      className="sc-fAjcbJ jQSDWU"
+    >
+      <div>
+        <h3
+          className="sc-htpNat cxoWVD"
+        >
+          Ammatillinen tutkinto
+        </h3>
+        <p
+          className="sc-eqIVtm ePKINy"
+        >
+          Käsityöalat
+        </p>
+      </div>
+      <div>
+        <button
+          className="sc-hzDkRC sc-fMiknA humKrW"
+          onClick={[Function]}
+        >
+          Poista tutkinto
+        </button>
+      </div>
     </div>
     <div>
-      <button
-        className="sc-dxgOiQ sc-eNQAEJ feRaVf"
-        onClick={[Function]}
+      <div
+        className="sc-kkGfuU gqgTmi"
       >
-        Poista tutkinto
-      </button>
+        <div
+          className="sc-iAyFgw iCRJhU"
+        >
+          <div
+            className="sc-hSdWYo gHljEq"
+          >
+            <div
+              className="sc-eHgmQL sc-cvbbAY hcUAGi"
+            >
+              Tutkintoon liittyvä osaaminen
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        className="sc-brqgnP cGMhhx"
+      />
     </div>
   </div>,
   <button
-    className="sc-dxgOiQ sc-jKJlTe cqBPrt"
+    className="sc-hzDkRC sc-fBuWsC hUjVmX"
     onClick={[Function]}
   >
     Lisää muualla kuin Suomessa suoritettu tutkinto

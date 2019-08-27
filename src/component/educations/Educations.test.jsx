@@ -22,7 +22,8 @@ const mockState = formState => jest.doMock('state/state', () => {
           }, {
             id: 'a24d7a2e-2922-4f60-9d12-c1285ead6ddd',
             level: { id: '2' },
-            specifier: { id: '0214' }
+            specifier: { id: '0214' },
+            code: 'koulutus_321101'
           }],
           selection: undefined
         }
@@ -50,6 +51,7 @@ describe('Education', () => {
 
   beforeEach(() => {
     jest.clearAllMocks()
+    jest.mock('component/educations/unverified-educations-list/fragment/Competences', () => () => null)
   })
 
   it('should show added educations', () => {
