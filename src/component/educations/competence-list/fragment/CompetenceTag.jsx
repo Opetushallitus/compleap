@@ -22,8 +22,8 @@ const ChipButton = styled.button`
   &:hover {
     border-color: ${({ theme }) => theme.color.accentDarker};
     
-    & svg:not(:hover) {
-      stroke: ${({ theme }) => theme.color.gray};
+    & svg {
+      stroke: ${({ theme, selected }) => selected ? theme.color.white : theme.color.gray};
     }
   }
 `
@@ -46,9 +46,8 @@ const ChipIconsContainer = styled.div`
 
 const TooltipIconContainer = styled.div`
   box-sizing: border-box;
-  background-color: ${({ theme, selected }) => selected ? theme.color.accentDarker : 'transparent'};
-  stroke: ${({ theme, selected }) => selected ? theme.color.white : theme.color.grayLighter};
-  border: solid 2px ${({ theme }) => theme.color.grayLighter};
+  color: ${({ theme, selected }) => selected ? theme.color.gray : theme.color.grayLighter};
+  border: solid 2px ${({ theme, selected }) => selected ? theme.color.gray : theme.color.grayLighter};
   border-radius: 50%;
   width: 1.3rem;
   height: 1.3rem;
@@ -56,7 +55,6 @@ const TooltipIconContainer = styled.div`
   align-items: center;
   justify-content: center;
   font-weight: 600;
-  color: ${({ theme }) => theme.color.grayLighter};
 
   &:hover {
     color: ${({ theme }) => theme.color.accentDarker};
@@ -77,7 +75,7 @@ const CheckmarkIconContainer = styled.div`
   margin-left: 0.2rem;
 
   &:hover {
-    stroke: ${({ theme }) => theme.color.accentDarker};
+    stroke: ${({ theme, selected }) => selected ? theme.color.white : theme.color.accentDarker};
   }
 `
 
@@ -125,7 +123,7 @@ const CompetenceTag = ({ selected = false, value, onClick, seeMoreUrl, children 
             onMouseEnter={() => setIsOpen(true)}
             onMouseLeave={() => setIsOpen(false)}
           >
-            <TooltipIconContainer>
+            <TooltipIconContainer selected={selected}>
               {'i'}
             </TooltipIconContainer>
             {isOpen && (
