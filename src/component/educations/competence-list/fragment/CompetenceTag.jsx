@@ -122,6 +122,7 @@ const CompetenceTag = ({ selected = false, value, onClick, seeMoreUrl, children 
             rel='noopener noreferrer'
             onMouseEnter={() => setIsOpen(true)}
             onMouseLeave={() => setIsOpen(false)}
+            onClick={event => event.stopPropagation()}
           >
             <TooltipIconContainer selected={selected}>
               {'i'}
