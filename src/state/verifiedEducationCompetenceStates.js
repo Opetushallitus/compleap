@@ -5,9 +5,9 @@ import { InternalEvent } from 'state/events'
 const State = Object.freeze({
   idle: 'idle',
   nop: 'nop',
-  pending: 'pending',
-  success: 'success',
-  failure: 'failure'
+  competencesPending: 'competencesPending',
+  competencesSuccess: 'competencesSuccess',
+  competencesFailure: 'competencesFailure'
 })
 
 const verifiedEducationCompetenceStates = {
@@ -17,29 +17,29 @@ const verifiedEducationCompetenceStates = {
       on: {
         '': [
           { target: State.nop, cond: (ctx, _) => !ctx.user.isLoggedIn || !ctx.user.id },
-          { target: State.success, cond: (ctx, _) => Object.keys(ctx.competences.data.fromVerifiedEducation).length > 0 }
+          { target: State.competencesSuccess, cond: (ctx, _) => Object.keys(ctx.competences.data.fromVerifiedEducation).length > 0 }
         ],
         [InternalEvent.GET_COMPETENCES_FOR_VERIFIED_EDUCATION]: {
-          target: State.pending
+          target: State.competencesPending
         }
       }
     },
     [State.nop]: { },
-    [State.pending]: {
+    [State.competencesPending]: {
       invoke: {
         src: Service.getCompetencesForVerifiedEducation,
         onDone: {
-          target: State.success,
+          target: State.competencesSuccess,
           actions: Action.setVerifiedEducationCompetenceData
         },
         onError: {
-          target: State.failure,
+          target: State.competencesFailure,
           actions: Action.setVerifiedEducationCompetenceError
         }
       }
     },
-    [State.success]: { },
-    [State.failure]: { }
+    [State.competencesSuccess]: { },
+    [State.competencesFailure]: { }
   }
 }
 
