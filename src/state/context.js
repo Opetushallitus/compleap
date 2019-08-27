@@ -186,7 +186,7 @@ export const actions = {
     }
   }),
   [Action.addUnverifiedEducationCompetenceData]: assign({
-    competences: (ctx, event) => R.assocPath(['data', 'fromUnverifiedEducation', event.data.qualificationUri], event.data.competences, ctx.competences)
+    competences: (ctx, event) => R.assocPath(['data', 'fromUnverifiedEducation', event.data.uri], event.data.competences, ctx.competences)
   }),
   [Action.removeUnverifiedEducationCompetenceData]: assign({
     competences: (ctx, event) => R.dissocPath(['data', 'fromUnverifiedEducation', event.data.code], ctx.competences)

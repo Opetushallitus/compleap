@@ -168,9 +168,11 @@ const services = {
       arrayFormat: 'comma'
     })
 
+    const competences = res[0].map(Competence)
+
     return ({
-      qualificationUri: uri,
-      competences: res[0].map(Competence)
+      uri,
+      competences
     })
   },
 
