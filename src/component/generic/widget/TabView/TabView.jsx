@@ -1,10 +1,13 @@
 import React, { useState } from 'react'
 import PropTypes from 'prop-types'
 import styled from 'styled-components'
+import media from 'ui/media'
 import TabBar from 'component/generic/widget/TabView/TabBar'
 
 const TabbedView = styled.div`
-  padding: 1rem;
+  ${media.full`
+    padding: 1rem;
+  `}
 `
 
 const TabView = ({ titles, views }) => {

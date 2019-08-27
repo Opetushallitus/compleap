@@ -13,7 +13,7 @@ const ChipButton = styled.button`
 
   border: solid 2px ${({ theme, selected }) => selected ? theme.color.accentDarker : theme.color.grayLighter};
   background-color: ${({ theme, selected }) => selected ? theme.color.accentLightest : theme.color.white};
-  height: 1rem;
+  min-height: 1rem;
   line-height: 1rem;
   padding: 0.3rem 4rem 0.3rem 1rem;
   margin: 0.2rem;
@@ -84,6 +84,7 @@ const TooltipLink = styled.a`
 
 const Text = styled.div`
   text-transform: capitalize;
+  text-align: left;
 `
 
 const TooltipContent = styled.div`
