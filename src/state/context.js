@@ -8,7 +8,8 @@ import {
   isSelectedLens,
   subtopicsLens,
   topicLens,
-  updateVerifiedEducationUnitRating
+  updateVerifiedEducationUnitRating,
+  toggleAllCompetenceInstances
 } from 'state/helper'
 import Rating from 'model/enum/Rating'
 
@@ -54,14 +55,14 @@ export const context = {
     data: {
       /**
        * {
-       *   [code: LearningOpportunityCodeUri]: Competence[]
+       *   [code: LearningOpportunityCodeUri]: (Competence & { selected: boolean })[]
        * }
        * @see {@link CompetenceModelSchema.json}
        */
       fromVerifiedEducation: {},
       /**
        * {
-       *   [code: LearningOpportunityCodeUri]: Competence[]
+       *   [code: LearningOpportunityCodeUri]: (Competence & { selected: boolean })[]
        * }
        * @see {@link CompetenceModelSchema.json}
        */
@@ -103,6 +104,7 @@ export const Action = Object.freeze({
   setVerifiedEducationData: 'setVerifiedEducationData',
   setVerifiedEducationCompetenceData: 'setVerifiedEducationCompetenceData',
   setVerifiedEducationCompetenceError: 'setVerifiedEducationCompetenceError',
+  toggleCompetenceSelection: 'toggleCompetenceSelection',
   likeEducationUnit: 'likeEducationUnit',
   dislikeEducationUnit: 'dislikeEducationUnit',
   addRecommendationLocationFilter: 'addRecommendationLocationFilter',
@@ -205,6 +207,13 @@ export const actions = {
   }),
   [Action.setVerifiedEducationCompetenceError]: assign({
     competences: (ctx, event) => R.assoc(['error', 'fromVerifiedEducation'], event.data, ctx.competences)
+  }),
+  /**
+   * This toggles all instances of a given competence
+   * (there may be multiple instances of a competence in case it is a match for multiple education).
+   */
+  [Action.toggleCompetenceSelection]: assign({
+    competences: (ctx, event) => toggleAllCompetenceInstances(ctx, event.data.uri)
   }),
   [Action.likeEducationUnit]: assign({
     education: (ctx, event) => updateVerifiedEducationUnitRating(event.data.id, Rating.LIKE, ctx)

@@ -3,7 +3,7 @@ import educationToLearningOpportunity from 'resources/mock/educationClassificati
 import { getProfile } from 'resources/mock/koski/profiles'
 import * as R from 'ramda'
 import uuid from 'uuid/v4'
-import { subtopicsLens } from 'state/helper'
+import { getCompetenceSelectionState, subtopicsLens } from 'state/helper'
 import { isVocational } from 'util/educationHelper'
 import { stopPersisting } from 'state/state'
 import VerifiedEducation from 'model/VerifiedEducation'
@@ -145,7 +145,9 @@ const services = {
         arrayFormat: 'comma'
       })
 
-      const competences = res[0].map(Competence)
+      const competences = res[0]
+        .map(Competence)
+        .map(c => R.assoc('selected', getCompetenceSelectionState(ctx, c.conceptUri), c))
 
       return {
         uri: education.uri,
@@ -168,7 +170,9 @@ const services = {
       arrayFormat: 'comma'
     })
 
-    const competences = res[0].map(Competence)
+    const competences = res[0]
+      .map(Competence)
+      .map(c => R.assoc('selected', getCompetenceSelectionState(ctx, c.conceptUri), c))
 
     return ({
       uri,

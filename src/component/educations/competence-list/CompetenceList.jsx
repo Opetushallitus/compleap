@@ -2,7 +2,8 @@ import React, { useContext } from 'react'
 import PropTypes from 'prop-types'
 import styled from 'styled-components'
 import qs from 'qs'
-import { Context } from 'state/state'
+import { Context, dispatch } from 'state/state'
+import { InteractionEvent } from 'state/events'
 import useObservable from 'component/generic/hook/useObservable'
 import CompetenceTag from './fragment/CompetenceTag'
 
@@ -43,8 +44,11 @@ const CompetenceList = ({ competences }) => {
             <ListItem key={c.conceptUri}>
               <CompetenceTag
                 value={getLabelMatchingLanguage(c, lang)}
-                selected={false}
-                onClick={() => console.log('select')}
+                selected={c.selected}
+                onClick={() => dispatch({
+                  type: InteractionEvent.TOGGLE_COMPETENCE,
+                  data: { uri: c.conceptUri }
+                })}
                 seeMoreUrl={escoLink}
               >
                 {getLabelMatchingLanguage(c, lang)}

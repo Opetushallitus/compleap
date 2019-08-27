@@ -25,3 +25,34 @@ export const updateVerifiedEducationUnitRating = (id, rating, ctx) => {
     ctx.education
   )
 }
+
+export const toggleAllCompetenceInstances = (ctx, uri) => {
+  const selectionStateLens = R.lensProp('selected')
+  const toggleAllInstances = R.mapObjIndexed(competences => competences.map(c => {
+    return c.conceptUri === uri
+      ? R.over(selectionStateLens, v => !v, c)
+      : c
+  }))
+
+  const updatedVerified = toggleAllInstances(ctx.competences.data.fromVerifiedEducation)
+  const updatedUnverified = toggleAllInstances(ctx.competences.data.fromUnverifiedEducation)
+
+  const update = R.compose(
+    R.assocPath(['data', 'fromUnverifiedEducation'], updatedUnverified),
+    R.assocPath(['data', 'fromVerifiedEducation'], updatedVerified)
+  )
+
+  return update(ctx.competences)
+}
+
+export const getCompetenceSelectionState = (ctx, uri) => {
+  const competence = R.compose(
+    R.find(R.propEq('conceptUri', uri)),
+    R.flatten,
+    R.map(R.values),
+    R.values,
+    R.pick(['fromVerifiedEducation', 'fromUnverifiedEducation'])
+  )(ctx.competences.data)
+
+  return competence ? competence.selected : false
+}

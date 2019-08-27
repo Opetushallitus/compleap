@@ -1,7 +1,7 @@
 import { Machine } from 'xstate'
 import { Action, actions, context } from 'state/context'
 import services, { Service } from 'state/services'
-import { NavigationEvent, UserEvent } from 'state/events'
+import { InteractionEvent, NavigationEvent, UserEvent } from 'state/events'
 import loginStates from 'state/loginStates'
 import interestsStates from 'state/interestsStates'
 import verifiedEducationStates from 'state/verifiedEducationStates'
@@ -60,6 +60,9 @@ export const machine = Machine({
         },
         [SectionState.interests]: { ...interestsStates },
         [SectionState.recommendations]: { ...recommendationStates }
+      },
+      on: {
+        [InteractionEvent.TOGGLE_COMPETENCE]: { actions: Action.toggleCompetenceSelection }
       }
     },
     [PageState.logout]: {
