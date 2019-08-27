@@ -87,12 +87,12 @@
     "en": "Finnish degrees"
   },
   "Olemme tunnistaneet sinulta seuraavat koulutukset:": {
-    "fi": "Olemme tunnistaneet sinulta seuraavat koulutukset:",
-    "en": "We have identified your following education:"
+    "fi": "Olemme tunnistaneet sinulta seuraavat aikaisemmat Suomessa tehdyt koulutukset:",
+    "en": "We have identified that you have taken part in the following education in Finland:"
   },
   "Merkitse mitä pidit opintojesi aiheista, niin voimme antaa parempia suosituksia koulutuksista. Voit myös jättää valinnan tyhjäksi.": {
-    "fi": "Merkitse mitä pidit opintojesi aiheista, niin voimme antaa parempia ehdotuksia koulutuksista. Voit myös jättää valinnan tyhjäksi.",
-    "en": "Tell us how you liked the topics of your education, and we can give you better suggestions for learning opportunities. You can also leave the selection empty."
+    "fi": "Tässä osiossa pääset valitsemaan, mitkä tekemäsi koulutuksen osioista olivat sinulle mieleisiä. Valitse \"peukku ylös\", jos pidit opintojesi aiheista, niin voimme antaa sinulle parempia ehdotuksia koulutuksista. Voit myös valita \"peukku alas\" tai jättää valinnan tyhjäksi.",
+    "en": "In this section you can choose which topics of your previous education you have liked. Select \"thumbs-up\" if you liked the topic so that we can give you better suggestions for learning opportunities. You can also select \"thumbs-down\" or leave the selection empty."
   },
   "Valmistunut": {
     "fi": "Valmistunut",
@@ -187,8 +187,8 @@
     "en": "Fields of interest"
   },
   "Seuraavaksi kartoitamme sinua kiinnostavia aiheita.": {
-    "fi": "Seuraavaksi kartoitamme sinua kiinnostavia aiheita.",
-    "en": "Next we will look at your fields of interest."
+    "fi": "Seuraavaksi kartoitamme aiheita, jotka kiinnostavat sinua työelämässä.",
+    "en": "Next we will look at the topics you are interested in in your professional life."
   },
   "Valitse": {
     "fi": "Valitse",
@@ -197,6 +197,10 @@
   "aihetta, joiden parissa sinua kiinnostaisi työskennellä.": {
     "fi": "aihetta, joiden parissa sinua kiinnostaisi työskennellä.",
     "en": "topics you'd like to work with."
+  },
+  "Klikkaamalla aiheita saat lisää vaihtoehtoja.": {
+    "fi": "Klikkaamalla aiheita saat lisää vaihtoehtoja.",
+    "en": "Click on topics to see more options."
   },
   "Kiinnostuksia valittu": {
     "fi": "Kiinnostuksia valittu",
@@ -623,12 +627,16 @@
     "en": "Horticulture"
   },
   "Suositellut opiskelupaikat": {
-    "fi": "Ehdotetut opiskelupaikat",
-    "en": "Suggested study places"
+    "fi": "Koulutusmahdollisuudet",
+    "en": "Education opportunities"
   },
   "Näytetään opintojesi ja valitsemiesi kiinnostusten perusteella sinulle sopivimpia opiskelupaikkoja hakualueeltasi. Voit halutessasi rajata aluetta tarkemmin.": {
-    "fi": "Näytetään opintojesi ja valitsemiesi kiinnostusten perusteella sinulle sopivimpia opiskelupaikkoja hakualueeltasi. Voit halutessasi rajata aluetta tarkemmin.",
-    "en": "Showing the most suitable study places from your selected area based on your studies and selected fields of interests. You can restrict the area further, if you want."
+    "fi": "Tässä näet opintojesi ja valitsemiesi kiinnostusten perusteella sinulle sopivimpia opiskelupaikkoja. Voit halutessasi rajata koulutuksen tasoa ja aluetta tarkemmin.",
+    "en": "In this section you can see the most suitable study places based on your studies and selected fields of interests. You can restrict the level of education and the area further, if you want."
+  },
+  "Koulutusmahdollisuudet ovat suuntaa antavia ja ne tulevat suoraan Opintopolku.fi-sivuston tarjonnasta. Saat lisätietoja klikkaamalla koulutusta.": {
+    "fi": "Koulutusmahdollisuudet ovat suuntaa antavia ja ne tulevat suoraan Opintopolku.fi-sivuston tarjonnasta. Saat lisätietoja klikkaamalla koulutusta.",
+    "en": "Education opportunities are indicative, and they come directly from Studyinfo.fi. By clicking on the education you will see more information."
   },
   "Valitse ensin vähintään": {
     "fi": "Valitse ensin vähintään",

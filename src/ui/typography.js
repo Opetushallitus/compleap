@@ -8,6 +8,7 @@ export const H1 = styled.h1`
 
 export const H2 = styled.h2`
   font-size: ${props => props.theme.font.size.l};
+  line-height: 1.4em;
   font-weight: 300;
   margin: 0 0 1rem 0;
 `

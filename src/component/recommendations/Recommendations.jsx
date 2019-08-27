@@ -38,9 +38,14 @@ const Recommendations = () => {
   return (
     <React.Fragment>
       <H1>{t`Suositellut opiskelupaikat`}</H1>
-      <p>
-        {t`Näytetään opintojesi ja valitsemiesi kiinnostusten perusteella sinulle sopivimpia opiskelupaikkoja hakualueeltasi. Voit halutessasi rajata aluetta tarkemmin.`}
-      </p>
+      <div>
+        <p>
+          {t`Näytetään opintojesi ja valitsemiesi kiinnostusten perusteella sinulle sopivimpia opiskelupaikkoja hakualueeltasi. Voit halutessasi rajata aluetta tarkemmin.`}
+        </p>
+        <p>
+          {t`Koulutusmahdollisuudet ovat suuntaa antavia ja ne tulevat suoraan Opintopolku.fi-sivuston tarjonnasta. Saat lisätietoja klikkaamalla koulutusta.`}
+        </p>
+      </div>
       {
         hasRequiredInterests
           ? <RecommendationResults recommendations={recommendations} status={status}/>

@@ -39,7 +39,11 @@ const TopicList = () => {
       <p>
         {t`Seuraavaksi kartoitamme sinua kiinnostavia aiheita.`}
       </p>
-      <H2>{t`Valitse` + ` ${process.env.MIN_INTERESTS} – ${process.env.MAX_INTERESTS} ` + t`aihetta, joiden parissa sinua kiinnostaisi työskennellä.`}</H2>
+      <H2>
+        {t`Valitse` + ` ${process.env.MIN_INTERESTS} – ${process.env.MAX_INTERESTS} ` + t`aihetta, joiden parissa sinua kiinnostaisi työskennellä.`}
+        <br/>
+        {t`Klikkaamalla aiheita saat lisää vaihtoehtoja.`}
+      </H2>
       <StyledTagList>
         {interests.map(v => (
           <TopicListItem key={v.id}>
