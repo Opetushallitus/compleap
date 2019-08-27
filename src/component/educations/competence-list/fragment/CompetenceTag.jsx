@@ -28,6 +28,11 @@ const ChipButton = styled.button`
   }
 `
 
+const Text = styled.div`
+  text-transform: capitalize;
+  text-align: left;
+`
+
 const ChipIconsContainer = styled.div`
   position: absolute;
   display: flex;
@@ -82,9 +87,14 @@ const TooltipLink = styled.a`
   color: ${({ theme }) => theme.color.black}
 `
 
-const Text = styled.div`
-  text-transform: capitalize;
-  text-align: left;
+const TooltipContainer = styled(PopupContainer)`
+  top: 1.75rem;
+  right: -4rem;
+
+  ${media.full`
+    top: 1.75rem;
+    right: -4rem;
+  `}
 `
 
 const TooltipContent = styled.div`
@@ -96,24 +106,6 @@ const TooltipContent = styled.div`
   padding: 0.1rem 0.25rem;
   font-size: ${({ theme }) => theme.font.size.xs};
 `
-
-const TooltipContainer = styled(PopupContainer)`
-  top: 1.75rem;
-  right: -4rem;
-  
-  ${media.full`
-    top: 1.75rem;
-    right: -4rem;
-  `}
-`
-
-const Tooltip = ({ children }) => (
-  <TooltipContainer>{children}</TooltipContainer>
-)
-
-Tooltip.propTypes = {
-  children
-}
 
 const CompetenceTag = ({ selected = false, value, onClick, seeMoreUrl, children }) => {
   const t = useTranslation()
@@ -137,11 +129,11 @@ const CompetenceTag = ({ selected = false, value, onClick, seeMoreUrl, children 
               {'i'}
             </TooltipIconContainer>
             {isOpen && (
-              <Tooltip>
+              <TooltipContainer>
                 <TooltipContent>
                   {t`Katso lisätietoja osaamisesta`}
                 </TooltipContent>
-              </Tooltip>
+              </TooltipContainer>
             )}
           </TooltipLink>
           <CheckmarkIconContainer selected={selected}>
