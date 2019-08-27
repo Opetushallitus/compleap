@@ -29,8 +29,11 @@ const ChipButton = styled.button`
 `
 
 const Text = styled.div`
-  text-transform: capitalize;
   text-align: left;
+
+  &::first-letter {
+    text-transform: uppercase;
+  }
 `
 
 const ChipIconsContainer = styled.div`
