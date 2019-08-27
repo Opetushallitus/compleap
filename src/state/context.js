@@ -52,7 +52,13 @@ export const context = {
   },
   competences: {
     data: {
-      fromVerifiedEducation: [],
+      /**
+       * {
+       *   [code: LearningOpportunityCodeUri]: Competence[]
+       * }
+       * @see {@link CompetenceModelSchema.json}
+       */
+      fromVerifiedEducation: {},
       /**
        * {
        *   [code: LearningOpportunityCodeUri]: Competence[]
