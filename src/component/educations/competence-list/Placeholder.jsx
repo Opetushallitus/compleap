@@ -1,7 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 import * as R from 'ramda'
-import CompetenceTag from './fragment/CompetenceTag'
+import { chipButtonBase } from 'ui/properties'
 
 const List = styled.ul`
   list-style: none;
@@ -10,7 +10,17 @@ const List = styled.ul`
 
 const ListItem = styled.li`
   display: inline-block;
-  margin: 0.5rem;
+`
+
+const PlaceholderTag = styled.button`
+  ${chipButtonBase};
+
+  border: solid 2px ${({ theme }) => theme.color.grayLightest};
+  background-color: ${({ theme }) => theme.color.white};
+  min-height: 1rem;
+  line-height: 1rem;
+  padding: 0.3rem 4rem 0.3rem 1rem;
+  margin: 0.2rem;
 `
 
 const Content = styled.div.attrs(({ width }) => ({ style: { width } }))``
@@ -19,9 +29,9 @@ const Placeholder = () => (
   <List>
     {R.range(0, 45).map(v => (
       <ListItem key={v}>
-        <CompetenceTag disabled={true}>
+        <PlaceholderTag>
           <Content width={`${Math.random() * 6}rem`}/>
-        </CompetenceTag>
+        </PlaceholderTag>
       </ListItem>
     ))}
   </List>
