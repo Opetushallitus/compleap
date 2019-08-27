@@ -50,9 +50,13 @@
     "fi": "Valitse pohjakoulutus",
     "en": "Select prior education"
   },
-  "Tervetuloa-teksti ja ohjeistus": {
-    "fi": "",
-    "en": ""
+  "Tervetuloa": {
+    "fi": "Tervetuloa",
+    "en": "Welcome"
+  },
+  "Tämän palvelun avulla saat tietoa sinulle sopivista koulutusmahdollisuuksista aikaisemman koulutuksesi sekä sinua työelämässä kiinnostavien asioiden perusteella. Koulutusmahdollisuudet ovat suuntaa antavia.": {
+    "fi": "Tämän palvelun avulla saat tietoa sinulle sopivista koulutusmahdollisuuksista aikaisemman koulutuksesi sekä sinua työelämässä kiinnostavien asioiden perusteella. Koulutusmahdollisuudet ovat suuntaa antavia.",
+    "en": "This service will provide you information about the learning opportunities that suit you based on your previous education and the things that interest you in professional life. Learning opportunities are indicative."
   },
   "Vaihda kuva": {
     "fi": "Vaihda kuva",

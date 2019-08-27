@@ -1,6 +1,8 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import PropTypes from 'prop-types'
 import styled from 'styled-components'
+import { Context } from 'state/state'
+import useObservable from 'component/generic/hook/useObservable'
 import Educations from 'component/educations/Educations'
 import Interests from 'component/interests/Interests'
 import Box from 'component/generic/widget/Box'
@@ -52,14 +54,35 @@ SectionContainer.propTypes = {
   children
 }
 
-const StyledIntroductionText = styled.div`
+const IntroductionSection = styled.div`
   background-color: ${({ theme }) => theme.color.white};
+`
+
+const IntroductionContentContainer = styled(Box)`
+  padding-bottom: 0;
+`
+
+const IntroductionHeading = styled.b`
+  font-size: ${({ theme }) => theme.font.size.l};
 `
 
 const IntroductionText = () => {
   const t = useTranslation()
-  const text = t`Tervetuloa-teksti ja ohjeistus`
-  return text.length > 0 ? <StyledIntroductionText><Box>{text}</Box></StyledIntroductionText> : null
+  const context$ = useContext(Context)
+  const name = useObservable(context$, { path: ['context', 'user', 'name'] })
+
+  return (
+    <IntroductionSection>
+      <IntroductionContentContainer>
+        <IntroductionHeading>
+          {t`Tervetuloa` + ' ' + name + '!'}
+        </IntroductionHeading>
+        <p>
+          {t`Tämän palvelun avulla saat tietoa sinulle sopivista koulutusmahdollisuuksista aikaisemman koulutuksesi sekä sinua työelämässä kiinnostavien asioiden perusteella. Koulutusmahdollisuudet ovat suuntaa antavia.`}
+        </p>
+      </IntroductionContentContainer>
+    </IntroductionSection>
+  )
 }
 
 const Profile = () => (
