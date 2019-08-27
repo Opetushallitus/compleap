@@ -20,7 +20,7 @@ const Competences = ({ educationUri }) => {
 
   return (
     <>
-      <p>{t`Tämän tutkinnon opinnoista sinulle on kertynyt seuraavanlaista osaamista`}</p>
+      <p>{t`Tämän tutkinnon perusteella olemme päätelleet, että osaat seuraavanlaisia asioita. Valitse näistä itsellesi tärkeimmät osaamiset.`}</p>
       <CompetenceList competences={uniqs}/>
     </>
   )

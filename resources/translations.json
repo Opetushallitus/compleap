@@ -166,9 +166,9 @@
     "fi": "Tutkintoon liittyvä osaaminen",
     "en": "Competences related to the education"
   },
-  "Tämän tutkinnon opinnoista sinulle on kertynyt seuraavanlaista osaamista": {
-    "fi": "Tämän tutkinnon opinnoista sinulle on kertynyt seuraavanlaista osaamista",
-    "en": "You have gained following competences from the studies in this education"
+  "Tämän tutkinnon perusteella olemme päätelleet, että osaat seuraavanlaisia asioita. Valitse näistä itsellesi tärkeimmät osaamiset.": {
+    "fi": "Tämän tutkinnon perusteella olemme päätelleet, että osaat seuraavanlaisia asioita. Valitse näistä sinulle oleellisimmat osaamiset.",
+    "en": "Based on this education, we have identified that you have following competences. Select the ones that are most relevant to you."
   },
   "Tämän koulutuksesi osaamisia ei saatu haettua": {
     "fi": "Tämän koulutuksesi osaamisia ei saatu haettua",
