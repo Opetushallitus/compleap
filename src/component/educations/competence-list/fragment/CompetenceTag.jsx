@@ -130,14 +130,14 @@ const CompetenceTag = ({ selected = false, value, onClick, seeMoreUrl, children 
             <TooltipIconContainer selected={selected}>
               {'i'}
             </TooltipIconContainer>
-            {isOpen && (
-              <TooltipContainer>
-                <TooltipContent>
-                  {t`Katso lisätietoja osaamisesta`}
-                </TooltipContent>
-              </TooltipContainer>
-            )}
           </TooltipLink>
+          {isOpen && (
+            <TooltipContainer>
+              <TooltipContent>
+                {t`Katso lisätietoja osaamisesta`}
+              </TooltipContent>
+            </TooltipContainer>
+          )}
           <CheckmarkIconContainer selected={selected}>
             <Checkmark style={{ strokeWidth: 2, paddingRight: '0.15rem' }}/>
           </CheckmarkIconContainer>
