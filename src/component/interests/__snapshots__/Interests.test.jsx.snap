@@ -163,12 +163,14 @@ exports[`Interests should show subtopics for selected topic 1`] = `
     Kiinnostukset
   </h1>
   <p>
-    Seuraavaksi kartoitamme sinua kiinnostavia aiheita.
+    Seuraavaksi kartoitamme aiheita, jotka kiinnostavat sinua työelämässä.
   </p>
   <h2
-    className="sc-dqBHgY ksSQPK"
+    className="sc-dqBHgY eFGttu"
   >
     Valitse 3 – 8 aihetta, joiden parissa sinua kiinnostaisi työskennellä.
+    <br />
+    Klikkaamalla aiheita saat lisää vaihtoehtoja.
   </h2>
   <ul
     className="sc-gwVKww hgkBPO"
@@ -253,7 +255,7 @@ exports[`Interests should show subtopics for selected topic 1`] = `
               }
             }
           >
-            <div
+            <button
               className="sc-iyvyFf jhNBkq"
               onClick={[Function]}
               selected={false}
@@ -274,7 +276,7 @@ exports[`Interests should show subtopics for selected topic 1`] = `
                   }
                 />
               </div>
-            </div>
+            </button>
           </div>
         </li>
         <li
@@ -287,7 +289,7 @@ exports[`Interests should show subtopics for selected topic 1`] = `
               }
             }
           >
-            <div
+            <button
               className="sc-iyvyFf jhNBkq"
               onClick={[Function]}
               selected={false}
@@ -308,7 +310,7 @@ exports[`Interests should show subtopics for selected topic 1`] = `
                   }
                 />
               </div>
-            </div>
+            </button>
           </div>
         </li>
         <li
@@ -321,7 +323,7 @@ exports[`Interests should show subtopics for selected topic 1`] = `
               }
             }
           >
-            <div
+            <button
               className="sc-iyvyFf jhNBkq"
               onClick={[Function]}
               selected={false}
@@ -342,7 +344,7 @@ exports[`Interests should show subtopics for selected topic 1`] = `
                   }
                 />
               </div>
-            </div>
+            </button>
           </div>
         </li>
         <li
@@ -355,7 +357,7 @@ exports[`Interests should show subtopics for selected topic 1`] = `
               }
             }
           >
-            <div
+            <button
               className="sc-iyvyFf jhNBkq"
               onClick={[Function]}
               selected={false}
@@ -376,7 +378,7 @@ exports[`Interests should show subtopics for selected topic 1`] = `
                   }
                 />
               </div>
-            </div>
+            </button>
           </div>
         </li>
         <li
@@ -389,7 +391,7 @@ exports[`Interests should show subtopics for selected topic 1`] = `
               }
             }
           >
-            <div
+            <button
               className="sc-iyvyFf jhNBkq"
               onClick={[Function]}
               selected={false}
@@ -410,7 +412,7 @@ exports[`Interests should show subtopics for selected topic 1`] = `
                   }
                 />
               </div>
-            </div>
+            </button>
           </div>
         </li>
         <li
@@ -423,7 +425,7 @@ exports[`Interests should show subtopics for selected topic 1`] = `
               }
             }
           >
-            <div
+            <button
               className="sc-iyvyFf jhNBkq"
               onClick={[Function]}
               selected={false}
@@ -444,7 +446,7 @@ exports[`Interests should show subtopics for selected topic 1`] = `
                   }
                 />
               </div>
-            </div>
+            </button>
           </div>
         </li>
         <li
@@ -457,7 +459,7 @@ exports[`Interests should show subtopics for selected topic 1`] = `
               }
             }
           >
-            <div
+            <button
               className="sc-iyvyFf jhNBkq"
               onClick={[Function]}
               selected={false}
@@ -478,7 +480,7 @@ exports[`Interests should show subtopics for selected topic 1`] = `
                   }
                 />
               </div>
-            </div>
+            </button>
           </div>
         </li>
         <li
@@ -491,7 +493,7 @@ exports[`Interests should show subtopics for selected topic 1`] = `
               }
             }
           >
-            <div
+            <button
               className="sc-iyvyFf jhNBkq"
               onClick={[Function]}
               selected={false}
@@ -512,7 +514,7 @@ exports[`Interests should show subtopics for selected topic 1`] = `
                   }
                 />
               </div>
-            </div>
+            </button>
           </div>
         </li>
         <li
@@ -525,7 +527,7 @@ exports[`Interests should show subtopics for selected topic 1`] = `
               }
             }
           >
-            <div
+            <button
               className="sc-iyvyFf jhNBkq"
               onClick={[Function]}
               selected={false}
@@ -546,7 +548,7 @@ exports[`Interests should show subtopics for selected topic 1`] = `
                   }
                 />
               </div>
-            </div>
+            </button>
           </div>
         </li>
         <li
@@ -559,7 +561,7 @@ exports[`Interests should show subtopics for selected topic 1`] = `
               }
             }
           >
-            <div
+            <button
               className="sc-iyvyFf jhNBkq"
               onClick={[Function]}
               selected={false}
@@ -580,7 +582,7 @@ exports[`Interests should show subtopics for selected topic 1`] = `
                   }
                 />
               </div>
-            </div>
+            </button>
           </div>
         </li>
         <li
@@ -593,7 +595,7 @@ exports[`Interests should show subtopics for selected topic 1`] = `
               }
             }
           >
-            <div
+            <button
               className="sc-iyvyFf jhNBkq"
               onClick={[Function]}
               selected={false}
@@ -614,7 +616,7 @@ exports[`Interests should show subtopics for selected topic 1`] = `
                   }
                 />
               </div>
-            </div>
+            </button>
           </div>
         </li>
         <li
@@ -627,7 +629,7 @@ exports[`Interests should show subtopics for selected topic 1`] = `
               }
             }
           >
-            <div
+            <button
               className="sc-iyvyFf jhNBkq"
               onClick={[Function]}
               selected={false}
@@ -648,7 +650,7 @@ exports[`Interests should show subtopics for selected topic 1`] = `
                   }
                 />
               </div>
-            </div>
+            </button>
           </div>
         </li>
         <li
@@ -661,7 +663,7 @@ exports[`Interests should show subtopics for selected topic 1`] = `
               }
             }
           >
-            <div
+            <button
               className="sc-iyvyFf jhNBkq"
               onClick={[Function]}
               selected={false}
@@ -682,7 +684,7 @@ exports[`Interests should show subtopics for selected topic 1`] = `
                   }
                 />
               </div>
-            </div>
+            </button>
           </div>
         </li>
         <li
@@ -695,7 +697,7 @@ exports[`Interests should show subtopics for selected topic 1`] = `
               }
             }
           >
-            <div
+            <button
               className="sc-iyvyFf jhNBkq"
               onClick={[Function]}
               selected={false}
@@ -716,7 +718,7 @@ exports[`Interests should show subtopics for selected topic 1`] = `
                   }
                 />
               </div>
-            </div>
+            </button>
           </div>
         </li>
         <li
@@ -729,7 +731,7 @@ exports[`Interests should show subtopics for selected topic 1`] = `
               }
             }
           >
-            <div
+            <button
               className="sc-iyvyFf jhNBkq"
               onClick={[Function]}
               selected={false}
@@ -750,7 +752,7 @@ exports[`Interests should show subtopics for selected topic 1`] = `
                   }
                 />
               </div>
-            </div>
+            </button>
           </div>
         </li>
         <li
@@ -763,7 +765,7 @@ exports[`Interests should show subtopics for selected topic 1`] = `
               }
             }
           >
-            <div
+            <button
               className="sc-iyvyFf jhNBkq"
               onClick={[Function]}
               selected={false}
@@ -784,7 +786,7 @@ exports[`Interests should show subtopics for selected topic 1`] = `
                   }
                 />
               </div>
-            </div>
+            </button>
           </div>
         </li>
       </ul>
@@ -1209,12 +1211,14 @@ exports[`Interests should show top level interest suggestions when fetched succe
     Kiinnostukset
   </h1>
   <p>
-    Seuraavaksi kartoitamme sinua kiinnostavia aiheita.
+    Seuraavaksi kartoitamme aiheita, jotka kiinnostavat sinua työelämässä.
   </p>
   <h2
-    className="sc-iAyFgw jEYeRD"
+    className="sc-iAyFgw eURdYi"
   >
     Valitse 3 – 8 aihetta, joiden parissa sinua kiinnostaisi työskennellä.
+    <br />
+    Klikkaamalla aiheita saat lisää vaihtoehtoja.
   </h2>
   <ul
     className="sc-jhAzac fDbksL"
