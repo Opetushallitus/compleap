@@ -12,7 +12,7 @@ const NumRecommendations = 10
 const doQueryRecommendations = ({ unverifiedEducations, verifiedEducations, interests }) => {
   dispatch(RecommendationsStatusEvent.QUERY_PENDING)
 
-  if (process.env.API_ENDPOINT === 'mock') {
+  if (process.env.RECOMMENDATIONS_ENDPOINT === 'mock') {
     const mockRecommendations = require('resources/mock/recommendations/mockRecommendations')
     return mockRequest({ unverifiedEducations, verifiedEducations, interests }, mockRecommendations, true)
   }
@@ -21,7 +21,7 @@ const doQueryRecommendations = ({ unverifiedEducations, verifiedEducations, inte
 
   return (
     http.get(
-      process.env.API_ENDPOINT, {
+      process.env.RECOMMENDATIONS_ENDPOINT, {
         uris: type === 'unit' ? verifiedEducations : type === 'qualification' ? unverifiedEducations : undefined,
         terms: interests,
         n: NumRecommendations,
