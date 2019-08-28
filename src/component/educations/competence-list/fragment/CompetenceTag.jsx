@@ -8,7 +8,7 @@ import media from 'ui/media'
 import { PopupContainer } from 'component/generic/widget/Popup'
 import useTranslation from 'component/generic/hook/useTranslation'
 
-const ChipButton = styled.button`
+const ChipButton = styled.div`
   ${chipButtonBase};
 
   border: solid 2px ${({ theme, selected }) => selected ? theme.color.accentDarker : theme.color.grayLighter};
