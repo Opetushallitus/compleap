@@ -25,7 +25,7 @@ const ChipButtonPrimary = styled.button`
   }
 `
 
-const ChipButtonSecondary = styled.div`
+const ChipButtonSecondary = styled.button`
   ${chipButtonBase};
 
   text-transform: none;
