@@ -136,7 +136,7 @@ const services = {
     }))
 
     const requests = educations.map(async education => {
-      const res = await http.get('/escos', {
+      const res = await http.get(process.env.COMPETENCES_ENDPOINT, {
         qualification: education.uri,
         uris: education.units,
         type: 'unit'
@@ -162,7 +162,7 @@ const services = {
   [Service.getCompetencesForUnverifiedEducation]: async (ctx, event) => {
     const uri = event.data
 
-    const res = await http.get('/escos', {
+    const res = await http.get(process.env.COMPETENCES_ENDPOINT, {
       qualification: uri,
       type: 'qualification'
     }, {

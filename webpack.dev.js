@@ -15,7 +15,8 @@ module.exports = merge(common, {
   plugins: [
     new webpack.DefinePlugin({
       'process.env.MOCK_API_LATENCY_MS': JSON.stringify(1000),
-      'process.env.RECOMMENDATIONS_ENDPOINT': JSON.stringify(process.env.RECOMMENDATIONS_ENDPOINT)
+      'process.env.RECOMMENDATIONS_ENDPOINT': JSON.stringify(process.env.RECOMMENDATIONS_ENDPOINT),
+      'process.env.COMPETENCES_ENDPOINT': JSON.stringify(process.env.COMPETENCES_ENDPOINT)
     })
   ]
 })
