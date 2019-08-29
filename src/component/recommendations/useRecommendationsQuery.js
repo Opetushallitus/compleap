@@ -25,7 +25,8 @@ const doQueryRecommendations = ({ unverifiedEducations, verifiedEducations, inte
         uris: type === 'unit' ? verifiedEducations : type === 'qualification' ? unverifiedEducations : undefined,
         terms: interests,
         n: NumRecommendations,
-        type
+        type,
+        modeltype: process.env.RECOMMENDATIONS_MODEL_TYPE
       }, {
         encode: false,
         arrayFormat: 'comma'
