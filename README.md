@@ -88,6 +88,8 @@ To use the local recommendations API together with the client app (being served 
 docker-compose up
 ```
 
+[If you're not able to setup Docker networking in Linux environment then try this link](https://stackoverflow.com/questions/24319662/from-inside-of-a-docker-container-how-do-i-connect-to-the-localhost-of-the-mach/52858101)
+
 The client is now connected to the API can be accessed from `localhost:7000`.
 
 ## Running tests
