@@ -21,7 +21,7 @@
     "baconjs": "^2.0.11",
     "core-js": "^3.0.1",
     "cross-fetch": "^3.0.2",
-    "dompurify": "^1.0.10",
+    "dompurify": "^2.0.3",
     "history": "^4.7.2",
     "polished": "^3.0.3",
     "prop-types": "^15.7.1",
