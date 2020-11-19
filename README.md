@@ -2,6 +2,13 @@
 
 This repository contains source code for Compleap Prototype components. This source code acts as an example implementation of the prototyped CompLeap service. The prototype application demonstrates a learner profile that makes use of information about learner's skills, competences, and interests. With the aid of this information, learning opportunity recommendations are offered to help the learner realise new areas where the competences and interests could be combined.
 
+Further information on the project and the choices made within the prototype development phase can be found on the CompLeap project Wiki pages: https://wiki.eduuni.fi/display/csccompleap/CompLeap+Home
+•	Content of prototypes: https://wiki.eduuni.fi/display/csccompleap/Content+of+Prototypes
+•	Framework architecture: https://wiki.eduuni.fi/display/csccompleap/T1.1+Framework+architecture+design
+•	User Scenarios: https://wiki.eduuni.fi/display/csccompleap/Feedback+and+specifications+to+user+scenarios
+•	Glossary: https://wiki.eduuni.fi/display/csccompleap/Glossary
+
+
 In terms of source code, the prototype application is divided into two main components:
 
 - Client-side application (`model` directory)
