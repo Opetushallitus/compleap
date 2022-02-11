@@ -16,7 +16,7 @@
     "test:component": "./node_modules/.bin/jest --testPathPattern=test.js --env=jsdom"
   },
   "dependencies": {
-    "ajv": "^6.10.0",
+    "ajv": "^6.12.3",
     "bacon.atom": "^5.0.5",
     "baconjs": "^2.0.11",
     "core-js": "^3.0.1",
