@@ -20,7 +20,7 @@
     "bacon.atom": "^5.0.5",
     "baconjs": "^2.0.11",
     "core-js": "^3.0.1",
-    "cross-fetch": "^3.0.2",
+    "cross-fetch": "^3.1.5",
     "dompurify": "^1.0.10",
     "history": "^4.7.2",
     "polished": "^3.0.3",
