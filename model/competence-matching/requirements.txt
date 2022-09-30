@@ -1,5 +1,5 @@
 fasttext==0.9.1
-joblib==0.13.2
+joblib==1.2.0
 mock==3.0.5
 numexpr==2.7.0
 numpy==1.17.0
